@@ -249,12 +249,35 @@ int Save_NowWriteFile_AfterMGInit(SaveData *saveData, int a1)
     return ret;
 }
 
+#ifdef NEW_GAME_START_BONUSES
+// SAVE_LOCAL_FIELD_DATA block id, and the offset of PlayerSaveData within it
+// (matches Save_LocalFieldData_Get / LocalFieldData_GetPlayer in arm9 at 0x0203B9C4 / 0x0203B9B4)
+#define SAVE_LOCAL_FIELD_DATA_ID 5
+#define LOCAL_FIELD_DATA_PLAYER_OFFSET 0x6C
+
+static void NewGame_ApplyStartBonuses(SaveData *saveData)
+{
+    // national dex unlocked from the very start (both the pokedex flag and the trainer card/profile flag)
+    Pokedex_SetNatDexFlag(SaveData_GetDexPtr(saveData));
+    Sav2_PlayerData_GetProfileAddr(saveData)->natDex = TRUE;
+
+    // running shoes from the very start (normally given by the guide gent in cherrygrove)
+    u8 *localFieldData = SaveArray_Get(saveData, SAVE_LOCAL_FIELD_DATA_ID);
+    FIELD_PLAYER_AVATAR_SUB *playerSaveData = (FIELD_PLAYER_AVATAR_SUB *)(localFieldData + LOCAL_FIELD_DATA_PLAYER_OFFSET);
+    playerSaveData->hasRunningShoes = TRUE;
+}
+#endif // NEW_GAME_START_BONUSES
+
 void Save_InitDynamicRegion(SaveData *saveData)
 {
     saveData->isNewGame = TRUE;
     saveData->sectorCleanFlag[0] = 1;
     saveData->sectorCleanFlag[1] = 1;
     Save_InitDynamicRegion_Internal(saveData->dynamic_region, saveData->arrayHeaders);
+#ifdef NEW_GAME_START_BONUSES
+    // runs when "new game" wipes the save (and when no save exists yet), after every save block is initialized
+    NewGame_ApplyStartBonuses(saveData);
+#endif
 }
 
 void Save_PrepareForAsyncWrite(SaveData *saveData, int a1)

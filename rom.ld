@@ -104,6 +104,7 @@ CalcLevelBySpeciesAndExp = 0x0206FDA8 | 1;
 SaveData_GetRepelPtr = 0x0202DB05;
 SaveData_GetEventPtr = 0x020503D0 | 1;
 SaveData_GetDexPtr = 0x0202A634 |1;
+Pokedex_SetNatDexFlag = 0x0202A53C | 1;
 SaveData_GetPlayerPartyPtr = 0x02074904 |1;
 Save_HOF_RecordParty = 0x0202E0F8 | 1;
 LoadHallOfFame = 0x02027104 | 1;

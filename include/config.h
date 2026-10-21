@@ -167,6 +167,9 @@
 // REUSABLE_TMS will make TMs infinite and hide the quantity number.
 #define REUSABLE_TMS
 
+// NEW_GAME_START_BONUSES unlocks the National Dex and gives the Running Shoes as soon as a new game is started.
+#define NEW_GAME_START_BONUSES
+
 // DELETABLE_HMS allows HMs to be forgotten, this also makes their quantity reduce, but the infinite TMs change prevents this.
 // #define DELETABLE_HMS
 
