@@ -202,6 +202,26 @@ int UNUSED CalcBaseDamageInternal(struct BattleSystem *bw, struct BattleStruct *
             break;
         }
         break;
+    case MOVE_HARD_PRESS:
+        // 100 * target's remaining HP fraction, minimum 1
+        movepower = QMul_RoundDown(100 * 100, (DefendingMon.hp * 4096) / DefendingMon.maxhp) / 100;
+        if (movepower < 1) {
+            movepower = 1;
+        }
+        break;
+    case MOVE_LAST_RESPECTS: {
+        // 50 + 50 per fainted party member (capped at 5000 like the official games; practically max 300 here)
+        movepower = 50 + 50 * CountFaintedPartyMons(bw, attacker);
+        break;
+    }
+    case MOVE_RAGE_FIST: {
+        // 50 + 50 per time the user has been hit this battle, max 350
+        movepower = 50 + 50 * sp->rageFistHits[SanitizeClientForTeamAccess(bw, attacker)][sp->sel_mons_no[attacker]];
+        if (movepower > 350) {
+            movepower = 350;
+        }
+        break;
+    }
     case MOVE_CRUSH_GRIP:
     case MOVE_WRING_OUT:
         // TODO: Check correctness

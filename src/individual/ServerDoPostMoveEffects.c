@@ -126,6 +126,14 @@ void __attribute__((section(".init"))) ServerDoPostMoveEffectsInternal(void *bsy
         if (IsAttackerOnField(ctx)) {
             ctx->store_damage[ctx->attack_client] += ctx->hit_damage;
         }
+        // Rage Fist: count every hit a Pokemon takes from another battler's attack (max 6 counted)
+        if (ctx->hit_damage > 0 && ctx->defence_client < CLIENT_MAX && ctx->defence_client != ctx->attack_client
+            && CheckSubstitute(ctx, ctx->defence_client) == FALSE) {
+            u8 *hits = &ctx->rageFistHits[SanitizeClientForTeamAccess(bsys, ctx->defence_client)][ctx->sel_mons_no[ctx->defence_client]];
+            if (*hits < 6) {
+                (*hits)++;
+            }
+        }
         ctx->swoam_seq_no++;
         FALLTHROUGH;
     case MOVE_PERFORMANCE_STEP_4_2_HEAVY_RECOIL:

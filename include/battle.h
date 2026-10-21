@@ -1099,6 +1099,7 @@ struct BattleStruct {
     // hack additions
     u16 cudChewArmedTurn[CLIENT_MAX]; // turn a berry was eaten by a Cud Chew mon (0 = not armed)
     u8 cudChewRestored[CLIENT_MAX];   // set when Cud Chew gave the berry back, so the second eat doesn't loop
+    u8 rageFistHits[CLIENT_MAX][6];   // times each party mon was hit by an attack this battle (Rage Fist), indexed like onceOnlyAbilityFlags
 };
 
 enum {
