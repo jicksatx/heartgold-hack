@@ -367,7 +367,7 @@ struct __attribute__((packed)) battle_moveflag {
     u32 custapBerryFlag : 1; /**< whether the custap berry has activated */
     u32 quickClawFlag : 1; /**< whether the quick claw activated */
     u32 meFirstFlag : 1; /**< whether the move me first was used */
-    u32 : 1;
+    u32 quickDrawFlag : 1; /**< whether quick draw activated this turn (uses a padding bit) */
 
     /* 0x08 */ int rechargeCount; /**< recharge duration */
     /* 0x0c */ int fakeOutCount; /**< can it use fake out? */
@@ -1095,6 +1095,10 @@ struct BattleStruct {
     int magicRoomCounter;
 
     int recoilDamage;
+
+    // hack additions
+    u16 cudChewArmedTurn[CLIENT_MAX]; // turn a berry was eaten by a Cud Chew mon (0 = not armed)
+    u8 cudChewRestored[CLIENT_MAX];   // set when Cud Chew gave the berry back, so the second eat doesn't loop
 };
 
 enum {
@@ -1890,6 +1894,7 @@ void LONG_CALL SCIO_LevelUpEffectSet(void *bw, int send_client);
 u32 LONG_CALL BattleWorkPlaceIDGet(void *bw);
 void LONG_CALL Task_DistributeExp(void *arg0, void *work);
 int LONG_CALL BattleWorkPokeCountGet(void *, int);
+int LONG_CALL CountFaintedPartyMons(void *bw, int client);
 BOOL LONG_CALL BattleBuffer_GetNext(struct BattleStruct *ctx, int battlerId);
 void LONG_CALL BattleController_EmitShowMonList(struct BattleSystem *bsys, struct BattleStruct *ctx, int battlerId, int forceSwitch, int selectedMon, int blockedMon);
 void LONG_CALL BattleController_EmitShowWaitMessage(struct BattleSystem *bsys, int battlerId);

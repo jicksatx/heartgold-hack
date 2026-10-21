@@ -740,6 +740,18 @@ int UNUSED CalcBaseDamageInternal(struct BattleSystem *bw, struct BattleStruct *
                 continue;
             }
 
+            // handle Supreme Overlord: +10% power per fainted party member (max 5 -> +50%)
+            if (AttackingMon.ability == ABILITY_SUPREME_OVERLORD) {
+                int fainted = CountFaintedPartyMons(bw, attacker);
+                if (fainted > 5) {
+                    fainted = 5;
+                }
+                if (fainted) {
+                    basePowerModifier = QMul_RoundUp(basePowerModifier, UQ412__1_0 + UQ412__0_1_BUT_HIGHER * fainted);
+                }
+                continue;
+            }
+
             // handle Technician
             if ((AttackingMon.ability == ABILITY_TECHNICIAN)
                 /* && (moveno != MOVE_STRUGGLE) as of Gen5 */

@@ -3720,6 +3720,13 @@ BOOL BattleController_CheckAbilityFailures4_StatusBasedFailures(struct BattleSys
         doesNotAffect = TRUE;
     }
 
+    // Aroma Veil protects the holder and its ally from moves that restrict move choice or infatuate
+    if ((MoldBreakerAbilityCheck(ctx, attacker, defender, ABILITY_AROMA_VEIL) || MoldBreakerAbilityCheck(ctx, attacker, BATTLER_ALLY(defender), ABILITY_AROMA_VEIL))
+        && (moveEffect == MOVE_EFFECT_TAUNT || moveEffect == MOVE_EFFECT_TORMENT || moveEffect == MOVE_EFFECT_ENCORE
+            || moveEffect == MOVE_EFFECT_DISABLE || moveEffect == MOVE_EFFECT_PREVENT_HEALING || moveEffect == MOVE_EFFECT_INFATUATE)) {
+        doesNotAffect = TRUE;
+    }
+
     if (MoldBreakerAbilityCheck(ctx, attacker, defender, ABILITY_OWN_TEMPO) && (moveEffect == MOVE_EFFECT_STATUS_CONFUSE)) {
         BattleController_ResetGeneralMoveFailureFlags(ctx, ctx->attack_client, TRUE);
         ctx->moveStatusFlagForSpreadMoves[defender] = MOVE_STATUS_FAILED;

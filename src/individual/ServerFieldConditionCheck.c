@@ -1692,6 +1692,31 @@ void ServerFieldConditionCheck(void *bw, struct BattleStruct *sp)
                         }
                         break;
                     }
+                    case ABILITY_CUD_CHEW: {
+                        // a berry eaten this turn is armed; at the end of the next turn it is given back once
+                        if ((sp->battlemon[battlerId].hp)
+                            && IS_ITEM_BERRY(sp->recycle_item[battlerId])
+                            && (sp->battlemon[battlerId].item == ITEM_NONE)) {
+                            if (sp->cudChewRestored[battlerId]) {
+                                // this is the second time the same berry was eaten; don't loop
+                                sp->cudChewRestored[battlerId] = 0;
+                                sp->cudChewArmedTurn[battlerId] = 0;
+                                sp->recycle_item[battlerId] = 0;
+                            } else if (sp->cudChewArmedTurn[battlerId] == 0) {
+                                sp->cudChewArmedTurn[battlerId] = sp->total_turn + 1;
+                            } else if ((u32)(sp->total_turn + 1) > sp->cudChewArmedTurn[battlerId]) {
+                                sp->item_work = sp->recycle_item[battlerId];
+                                sp->recycle_item[battlerId] = 0;
+                                sp->battlemon[battlerId].item = sp->item_work;
+                                sp->cudChewArmedTurn[battlerId] = 0;
+                                sp->cudChewRestored[battlerId] = 1;
+                                sp->battlerIdTemp = battlerId;
+                                seq_no = BATTLE_SUBSCRIPT_CUD_CHEW;
+                                ret = TRUE;
+                            }
+                        }
+                        break;
+                    }
                     case ABILITY_MOODY: { // this is going to be interesting
                         if (sp->battlemon[battlerId].hp) {
                             // Use % 7 instead of %5 and pass FALSE to AreAnyStatsNotAtValue to include accuracy/evasion like earlier gens.
@@ -1990,6 +2015,7 @@ void ServerFieldConditionCheck(void *bw, struct BattleStruct *sp)
 
             for (int i = 0; i < client_set_max; i++) {
                 sp->battlemon[i].moveeffect.quickClawFlag = 0;
+                sp->battlemon[i].moveeffect.quickDrawFlag = 0;
                 sp->battlemon[i].moveeffect.custapBerryFlag = 0;
                 sp->numberOfTurnsClientHasCurrentAbility[i] = sp->numberOfTurnsClientHasCurrentAbility[i] + 1;
 

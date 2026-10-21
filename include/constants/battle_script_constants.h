@@ -530,6 +530,10 @@
 #define BATTLE_SUBSCRIPT_HEAVY_RECOIL                           (521)
 #define BATTLE_SUBSCRIPT_PREVENT_INTIMIDATE                     (522)
 #define BATTLE_SUBSCRIPT_RECEIVER                               (523)
+#define BATTLE_SUBSCRIPT_SUPERSWEET_SYRUP                       (524)
+#define BATTLE_SUBSCRIPT_CURIOUS_MEDICINE                       (525)
+#define BATTLE_SUBSCRIPT_COSTAR                                 (526)
+#define BATTLE_SUBSCRIPT_CUD_CHEW                               (527)
 
 #define MAX_BASE_SUBSCRIPT_NUM 523
 

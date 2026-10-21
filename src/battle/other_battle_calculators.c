@@ -1089,8 +1089,8 @@ u8 LONG_CALL CalcSpeed(void *bw, struct BattleStruct *sp, int client1, int clien
     u8 hold_effect2;
     s8 priority1 = sp->clientPriority[client1];
     s8 priority2 = sp->clientPriority[client2];
-    u8 quick_claw1 = sp->battlemon[client1].moveeffect.quickClawFlag || sp->battlemon[client1].moveeffect.custapBerryFlag;
-    u8 quick_claw2 = sp->battlemon[client2].moveeffect.quickClawFlag || sp->battlemon[client2].moveeffect.custapBerryFlag;
+    u8 quick_claw1 = sp->battlemon[client1].moveeffect.quickClawFlag || sp->battlemon[client1].moveeffect.custapBerryFlag || sp->battlemon[client1].moveeffect.quickDrawFlag;
+    u8 quick_claw2 = sp->battlemon[client2].moveeffect.quickClawFlag || sp->battlemon[client2].moveeffect.custapBerryFlag || sp->battlemon[client2].moveeffect.quickDrawFlag;
     u8 move_last1 = 0, move_last2 = 0;
     int ability1;
     int ability2;
@@ -1697,6 +1697,12 @@ void LONG_CALL CalcPriorityAndQuickClawCustapBerry(void *bsys, struct BattleStru
 
         hold_effect = HeldItemHoldEffectGet(ctx, client);
         hold_atk = HeldItemAtkGet(ctx, client, 0);
+
+        // handle Quick Draw: 30% chance to move first in its priority bracket when using a damaging move
+        if (GetBattlerAbility(ctx, client) == ABILITY_QUICK_DRAW && GetMoveSplit(ctx, move) != SPLIT_STATUS
+            && (BattleRand(bsys) % 10) < 3) {
+            ctx->battlemon[client].moveeffect.quickDrawFlag = 1;
+        }
 
         if (hold_effect == HOLD_EFFECT_SOMETIMES_PRIORITY) {
             if ((ctx->agi_rand[client] % (100 / hold_atk)) == 0) {
@@ -4658,4 +4664,26 @@ BOOL LONG_CALL AnyPendingSwitches(struct BattleSystem *bsys, struct BattleStruct
 BOOL LONG_CALL BattlerFirstTurnOut(struct BattleStruct *ctx, int battlerId)
 {
     return ctx->moveConditionsFlags[battlerId].firstTurnOut > 0;
+}
+
+/**
+ *  @brief count the fainted Pokemon in a battler's party (eggs and empty slots don't count).
+ *         used by Supreme Overlord and Last Respects.
+ */
+int LONG_CALL CountFaintedPartyMons(void *bw, int client)
+{
+    int count = 0;
+    int partyCount = BattleWorkPokeCountGet(bw, client);
+
+    for (int i = 0; i < partyCount; i++) {
+        struct PartyPokemon *mon = BattleWorkPokemonParamGet(bw, client, i);
+        u32 species = GetMonData(mon, MON_DATA_SPECIES_OR_EGG, NULL);
+        if (species == SPECIES_NONE || species == SPECIES_EGG) {
+            continue;
+        }
+        if (GetMonData(mon, MON_DATA_HP, NULL) == 0) {
+            count++;
+        }
+    }
+    return count;
 }

@@ -713,6 +713,53 @@ int UNUSED SwitchInAbilityCheck(void *bw, struct BattleStruct *sp)
                     }
                 }
 
+                // Supersweet Syrup - once per battle, lower opposing evasion on entry
+                {
+                    if ((sp->onceOnlyAbilityFlags[SanitizeClientForTeamAccess(bw, client_no)][sp->sel_mons_no[client_no]].superSweetSyrupFlag == FALSE)
+                        && (sp->battlemon[client_no].hp)
+                        && (GetBattlerAbility(sp, client_no) == ABILITY_SUPERSWEET_SYRUP)) {
+                        sp->onceOnlyAbilityFlags[SanitizeClientForTeamAccess(bw, client_no)][sp->sel_mons_no[client_no]].superSweetSyrupFlag = TRUE;
+                        sp->battlerIdTemp = client_no;
+                        scriptnum = BATTLE_SUBSCRIPT_SUPERSWEET_SYRUP;
+                        ret = SWITCH_IN_CHECK_MOVE_SCRIPT;
+                        break;
+                    }
+                }
+
+                // Curious Medicine - on entry, reset the ally's stat stages (double battles)
+                // Costar - on entry, copy the ally's stat stages (double battles)
+                {
+                    int ability = GetBattlerAbility(sp, client_no);
+                    int ally = BATTLER_ALLY(client_no);
+                    if ((ability == ABILITY_CURIOUS_MEDICINE || ability == ABILITY_COSTAR)
+                        && (sp->battlemon[client_no].ability_activated_flag == 0)
+                        && (sp->battlemon[client_no].hp)) {
+                        sp->battlemon[client_no].ability_activated_flag = 1;
+                        if ((client_set_max == 4) && (sp->battlemon[ally].hp)) {
+                            BOOL anyChange = FALSE;
+                            for (int stat = 0; stat < STAT_MAX; stat++) {
+                                if (sp->battlemon[ally].states[stat] != 6) {
+                                    anyChange = TRUE;
+                                }
+                            }
+                            if (anyChange) {
+                                for (int stat = 0; stat < STAT_MAX; stat++) {
+                                    if (ability == ABILITY_CURIOUS_MEDICINE) {
+                                        sp->battlemon[ally].states[stat] = 6;
+                                    } else {
+                                        sp->battlemon[client_no].states[stat] = sp->battlemon[ally].states[stat];
+                                    }
+                                }
+                                sp->battlerIdTemp = client_no;
+                                sp->state_client = ally;
+                                scriptnum = (ability == ABILITY_CURIOUS_MEDICINE) ? BATTLE_SUBSCRIPT_CURIOUS_MEDICINE : BATTLE_SUBSCRIPT_COSTAR;
+                                ret = SWITCH_IN_CHECK_MOVE_SCRIPT;
+                                break;
+                            }
+                        }
+                    }
+                }
+
                 // Dauntless Shield
                 {
                     if ((sp->onceOnlyAbilityFlags[SanitizeClientForTeamAccess(bw, client_no)][sp->sel_mons_no[client_no]].dauntlessShieldFlag == FALSE)
