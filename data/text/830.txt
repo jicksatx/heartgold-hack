@@ -167,12 +167,12 @@ Used to make Pokéblocks\nthat will enhance Beauty.\nIts blue flesh is dry if ea
 Used to make Pokéblocks\nthat will enhance Cuteness.\nIts pink flesh is sweet if eaten.
 Used to make Pokéblocks\nthat will enhance Cleverness.\nIts green flesh is bitter if eaten.
 Used to make Pokéblocks\nthat will enhance Toughness.\nIts yellow flesh is sour if eaten.
-If a Pokémon is fed this Berry,\nit will grow more friendly, but it\nwill lose base points for its HP stat.
-If a Pokémon is fed this Berry,\nit will grow more friendly, but it\nwill lose base points for its Attack stat.
-If a Pokémon is fed this Berry,\nit will grow more friendly, but it\nwill lose base points for its Defense stat.
-If a Pokémon is fed this Berry,\nit will grow more friendly, but it\nwill lose base points for its Sp. Atk stat.
-If a Pokémon is fed this Berry,\nit will grow more friendly, but it\nwill lose base points for its Sp. Def stat.
-If a Pokémon is fed this Berry,\nit will grow more friendly, but it\nwill lose base points for its Speed stat.
+If a Pokémon is fed this Berry,\nit will grow more friendly toward\nits Trainer.
+If a Pokémon is fed this Berry,\nit will grow more friendly toward\nits Trainer.
+If a Pokémon is fed this Berry,\nit will grow more friendly toward\nits Trainer.
+If a Pokémon is fed this Berry,\nit will grow more friendly toward\nits Trainer.
+If a Pokémon is fed this Berry,\nit will grow more friendly toward\nits Trainer.
+If a Pokémon is fed this Berry,\nit will grow more friendly toward\nits Trainer.
 Used to make Pokéblocks that will\nenhance Beauty.\nThis Berry is rare in other regions.
 Used to make Pokéblocks that will\nenhance Cuteness.\nThis Berry is rare in other regions.
 Used to make Pokéblocks that will\nenhance Cleverness.\nThis Berry is rare in other regions.

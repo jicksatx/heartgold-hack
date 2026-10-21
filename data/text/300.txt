@@ -102,9 +102,9 @@ You’re already surfing.\r
 You can’t use that here.\r
 It won’t have any effect.\r
 Two Pokémon are needed.\r
-{STRVAR_1 1, 0, 0} became more friendly.\rHowever, its base {STRVAR_1 13, 1, 0} fell!\r
-{STRVAR_1 1, 0, 0} adores you!\rIts base {STRVAR_1 13, 1, 0} fell!\r
-{STRVAR_1 1, 0, 0} became more friendly.\rIts base {STRVAR_1 13, 1, 0} can’t go lower.\r
+{STRVAR_1 1, 0, 0} became more friendly.\r
+{STRVAR_1 1, 0, 0} adores you!\r
+{STRVAR_1 1, 0, 0} became more friendly.\r
 {STRVAR_1 1, 0, 0} was given the\n{STRVAR_1 8, 1, 0} to hold.\r
 Three Pokémon are needed.\r
 Four Pokémon are needed.\r
