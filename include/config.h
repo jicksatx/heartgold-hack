@@ -170,6 +170,9 @@
 // NEW_GAME_START_BONUSES unlocks the National Dex and gives the Running Shoes as soon as a new game is started.
 #define NEW_GAME_START_BONUSES
 
+// REMOVE_EVS makes stats ignore EVs entirely and stops battles from awarding them.
+#define REMOVE_EVS
+
 // DELETABLE_HMS allows HMs to be forgotten, this also makes their quantity reduce, but the infinite TMs change prevents this.
 // #define DELETABLE_HMS
 

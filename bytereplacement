@@ -569,3 +569,15 @@ arm9 020701AC 08 E0
 
 # sub_02070854 always call GetMonPicHeightBySpeciesGenderForm
 arm9 020708B0 06 E0
+
+#ifdef REMOVE_EVS
+# stat calculation (CalcMonStats, arm9) reads every EV as 0: replace each "bl GetMonData" for MON_DATA_*_EV with "movs r0, #0; nop"
+arm9 0206E2BE 00 20 C0 46
+arm9 0206E2D6 00 20 C0 46
+arm9 0206E2EE 00 20 C0 46
+arm9 0206E306 00 20 C0 46
+arm9 0206E31E 00 20 C0 46
+arm9 0206E336 00 20 C0 46
+# battles never award EVs: BattleScript_CalcEffortValues returns immediately ("bx lr")
+0012 022463E8 70 47
+#endif // REMOVE_EVS
