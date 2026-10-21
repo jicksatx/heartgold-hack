@@ -120718,7 +120718,7 @@ const ITEMDATA __data[] =
 
 [ITEM_SCROLL_OF_DARKNESS] =
 {
-    ITEM_PRICE(0),
+    ITEM_PRICE(3000),
     .holdEffect = 0,
     .holdEffectParam = 0,
     .pluckEffect = 0,
@@ -120783,7 +120783,7 @@ const ITEMDATA __data[] =
 
 [ITEM_SCROLL_OF_WATERS] =
 {
-    ITEM_PRICE(0),
+    ITEM_PRICE(3000),
     .holdEffect = 0,
     .holdEffectParam = 0,
     .pluckEffect = 0,
