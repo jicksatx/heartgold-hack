@@ -814,7 +814,7 @@ const EvolutionTable __data[MAX_SPECIES_INCLUDING_FORMS + 1] =
 
     [SPECIES_PRIMEAPE] = {
         .entries = {
-            { EVO_HAS_MOVE, MOVE_RAGE_FIST, SPECIES_ANNIHILAPE },
+            { EVO_LEVEL, 35, SPECIES_ANNIHILAPE },
             { EVO_NONE, 0, SPECIES_NONE },
             { EVO_NONE, 0, SPECIES_NONE },
             { EVO_NONE, 0, SPECIES_NONE },
@@ -14870,7 +14870,7 @@ const EvolutionTable __data[MAX_SPECIES_INCLUDING_FORMS + 1] =
 
     [SPECIES_DIPPLIN] = {
         .entries = {
-            { EVO_HAS_MOVE, MOVE_DRAGON_CHEER, SPECIES_HYDRAPPLE },
+            { EVO_LEVEL, 40, SPECIES_HYDRAPPLE },
             { EVO_NONE, 0, SPECIES_NONE },
             { EVO_NONE, 0, SPECIES_NONE },
             { EVO_NONE, 0, SPECIES_NONE },
