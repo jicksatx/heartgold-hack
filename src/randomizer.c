@@ -156,3 +156,123 @@ u16 LONG_CALL Randomizer_RemapRivalSpecies(u16 species)
 #endif
     return species;
 }
+
+// ---------------------------------------------------------------- wild encounters
+
+#ifdef RANDOMIZE_WILD_ENCOUNTERS
+
+#include "encounter.h"
+
+extern const u16 sBaseStatTotals[1076];
+extern const u16 sWildPool[];
+extern const u16 sWildPoolCount;
+
+BOOL LONG_CALL MapHeader_HasWildEncounters(u32 mapId);
+u32 LONG_CALL MapHeader_GetWildEncounterBank(u32 mapId);
+
+#define ENCDATA_NARC 37
+#define WILD_POOL_MIN_CANDIDATES 8
+
+static BOOL IsExcludedOriginal(u16 species)
+{
+    // keep legendaries etc. as they are if they ever show up in a table (none do in vanilla HGSS)
+    return IS_SPECIES_LEGENDARY(species) || IS_SPECIES_MYTHICAL(species) || IS_SPECIES_SUBLEGEND(species) || IS_SPECIES_ULTRA_BEAST(species);
+}
+
+/**
+ *  @brief replacement for one wild species in one area.  the same original species in the same area always gets
+ *         the same replacement (for this save), chosen among pool species with a similar base stat total.
+ *
+ *  @param speciesAndForm species | (form << 11) as stored in the encounter table
+ *  @param area encounter bank id of the map
+ */
+u16 LONG_CALL Randomizer_RemapWildSpecies(u16 speciesAndForm, u32 area)
+{
+    u16 species = speciesAndForm & 0x7FF;
+
+    if (species == SPECIES_NONE || species > 1075 || IsExcludedOriginal(species)) {
+        return speciesAndForm;
+    }
+
+    s32 target = sBaseStatTotals[species];
+    if (target == 0) {
+        return speciesAndForm;
+    }
+
+    // find the window of pool species whose BST is within +-tolerance of the original; widen until there's enough choice
+    s32 tolerance = target / 10;
+    if (tolerance < 20) {
+        tolerance = 20;
+    }
+    s32 lo = 0, hi = 0;
+    for (;;) {
+        lo = 0;
+        while (lo < sWildPoolCount && sBaseStatTotals[sWildPool[lo]] < target - tolerance) {
+            lo++;
+        }
+        hi = lo;
+        while (hi < sWildPoolCount && sBaseStatTotals[sWildPool[hi]] <= target + tolerance) {
+            hi++;
+        }
+        if (hi - lo >= WILD_POOL_MIN_CANDIDATES || (lo == 0 && hi == sWildPoolCount)) {
+            break;
+        }
+        tolerance += 20;
+    }
+
+    u32 count = hi - lo;
+    u32 pick = Randomizer_Hash(Randomizer_GetSeed(), 0xA4EA0000 ^ (area << 11) ^ species) % count;
+    u16 newSpecies = sWildPool[lo + pick];
+    if (newSpecies == species && count > 1) {
+        newSpecies = sWildPool[lo + (pick + 1) % count];
+    }
+    return newSpecies; // form 0
+}
+
+static void RemapList(u16 *list, u32 n, u32 area)
+{
+    for (u32 i = 0; i < n; i++) {
+        list[i] = Randomizer_RemapWildSpecies(list[i], area);
+    }
+}
+
+static void RemapSlots(EncounterDataSlot *slots, u32 n, u32 area)
+{
+    for (u32 i = 0; i < n; i++) {
+        slots[i].species = Randomizer_RemapWildSpecies(slots[i].species, area);
+    }
+}
+
+void LONG_CALL Randomizer_RandomizeEncounterTable(EncounterData *enc, u32 area)
+{
+    RemapList(enc->landSlots.speciesMorning, NUM_ENCOUNTERS_LAND, area);
+    RemapList(enc->landSlots.speciesDay, NUM_ENCOUNTERS_LAND, area);
+    RemapList(enc->landSlots.speciesNight, NUM_ENCOUNTERS_LAND, area);
+    RemapList(enc->hoennSoundSpecies, NUM_ENCOUNTERS_SOUNDS, area);
+    RemapList(enc->sinnohSoundSpecies, NUM_ENCOUNTERS_SOUNDS, area);
+    RemapSlots(enc->surfSlots, NUM_ENCOUNTERS_SURF, area);
+    RemapSlots(enc->rockSmashSlots, NUM_ENCOUNTERS_ROCKSMASH, area);
+    RemapSlots(enc->oldRodSlots, NUM_ENCOUNTERS_FISH, area);
+    RemapSlots(enc->goodRodSlots, NUM_ENCOUNTERS_FISH, area);
+    RemapSlots(enc->superRodSlots, NUM_ENCOUNTERS_FISH, area);
+    enc->landSwarm = Randomizer_RemapWildSpecies(enc->landSwarm, area);
+    enc->surfSwarm = Randomizer_RemapWildSpecies(enc->surfSwarm, area);
+    enc->nightFish = Randomizer_RemapWildSpecies(enc->nightFish, area);
+    enc->fishSwarm = Randomizer_RemapWildSpecies(enc->fishSwarm, area);
+}
+
+/**
+ *  @brief replaces the vanilla WildEncounters_ReadFromNarc (0x0203B88C): loads a map's encounter table, then randomizes it.
+ *         everything that reads wild species (grass/surf/fishing/rock smash, swarms, Static/Magnet Pull slot picks) sees the result.
+ */
+void LONG_CALL WildEncounters_ReadFromNarc(EncounterData *encData, u32 mapno)
+{
+    memset(encData, 0, sizeof(EncounterData));
+    if (MapHeader_HasWildEncounters(mapno)) {
+        u32 bank = MapHeader_GetWildEncounterBank(mapno);
+        ReadWholeNarcMemberByIdPair(encData, ENCDATA_NARC, bank);
+        Randomizer_RandomizeEncounterTable(encData, bank);
+    }
+}
+
+#endif // RANDOMIZE_WILD_ENCOUNTERS

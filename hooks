@@ -662,3 +662,8 @@ arm9 EncounterSlot_WildMonSlotRoll_Headbutt 022477C0 0
 0012 PlayerTrainerVictoryBGM_hook 0224DA9E 3
 
 arm9 FieldSystem_RestoreMapObjectsFromSave 0203B9F4 1
+
+#ifdef RANDOMIZE_WILD_ENCOUNTERS
+# hack: full replacement so encounter tables are randomized as they load (src/randomizer.c)
+arm9 WildEncounters_ReadFromNarc 0203B88C
+#endif

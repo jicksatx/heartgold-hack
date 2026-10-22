@@ -123,7 +123,9 @@ FieldSysGetAttrAddrInternal = 0x020401B4 | 1;
 FieldSystem_FlagCheck = 0x020403FC | 1;
 Field_GetBgEvents = 0x0203B6D8 | 1;
 Field_GetNumBgEvents = 0x0203B6E0 | 1;
-WildEncounters_ReadFromNarc = 0x0203B88C | 1;
+/* hack: WildEncounters_ReadFromNarc (0x0203B88C) is replaced in src/randomizer.c */
+MapHeader_HasWildEncounters = 0x0203B324 | 1;
+MapHeader_GetWildEncounterBank = 0x0203B344 | 1;
 
 sys_AllocMemory = 0x0201AA8C | 1;
 sys_FreeMemoryEz = 0x0201AB0C | 1;
