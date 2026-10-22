@@ -131,3 +131,8 @@ arm9 sPokeathlonShop_NatdexThursday 0210FA30
 arm9 sPokeathlonShop_NatdexFriday 0210FA34
 arm9 sPokeathlonShop_NatdexSaturday 0210FA38
 #endif
+
+#ifdef MART_EXPANSION
+# ScrCmd_SpecialMartBuy literal pool: point it at the expanded special mart table (adds the Mega Stone shop as index 30)
+arm9 sSpecialMartTable 02048190
+#endif
