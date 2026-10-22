@@ -166,6 +166,7 @@ u16 LONG_CALL Randomizer_RemapRivalSpecies(u16 species)
 extern const u16 sBaseStatTotals[1076];
 extern const u16 sWildPool[];
 extern const u16 sWildPoolCount;
+extern const u16 sWildPoolBST[];
 
 BOOL LONG_CALL MapHeader_HasWildEncounters(u32 mapId);
 u32 LONG_CALL MapHeader_GetWildEncounterBank(u32 mapId);
@@ -207,11 +208,11 @@ u16 LONG_CALL Randomizer_RemapWildSpecies(u16 speciesAndForm, u32 area)
     s32 lo = 0, hi = 0;
     for (;;) {
         lo = 0;
-        while (lo < sWildPoolCount && sBaseStatTotals[sWildPool[lo]] < target - tolerance) {
+        while (lo < sWildPoolCount && sWildPoolBST[lo] < target - tolerance) {
             lo++;
         }
         hi = lo;
-        while (hi < sWildPoolCount && sBaseStatTotals[sWildPool[hi]] <= target + tolerance) {
+        while (hi < sWildPoolCount && sWildPoolBST[hi] <= target + tolerance) {
             hi++;
         }
         if (hi - lo >= WILD_POOL_MIN_CANDIDATES || (lo == 0 && hi == sWildPoolCount)) {
@@ -223,10 +224,10 @@ u16 LONG_CALL Randomizer_RemapWildSpecies(u16 speciesAndForm, u32 area)
     u32 count = hi - lo;
     u32 pick = Randomizer_Hash(Randomizer_GetSeed(), 0xA4EA0000 ^ (area << 11) ^ species) % count;
     u16 newSpecies = sWildPool[lo + pick];
-    if (newSpecies == species && count > 1) {
+    if (newSpecies == speciesAndForm && count > 1) {
         newSpecies = sWildPool[lo + (pick + 1) % count];
     }
-    return newSpecies; // form 0
+    return newSpecies; // pool entries already carry their form in the top bits (regional forms)
 }
 
 static void RemapList(u16 *list, u32 n, u32 area)
