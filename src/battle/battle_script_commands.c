@@ -16,6 +16,7 @@
 
 #include "battle.h"
 #include "mega.h"
+#include "nuzlocke.h"
 #include "message.h"
 #include "nitro.h"
 #include "overlay.h"
@@ -142,6 +143,8 @@ BOOL btl_scr_cmd_129_SetFieldCondition2(void *bsys UNUSED, struct BattleStruct *
 BOOL btl_scr_cmd_12A_GoToIfMoveConditionFlagSet(void *bsys, struct BattleStruct *ctx);
 BOOL btl_scr_cmd_12B_TryActivateReceiver(void *bsys, struct BattleStruct *ctx);
 BOOL btl_scr_cmd_12C_TryActivateEmergencyExit(void *bsys, struct BattleStruct *ctx);
+BOOL btl_scr_cmd_12D_NuzlockeRecordFaint(void *bsys, struct BattleStruct *ctx);
+BOOL btl_scr_cmd_12E_NuzlockeGoToIfCatchBlocked(void *bsys, struct BattleStruct *ctx);
 BOOL BtlCmd_GoToMoveScript(struct BattleSystem *bsys, struct BattleStruct *ctx);
 BOOL BtlCmd_WeatherHPRecovery(void *bw, struct BattleStruct *sp);
 BOOL BtlCmd_CalcWeatherBallParams(void *bw, struct BattleStruct *sp);
@@ -485,8 +488,10 @@ const u8 *BattleScrCmdNames[] = {
     "IsFieldCondition2On",
     "SetFieldCondition2",
     "GoToIfMoveConditionFlagSet",
-    "TryActivateReceiver"
-    "TryActivateEmergencyExit"
+    "TryActivateReceiver",
+    "TryActivateEmergencyExit",
+    "NuzlockeRecordFaint",
+    "NuzlockeGoToIfCatchBlocked",
     // "YourCustomCommand",
 };
 
@@ -494,7 +499,7 @@ u32 cmdAddress = 0;
 #pragma GCC diagnostic pop
 #endif // DEBUG_BATTLE_SCRIPT_COMMANDS
 
-#define BASE_ENGINE_BTL_SCR_CMDS_MAX 0x12C
+#define BASE_ENGINE_BTL_SCR_CMDS_MAX 0x12E
 
 // clang-format off
 const btl_scr_cmd_func NewBattleScriptCmdTable[] = {
@@ -574,6 +579,8 @@ const btl_scr_cmd_func NewBattleScriptCmdTable[] = {
     [0x12A - START_OF_NEW_BTL_SCR_CMDS] = btl_scr_cmd_12A_GoToIfMoveConditionFlagSet,
     [0x12B - START_OF_NEW_BTL_SCR_CMDS] = btl_scr_cmd_12B_TryActivateReceiver,
     [0x12C - START_OF_NEW_BTL_SCR_CMDS] = btl_scr_cmd_12C_TryActivateEmergencyExit,
+    [0x12D - START_OF_NEW_BTL_SCR_CMDS] = btl_scr_cmd_12D_NuzlockeRecordFaint, // hack
+    [0x12E - START_OF_NEW_BTL_SCR_CMDS] = btl_scr_cmd_12E_NuzlockeGoToIfCatchBlocked, // hack
     // [BASE_ENGINE_BTL_SCR_CMDS_MAX - START_OF_NEW_BTL_SCR_CMDS + 1] = btl_scr_cmd_custom_01_your_custom_command,
 };
 
@@ -6054,6 +6061,55 @@ BOOL BtlCmd_SwitchAndUpdateMon(struct BattleSystem *bsys, struct BattleStruct *c
     ctx->hp_temp = ctx->battlemon[1].hp;
 
     InitSwitchWork(bsys, ctx, battlerId);
+
+    return FALSE;
+}
+
+/**
+ *  @brief hack: remember that a player Pokemon fainted this battle (Nuzlocke deaths stick even if it is revived).
+ *         NuzlockeRecordFaint (no arguments), used in the faint subscript.
+ */
+BOOL btl_scr_cmd_12D_NuzlockeRecordFaint(void *bsys, struct BattleStruct *ctx)
+{
+    IncrementBattleScriptPtr(ctx, 1);
+
+#ifdef NUZLOCKE_MODE
+    int client = ctx->fainting_client;
+    u32 battleType = BattleTypeGet(bsys);
+
+    // player side only, and not the AI partner's Pokemon in tag/multi battles
+    if (client >= 0 && client < CLIENT_MAX && (client & 1) == 0
+        && (client == 0 || !(battleType & (BATTLE_TYPE_MULTI | BATTLE_TYPE_TAG)))) {
+        u8 slot = ctx->sel_mons_no[client];
+        if (slot < 6) {
+            newBS.nuzlockeFaintMask |= (1 << slot);
+        }
+    }
+#endif // NUZLOCKE_MODE
+
+    return FALSE;
+}
+
+/**
+ *  @brief hack: NuzlockeGoToIfCatchBlocked areaUsedLabel, dupeLabel.  jumps when the Nuzlocke rules don't allow
+ *         catching this wild Pokemon (decided when the battle started).
+ */
+BOOL btl_scr_cmd_12E_NuzlockeGoToIfCatchBlocked(void *bsys UNUSED, struct BattleStruct *ctx)
+{
+    IncrementBattleScriptPtr(ctx, 1);
+    int areaUsedAdrs = read_battle_script_param(ctx);
+    int dupeAdrs = read_battle_script_param(ctx);
+
+#ifdef NUZLOCKE_MODE
+    if (newBS.nuzlockeCatchBlocked == NUZLOCKE_CATCH_AREA_USED) {
+        IncrementBattleScriptPtr(ctx, areaUsedAdrs);
+    } else if (newBS.nuzlockeCatchBlocked == NUZLOCKE_CATCH_DUPE) {
+        IncrementBattleScriptPtr(ctx, dupeAdrs);
+    }
+#else
+    (void)areaUsedAdrs;
+    (void)dupeAdrs;
+#endif // NUZLOCKE_MODE
 
     return FALSE;
 }

@@ -13,6 +13,7 @@
 #include "battle.h"
 #include "overlay.h"
 #include "pokemon.h"
+#include "nuzlocke.h"
 
 #ifdef DEBUG_BATTLE_SCENARIOS
 #include "test_battle.h"
@@ -1017,6 +1018,52 @@ void TryRevertFormChange(struct BattleStruct *sp, void *bw, int client_no)
     RevertFormChange(pp, species, form_no);
 }
 
+#ifdef NUZLOCKE_MODE
+
+/**
+ *  @brief hack: Nuzlocke deaths.  every player Pokemon that fainted during the battle (even if it was revived
+ *         mid-battle) is marked dead and left at 0 HP; it moves to the graveyard box on the next map load.
+ *         a total wipe in a battle the player is allowed to lose (first rival battle, Bug Contest) doesn't count.
+ *
+ *  @param bw battle work structure
+ */
+static void Nuzlocke_BattleEnd(struct BattleSystem *bw)
+{
+    u32 battleType = BattleTypeGet(bw);
+    int i, count, alive = 0;
+    u8 dead = 0;
+
+    if (!Nuzlocke_IsActive() || (battleType & (BATTLE_TYPE_LINK | BATTLE_TYPE_FRONTIER | BATTLE_TYPE_TUTORIAL))) {
+        return;
+    }
+
+    count = BattleWorkPokeCountGet(bw, 0);
+    for (i = 0; i < count && i < 6; i++) {
+        struct PartyPokemon *pp = BattleWorkPokemonParamGet(bw, 0, i);
+        if (GetMonData(pp, MON_DATA_SPECIES, NULL) == 0 || GetMonData(pp, MON_DATA_IS_EGG, NULL)) {
+            continue;
+        }
+        if (GetMonData(pp, MON_DATA_HP, NULL) == 0 || (newBS.nuzlockeFaintMask & (1 << i))) {
+            dead |= (1 << i);
+        } else {
+            alive++;
+        }
+    }
+
+    if (alive == 0 && (battleType & (BATTLE_TYPE_CAN_LOSE | BATTLE_TYPE_BUG_CONTEST))) {
+        return;
+    }
+
+    for (i = 0; i < count && i < 6; i++) {
+        if (dead & (1 << i)) {
+            Nuzlocke_MarkMonDead(BattleWorkPokemonParamGet(bw, 0, i));
+        }
+    }
+    newBS.nuzlockeFaintMask = 0;
+}
+
+#endif // NUZLOCKE_MODE
+
 /**
  *  @brief clean up illusion and revert battle-specific forms (megas) to their base forms
  *
@@ -1055,6 +1102,10 @@ void BattleEndRevertFormChange(struct BattleSystem *bw)
 
         RevertFormChange(pp, monsno, form);
     }
+
+#ifdef NUZLOCKE_MODE
+    Nuzlocke_BattleEnd(bw);
+#endif // NUZLOCKE_MODE
 
 #ifdef RESTORE_ITEMS_AT_BATTLE_END
     // grab newItems array for use later

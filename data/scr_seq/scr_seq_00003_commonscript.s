@@ -100,6 +100,7 @@ scrdef scr_seq_0003_071
 scrdef scr_seq_0003_072_repels
 scrdef scr_seq_0003_073_autobattle_testing
 scrdef scr_seq_0003_074_move_relearner
+scrdef scr_seq_0003_075_nuzlocke_game_over
 scrdef_end
 
 scr_seq_0003_002:
@@ -1044,6 +1045,7 @@ scr_seq_0003_011:
     end
 
 scr_seq_0003_012:
+    goto_if_set FLAG_NUZLOCKE_ENABLED, _nuzlockeWhitedOut
     scrcmd_609
     lockall
     apply_movement obj_player, _1054
@@ -1069,6 +1071,7 @@ scr_seq_0003_012:
     .byte 0x2d
     .byte 0x00, 0x2a, 0x1b, 0x00, 0x2d, 0x00, 0x2b, 0x1b, 0x00
 scr_seq_0003_013:
+    goto_if_set FLAG_NUZLOCKE_ENABLED, _nuzlockeWhitedOut
     scrcmd_609
     lockall
     fade_screen 6, 1, 1, RGB_BLACK
@@ -1843,3 +1846,27 @@ _relearnNoMoves:
     closemsg
     releaseall
     end
+
+// hack: Nuzlocke game over.  queued by the whiteout scripts above, and by every map's scene check once the run is
+// over (src/nuzlocke.c), so a finished run can't be continued.  it never ends: the player has to reset.
+_nuzlockeWhitedOut:
+    scrcmd_609
+    lockall
+    fade_screen 6, 1, 1, RGB_BLACK
+    wait_fade
+    goto _nuzlockeGameOver
+
+scr_seq_0003_075_nuzlocke_game_over:
+    scrcmd_609
+    lockall
+_nuzlockeGameOver:
+    goto_if_set FLAG_NUZLOCKE_RUN_OVER, _nuzlockeGameOverLoop
+    npc_msg 128
+    setflag FLAG_NUZLOCKE_RUN_OVER
+    add_waiting_icon
+    save_game_normal VAR_SPECIAL_RESULT
+    remove_waiting_icon
+_nuzlockeGameOverLoop:
+    npc_msg 129
+    wait_button
+    goto _nuzlockeGameOverLoop

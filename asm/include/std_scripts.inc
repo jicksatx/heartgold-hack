@@ -2,6 +2,7 @@
 .definelabel POKEHEARTGOLD_CONSTANTS_STD_SCRIPT_H, 0
 
 .equ std_move_relearner, 2074
+.equ std_nuzlocke_game_over, 2075
 .equ std_picture_books, 2500
 .equ std_books_for_pkmn, 2501
 .equ std_chock_full, 2502

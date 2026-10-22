@@ -181,6 +181,10 @@
 // RANDOMIZE_WILD_ENCOUNTERS (hack) remaps every wild species per area to a similar-BST Pokemon using the same seed (src/randomizer.c)
 #define RANDOMIZE_WILD_ENCOUNTERS
 
+// NUZLOCKE_MODE (hack) offers a Nuzlocke run when a new game starts (src/nuzlocke.c, include/nuzlocke.h).
+// moving dead Pokemon to the graveyard box runs from the RANDOMIZE_WILD_ENCOUNTERS map-load hook, so keep both on.
+#define NUZLOCKE_MODE
+
 // DELETABLE_HMS allows HMs to be forgotten, this also makes their quantity reduce, but the infinite TMs change prevents this.
 // #define DELETABLE_HMS
 

@@ -667,3 +667,8 @@ arm9 FieldSystem_RestoreMapObjectsFromSave 0203B9F4 1
 # hack: full replacement so encounter tables are randomized as they load (src/randomizer.c)
 arm9 WildEncounters_ReadFromNarc 0203B88C
 #endif
+
+#ifdef NUZLOCKE_MODE
+# hack: map scene-script lookup replaced so a finished Nuzlocke run always shows the game-over script (src/nuzlocke.c)
+arm9 Nuzlocke_GetMapSceneScriptId 0204080C
+#endif

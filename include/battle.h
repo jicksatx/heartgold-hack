@@ -1205,7 +1205,9 @@ struct BattleSystem {
     // UnkBattleSystemSub1D0 unk1D0[4];
     // UnkBattleSystemSub220 unk220;
     // GAME_STATS *gameStats;
-    u8 padding_19C[0x220 - 0x19C]; // 220 based on assembly at 0223B884
+    u8 padding_19C[0x1B4 - 0x19C];
+    struct OPTIONS *options; // 1B4, copy of the player's options for this battle (BattleSystem_GetBattleStyle at 0223B740)
+    u8 padding_1B8[0x220 - 0x1B8]; // 220 based on assembly at 0223B884
     u8 *bg_area;
     u16 *pal_area;
     u8 sendBuffer[0x1000];
@@ -1231,8 +1233,8 @@ struct BattleSystem {
     u8 criticalHpMusicDelay : 3;
     u32 terrain;
     u32 bgId;
-    // int location;
-    // u32 battleSpecial;
+    int location; // map section of the battle
+    u32 battleSpecial; // BATTLE_SPECIAL_* flags
     // int timezone; //might be timeOfDay? unclear
     // int safariBallCnt;
     // u8 unk2418[4];
@@ -1356,6 +1358,9 @@ struct PACKED newBattleStruct {
 #ifdef RESTORE_ITEMS_AT_BATTLE_END
     u16 itemsToRestore[6]; // items that each mon was holding at the beginning of the battle
 #endif // RESTORE_ITEMS_AT_BATTLE_END
+
+    u8 nuzlockeCatchBlocked; // hack: NUZLOCKE_CATCH_* reason the wild Pokemon can't be caught
+    u8 nuzlockeFaintMask; // hack: player party slots that fainted at any point this battle
 };
 
 struct PACKED BATTLE_PARAM {

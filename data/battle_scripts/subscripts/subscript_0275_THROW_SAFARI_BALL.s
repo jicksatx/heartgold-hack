@@ -9,6 +9,7 @@ _000:
     // {0} used one {1}!
     PrintMessage 857, TAG_TRNAME_ITEM, BATTLER_CATEGORY_ATTACKER, BATTLER_CATEGORY_MSG_TEMP
     Wait 
+    NuzlockeGoToIfCatchBlocked _nuzlockeAreaUsed, _nuzlockeDupe
     ThrowPokeball BATTLER_CATEGORY_PLAYER, BTLSCR_THROW_SAFARI_BALL
     GoTo _025
 
@@ -41,3 +42,17 @@ _049:
 
 _058:
     End 
+
+_nuzlockeAreaUsed:
+    // Your encounter here is used up!\nThis Pokémon can’t be caught!
+    PrintMessage 1798, TAG_NONE
+    GoTo _nuzlockeBlocked
+
+_nuzlockeDupe:
+    // You already caught this family!\nThis Pokémon can’t be caught!
+    PrintMessage 1799, TAG_NONE
+
+_nuzlockeBlocked:
+    Wait
+    WaitButtonABTime 30
+    End

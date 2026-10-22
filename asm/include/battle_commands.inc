@@ -1645,7 +1645,18 @@
     .long (((\arg_1 - .) / 4) - 1)
     .endm
 
-    .equ BASE_ENGINE_BTL_SCR_CMDS_MAX, 300
+    // hack: Nuzlocke mode (src/battle/battle_script_commands.c)
+    .macro NuzlockeRecordFaint
+    .long 301
+    .endm
+
+    .macro NuzlockeGoToIfCatchBlocked areaUsed, dupe
+    .long 302
+    .long (((\areaUsed - .) / 4) - 2)
+    .long (((\dupe - .) / 4) - 1)
+    .endm
+
+    .equ BASE_ENGINE_BTL_SCR_CMDS_MAX, 302
 
     // .macro YourCustomCommand
     // .long (BASE_ENGINE_BTL_SCR_CMDS_MAX + 1)

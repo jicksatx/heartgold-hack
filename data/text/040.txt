@@ -126,3 +126,5 @@ Hm... That Pokémon doesn’t have\nany moves to remember right now.
 Hm? That’s an Egg!\nIt can’t learn any moves yet.
 There! Your Pokémon remembered\nthe move!
 Come back anytime you want a\nPokémon to remember a move!
+Every Pokémon in your party has\nfainted...\rYour Nuzlocke run is over.\nThis save has been marked as finished.\r
+This Nuzlocke run has ended.\nPlease start a New Game.\rTo reset: hold L + R + START + SELECT.

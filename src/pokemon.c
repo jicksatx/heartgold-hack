@@ -16,6 +16,7 @@
 #include "constants/weather_numbers.h"
 
 #include "bag.h"
+#include "nuzlocke.h"
 #include "battle.h"
 #include "overlay.h"
 #include "rtc.h"
@@ -1043,6 +1044,13 @@ u32 LONG_CALL CheckIfMonsAreEqual(struct PartyPokemon *pokemon1, struct PartyPok
 BOOL LONG_CALL CanUseItemOnMonInParty(struct Party *party, u16 itemID, s32 partyIdx, s32 moveIdx, u32 heapID)
 {
     struct PartyPokemon *mon = Party_GetMonByIndex(party, partyIdx);
+
+#ifdef NUZLOCKE_MODE
+    // hack: a dead Nuzlocke Pokemon can't be revived, healed or otherwise used
+    if (Nuzlocke_IsActive() && Nuzlocke_IsMonDead(mon)) {
+        return FALSE;
+    }
+#endif // NUZLOCKE_MODE
 
     if (GetItemData(itemID, ITEM_PARAM_LEVEL_UP, heapID) && GetMonData(mon, MON_DATA_LEVEL, NULL) == 100 && GetMonEvolution(party, mon, EVOCTX_LEVELUP, itemID, NULL)) {
         return TRUE;

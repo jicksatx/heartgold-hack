@@ -8,6 +8,8 @@
 #include "pokemon.h"
 
 #include "randomizer.h"
+#include "nuzlocke.h"
+#include "script.h"
 
 /*
  *  hack: seeded randomizer shared by the starter randomizer and (later) the area randomizer.
@@ -274,6 +276,13 @@ void LONG_CALL WildEncounters_ReadFromNarc(EncounterData *encData, u32 mapno)
         ReadWholeNarcMemberByIdPair(encData, ENCDATA_NARC, bank);
         Randomizer_RandomizeEncounterTable(encData, bank);
     }
+
+#ifdef NUZLOCKE_MODE
+    // the player's map is (re)loading: move any Pokemon that died since the last map load into the graveyard box
+    if (gFieldSysPtr != NULL && gFieldSysPtr->location != NULL && (u32)gFieldSysPtr->location->mapId == mapno) {
+        Nuzlocke_BuryDeadPartyMons();
+    }
+#endif
 }
 
 #endif // RANDOMIZE_WILD_ENCOUNTERS

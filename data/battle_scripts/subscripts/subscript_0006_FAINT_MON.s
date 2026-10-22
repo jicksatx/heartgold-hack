@@ -4,6 +4,7 @@
 .data
 
 _000:
+    NuzlockeRecordFaint
     IncrementGameStat BATTLER_CATEGORY_FAINTED_MON, BATTLER_TYPE_SOLO_ENEMY, 42
     IncrementGameStat BATTLER_CATEGORY_FAINTED_MON, BATTLER_TYPE_SOLO_PLAYER, 97
     PlayFaintAnimation 
