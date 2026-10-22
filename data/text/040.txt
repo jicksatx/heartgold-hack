@@ -119,3 +119,10 @@ NOT TELLING
 The repellent’s effect wore off!\nWould you like to use another one?
 You used the {STRVAR_1 8, 1, 0}.
 Begin auto-battle.
+I’m the Move Relearner!\nFor $500, I can help a Pokémon\fremember a move it has forgotten.\rWould you like me to teach a move? {YESNO 0}
+Which Pokémon should remember\na move?
+Sorry... You don’t have enough\nmoney for that.
+Hm... That Pokémon doesn’t have\nany moves to remember right now.
+Hm? That’s an Egg!\nIt can’t learn any moves yet.
+There! Your Pokémon remembered\nthe move!
+Come back anytime you want a\nPokémon to remember a move!

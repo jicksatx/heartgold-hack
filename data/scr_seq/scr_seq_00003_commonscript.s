@@ -99,6 +99,7 @@ scrdef scr_seq_0003_070
 scrdef scr_seq_0003_071
 scrdef scr_seq_0003_072_repels
 scrdef scr_seq_0003_073_autobattle_testing
+scrdef scr_seq_0003_074_move_relearner
 scrdef_end
 
 scr_seq_0003_002:
@@ -1751,5 +1752,94 @@ scr_seq_0003_073_autobattle_testing:
     trainer_battle 5, 0, 0, 0
     //setvar 0x800B, 1
     //WildBattleSp 785 | (1 << 11), 50, 0
+    releaseall
+    end
+
+// hack: Move Relearner (std 2074, called from an NPC in each gym town's Pokemon Center).
+// standard relearner (level-up moves up to the current level), costs 500 per move, only charged if a move is learned.
+scr_seq_0003_074_move_relearner:
+    play_se SEQ_SE_DP_SELECT
+    lockall
+    faceplayer
+    show_money_box 20, 2
+    npc_msg 121
+    touchscreen_menu_hide
+    getmenuchoice VAR_SPECIAL_RESULT
+    touchscreen_menu_show
+    compare VAR_SPECIAL_RESULT, 0
+    goto_if_ne _relearnCancel
+    hasenoughmoneyimmediate VAR_SPECIAL_RESULT, 500
+    compare VAR_SPECIAL_RESULT, 0
+    goto_if_eq _relearnNoMoney
+    npc_msg 122
+    closemsg
+    hide_money_box
+    fade_screen 6, 1, 0, RGB_BLACK
+    wait_fade
+    party_select_ui
+    get_party_selection VAR_SPECIAL_x8005
+    restore_overworld
+    fade_screen 6, 1, 1, RGB_BLACK
+    wait_fade
+    compare VAR_SPECIAL_x8005, 255
+    goto_if_eq _relearnCancelNoBox
+    get_partymon_species VAR_SPECIAL_x8005, VAR_SPECIAL_RESULT
+    compare VAR_SPECIAL_RESULT, 0
+    goto_if_eq _relearnEgg
+    scrcmd_466 VAR_SPECIAL_RESULT, VAR_SPECIAL_x8005
+    compare VAR_SPECIAL_RESULT, 0
+    goto_if_eq _relearnNoMoves
+    fade_screen 6, 1, 0, RGB_BLACK
+    wait_fade
+    move_relearner_init VAR_SPECIAL_x8005
+    move_relearner_get_result VAR_SPECIAL_RESULT
+    restore_overworld
+    fade_screen 6, 1, 1, RGB_BLACK
+    wait_fade
+    compare VAR_SPECIAL_RESULT, 255
+    goto_if_eq _relearnCancelNoBox
+    submoneyimmediate 500
+    show_money_box 20, 2
+    npc_msg 126
+    wait_button
+    hide_money_box
+    closemsg
+    releaseall
+    end
+
+_relearnNoMoney:
+    npc_msg 123
+    wait_button
+    hide_money_box
+    closemsg
+    releaseall
+    end
+
+_relearnCancel:
+    npc_msg 127
+    wait_button
+    hide_money_box
+    closemsg
+    releaseall
+    end
+
+_relearnCancelNoBox:
+    npc_msg 127
+    wait_button
+    closemsg
+    releaseall
+    end
+
+_relearnEgg:
+    npc_msg 125
+    wait_button
+    closemsg
+    releaseall
+    end
+
+_relearnNoMoves:
+    npc_msg 124
+    wait_button
+    closemsg
     releaseall
     end
