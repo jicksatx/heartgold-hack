@@ -4118,6 +4118,11 @@ BOOL LONG_CALL CheckLegalMetronomeMove(struct BattleSystem *bsys UNUSED, struct 
 {
     int i = 0;
 
+    // never call G-Max moves (they sit above the normal move range) or moves that aren't implemented
+    if (moveNo >= MOVE_G_MAX_WILDFIRE || IsMoveUnimplemented(moveNo)) {
+        return FALSE;
+    }
+
     do {
         if (sMetronomeMimicMoveBanList[i] == moveNo) {
             break;

@@ -10,8 +10,8 @@ Base ROM: US English HeartGold (game code IPKE). Personal use only.
 4. Impossible evolutions — DONE. Trade/trade-item evos → use item (Linking Cord, Sachet, Whipped Dream, held items made usable). Levels: Milcery 25, Poltchageist 28, Gimmighoul 40, Bisharp 50, Stantler 30, Pawmo 32, Bramblin 30, Rellor 30, Primeape 35, Dipplin→Hydrapple 40.
 5. Gens 1–9 + Fairy — DONE (audit). Missing Gen 9 battle sprites (9) and follower sprites (30) converted from pokeemerald-expansion (scripts/hack/). HeightTable recomputed for Gen 5+.
    - Extra: 8 abilities and 30 moves implemented (see git log). Skipped: Opportunist, Ball Fetch, Symbiosis, Embody Aspect; 29 moves still unimplemented (doubles/field effects).
-6. Remove Dynamax/Gigantamax, Z-moves, Tera leftovers — NEXT
-7. Mega Stone shop (Slowpoke Tail vendor near Lake of Rage) + Key Stone
+6. Remove Dynamax/Gigantamax, Z-moves, Tera leftovers — DONE. Engine never activates any of them (battle steps are empty stubs, flags never set); no gimmick moves in learnsets, items in shops/wild held items, or trainer data. Fixed Metronome/Copycat being able to call G-Max moves and unimplemented moves. Terapagos Tera Shift form change kept (ability, not Terastallization).
+7. NEXT: Mega Stone shop (Slowpoke Tail vendor near Lake of Rage) + Key Stone
 8. Level caps tied to next Gym Leader (hg-engine has IMPLEMENT_LEVEL_CAP)
 9. Move Relearner in all 16 gym towns, standard relearner, 500₽ per move
 10. Starter randomizer (seeded; Grass/Fire/Water pools Gens 1–9 incl. Johto starters)
