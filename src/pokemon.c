@@ -1717,6 +1717,50 @@ u32 CheckCanUseBallOnDoublesFromBag(struct BattleStruct *sp)
     return TRUE;
 }
 
+#ifdef LEVEL_CAP_FROM_BADGES
+// badge indices (asm/include/scriptmacros.inc)
+#define BADGE_ZEPHYR  0
+#define BADGE_HIVE    1
+#define BADGE_PLAIN   2
+#define BADGE_FOG     3
+#define BADGE_STORM   4
+#define BADGE_MINERAL 5
+#define BADGE_GLACIER 6
+#define BADGE_RISING  7
+#define FLAG_GAME_CLEAR_FOR_CAP 2404 // FLAG_GAME_CLEAR, set after beating the Elite Four
+
+// Kanto gyms can be taken in any order, so the cap rises with the number of Kanto badges.
+// these are the Kanto leaders' ace levels sorted low to high, then Blue, then Red (after all 16 badges)
+static const u8 sKantoLevelCaps[] = { 50, 53, 54, 54, 55, 56, 59, 60, 88 };
+
+/**
+ *  @brief level cap = the ace level of the next gym leader / Elite Four / Red, worked out from the player's badges
+ */
+u32 GetLevelCapFromBadges(void)
+{
+    struct PlayerProfile *profile = Sav2_PlayerData_GetProfileAddr(SaveBlock2_get());
+    #define HAS(b) (PlayerProfile_TestBadgeFlag(profile, (b)) == TRUE)
+
+    if (!HAS(BADGE_ZEPHYR)) return 13;   // Falkner - Pidgeotto
+    if (!HAS(BADGE_HIVE))   return 17;   // Bugsy - Scyther
+    if (!HAS(BADGE_PLAIN))  return 19;   // Whitney - Miltank
+    if (!HAS(BADGE_FOG))    return 25;   // Morty - Gengar
+    // Chuck (31) and Jasmine (35) can be done in either order, and Pryce is 34, so use 35 for the whole stretch
+    if (!HAS(BADGE_STORM) || !HAS(BADGE_MINERAL) || !HAS(BADGE_GLACIER)) return 35;
+    if (!HAS(BADGE_RISING)) return 41;   // Clair - Kingdra
+    if (!CheckScriptFlag(FLAG_GAME_CLEAR_FOR_CAP)) return 50; // Elite Four - Lance's Dragonite
+
+    u32 kanto = 0;
+    for (int i = 8; i < 16; i++) {
+        if (HAS(i)) {
+            kanto++;
+        }
+    }
+    #undef HAS
+    return sKantoLevelCaps[kanto];
+}
+#endif // LEVEL_CAP_FROM_BADGES
+
 /**
  *  @brief get level cap from the script variable defined by LEVEL_CAP_VARIABLE
  *
@@ -1728,11 +1772,15 @@ u32 LONG_CALL GetLevelCap(void)
     return 0;
 #else
 #ifdef IMPLEMENT_LEVEL_CAP
+#ifdef LEVEL_CAP_FROM_BADGES
+    return GetLevelCapFromBadges();
+#else
     u32 levelCap = GetScriptVar(LEVEL_CAP_VARIABLE);
     if (levelCap > 100 || levelCap == 0) {
         levelCap = 100;
     }
     return levelCap;
+#endif // LEVEL_CAP_FROM_BADGES
 #else
     return 100;
 #endif // IMPLEMENT_LEVEL_CAP
