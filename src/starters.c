@@ -1,6 +1,8 @@
 #include "../include/constants/species.h"
 #include "../include/pokemon.h"
 #include "../include/types.h"
+#include "../include/config.h"
+#include "../include/randomizer.h"
 
 extern u32 space_for_setmondata;
 extern u32 sStarterChoiceCries[];
@@ -30,8 +32,13 @@ static const u16 sStarterChoices[3] = {
 void LONG_CALL CreateStarter_SetStarterSpecies(int *species)
 {
     for (int i = 0; i < 3; i++) {
+#ifdef RANDOMIZE_STARTERS
+        // hack: seeded starter randomizer (src/randomizer.c); slot 0 grass, 1 fire, 2 water
+        species[i] = Randomizer_GetStarterSpecies(i);
+#else
         // strip off form
         species[i] = sStarterChoices[i] & 0x7FF;
+#endif
     }
 }
 
@@ -47,7 +54,9 @@ void LONG_CALL CreateStarter_CreateMon(struct PartyPokemon *mon, int species, in
     u32 form = 0;
 
     if (slot >= 0 && slot < 3) {
+#ifndef RANDOMIZE_STARTERS
         form = sStarterChoices[slot] >> 11;
+#endif
     }
 
     space_for_setmondata = form;
@@ -70,7 +79,9 @@ void LONG_CALL CreateMonSprites_HandleForm(MON_PIC *pic, u16 species, u8 gender,
     u32 form = 0;
 
     if (slot >= 0 && slot < 3) {
+#ifndef RANDOMIZE_STARTERS
         form = sStarterChoices[slot] >> 11;
+#endif
         sStarterChoiceCries[slot] = (form == 0) ? species : PokeOtherFormMonsNoGet(species, form);
     }
 

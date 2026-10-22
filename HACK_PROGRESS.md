@@ -14,10 +14,11 @@ Base ROM: US English HeartGold (game code IPKE). Personal use only.
 7. Mega Stone shop — DONE. Goldenrod Radio Tower 1F "Ben fan" NPC (data/scr_seq/scr_seq_00029_D23R0101.s, text data/text/065.txt). First talk gives Key Stone + sets FLAG_MEGA_EVOLUTION_ENABLED, then sells all 92 Mega Stones at 10,000 each via new special mart index 30 (expanded table sSpecialMartTable in src/field/mart.c, repointed at 0x02048190).
 8. Level caps — DONE. IMPLEMENT_LEVEL_CAP + LEVEL_CAP_FROM_BADGES (GetLevelCapFromBadges in src/pokemon.c): Johto 13/17/19/25, 35 for Chuck/Jasmine/Pryce, 41 Clair, 50 Elite Four; Kanto by badge count 50,53,54,54,55,56,59,60; 88 for Red. Rare Candies capped. Daycare not capped (vanilla code).
 9. Move Relearner — DONE. Shared std script 2074 (commonscript entry 074, text 040.txt 121-127). One flavor NPC in each gym town Pokémon Center calls it (data/scr_seq/scr_seq_00xxx_T??PC0101.s): Violet, Azalea, Goldenrod, Ecruteak, Cianwood, Olivine, Mahogany, Blackthorn, Pewter, Cerulean, Vermilion, Celadon, Fuchsia, Saffron, Cinnabar, Viridian. 500 charged only when a move is learned.
-10. NEXT: Starter randomizer (seeded; Grass/Fire/Water pools Gens 1–9 incl. Johto starters)
-11. Area randomizer (seeded; similar BST; excludes starters, legendaries, Ultra Beasts, battle forms; starters never wild)
+10. Starter randomizer — DONE. RANDOMIZE_STARTERS, src/randomizer.c. Seed made once per new game (first use), stored in vars 0x4164/0x4165. One Grass/Fire/Water line each from 9 per type (Gens 1–9). Silver's Johto starter lines remapped stage-for-stage in src/field/enemy_party.c. Elm's selection text names the type (data/text/190.txt). Not updated: friend's Pokégear flavor lines naming Johto starters (text 662/663).
+11. NEXT: Area randomizer (seeded; similar BST; excludes starters, legendaries, Ultra Beasts, battle forms; starters never wild)
 12. Nuzlocke mode (RadiantRed rules: New Game option; first encounter per area once you have Poké Balls; fainted → locked graveyard box; dupes + shiny clauses; gifts/statics free; forced Set; nicknames optional; wipe = game over)
 13. Sinnoh/Platinum content — decide later
+14. Backburner idea: two-chapter game (FireRed-style Kanto as Red first, then HeartGold as Ethan/Lyra; Mt. Silver Red uses the team that beat the Chapter 1 Elite Four). Lighter alternative discussed: tool that imports the RadiantRed Hall of Fame team as Mt. Silver Red's team. Revisit after the main list.
 
 ## Building in the cloud workspace (workarounds)
 - Only GitHub is reachable: ARM toolchain from xpack GitHub release (arm-none-eabi-gcc 14.2.1),

@@ -175,6 +175,9 @@
 // REMOVE_EVS makes stats ignore EVs entirely and stops battles from awarding them.
 #define REMOVE_EVS
 
+// RANDOMIZE_STARTERS (hack) picks a seeded Grass/Fire/Water starter from Gens 1-9 per new game; Silver's starter line follows it.
+#define RANDOMIZE_STARTERS
+
 // DELETABLE_HMS allows HMs to be forgotten, this also makes their quantity reduce, but the infinite TMs change prevents this.
 // #define DELETABLE_HMS
 

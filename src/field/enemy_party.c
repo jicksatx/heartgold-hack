@@ -9,6 +9,8 @@
 #include "constants/item.h"
 #include "constants/moves.h"
 #include "constants/species.h"
+#include "constants/trainerclass.h"
+#include "randomizer.h"
 #include "constants/weather_numbers.h"
 
 #include "bag.h"
@@ -149,6 +151,12 @@ void MakeTrainerPokemonParty(struct BATTLE_PARAM *bp, int num, int heapID)
         offset += 2;
         form_no = (species & 0xF800) >> 11;
         species &= 0x07FF;
+#ifdef RANDOMIZE_STARTERS
+        // hack: Silver's starter line follows the randomized starters (src/randomizer.c)
+        if (bp->trainer_data[num].tr_type == TRAINERCLASS_RIVAL) {
+            species = Randomizer_RemapRivalSpecies(species);
+        }
+#endif
 
         // item field - conditional
         if (bp->trainer_data[num].data_type & TRAINER_DATA_TYPE_ITEMS) {
