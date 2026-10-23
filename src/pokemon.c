@@ -17,6 +17,7 @@
 
 #include "bag.h"
 #include "nuzlocke.h"
+#include "chapter.h"
 #include "battle.h"
 #include "overlay.h"
 #include "rtc.h"
@@ -1748,6 +1749,20 @@ u32 GetLevelCapFromBadges(void)
 {
     struct PlayerProfile *profile = Sav2_PlayerData_GetProfileAddr(SaveBlock2_get());
     #define HAS(b) (PlayerProfile_TestBadgeFlag(profile, (b)) == TRUE)
+
+#ifdef CHAPTER_SYSTEM
+    // Part 1 (FireRed Kanto, as Red): FireRed's gym leader aces by Kanto badge count, then Champion Blue's ace
+    if (Chapter_Get() == CHAPTER_RED) {
+        static const u8 sPart1Caps[9] = { 14, 21, 24, 29, 43, 43, 47, 50, 63 };
+        u32 part1Badges = 0;
+        for (int i = 8; i < 16; i++) {
+            if (HAS(i)) {
+                part1Badges++;
+            }
+        }
+        return sPart1Caps[part1Badges];
+    }
+#endif
 
     if (!HAS(BADGE_ZEPHYR)) return 13;   // Falkner - Pidgeotto
     if (!HAS(BADGE_HIVE))   return 17;   // Bugsy - Scyther

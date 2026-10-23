@@ -18,6 +18,9 @@
 
 #define FLAG_GAME_CLEAR    2404
 
+// Part 1 wild tables are encounter narc members 143 + bank (data/EncountersPart1.inc)
+#define PART1_ENCOUNTER_OFFSET 143
+
 // Red's team is kept in the unused padding at the end of each PC Box (16 bytes x 30 boxes)
 #define CHAPTER_TEAM_MAGIC 0x31444552 // "RED1"
 #define CHAPTER_TEAM_SIZE  6

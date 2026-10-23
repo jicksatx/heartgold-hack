@@ -14206,4 +14206,7 @@ const EncounterData __data[] =
         .fishSwarm = SPECIES_MAGIKARP,
     },
 
+
+    // hack: Part 1 (FireRed Kanto) tables at 143 + bank (scripts/hack/gen_part1_wild.py)
+#include "EncountersPart1.inc"
 };

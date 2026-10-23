@@ -9,6 +9,7 @@
 
 #include "randomizer.h"
 #include "nuzlocke.h"
+#include "chapter.h"
 #include "script.h"
 
 /*
@@ -290,6 +291,15 @@ void LONG_CALL WildEncounters_ReadFromNarc(EncounterData *encData, u32 mapno)
     if (MapHeader_HasWildEncounters(mapno)) {
         u32 bank = MapHeader_GetWildEncounterBank(mapno);
         ReadWholeNarcMemberByIdPair(encData, ENCDATA_NARC, bank);
+#ifdef CHAPTER_SYSTEM
+        // Part 1 (FireRed Kanto) uses FireRed's table where there is one: member 143 + bank, marked with dummy[0]
+        if (Chapter_Get() == CHAPTER_RED) {
+            ReadWholeNarcMemberByIdPair(encData, ENCDATA_NARC, PART1_ENCOUNTER_OFFSET + bank);
+            if (encData->dummy[0] != 1) {
+                ReadWholeNarcMemberByIdPair(encData, ENCDATA_NARC, bank);
+            }
+        }
+#endif
         Randomizer_RandomizeEncounterTable(encData, bank);
     }
 
