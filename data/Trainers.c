@@ -31367,6 +31367,312 @@ const TrainerData sTrainerData[] = {
         },
     },
 
+    // BEGIN PART1 GENERATED (scripts/hack/gen_part1_trainers.py)
+    // TRAINER_BUG_CATCHER_RICK (FireRed, ViridianForest)
+    [744] = {
+        .name = "Rick",
+        .data = {
+            .trainerType = TRAINER_DATA_TYPE_NOTHING,
+            .trainerClass = TRAINERCLASS_BUG_CATCHER,
+            .items = { ITEM_NONE, ITEM_NONE, ITEM_NONE, ITEM_NONE },
+            .aiFlags = F_PRIORITIZE_SUPER_EFFECTIVE | F_EVALUATE_ATTACKS,
+            .battleType = SINGLE_BATTLE,
+        },
+        .party = {
+            {
+                .ivs = 0,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 6,
+                .species = SPECIES_WEEDLE,
+                .ballSeal = 0,
+            },
+            {
+                .ivs = 0,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 6,
+                .species = SPECIES_CATERPIE,
+                .ballSeal = 0,
+            },
+        },
+        .text = {
+            {
+                .type = TRMSG_INTRO,
+                .text = "Hey! You have Pokémon!\\nCome on!\\fLet’s battle ’em!\\n",
+            },
+            {
+                .type = TRMSG_LOSE,
+                .text = "No!\\nCaterpie can’t hack it!\\n",
+            },
+            {
+                .type = TRMSG_AFTER,
+                .text = "Ssh! You’ll scare the bugs away.\\nAnother time, okay?\\n",
+            },
+        },
+    },
+
+    // TRAINER_BUG_CATCHER_DOUG (FireRed, ViridianForest)
+    [745] = {
+        .name = "Doug",
+        .data = {
+            .trainerType = TRAINER_DATA_TYPE_NOTHING,
+            .trainerClass = TRAINERCLASS_BUG_CATCHER,
+            .items = { ITEM_NONE, ITEM_NONE, ITEM_NONE, ITEM_NONE },
+            .aiFlags = F_PRIORITIZE_SUPER_EFFECTIVE | F_EVALUATE_ATTACKS,
+            .battleType = SINGLE_BATTLE,
+        },
+        .party = {
+            {
+                .ivs = 0,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 7,
+                .species = SPECIES_WEEDLE,
+                .ballSeal = 0,
+            },
+            {
+                .ivs = 0,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 7,
+                .species = SPECIES_KAKUNA,
+                .ballSeal = 0,
+            },
+            {
+                .ivs = 0,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 7,
+                .species = SPECIES_WEEDLE,
+                .ballSeal = 0,
+            },
+        },
+        .text = {
+            {
+                .type = TRMSG_INTRO,
+                .text = "Yo!\\nYou can’t jam out if you’re a\\fPokémon Trainer!\\n",
+            },
+            {
+                .type = TRMSG_LOSE,
+                .text = "Huh?\\nI ran out of Pokémon!\\n",
+            },
+            {
+                .type = TRMSG_AFTER,
+                .text = "That totally stinks! I’m going to\\ncatch some stronger ones!\\n",
+            },
+        },
+    },
+
+    // TRAINER_BUG_CATCHER_SAMMY (FireRed, ViridianForest)
+    [746] = {
+        .name = "Sammy",
+        .data = {
+            .trainerType = TRAINER_DATA_TYPE_NOTHING,
+            .trainerClass = TRAINERCLASS_BUG_CATCHER,
+            .items = { ITEM_NONE, ITEM_NONE, ITEM_NONE, ITEM_NONE },
+            .aiFlags = F_PRIORITIZE_SUPER_EFFECTIVE | F_EVALUATE_ATTACKS,
+            .battleType = SINGLE_BATTLE,
+        },
+        .party = {
+            {
+                .ivs = 0,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 9,
+                .species = SPECIES_WEEDLE,
+                .ballSeal = 0,
+            },
+        },
+        .text = {
+            {
+                .type = TRMSG_INTRO,
+                .text = "Hey, wait up!\\nWhat’s the hurry? Why the rush?\\n",
+            },
+            {
+                .type = TRMSG_LOSE,
+                .text = "I give!\\nYou’re good at this!\\n",
+            },
+            {
+                .type = TRMSG_AFTER,
+                .text = "Sometimes, you can find stuff on\\nthe ground.\\rI’m looking for the stuff I\\ndropped. Can you help me?\\n",
+            },
+        },
+    },
+
+    // TRAINER_BUG_CATCHER_ANTHONY (FireRed, ViridianForest)
+    [747] = {
+        .name = "Anthony",
+        .data = {
+            .trainerType = TRAINER_DATA_TYPE_NOTHING,
+            .trainerClass = TRAINERCLASS_BUG_CATCHER,
+            .items = { ITEM_NONE, ITEM_NONE, ITEM_NONE, ITEM_NONE },
+            .aiFlags = F_PRIORITIZE_SUPER_EFFECTIVE | F_EVALUATE_ATTACKS,
+            .battleType = SINGLE_BATTLE,
+        },
+        .party = {
+            {
+                .ivs = 0,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 7,
+                .species = SPECIES_CATERPIE,
+                .ballSeal = 0,
+            },
+            {
+                .ivs = 0,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 8,
+                .species = SPECIES_CATERPIE,
+                .ballSeal = 0,
+            },
+        },
+        .text = {
+            {
+                .type = TRMSG_INTRO,
+                .text = "I might be little, but I won’t like\\nit if you go easy on me!\\n",
+            },
+            {
+                .type = TRMSG_LOSE,
+                .text = "Oh, boo.\\nNothing went right.\\n",
+            },
+            {
+                .type = TRMSG_AFTER,
+                .text = "I lost some of my allowance...\\n",
+            },
+        },
+    },
+
+    // TRAINER_BUG_CATCHER_CHARLIE (FireRed, ViridianForest)
+    [748] = {
+        .name = "Charlie",
+        .data = {
+            .trainerType = TRAINER_DATA_TYPE_NOTHING,
+            .trainerClass = TRAINERCLASS_BUG_CATCHER,
+            .items = { ITEM_NONE, ITEM_NONE, ITEM_NONE, ITEM_NONE },
+            .aiFlags = F_PRIORITIZE_SUPER_EFFECTIVE | F_EVALUATE_ATTACKS,
+            .battleType = SINGLE_BATTLE,
+        },
+        .party = {
+            {
+                .ivs = 0,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 7,
+                .species = SPECIES_METAPOD,
+                .ballSeal = 0,
+            },
+            {
+                .ivs = 0,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 7,
+                .species = SPECIES_CATERPIE,
+                .ballSeal = 0,
+            },
+            {
+                .ivs = 0,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 7,
+                .species = SPECIES_METAPOD,
+                .ballSeal = 0,
+            },
+        },
+        .text = {
+            {
+                .type = TRMSG_INTRO,
+                .text = "Did you know that Pokémon evolve?\\n",
+            },
+            {
+                .type = TRMSG_LOSE,
+                .text = "Oh!\\nI lost!\\n",
+            },
+            {
+                .type = TRMSG_AFTER,
+                .text = "Bug Pokémon evolve quickly.\\nThey’re a lot of fun!\\n",
+            },
+        },
+    },
+
+    // TRAINER_CAMPER_LIAM (FireRed, PewterCity_Gym)
+    [749] = {
+        .name = "Liam",
+        .data = {
+            .trainerType = TRAINER_DATA_TYPE_MOVES,
+            .trainerClass = TRAINERCLASS_CAMPER,
+            .items = { ITEM_NONE, ITEM_NONE, ITEM_NONE, ITEM_NONE },
+            .aiFlags = F_PRIORITIZE_SUPER_EFFECTIVE | F_EVALUATE_ATTACKS,
+            .battleType = SINGLE_BATTLE,
+        },
+        .party = {
+            {
+                .ivs = 0,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 10,
+                .species = SPECIES_GEODUDE,
+                .moves = { MOVE_TACKLE, MOVE_DEFENSE_CURL, MOVE_NONE, MOVE_NONE },
+                .ballSeal = 0,
+            },
+            {
+                .ivs = 0,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 11,
+                .species = SPECIES_SANDSHREW,
+                .moves = { MOVE_SCRATCH, MOVE_DEFENSE_CURL, MOVE_SAND_ATTACK, MOVE_NONE },
+                .ballSeal = 0,
+            },
+        },
+        .text = {
+            {
+                .type = TRMSG_INTRO,
+                .text = "Stop right there, kid!\\rYou’re ten thousand light-years \\nfrom facing Brock!\\n",
+            },
+            {
+                .type = TRMSG_LOSE,
+                .text = "Darn!\\rLight-years isn’t time...\\nIt measures distance!\\n",
+            },
+            {
+                .type = TRMSG_AFTER,
+                .text = "You’re pretty hot.\\n...But not as hot as Brock!\\n",
+            },
+        },
+    },
+
+    // TRAINER_LEADER_BROCK (FireRed, PewterCity_Gym)
+    [750] = {
+        .name = "Brock",
+        .data = {
+            .trainerType = TRAINER_DATA_TYPE_MOVES,
+            .trainerClass = TRAINERCLASS_LEADER_BROCK,
+            .items = { ITEM_NONE, ITEM_NONE, ITEM_NONE, ITEM_NONE },
+            .aiFlags = F_PRIORITIZE_SUPER_EFFECTIVE | F_EVALUATE_ATTACKS,
+            .battleType = SINGLE_BATTLE,
+        },
+        .party = {
+            {
+                .ivs = 0,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 12,
+                .species = SPECIES_GEODUDE,
+                .moves = { MOVE_TACKLE, MOVE_DEFENSE_CURL, MOVE_NONE, MOVE_NONE },
+                .ballSeal = 0,
+            },
+            {
+                .ivs = 0,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 14,
+                .species = SPECIES_ONIX,
+                .moves = { MOVE_TACKLE, MOVE_BIND, MOVE_ROCK_TOMB, MOVE_NONE },
+                .ballSeal = 0,
+            },
+        },
+        .text = {
+            {
+                .type = TRMSG_INTRO,
+                .text = "So, you’re here. I’m Brock.\\nI’m Pewter’s Gym Leader.\\rMy rock-hard willpower is evident\\neven in my Pokémon.\\rMy Pokémon are all rock hard, and\\nhave true-grit determination.\\rThat’s right - my Pokémon are all\\nthe Rock type!\\rFuhaha! You’re going to challenge\\nme knowing that you’ll lose?\\rThat’s the Trainer’s honor that\\ncompels you to challenge me.\\rFine, then!\\nShow me your best!\\n",
+            },
+            {
+                .type = TRMSG_LOSE,
+                .text = "I took you for granted, and so\\nI lost.\\rAs proof of your victory, I confer\\non you this...the official Pokémon\\fLeague Boulder Badge.\\rJust having the Boulder Badge makes\\nyour Pokémon more powerful.\\rIt also enables the use of the\\nmove Flash outside of battle.\\rOf course, a Pokémon must know the\\nmove Flash to use it.\\n",
+            },
+            {
+                .type = TRMSG_AFTER,
+                .text = "There are all kinds of Trainers in\\nthis huge world of ours.\\rYou appear to be very gifted as a\\nPokémon Trainer.\\rSo let me make a suggestion.\\rGo to the Gym in Cerulean and test\\nyour abilities.\\n",
+            },
+        },
+    },
+    // END PART1 GENERATED
 };
 
 const u16 sTrainerTextOrder[] = {
@@ -32012,6 +32318,15 @@ const u16 sTrainerTextOrder[] = {
     741,
     742,
     743,
+    // BEGIN PART1 GENERATED (scripts/hack/gen_part1_trainers.py)
+    744,
+    745,
+    746,
+    747,
+    748,
+    749,
+    750,
+    // END PART1 GENERATED
 };
 
 const u32 sTrainerDataCount = sizeof(sTrainerData) / sizeof(sTrainerData[0]);

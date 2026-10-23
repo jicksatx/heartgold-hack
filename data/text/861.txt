@@ -1,0 +1,7 @@
+Hiya! I can tell you have what it\ntakes to become a Pokémon champ!\rI’m no Trainer, but I can tell you\nhow to win!\rBrock uses Rock-type Pokémon.\nThey’re tough, but Water-type and\fGrass-type moves work well on them!
+Just as I thought!\nYou’re Pokémon champ material!
+Pewter City Pokémon Gym\nLeader: Brock
+Pewter City Pokémon Gym\nLeader: Brock\rWinning Trainers:\n{STRVAR_1 3, 0, 0}
+{STRVAR_1 3, 0, 0} received the Boulder Badge\nfrom Brock!
+Brock: Wait! Take this with you!\r
+Brock: A TM contains a technique\nthat can be taught to Pokémon.\rTM39 contains Rock Tomb.\rIt hurls boulders at the foe and\nlowers its Speed.

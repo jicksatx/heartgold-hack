@@ -1,0 +1,15 @@
+You’re a Trainer, right?\rBrock’s looking for new challengers!\nGo see him at the Gym first!\r
+You’re a Trainer, right?\rBrock’s looking for new challengers!\nThe Gym’s right over there.
+You beat Brock? Wow!\rThe next Gym is in Cerulean City,\npast Mt. Moon.
+It’s rumored that Clefairy came\nfrom the moon!\rThey appeared after a moon stone\nfell on Mt. Moon.
+Brock is cool!\rHe’s not just tough. Everyone in\ntown looks up to him!
+Pewter City\nA Stone Gray City
+Pewter City Pokémon Gym\nLeader: Brock\fThe Rock-Solid Pokémon Trainer!
+Pewter Museum of Science
+Welcome to Pewter City!
+Oh, {STRVAR_1 3, 0, 0}!\r
+Aide: I’m glad I caught up to you.\rProfessor Oak asked me to deliver\nthis to you.\r
+{STRVAR_1 3, 0, 0} received the Running Shoes!
+{STRVAR_1 3, 0, 0} switched shoes with the\nRunning Shoes.\rHold the B Button to run!\r
+Aide: Well, I must be going back to\nthe lab. Bye!\r
+(Test build) Part 1 continues past\nhere in a later build.\r
