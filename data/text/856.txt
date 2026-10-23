@@ -1,2 +1,6 @@
 Daisy: Hi, {STRVAR_1 3, 0, 0}!\nBlue is out at Grandpa’s lab.
 Daisy: Blue left to train his\nPokémon. He’s so competitive!
+Daisy: Grandpa asked you to run an\nerrand? Here, this will help you!\r
+{STRVAR_1 3, 0, 0} received a Pokégear!\nIt has a Town Map built in.
+Daisy: Use it to find out where you\nare.\rDon’t mind whatever my brother\nsaid. Good luck!
+Daisy: The Town Map in your Pokégear\nwill help you find your way around.

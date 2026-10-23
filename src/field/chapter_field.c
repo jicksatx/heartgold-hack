@@ -30,6 +30,10 @@ static const struct Part1Map sPart1Maps[] = {
     { 49,  491, 965, 966, 854 }, // Pallet Town
     { 505, 492, 967, 968, 855 }, // Professor Oak's Lab
     { 504, 493, 969, 970, 856 }, // Blue's house 1F
+    { 9,   494, 971, 970, 859 }, // Route 1
+    { 50,  495, 972, 970, 857 }, // Viridian City
+    { 500, 496, 973, 974, 858 }, // Viridian City Poke Mart
+    { 27,  497, 975, 976, 860 }, // Route 22
 };
 
 #define MAP_HEADERS        ((const u8 *)0x020F6BE0) // sMapHeaders

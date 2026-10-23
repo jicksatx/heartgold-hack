@@ -81,7 +81,7 @@
       "param2": 0,
       "movement_range_x": 0,
       "movement_range_z": 0,
-      "x": 1041,
+      "x": 1039,
       "z": 358,
       "y": 0
     }
@@ -112,7 +112,7 @@
   "coord_events": [
     {
       "script": 7,
-      "x": 1040,
+      "x": 1038,
       "z": 355,
       "width": 4,
       "length": 1,

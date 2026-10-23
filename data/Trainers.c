@@ -31253,6 +31253,120 @@ const TrainerData sTrainerData[] = {
         },
     },
 
+    // hack: Part 1 (FireRed) - Blue on Route 22 (first time), player chose Grass
+    [741] = {
+        .name = "Blue",
+        .data = {
+            .trainerType = TRAINER_DATA_TYPE_NOTHING,
+            .trainerClass = TRAINERCLASS_LEADER_BLUE,
+            .items = { ITEM_NONE, ITEM_NONE, ITEM_NONE, ITEM_NONE },
+            .aiFlags = F_PRIORITIZE_SUPER_EFFECTIVE,
+            .battleType = SINGLE_BATTLE,
+        },
+        .party = {
+            {
+                .ivs = 0,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 9,
+                .species = SPECIES_PIDGEY,
+                .ballSeal = 0,
+            },
+            {
+                .ivs = 0,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 9,
+                .species = SPECIES_CHARMANDER,
+                .ballSeal = 0,
+            },
+        },
+        .text = {
+            {
+                .type = TRMSG_LOSE,
+                .text = "Awww!\\nYou just lucked out!\\n",
+            },
+            {
+                .type = TRMSG_WIN,
+                .text = "Yeah! Am I great or what?\\n",
+            },
+        },
+    },
+
+    // hack: Part 1 (FireRed) - Blue on Route 22 (first time), player chose Fire
+    [742] = {
+        .name = "Blue",
+        .data = {
+            .trainerType = TRAINER_DATA_TYPE_NOTHING,
+            .trainerClass = TRAINERCLASS_LEADER_BLUE,
+            .items = { ITEM_NONE, ITEM_NONE, ITEM_NONE, ITEM_NONE },
+            .aiFlags = F_PRIORITIZE_SUPER_EFFECTIVE,
+            .battleType = SINGLE_BATTLE,
+        },
+        .party = {
+            {
+                .ivs = 0,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 9,
+                .species = SPECIES_PIDGEY,
+                .ballSeal = 0,
+            },
+            {
+                .ivs = 0,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 9,
+                .species = SPECIES_SQUIRTLE,
+                .ballSeal = 0,
+            },
+        },
+        .text = {
+            {
+                .type = TRMSG_LOSE,
+                .text = "Awww!\\nYou just lucked out!\\n",
+            },
+            {
+                .type = TRMSG_WIN,
+                .text = "Yeah! Am I great or what?\\n",
+            },
+        },
+    },
+
+    // hack: Part 1 (FireRed) - Blue on Route 22 (first time), player chose Water
+    [743] = {
+        .name = "Blue",
+        .data = {
+            .trainerType = TRAINER_DATA_TYPE_NOTHING,
+            .trainerClass = TRAINERCLASS_LEADER_BLUE,
+            .items = { ITEM_NONE, ITEM_NONE, ITEM_NONE, ITEM_NONE },
+            .aiFlags = F_PRIORITIZE_SUPER_EFFECTIVE,
+            .battleType = SINGLE_BATTLE,
+        },
+        .party = {
+            {
+                .ivs = 0,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 9,
+                .species = SPECIES_PIDGEY,
+                .ballSeal = 0,
+            },
+            {
+                .ivs = 0,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 9,
+                .species = SPECIES_BULBASAUR,
+                .ballSeal = 0,
+            },
+        },
+        .text = {
+            {
+                .type = TRMSG_LOSE,
+                .text = "Awww!\\nYou just lucked out!\\n",
+            },
+            {
+                .type = TRMSG_WIN,
+                .text = "Yeah! Am I great or what?\\n",
+            },
+        },
+    },
+
 };
 
 const u16 sTrainerTextOrder[] = {
@@ -31895,6 +32009,9 @@ const u16 sTrainerTextOrder[] = {
     738,
     739,
     740,
+    741,
+    742,
+    743,
 };
 
 const u32 sTrainerDataCount = sizeof(sTrainerData) / sizeof(sTrainerData[0]);

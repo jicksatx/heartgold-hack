@@ -1,0 +1,6 @@
+Hey! You came from Pallet Town?\r
+You know Professor Oak, right?\rHis order came in.\nWill you take it to him?\r
+(unused)
+Okay, thanks!\rPlease say hi to Professor Oak\nfor me, too.
+This shop does good business in\nAntidotes.
+I’ve got to buy some Potions.\rYou never know when your Pokémon\nwill need quick healing.

@@ -18,3 +18,13 @@ Blue: Okay! I’ll make my Pokémon\nbattle to toughen it up!\r{STRVAR_1 3, 0, 0
 That’s Professor Oak’s last\nPokémon.
 I study Pokémon as Professor Oak’s\naide.
 Professor Oak: Now, {STRVAR_1 3, 0, 0}, which\nPokémon do you want?
+Professor Oak: Oh, {STRVAR_1 3, 0, 0}!\rHow is my old Pokémon?\rWell, it seems to like you a lot.\nYou must be talented as a Trainer!\rWhat? You have something for me?\r
+{STRVAR_1 3, 0, 0} delivered Oak’s Parcel.\r
+Professor Oak: Ah! This is the custom\nPoké Ball I ordered! Thank you!\r
+Blue: Gramps!\nWhat did you call me for?\r
+Professor Oak: Oh, right! I have a\nrequest for you two.\rOn the desk there is my invention,\nthe Pokédex!\rIt automatically records data on\nPokémon you’ve seen or caught.\rIt’s a high-tech encyclopedia!\r{STRVAR_1 3, 0, 0} and Blue!\nTake these with you!\r
+{STRVAR_1 3, 0, 0} received the Pokédex\nfrom Professor Oak!
+Professor Oak: To make a complete\nguide on all the Pokémon in the\fworld...\rThat was my dream!\rBut I’m too old.\nI can’t get the job done.\rSo, I want you two to fulfill my\ndream for me.\rGet moving, you two.\nThis is a great undertaking in\fPokémon history!\r
+Professor Oak: Oh, and you can’t catch\nPokémon without Poké Balls.\rHere, take these.\r
+Blue: All right, Gramps!\nLeave it all to me!\r{STRVAR_1 3, 0, 0}, I hate to say it, but I\ndon’t need you!\rI know! I’ll borrow a Town Map from\nmy sis!\rI’ll tell her not to lend you one,\n{STRVAR_1 3, 0, 0}! Hahaha!\r
+Professor Oak: Pokémon around the\nworld wait for you, {STRVAR_1 3, 0, 0}!

@@ -1,0 +1,4 @@
+Blue: Hey! {STRVAR_1 3, 0, 0}!\rYou’re going to the Pokémon League?\rForget it! You probably don’t have\nany Badges.\rThe guard won’t let you through!\rBy the way, did your Pokémon get any\nstronger?\r
+Blue: I heard the Pokémon League has\nmany tough Trainers.\rI have to figure out how to get past\nthem.\rYou should quit dawdling and get a\nmove on!\r
+Pokémon League Front Gate\rOnly Trainers with all eight Kanto\nBadges may enter.
+Route 22\nPokémon League Front Gate

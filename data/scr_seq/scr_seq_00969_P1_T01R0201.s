@@ -18,6 +18,8 @@ scr_seq_P1_T01R0201_001:
 	lockall
 	faceplayer
 	buffer_players_name 0
+	compare VAR_P1_STORY, 6
+	goto_if_ge _townMap
 	compare VAR_P1_STORY, 4
 	goto_if_ge _blueLeft
 	npc_msg 0
@@ -25,6 +27,23 @@ scr_seq_P1_T01R0201_001:
 
 _blueLeft:
 	npc_msg 1
+	goto _done
+
+// FireRed: Daisy gives Red a Town Map.  here it's the Pokegear with its map card
+_townMap:
+	goto_if_set FLAG_GOT_POKEGEAR, _haveMap
+	npc_msg 2
+	setflag FLAG_GOT_POKEGEAR
+	register_pokegear_card 1
+	buffer_players_name 0
+	npc_msg 3
+	play_fanfare SEQ_ME_KEYITEM
+	wait_fanfare
+	npc_msg 4
+	goto _done
+
+_haveMap:
+	npc_msg 5
 _done:
 	wait_button
 	closemsg

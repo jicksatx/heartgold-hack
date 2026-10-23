@@ -1,0 +1,16 @@
+Old Man: You can’t go through here!\nThis is private property!\r
+Old Man: You can’t go through here!\nThis is private property!
+Old Man: Ahh, I’ve had my coffee now,\nand I feel great!\rWhen a wild Pokémon is weak, throw a\nPoké Ball at it to catch it.\rWeaken it in battle first.\nA healthy Pokémon may break free!
+Oh, Grandpa! Don’t be so mean!\rI’m so sorry. He hasn’t had his\ncoffee yet.
+When I go shopping in Pewter City,\nI have to take the winding trail\fthrough Viridian Forest.
+Those Pokémon that look like\ncaterpillars...\rDo you want to know about them?\n{YESNO 0}
+Caterpie has no poison, but Weedle\ndoes.\rWatch out for its Poison Sting!
+Oh, okay then!
+This Gym is always closed.\rI wonder who the Leader is?
+You can carry up to six Pokémon\nwith you.\rIf you catch more, they’re sent to\nthe PC.
+Viridian City\nThe Eternally Green Paradise
+Trainer Tips\rCatch Pokémon and expand your\ncollection.\rThe more you have, the easier it\nis to battle.
+Viridian City Pokémon Gym\nLeader: ...\fThe rest of the text is illegible...
+Trainer House\nThe Club for Top Trainer Battles
+The Gym’s doors are locked...
+(Test build) Part 1 continues past\nhere in a later build.\r

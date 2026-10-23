@@ -9,6 +9,7 @@
 .include "asm/include/std_scripts.inc"
 .include "asm/include/trainers.inc"
 
+#include "constants/item.h"
 #include "config.h"
 
 // hack: Professor Oak's Lab in Part 1 (FireRed).  events: data/eventdata/part1/492_P1_T01R0301.json, text:
@@ -131,8 +132,53 @@ scr_seq_P1_T01R0301_005:
 	goto _talkDone
 
 _oakAfter:
+	compare VAR_P1_STORY, 5
+	goto_if_eq _deliverParcel
+	goto_if_gt _oakDexTalk
 	npc_msg 13
 	goto _talkDone
+
+_oakDexTalk:
+	npc_msg 29
+	goto _talkDone
+
+// FireRed: Red brings Oak's Parcel from Viridian; Blue comes back and both get a Pokedex
+_deliverParcel:
+	npc_msg 20
+	takeitem_no_check ITEM_PARCEL, 1
+	npc_msg 21
+	npc_msg 22
+	closemsg
+	move_person OBJ_BLUE, 8, 12
+	clearflag FLAG_P1_HIDE_LAB_BLUE
+	show_person OBJ_BLUE
+	apply_movement OBJ_BLUE, _blueWalkIn
+	wait_movement
+	npc_msg 23
+	npc_msg 24
+	give_pokedex
+	setflag FLAG_GOT_POKEDEX
+	nat_dex_flag_action 1, VAR_SPECIAL_RESULT
+	buffer_players_name 0
+	npc_msg 25
+	play_fanfare SEQ_ME_KEYITEM
+	wait_fanfare
+	closemsg
+	buffer_players_name 0
+	npc_msg 26
+	npc_msg 27
+	giveitem_no_check ITEM_POKE_BALL, 5
+	buffer_players_name 0
+	npc_msg 28
+	closemsg
+	apply_movement OBJ_BLUE, _blueWalkOut
+	wait_movement
+	hide_person OBJ_BLUE
+	setflag FLAG_P1_HIDE_LAB_BLUE
+	setvar VAR_P1_STORY, 6
+	setvar VAR_P1_ROUTE22, 1
+	releaseall
+	end
 
 scr_seq_P1_T01R0301_006:
 	play_se SEQ_SE_DP_SELECT
@@ -224,6 +270,17 @@ _oakIsIn:
 	.balign 4
 _stepBack:
 	step 12, 1  // walk north
+	step_end
+
+	.balign 4
+_blueWalkIn:
+	step 12, 3  // walk north
+	step_end
+
+	.balign 4
+_blueWalkOut:
+	step 13, 3  // walk south
+	step 69, 1  // invisible
 	step_end
 
 	.balign 4

@@ -373,8 +373,11 @@
 .equ VAR_UNK_4166, 0x4166
 .equ VAR_CHAPTER, 0x4166
 // hack: Part 1 story progress (FireRed).  0 start, 1 Oak led Red to the lab, 2 choosing a starter, 3 got starter,
-// 4 beat/lost to Blue in the lab
+// 4 beat/lost to Blue in the lab,
 .equ VAR_P1_STORY, 0x4167
+// 5 has Oak's Parcel, 6 got the Pokedex
+// Route 22 rival: 1 waiting (after the Pokedex), 2 beaten
+.equ VAR_P1_ROUTE22, 0x4168
 .equ VAR_UNK_4167, 0x4167
 .equ VAR_UNK_4168, 0x4168
 .equ VAR_UNK_4169, 0x4169
