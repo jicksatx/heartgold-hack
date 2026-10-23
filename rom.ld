@@ -924,3 +924,4 @@ Save_MapObjects_Get = 0x0203B9D0 | 1;
 /* hack: chapter system (src/chapter.c) */
 Heap_Destroy = 0x0201A9C4 | 1;
 RegisterMainOverlay = 0x02000EF4 | 1;
+TrainerClass_GetGenderOrTrainerCount = 0x020735F8 | 1;

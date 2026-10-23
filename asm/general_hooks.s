@@ -138,3 +138,14 @@ ldr r2, =0x021FF662 | 1
 bx  r2
 
 .pool
+
+// hack: Part 1 skips Professor Oak's boy/girl question (src/chapter.c).  replaces the ARE_YOU_A_GENDER case of
+// the Oak's speech state machine (overlay 53, 0x021E7818); r4 = speech data.  returns into the shared exit (r5 = 0).
+.global Chapter_OakSpeechGenderHook
+Chapter_OakSpeechGenderHook:
+mov r0, r4
+bl Chapter_OakSpeechAskGender
+ldr r1, =0x021E7CF8 | 1
+bx r1
+
+.pool

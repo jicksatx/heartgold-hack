@@ -183,4 +183,83 @@ BOOL LONG_CALL Chapter_ContinueAppExit(void *man UNUSED, int *state UNUSED)
     return TRUE;
 }
 
+// player sprite tags by state (PLAYER_STATE_*): Ethan, Lyra, and Red (0 = use Ethan's)
+static const u16 sPlayerSprites[3][15] = {
+    { 0, 21, 178, 258, 176, 180, 407, 188, 196, 198, 200, 248, 260, 423, 297 },
+    { 97, 98, 179, 259, 177, 181, 408, 189, 197, 199, 201, 249, 261, 424, 298 },
+    { 7000, 7001, 7002, 0, 7003, 7004, 0, 7005, 7006, 7007, 7008, 7009, 0, 0, 0 }, // src/field/overworld_table.c
+};
+
+/**
+ *  @brief replaces PlayerAvatar_GetSpriteByStateAndGender (0x0205C898): in Part 1 the player is Red
+ */
+u32 LONG_CALL Chapter_GetPlayerSprite(s32 state, u32 gender)
+{
+    if (state < 0 || state >= 15) {
+        return 0;
+    }
+    if (Chapter_Get() == CHAPTER_RED && sPlayerSprites[2][state] != 0) {
+        return sPlayerSprites[2][state];
+    }
+    return sPlayerSprites[gender ? 1 : 0][state];
+}
+
+u32 LONG_CALL TrainerClass_GetGenderOrTrainerCount(int trainerClass);
+
+/**
+ *  @brief replaces TrainerClassToBackpicID (0x0207280C): in Part 1 the player's battle back sprite is Red's (17,
+ *         data/graphics/trainer_back_gfx/17.png)
+ */
+int LONG_CALL Chapter_TrainerClassToBackpic(int trainerClass, BOOL isLink)
+{
+    switch (trainerClass) {
+    case 0: // Ethan
+    case 1: // Lyra
+        if (isLink) {
+            return trainerClass + 15;
+        }
+        if (Chapter_Get() == CHAPTER_RED) {
+            return 17;
+        }
+        return trainerClass;
+    case 23: // rival
+        return 2;
+    case 123: // Lance
+        return 3;
+    case 90: case 91: case 92: case 93: case 94: // Cheryl, Riley, Buck, Mira, Marley
+        return trainerClass - 86;
+    case 125: case 126: // Lucas, Dawn (DP)
+        return trainerClass - 116;
+    case 127: case 128: // Lucas, Dawn (Pt)
+        return trainerClass - 115;
+    default:
+        return TrainerClass_GetGenderOrTrainerCount(trainerClass) == 1 ? 1 : 0;
+    }
+}
+
+// overlay 53 (Professor Oak's speech)
+#define OakSpeech_PrintDialogMsg ((BOOL (*)(void *data, int msgId, int a2))(0x021E611C | 1))
+#define BeginNormalPaletteFade ((void (*)(int screen, int typeTop, int typeBottom, u16 color, int duration, int framesPer, u32 heapId))(0x0200FA24 | 1))
+#define OAK_SPEECH_STATE(data) (*(int *)((u8 *)(data) + 0x0C))
+#define OAK_SPEECH_PLAYER_GENDER(data) (*(u16 *)((u8 *)(data) + 0x134))
+#define OAK_SPEECH_CURSOR_POS(data) (*((u8 *)(data) + 0x163))
+
+/**
+ *  @brief the "Are you a boy or a girl?" step of Oak's speech.  Part 1 is always Red, so it skips straight to
+ *         "so you're a boy" -> naming.  otherwise it does what the original code did.
+ */
+void LONG_CALL Chapter_OakSpeechAskGender(void *data)
+{
+    if (Chapter_Get() == CHAPTER_RED) {
+        OAK_SPEECH_PLAYER_GENDER(data) = 0;
+        OAK_SPEECH_CURSOR_POS(data) = 0;
+        OAK_SPEECH_STATE(data) = 93; // OAK_SPEECH_MAIN_STATE_CONFIRM_GENDER_YES
+        return;
+    }
+    if (OakSpeech_PrintDialogMsg(data, 37, 1) == TRUE) {
+        OAK_SPEECH_STATE(data) = 62; // OAK_SPEECH_MAIN_STATE_WAIT_FADE_OUT_TO_ASK_GENDER
+        BeginNormalPaletteFade(4, 0, 0, 0, 6, 1, *(u32 *)data); // sub screen, brightness out, black
+    }
+}
+
 #endif // CHAPTER_SYSTEM

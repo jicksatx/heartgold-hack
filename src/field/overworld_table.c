@@ -23,7 +23,7 @@
     { .tag = NEW_NPC_TAG_START + num, .gfx = NEW_NPC_GFX_START + num, .callback_params = 0 },
 
 // adjust this depending on the amount of new npc's that you have added
-#define MON_OVERWORLD_GFX_START (297)
+#define MON_OVERWORLD_GFX_START (307) // hack: 297 + the 10 Red player sheets in data/graphics/overworlds/custom
 
 #define MON_FOLLOWER_ENTRY(species, cbparams) \
     { .tag = MON_OVERWORLD_TAG_START + species, .gfx = MON_OVERWORLD_GFX_START + species, .callback_params = cbparams },
@@ -310,6 +310,18 @@ struct OVERWORLD_TAG gOWTagToFileNum[] = // skip down a bit to see the parts tha
         { .tag = 425, .gfx = 210, .callback_params = 0x45A5 },
         { .tag = 426, .gfx = 211, .callback_params = 0x49A5 },
         { .tag = 427, .gfx = 212, .callback_params = 0x0000 },
+
+        // hack: Red, the Part 1 player (scripts/hack/make_red_overworlds.py), same callback params as Ethan's sheets
+        { .tag = NEW_NPC_TAG_START + 0, .gfx = NEW_NPC_GFX_START + 0, .callback_params = 0x1C60 }, // walk/run
+        { .tag = NEW_NPC_TAG_START + 1, .gfx = NEW_NPC_GFX_START + 1, .callback_params = 0x1881 }, // bike
+        { .tag = NEW_NPC_TAG_START + 2, .gfx = NEW_NPC_GFX_START + 2, .callback_params = 0x24E0 }, // surf
+        { .tag = NEW_NPC_TAG_START + 3, .gfx = NEW_NPC_GFX_START + 3, .callback_params = 0x20A0 }, // field move
+        { .tag = NEW_NPC_TAG_START + 4, .gfx = NEW_NPC_GFX_START + 4, .callback_params = 0x28C0 }, // watering
+        { .tag = NEW_NPC_TAG_START + 5, .gfx = NEW_NPC_GFX_START + 5, .callback_params = 0x2D00 }, // fishing
+        { .tag = NEW_NPC_TAG_START + 6, .gfx = NEW_NPC_GFX_START + 6, .callback_params = 0x3120 }, // ladder
+        { .tag = NEW_NPC_TAG_START + 7, .gfx = NEW_NPC_GFX_START + 7, .callback_params = 0x3D60 }, // pokegear
+        { .tag = NEW_NPC_TAG_START + 8, .gfx = NEW_NPC_GFX_START + 8, .callback_params = 0x40A0 }, // save
+        { .tag = NEW_NPC_TAG_START + 9, .gfx = NEW_NPC_GFX_START + 9, .callback_params = 0x3540 }, // heal
 
         // npc mons
 
