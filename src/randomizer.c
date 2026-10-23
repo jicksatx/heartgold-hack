@@ -168,7 +168,23 @@ u16 LONG_CALL Randomizer_RemapRivalSpecies(u16 species)
 extern const u16 sBaseStatTotals[1076];
 extern const u16 sWildPool[];
 extern const u16 sWildPoolCount;
-extern const u16 sWildPoolBST[];
+extern const u16 sWildPoolFormCount;
+extern const u16 sWildPoolFormBST[][2];
+
+// base stat total of pool entry i (regional forms have their own, everything else uses sBaseStatTotals)
+static s32 PoolBST(s32 i)
+{
+    u16 entry = sWildPool[i];
+    if ((entry >> 11) == 0) {
+        return sBaseStatTotals[entry];
+    }
+    for (u32 k = 0; k < sWildPoolFormCount; k++) {
+        if (sWildPoolFormBST[k][0] == i) {
+            return sWildPoolFormBST[k][1];
+        }
+    }
+    return 0;
+}
 
 BOOL LONG_CALL MapHeader_HasWildEncounters(u32 mapId);
 u32 LONG_CALL MapHeader_GetWildEncounterBank(u32 mapId);
@@ -210,11 +226,11 @@ u16 LONG_CALL Randomizer_RemapWildSpecies(u16 speciesAndForm, u32 area)
     s32 lo = 0, hi = 0;
     for (;;) {
         lo = 0;
-        while (lo < sWildPoolCount && sWildPoolBST[lo] < target - tolerance) {
+        while (lo < sWildPoolCount && PoolBST(lo) < target - tolerance) {
             lo++;
         }
         hi = lo;
-        while (hi < sWildPoolCount && sWildPoolBST[hi] <= target + tolerance) {
+        while (hi < sWildPoolCount && PoolBST(hi) <= target + tolerance) {
             hi++;
         }
         if (hi - lo >= WILD_POOL_MIN_CANDIDATES || (lo == 0 && hi == sWildPoolCount)) {

@@ -100,9 +100,13 @@ with open(OUT, "w") as f:
     for total, expr, label in pool:
         f.write(f"    {expr}, // {label[8:]} {total}\n")
     f.write("};\n\n")
-    f.write(f"const u16 sWildPoolBST[{len(pool)}] = {{\n")
-    for total, expr, label in pool:
-        f.write(f"    {total},\n")
+    # base stat totals of the pool entries are read from sBaseStatTotals; only the regional forms need their own
+    forms = [(i, total, label) for i, (total, expr, label) in enumerate(pool) if "<<" in expr]
+    f.write(f"const u16 sWildPoolFormCount = {len(forms)};\n\n")
+    f.write("// (pool index, base stat total) of each regional form in sWildPool\n")
+    f.write(f"const u16 sWildPoolFormBST[{len(forms)}][2] = {{\n")
+    for i, total, label in forms:
+        f.write(f"    {{ {i}, {total} }}, // {label[8:]}\n")
     f.write("};\n")
 
 print(f"canonical species: {len(canonical)}, with stats: {len(bst)}, excluded: {len(excluded & set(canonical))}, regional forms added: {len(added)}, pool: {len(pool)}")

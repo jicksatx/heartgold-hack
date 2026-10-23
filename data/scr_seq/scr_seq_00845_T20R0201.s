@@ -64,7 +64,10 @@ scr_seq_T20R0201_000:
 	play_fanfare SEQ_SE_PL_KIRAKIRA
 	wait_fanfare
 	npc_msg 5
-	// hack: Nuzlocke mode is chosen here, once per new game (include/nuzlocke.h)
+	// hack: Nuzlocke mode is chosen here, once per new game (include/nuzlocke.h).
+	// in Part 2 of the two-part game it was already chosen at the start of Part 1.
+	compare VAR_CHAPTER, 2
+	goto_if_eq _nuzlockeAsked
 	npc_msg 39
 	npc_msg 40
 	touchscreen_menu_hide

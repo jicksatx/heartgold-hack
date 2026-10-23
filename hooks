@@ -672,3 +672,10 @@ arm9 WildEncounters_ReadFromNarc 0203B88C
 # hack: map scene-script lookup replaced so a finished Nuzlocke run always shows the game-over script (src/nuzlocke.c)
 arm9 Nuzlocke_GetMapSceneScriptId 0204080C
 #endif
+
+#ifdef CHAPTER_SYSTEM
+# hack: Part 1 (Red) / Part 2 (Gold) - chapter-aware home locations and the Part 1 -> Part 2 switch on Continue (src/chapter.c)
+arm9 Chapter_Location_SetToPlayerRoom 0203E368 2
+arm9 Chapter_Location_SetToOutsidePlayerHome 0203E380 2
+0036 Chapter_ContinueAppExit 021E5A1C
+#endif

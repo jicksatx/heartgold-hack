@@ -3,6 +3,7 @@
 #include "types.h"
 
 #include "save.h"
+#include "chapter.h"
 
 #include "constants/buttons.h"
 #include "constants/file.h"
@@ -277,6 +278,10 @@ void Save_InitDynamicRegion(SaveData *saveData)
 #ifdef NEW_GAME_START_BONUSES
     // runs when "new game" wipes the save (and when no save exists yet), after every save block is initialized
     NewGame_ApplyStartBonuses(saveData);
+#endif
+#ifdef CHAPTER_SYSTEM
+    // hack: every new game starts in Part 1 (Red); Part 2 sets its own value afterwards (src/chapter.c)
+    SetScriptVarPassSave(SavArray_Flags_get(saveData), VAR_CHAPTER, CHAPTER_RED);
 #endif
 }
 

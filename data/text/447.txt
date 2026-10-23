@@ -1,0 +1,9 @@
+Hi!\rRed’s been away. He hasn’t called\neither, so I have no idea where he\fis or what he’s been doing.\rThey say no news is good news,\nbut I do worry about him.
+I worry about Red getting hurt or\nsick, but he’s a boy. I’m proud that\fhe is doing what he wants to do.
+They have shows that aren’t\naired in Johto...
+Right. All boys leave home someday.\nIt said so on TV.\rOh, yes. Professor Oak, next door,\nwas looking for you.
+Oh, and before you go...\rSome Trainers like to take on a\nspecial challenge called a Nuzlocke.\fOnly the first wild Pokémon you meet\nin each area may be caught.\rIf a Pokémon faints, it can’t be\nrevived. It rests in your last PC Box.\rIf all of your Pokémon faint,\nyour adventure is over for good.\r
+Would you like to take on the\nNuzlocke Challenge? {YESNO 0}
+Then the Nuzlocke Challenge is on!\nBe careful out there, dear.\r
+All right! Just have fun out there!\r
+(Test build) Skip to the end of\nPart 1?\rYou’ll get a test team and go\nstraight to the Hall of Fame. {YESNO 0}

@@ -921,3 +921,6 @@ sub_0207294C = 0x0207294C | 1;
 sub_02017068 = 0x02017068 | 1;
 MapObjectManager_RestoreFromSave = 0x0205E648 | 1;
 Save_MapObjects_Get = 0x0203B9D0 | 1;
+/* hack: chapter system (src/chapter.c) */
+Heap_Destroy = 0x0201A9C4 | 1;
+RegisterMainOverlay = 0x02000EF4 | 1;

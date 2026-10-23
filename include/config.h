@@ -185,6 +185,12 @@
 // moving dead Pokemon to the graveyard box runs from the RANDOMIZE_WILD_ENCOUNTERS map-load hook, so keep both on.
 #define NUZLOCKE_MODE
 
+// CHAPTER_SYSTEM (hack) makes the game two parts: Part 1 as Red in Kanto, then Part 2 (HeartGold) on the same save (src/chapter.c)
+#define CHAPTER_SYSTEM
+
+// CHAPTER_DEBUG_SKIP (hack, testing only) lets Red's mom skip straight to Part 1's Hall of Fame with a test team
+#define CHAPTER_DEBUG_SKIP
+
 // DELETABLE_HMS allows HMs to be forgotten, this also makes their quantity reduce, but the infinite TMs change prevents this.
 // #define DELETABLE_HMS
 
