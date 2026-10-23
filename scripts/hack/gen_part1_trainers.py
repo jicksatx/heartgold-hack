@@ -28,7 +28,46 @@ PART1_TRAINERS = [
     ("TRAINER_BUG_CATCHER_CHARLIE", "ViridianForest"),
     ("TRAINER_CAMPER_LIAM", "PewterCity_Gym"),
     ("TRAINER_LEADER_BROCK", "PewterCity_Gym"),
+    # Build 16: Route 3, Mt. Moon, Route 4, Cerulean
+    ("TRAINER_LASS_ROBIN", "Route3"),
+    ("TRAINER_BUG_CATCHER_JAMES", "Route3"),
+    ("TRAINER_LASS_SALLY", "Route3"),
+    ("TRAINER_BUG_CATCHER_GREG", "Route3"),
+    ("TRAINER_YOUNGSTER_CALVIN", "Route3"),
+    ("TRAINER_LASS_JANICE", "Route3"),
+    ("TRAINER_BUG_CATCHER_COLTON", "Route3"),
+    ("TRAINER_YOUNGSTER_BEN", "Route3"),
+    ("TRAINER_LASS_IRIS", "MtMoon_1F"),
+    ("TRAINER_BUG_CATCHER_ROBBY", "MtMoon_1F"),
+    ("TRAINER_SUPER_NERD_JOVAN", "MtMoon_1F"),
+    ("TRAINER_LASS_MIRIAM", "MtMoon_1F"),
+    ("TRAINER_BUG_CATCHER_KENT", "MtMoon_1F"),
+    ("TRAINER_YOUNGSTER_JOSH", "MtMoon_1F"),
+    ("TRAINER_HIKER_MARCOS", "MtMoon_1F"),
+    ("TRAINER_TEAM_ROCKET_GRUNT", "MtMoon_B2F"),
+    ("TRAINER_TEAM_ROCKET_GRUNT_2", "MtMoon_B2F"),
+    ("TRAINER_TEAM_ROCKET_GRUNT_3", "MtMoon_B2F"),
+    ("TRAINER_TEAM_ROCKET_GRUNT_4", "MtMoon_B2F"),
+    ("TRAINER_SUPER_NERD_MIGUEL", "MtMoon_B2F"),
+    ("TRAINER_LASS_CRISSY", "Route4"),
+    ("TRAINER_RIVAL_CERULEAN_SQUIRTLE", "CeruleanCity"),
+    ("TRAINER_RIVAL_CERULEAN_BULBASAUR", "CeruleanCity"),
+    ("TRAINER_RIVAL_CERULEAN_CHARMANDER", "CeruleanCity"),
 ]
+
+# HeartGold overworld sprite for each FireRed class (for the events' trainer objects)
+SPRITES = {
+    "BUG_CATCHER": 318, "YOUNGSTER": 317, "LASS": 319, "CAMPER": 345, "PICNICKER": 346, "HIKER": 333,
+    "SUPER_NERD": 338, "TEAM_ROCKET": 222, "SCIENTIST": 29, "POKEMANIAC": 377, "SAILOR": 348, "FISHERMAN": 347,
+    "SWIMMER_M": 342, "SWIMMER_F": 343, "BIKER": 229, "CUE_BALL": 229, "GENTLEMAN": 341, "BEAUTY": 326,
+    "BIRD_KEEPER": 323, "BLACK_BELT": 344, "PSYCHIC": 227, "CHANNELER": 219, "COOLTRAINER": 324, "RIVAL_EARLY": 375,
+    "RIVAL_LATE": 375, "LEADER": 352,
+}
+
+
+def trainer_id(const):
+    """Part 1 id of a FireRed trainer constant (for building the events)"""
+    return FIRST_ID + [c for c, _ in PART1_TRAINERS].index(const)
 
 # FireRed class -> HeartGold class
 CLASSES = {
@@ -86,11 +125,11 @@ def read(path):
     return open(path, encoding="utf-8").read()
 
 
-def frlg_text(text):
+def frlg_text(text, player=None):
     """FireRed string -> HeartGold text-archive line: \\n newline, \\l scroll -> \\f, \\p new box -> \\r"""
     # a leader's defeat line narrates getting the badge in another font; the gym script does that part here
     text = re.sub(r"\{FONT_NORMAL\}.*?\{FONT_MALE\}", "", text)
-    text = text.replace("{PLAYER}", "you").replace("{RIVAL}", "Blue")
+    text = text.replace("{PLAYER}", "\x01" if player else "you").replace("{RIVAL}", "Blue")
     text = re.sub(r"\{[A-Z0-9_ ]+\}", "", text)
     text = re.sub(r"([A-Z]+)BADGE", lambda m: m.group(1) + " Badge", text)
     for a, b in WORDS:
@@ -105,6 +144,8 @@ def frlg_text(text):
     text = re.sub(r"[A-Zé]{2,}(?:\.)?", fix, text)
     text = text.replace("\\l", "\\f").replace("\\p", "\\r")
     text = text.replace("'", "’").replace("…", "...")
+    if player:
+        text = text.replace("\x01", player)
     return text
 
 
@@ -123,13 +164,27 @@ def parse_texts(map_name):
     return {k: v.rstrip("$") for k, v in out.items()}
 
 
+_ALL_TEXTS = {}
+
+
+def parse_all_texts():
+    if not _ALL_TEXTS:
+        import glob
+        for path in glob.glob(f"{PFR}/data/maps/*/text.inc"):
+            _ALL_TEXTS.update(parse_texts(path.split("/")[-2]))
+    return _ALL_TEXTS
+
+
 def parse_battle_texts(map_name, const):
-    lines = read(f"{PFR}/data/maps/{map_name}/scripts.inc").splitlines()
+    lines = read(f"{PFR}/data/maps/{map_name}/scripts.inc").splitlines() + read(f"{PFR}/data/scripts/trainers.inc").splitlines()
     for i, line in enumerate(lines):
-        m = re.match(r"\s*trainerbattle_\w+ " + const + r", (\w+), (\w+)", line)
+        m = re.match(r"\s*trainerbattle_\w+ " + const + r", (\w+)(?:, (\w+))?(?:, .*)?\s*$", line)
         if not m:
             continue
-        intro, defeat = m.group(1), m.group(2)
+        if m.group(2):
+            intro, defeat = m.group(1), m.group(2)
+        else:
+            intro, defeat = None, m.group(1)  # trainerbattle_no_intro: the script says the intro
         after = None
         for nxt in lines[i + 1:i + 8]:
             m2 = re.match(r"\s*msgbox (\w+)", nxt)
@@ -159,7 +214,7 @@ def parse_trainers():
 def parse_parties():
     src = read(f"{PFR}/src/data/trainer_parties.h")
     out = {}
-    for m in re.finditer(r"static const struct \w+ (sParty_\w+)\[\] = \{(DUMMY_TRAINER_MON\}|.*?\n\});", src, re.S):
+    for m in re.finditer(r"static const struct \w+ (sParty_\w+)\[\] = \{([^\n]*\}|.*?\n\});", src, re.S):
         mons = []
         for mm in re.finditer(r"\{(.*?)\n    \}", m.group(2), re.S):
             body = mm.group(1)
@@ -192,8 +247,14 @@ def main():
         t = trainers[const]
         mons = parties[t["party"]]
         texts = parse_texts(map_name)
+        for label in parse_battle_texts(map_name, const):
+            if label and label not in texts:
+                texts.update(parse_all_texts())
         intro, defeat, after = parse_battle_texts(map_name, const)
-        cls = LEADERS.get(t["name"]) if t["cls"] == "LEADER" else CLASSES[t["cls"]]
+        if t["cls"].startswith("RIVAL"):
+            cls, t = "TRAINERCLASS_LEADER_BLUE", dict(t, name="BLUE")  # Part 1's rival is always Blue (enemy_party.c)
+        else:
+            cls = LEADERS.get(t["name"]) if t["cls"] == "LEADER" else CLASSES[t["cls"]]
         has_items = "ITEM" in t["kind"] and "NO_ITEM" not in t["kind"]
         has_moves = "CUSTOM_MOVES" in t["kind"]
         types = []

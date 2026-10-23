@@ -39,6 +39,10 @@ static const struct Part1Map sPart1Maps[] = {
     { 147, 500, 978, 970, 863 }, // Viridian Forest
     { 51,  501, 979, 980, 862 }, // Pewter City
     { 473, 502, 981, 970, 861 }, // Pewter Gym
+    { 11,  503, 982, 970, 865 }, // Route 3
+    { 107, 504, 983, 984, 866 }, // Mt. Moon
+    { 12,  505, 985, 970, 867 }, // Route 4
+    { 52,  506, 986, 970, 868 }, // Cerulean City
 };
 
 #define MAP_HEADERS        ((const u8 *)0x020F6BE0) // sMapHeaders

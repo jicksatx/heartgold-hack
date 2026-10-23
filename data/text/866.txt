@@ -1,0 +1,9 @@
+Hey, stop!\rI found these fossils!\nThey’re both mine!\r
+We’ll each take a fossil!\nNo being greedy!
+Far away, on Cinnabar Island,\nthere’s a Pokémon Lab.\rThey do research on regenerating\nfossils.
+Do you want the Dome Fossil? {YESNO 0}
+Do you want the Helix Fossil? {YESNO 0}
+All right.\nThen this fossil is mine!
+Beware!\nZubat is a bloodsucker!
+Hi, I’m excavating for fossils here\nunder Mt. Moon.\rSometimes, Brock of Pewter Gym\nlends me a hand.
+Hey, stop! You haven’t beaten me\nyet! These fossils are mine!

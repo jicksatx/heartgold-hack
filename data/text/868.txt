@@ -1,0 +1,12 @@
+Blue: Yo! {STRVAR_1 3, 0, 0}!\rYou’re still struggling along back\nhere?\rI’m doing great! I caught a bunch\nof strong and smart Pokémon!\rHere, let me see what you caught,\n{STRVAR_1 3, 0, 0}!\r
+Blue: Hey, guess what?\rI went to Bill’s and got him to\nshow me his rare Pokémon.\rThat added a lot of pages to my\nPokédex!\rAfter all, Bill’s world famous as a\nPokémaniac.\rHe invented the Pokémon Storage\nSystem on PC, too.\rSince you’re using his system,\nyou should go thank him.\rWell, I better get rolling!\nSmell ya later!\r
+Blue: All right, I really am gone.\nSmell ya later!\r
+Cerulean City\nA Mysterious, Blue Aura Surrounds\fIt
+Cerulean City Pokémon Gym\nLeader: Misty\fThe Tomboyish Mermaid!
+Grass and caves handled easily!\nBike Shop
+Trainer Tips\rA Pokémon can be made to hold\nan item.\rSome items can even be used by\nthe holding Pokémon in battle.
+You’re a Trainer, too?\rCollecting, battling...\nIt’s a tough life, isn’t it?
+The people here were robbed.\rIt’s obvious that Team Rocket is\nbehind this most heinous crime!\rEven our Police Force has\ntrouble with the Rockets!
+(Test build) Part 1 continues past\nhere in a later build.\r
+(Test build) Misty’s Gym opens in a\nlater build.
+Rt. 24 Ahead\nNorth to Nugget Bridge

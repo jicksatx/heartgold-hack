@@ -378,6 +378,10 @@
 // 5 has Oak's Parcel, 6 got the Pokedex, 7 beat Brock, 8 got the Running Shoes
 // Route 22 rival: 1 waiting (after the Pokedex), 2 beaten
 .equ VAR_P1_ROUTE22, 0x4168
+// Cerulean rival: 1 beaten
+.equ VAR_P1_CERULEAN, 0x4169
+// never set: coord events on it always fire (test-build stops at the edge of what's built)
+.equ VAR_P1_TESTBLOCK, 0x416A
 .equ VAR_UNK_4167, 0x4167
 .equ VAR_UNK_4168, 0x4168
 .equ VAR_UNK_4169, 0x4169

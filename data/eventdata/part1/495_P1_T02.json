@@ -172,6 +172,13 @@
   ],
   "warp_events": [
     {
+      "x": 990,
+      "z": 216,
+      "dest_header_id": 496,
+      "dest_warp_id": 0,
+      "y": 0
+    },
+    {
       "x": 1034,
       "z": 244,
       "dest_header_id": 497,
