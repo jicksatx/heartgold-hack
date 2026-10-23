@@ -365,6 +365,7 @@ ifeq ($(ROM_TOOL),$(DSROM))
 else
 	$(NDSTOOL) -c $(BUILDROM) -9 $(BASE)/arm9.bin -7 $(BASE)/arm7.bin -y9 $(BASE)/overarm9.bin -y7 $(BASE)/overarm7.bin -d $(FILESYS) -y $(BASE)/overlay -t $(BASE)/banner.bin -h $(BASE)/header.bin
 endif
+	$(PYTHON) scripts/hack/patch_banner.py $(BUILDROM)
 	@echo "Done.  See output $(BUILDROM)."
 
 
@@ -422,6 +423,9 @@ endif
 
 	@echo "opening demo files:"
 	cp $(OPENDEMO_NARC) $(OPENDEMO_TARGET)
+
+	@echo "title logo:"
+	cp $(TITLELOGO_NARC) $(TITLELOGO_TARGET)
 
 	@echo "mon personal data:"
 	cp $(MONDATA_NARC) $(MONDATA_TARGET)
