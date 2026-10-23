@@ -740,5 +740,9 @@
 .equ TRAINER_PARTNER_RIVAL_1, 735
 .equ TRAINER_PARTNER_RIVAL_2, 736
 .equ TRAINER_PARTNER_RIVAL_3, 737
+// hack: Part 1 (FireRed) trainers, named for the player's starter type
+.equ TRAINER_P1_BLUE_LAB_VS_GRASS, 738
+.equ TRAINER_P1_BLUE_LAB_VS_FIRE, 739
+.equ TRAINER_P1_BLUE_LAB_VS_WATER, 740
 
 .endif

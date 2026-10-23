@@ -1,0 +1,2 @@
+Daisy: Hi, {STRVAR_1 3, 0, 0}!\nBlue is out at Grandpa’s lab.
+Daisy: Blue left to train his\nPokémon. He’s so competitive!

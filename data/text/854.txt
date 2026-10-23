@@ -1,0 +1,8 @@
+I’m raising Pokémon, too.\nWhen they get strong, they’ll be\fable to protect me!
+Technology is incredible!\rYou can now store and recall items\nand Pokémon as data on a PC!
+Pallet Town\nShades of your journey await!
+{STRVAR_1 3, 0, 0}’s House
+Oak Pokémon\nResearch Lab
+Blue’s House
+Professor Oak: Hey! Wait!\nDon’t go out!\r
+Professor Oak: That was close!\rTall grass is where wild Pokémon\nlive. Walking in there alone is\fdangerous.\rYou need a Pokémon of your own\nto protect yourself.\rI know! Come with me!\r

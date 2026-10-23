@@ -27,7 +27,12 @@ elif args[0] == 'create':
         files.append(None)
 
     idx = 0
-    for entry in sorted(os.listdir(args[2])):
+    # members are named <narc>_<index>; sort by the index as a number so 2_1000 comes after 2_999
+    def member_key(entry):
+        index = entry.rsplit('_', 1)[-1]
+        return (0, int(index), entry) if index.isdigit() else (1, 0, entry)
+
+    for entry in sorted(os.listdir(args[2]), key=member_key):
         with open(os.path.join(args[2], entry), 'rb') as f:
             files[idx] = f.read()
         idx += 1

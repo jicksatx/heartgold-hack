@@ -16,6 +16,9 @@
 #define CHAPTER_RED        1
 #define CHAPTER_GOLD       2
 
+// Part 1 story progress, see asm/include/vars.inc
+#define VAR_P1_STORY       0x4167
+
 #define FLAG_GAME_CLEAR    2404
 
 // Part 1 wild tables are encounter narc members 143 + bank (data/EncountersPart1.inc)

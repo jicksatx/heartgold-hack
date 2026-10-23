@@ -1917,6 +1917,13 @@
 .equ FLAG_NUZLOCKE_ENABLED, 2602
 .equ FLAG_NUZLOCKE_RUN_OVER, 2603
 .equ FLAG_NUZLOCKE_ASKED, 2604
+// hack: Part 1 (FireRed) object flags.  Part 2 starts with a fresh set of flags, so these are only used in Part 1
+.equ FLAG_P1_HIDE_PALLET_OAK, 2605
+.equ FLAG_P1_LAB_BALL_GRASS, 2606
+.equ FLAG_P1_LAB_BALL_FIRE, 2607
+.equ FLAG_P1_LAB_BALL_WATER, 2608
+.equ FLAG_P1_HIDE_LAB_BLUE, 2609
+.equ FLAG_P1_HIDE_LAB_OAK, 2610
 .equ FLAG_UNK_A2C, 2604
 .equ FLAG_UNK_A2D, 2605
 .equ FLAG_UNK_A2E, 2606

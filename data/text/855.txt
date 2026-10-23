@@ -1,0 +1,20 @@
+Blue: Gramps!\nI’m tired of waiting!\r
+Professor Oak: Blue? Let me think...\rOh, that’s right, I told you to come!\nJust wait a moment.\rHere, {STRVAR_1 3, 0, 0}.\rThere are three Pokémon here.\nHaha! They’re inside these Poké Balls.\rWhen I was young, I was a serious\nPokémon Trainer.\rIn my old age, I have only these\nthree left, but you can have one.\fGo on, choose!\r
+Blue: Hey! Gramps!\nWhat about me?\r
+Professor Oak: Be patient, Blue.\nYou can have one, too!\r
+Professor Oak: Now, {STRVAR_1 3, 0, 0}, which\nPokémon do you want?\r
+{STRVAR_1 3, 0, 0} received the\n{STRVAR_1 1, 1, 0} from Professor Oak!
+Blue: Then I’ll take this one!\r
+Blue received the {COLOR 1}Fire-type{COLOR 0}\nPokémon from Professor Oak!
+Blue received the {COLOR 2}Water-type{COLOR 0}\nPokémon from Professor Oak!
+Blue received the {COLOR 3}Grass-type{COLOR 0}\nPokémon from Professor Oak!
+Blue: Yo, {STRVAR_1 3, 0, 0}!\nGramps isn’t around.
+Blue: Go ahead and choose first.\nI’m not as greedy as you are.
+Blue: My Pokémon looks a lot\ntougher than yours.
+Professor Oak: If a wild Pokémon\nappears, your Pokémon can battle it.\rWith it at your side, you should be\nable to reach the next town.
+Professor Oak: Hey! Don’t go away\nyet!\r
+Blue: Wait, {STRVAR_1 3, 0, 0}!\nLet’s check out our Pokémon!\rCome on, I’ll take you on!\r
+Blue: Okay! I’ll make my Pokémon\nbattle to toughen it up!\r{STRVAR_1 3, 0, 0}! Gramps!\nSmell ya later!\r
+That’s Professor Oak’s last\nPokémon.
+I study Pokémon as Professor Oak’s\naide.
+Professor Oak: Now, {STRVAR_1 3, 0, 0}, which\nPokémon do you want?

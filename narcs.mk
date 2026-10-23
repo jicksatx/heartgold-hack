@@ -761,8 +761,14 @@ ZONE_EVENT_TARGET := $(FILESYS)/a/0/3/2
 ZONE_EVENT_DEPENDENCIES_DIR := data/eventdata/zone_event
 ZONE_EVENT_TEMPL := $(ZONE_EVENT_DEPENDENCIES_DIR).json.txt
 
+# hack: the Part 1 (FireRed) maps' events are always built, as new members (include/chapter.h)
+ZONE_EVENT_PART1_DIR := data/eventdata/part1
+
 ifeq ($(BUILD_DUMPED_EVENTDATA),1)
-ZONE_EVENT_JSONS := $(sort $(wildcard $(ZONE_EVENT_DEPENDENCIES_DIR)/*.json))
+ZONE_EVENT_JSONS := $(sort $(wildcard $(ZONE_EVENT_DEPENDENCIES_DIR)/*.json)) $(sort $(wildcard $(ZONE_EVENT_PART1_DIR)/*.json))
+else
+ZONE_EVENT_JSONS := $(sort $(wildcard $(ZONE_EVENT_PART1_DIR)/*.json))
+endif
 
 ZONE_EVENT_DEPS := $(SCRIPT_INCLUDES) $(wildcard $(SCR_SEQ_DEPENDENCIES_DIR)/*.inc) $(ZONE_EVENT_TEMPL)
 
@@ -791,15 +797,14 @@ $(ZONE_EVENT_NARC): $(ZONE_EVENT_OBJS) | $(ZONE_EVENT_DIR)
 .PHONY: $(ZONE_EVENT_NARC)
 
 ifneq ($(strip $(ZONE_EVENT_OBJS)),)
+ifeq ($(BUILD_DUMPED_EVENTDATA),1)
 ifeq ($(strip $(wildcard $(SCR_SEQ_DEPENDENCIES_DIR)/include/event_*.inc)),)
 $(error BUILD_DUMPED_EVENTDATA is enabled, but the script labels the maps reference are not in $(SCR_SEQ_DEPENDENCIES_DIR)/include/event_*.inc$(n)Either restore them or turn the toggle back off in $(CONFIG_H))
+endif
 endif
 NARC_FILES += $(ZONE_EVENT_NARC)
 endif
 REQUIRED_DIRECTORIES += $(ZONE_EVENT_DIR) $(ZONE_EVENT_OBJ_DIR)
-
-endif
-# BUILD_DUMPED_EVENTDATA
 
 $(SCR_SEQ_DIR) $(SCR_SEQ_OBJ_DIR) $(ZONE_EVENT_DIR) $(ZONE_EVENT_OBJ_DIR):
 	@mkdir -p $@

@@ -63,7 +63,18 @@ enum {
 };
 
 #define STARTER_LINES_PER_TYPE 9
+#define KANTO_LINE_INDEX       0 // Bulbasaur / Charmander / Squirtle, the lines Blue's Part 1 trainer data uses
 #define JOHTO_LINE_INDEX       1 // Chikorita / Cyndaquil / Totodile, the lines Silver's trainer data uses
+
+// hack: Part 1 (FireRed) offers its own starters (include/chapter.h)
+static BOOL Randomizer_IsPart1(void)
+{
+#ifdef CHAPTER_SYSTEM
+    return Chapter_Get() == CHAPTER_RED;
+#else
+    return FALSE;
+#endif
+}
 
 // [type][line][stage]
 static const u16 sStarterLines[3][STARTER_LINES_PER_TYPE][3] = {
@@ -108,9 +119,9 @@ static const u16 sStarterLines[3][STARTER_LINES_PER_TYPE][3] = {
 static u32 Randomizer_GetStarterLine(u32 type)
 {
 #ifdef RANDOMIZE_STARTERS
-    return Randomizer_Hash(Randomizer_GetSeed(), 0x57A27E00 + type) % STARTER_LINES_PER_TYPE;
+    return Randomizer_Hash(Randomizer_GetSeed(), 0x57A27E00 + type + (Randomizer_IsPart1() ? 0x10 : 0)) % STARTER_LINES_PER_TYPE;
 #else
-    return JOHTO_LINE_INDEX;
+    return Randomizer_IsPart1() ? KANTO_LINE_INDEX : JOHTO_LINE_INDEX;
 #endif
 }
 
@@ -143,15 +154,17 @@ BOOL LONG_CALL Randomizer_IsStarterLineSpecies(u16 species)
 }
 
 /**
- *  @brief Silver's trainer data uses the Johto starter lines.  swap them for the randomized line of the same type
- *         at the same evolution stage, so he still has the starter that is strong against the player's.
+ *  @brief Silver's trainer data uses the Johto starter lines (Blue's in Part 1, the Kanto ones).  swap them for the
+ *         randomized line of the same type at the same evolution stage, so the rival still has the starter that is
+ *         strong against the player's.
  */
 u16 LONG_CALL Randomizer_RemapRivalSpecies(u16 species)
 {
 #ifdef RANDOMIZE_STARTERS
+    u32 line = Randomizer_IsPart1() ? KANTO_LINE_INDEX : JOHTO_LINE_INDEX;
     for (int type = 0; type < 3; type++) {
         for (int stage = 0; stage < 3; stage++) {
-            if (sStarterLines[type][JOHTO_LINE_INDEX][stage] == species) {
+            if (sStarterLines[type][line][stage] == species) {
                 return sStarterLines[type][Randomizer_GetStarterLine(type)][stage];
             }
         }

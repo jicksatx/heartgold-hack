@@ -11,6 +11,7 @@
 #include "constants/species.h"
 #include "constants/trainerclass.h"
 #include "randomizer.h"
+#include "chapter.h"
 #include "constants/weather_numbers.h"
 
 #include "bag.h"
@@ -152,8 +153,13 @@ void MakeTrainerPokemonParty(struct BATTLE_PARAM *bp, int num, int heapID)
         form_no = (species & 0xF800) >> 11;
         species &= 0x07FF;
 #ifdef RANDOMIZE_STARTERS
-        // hack: Silver's starter line follows the randomized starters (src/randomizer.c)
-        if (bp->trainer_data[num].tr_type == TRAINERCLASS_RIVAL) {
+        // hack: the rival's starter line follows the randomized starters (src/randomizer.c).  Silver, or Blue in
+        // Part 1, where he is always the rival (include/chapter.h)
+        if (bp->trainer_data[num].tr_type == TRAINERCLASS_RIVAL
+#ifdef CHAPTER_SYSTEM
+            || (bp->trainer_data[num].tr_type == TRAINERCLASS_LEADER_BLUE && Chapter_Get() == CHAPTER_RED)
+#endif
+        ) {
             species = Randomizer_RemapRivalSpecies(species);
         }
 #endif

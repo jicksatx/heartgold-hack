@@ -31160,6 +31160,99 @@ const TrainerData sTrainerData[] = {
         },
     },
 
+    // hack: Part 1 (FireRed) - Blue in Oak's lab, player chose Grass
+    [738] = {
+        .name = "Blue",
+        .data = {
+            .trainerType = TRAINER_DATA_TYPE_NOTHING,
+            .trainerClass = TRAINERCLASS_LEADER_BLUE,
+            .items = { ITEM_NONE, ITEM_NONE, ITEM_NONE, ITEM_NONE },
+            .aiFlags = F_PRIORITIZE_SUPER_EFFECTIVE,
+            .battleType = SINGLE_BATTLE,
+        },
+        .party = {
+            {
+                .ivs = 0,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 5,
+                .species = SPECIES_CHARMANDER,
+                .ballSeal = 0,
+            },
+        },
+        .text = {
+            {
+                .type = TRMSG_LOSE,
+                .text = "What?! No way!\\nI picked the wrong Pokémon!\\n",
+            },
+            {
+                .type = TRMSG_WIN,
+                .text = "Yeah! Am I great or what?\\n",
+            },
+        },
+    },
+
+    // hack: Part 1 (FireRed) - Blue in Oak's lab, player chose Fire
+    [739] = {
+        .name = "Blue",
+        .data = {
+            .trainerType = TRAINER_DATA_TYPE_NOTHING,
+            .trainerClass = TRAINERCLASS_LEADER_BLUE,
+            .items = { ITEM_NONE, ITEM_NONE, ITEM_NONE, ITEM_NONE },
+            .aiFlags = F_PRIORITIZE_SUPER_EFFECTIVE,
+            .battleType = SINGLE_BATTLE,
+        },
+        .party = {
+            {
+                .ivs = 0,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 5,
+                .species = SPECIES_SQUIRTLE,
+                .ballSeal = 0,
+            },
+        },
+        .text = {
+            {
+                .type = TRMSG_LOSE,
+                .text = "What?! No way!\\nI picked the wrong Pokémon!\\n",
+            },
+            {
+                .type = TRMSG_WIN,
+                .text = "Yeah! Am I great or what?\\n",
+            },
+        },
+    },
+
+    // hack: Part 1 (FireRed) - Blue in Oak's lab, player chose Water
+    [740] = {
+        .name = "Blue",
+        .data = {
+            .trainerType = TRAINER_DATA_TYPE_NOTHING,
+            .trainerClass = TRAINERCLASS_LEADER_BLUE,
+            .items = { ITEM_NONE, ITEM_NONE, ITEM_NONE, ITEM_NONE },
+            .aiFlags = F_PRIORITIZE_SUPER_EFFECTIVE,
+            .battleType = SINGLE_BATTLE,
+        },
+        .party = {
+            {
+                .ivs = 0,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 5,
+                .species = SPECIES_BULBASAUR,
+                .ballSeal = 0,
+            },
+        },
+        .text = {
+            {
+                .type = TRMSG_LOSE,
+                .text = "What?! No way!\\nI picked the wrong Pokémon!\\n",
+            },
+            {
+                .type = TRMSG_WIN,
+                .text = "Yeah! Am I great or what?\\n",
+            },
+        },
+    },
+
 };
 
 const u16 sTrainerTextOrder[] = {
@@ -31799,6 +31892,9 @@ const u16 sTrainerTextOrder[] = {
     628,
     629,
     630,
+    738,
+    739,
+    740,
 };
 
 const u32 sTrainerDataCount = sizeof(sTrainerData) / sizeof(sTrainerData[0]);
