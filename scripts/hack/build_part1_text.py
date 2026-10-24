@@ -318,6 +318,11 @@ ARCHIVES = {
         ("L", "FuchsiaCity_House2_Text_OhThatsDisappointing", N),
         ("L", "FuchsiaCity_House2_Text_HowAreTheFishBiting", N),
         ("L", "FuchsiaCity_WardensHouse_Text_HifFuffHefifoo", N),
+        ("L", "FuchsiaCity_WardensHouse_Text_HeOhayHeHaHoo", R),
+        ("L", "FuchsiaCity_WardensHouse_Text_GaveGoldTeethToWarden", R),
+        ("L", "FuchsiaCity_WardensHouse_Text_WardenPoppedInHisTeeth", R),
+        ("L", "FuchsiaCity_WardensHouse_Text_ThanksSonGiveYouSomething", R),
+        ("L", "FuchsiaCity_WardensHouse_Text_ExplainStrength", N),
     ],
     902: [  # Celadon Restaurant
         ("L", "CeladonCity_Restaurant_Text_TakingBreakRightNow", N),
@@ -354,6 +359,10 @@ ARCHIVES = {
         ("T", "I sure do fancy that {STRVAR_1 1, 4, 0}!\\nBut, it’s hard to win at the games!"),
         ("L", "CeladonCity_GameCorner_PrizeRoom_Text_RakedItInToday", N),
         ("T", "Prize TMs on display:\\nIce Beam, Iron Tail, Thunderbolt,\\fShadow Ball and Flamethrower."),
+    ],
+    904: [  # Safari Zone (HeartGold's): the Gold Teeth and the Secret House attendant
+        ("L", "SafariZone_SecretHouse_Text_CongratsYouveWon", R),
+        ("L", "SafariZone_SecretHouse_Text_ExplainSurf", N),
     ],
     901: [  # Underground Path (Route 5-6 tunnel, also standing in for the Route 7-8 one)
         ("T", P + " came up the stairs on the\\nother side of Saffron City." + R),

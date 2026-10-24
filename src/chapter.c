@@ -301,7 +301,8 @@ BOOL LONG_CALL Chapter_TestBadgeFlag(struct PlayerProfile *profile, s32 badge)
 /**
  *  @brief replaces BufferTrainerClassNameFromDataStruct (0x0200C344), only called by the battle messages.  the class
  *         name is buffered with its trailing space (data/text/197.txt has no space between the class and the name),
- *         so Blue can be buffered as nothing at all: "You are challenged by Blue!" in both parts.
+ *         so Part 1's Blue (Red's rival) can be buffered as nothing at all: "You are challenged by Blue!".  in Part 2
+ *         he is "Leader Blue" as in HeartGold.
  */
 void LONG_CALL Chapter_BufferBattleTrainerClass(MessageFormat *msgFmt, u32 fieldno, void *trainer)
 {
@@ -312,7 +313,11 @@ void LONG_CALL Chapter_BufferBattleTrainerClass(MessageFormat *msgFmt, u32 field
     }
     String *buf = msgFmt->buffer;
     ReadMsgDataIntoString(msgData, trainerClass, buf);
-    if (trainerClass == TRAINERCLASS_LEADER_BLUE_ID) {
+    BOOL hideClass = FALSE;
+#ifdef CHAPTER_SYSTEM
+    hideClass = (trainerClass == TRAINERCLASS_LEADER_BLUE_ID && Chapter_Get() == CHAPTER_RED);
+#endif
+    if (hideClass) {
         buf->size = 0;
         buf->data[0] = CHAR_EOS;
     } else if (buf->size + 1 < buf->maxsize) {

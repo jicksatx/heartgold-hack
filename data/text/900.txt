@@ -4,3 +4,8 @@ Fishing is a way of life!\nIt is like the finest poetry.\rA crummy Old Rod could
 Oh...\nThat’s so disappointing...
 Hello there, {STRVAR_1 3, 0, 0}!\rHow are the fish biting?
 Warden: Hif fuff hefifoo!\rHa lof ha feef ee hafahi ho.\nHeff hee fwee!
+Ha?\nHe ohay heh ha hoo ee haheh!\r
+{STRVAR_1 3, 0, 0} gave the Gold Teeth\nto the Warden.\r
+The Warden popped in his teeth!\r
+Warden: Thanks, son!\nYou’re a real lifesaver!\rNo one could understand a word\nthat I said, not a one!\rI was too ashamed to show my face\naround the Office, even.\rLet me give you something for your\ntrouble.\r
+Warden: Inside HM04 you’ll find\nStrength.\rIt lets Pokémon move boulders when\nyou’re outside of battle.\rOh yes, did you find the Secret\nHouse in the Safari Zone?

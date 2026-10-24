@@ -12,7 +12,7 @@
 #include "constants/item.h"
 #include "config.h"
 
-// hack: Fuchsia's southwest house and the Warden's house in Part 1 (FireRed): the Fishing Guru's older brother gives the Good Rod; the Warden has lost his teeth.  events: 556_P1_T08R0401.json, 557_P1_T08R0601.json.  text: data/text/900.txt
+// hack: Fuchsia's southwest house and the Warden's house in Part 1 (FireRed): the Fishing Guru's older brother gives the Good Rod; the Warden trades HM04 Strength for his Gold Teeth (found in the Safari Zone).  events: 556_P1_T08R0401.json, 557_P1_T08R0601.json.  text: data/text/900.txt
 
 .data
 
@@ -57,5 +57,32 @@ _bagFull:
 	releaseall
 	end
 scr_seq_P1_T08R0401_002:
-	simple_npc_msg 5
+	play_se SEQ_SE_DP_SELECT
+	lockall
+	faceplayer
+	goto_if_set FLAG_P1_GOT_HM04, _wardenAfter
+	hasitem ITEM_GOLD_TEETH, 1, VAR_SPECIAL_RESULT
+	compare VAR_SPECIAL_RESULT, 0
+	goto_if_eq _noTeeth
+	npc_msg 6
+	buffer_players_name 0
+	npc_msg 7
+	takeitem_no_check ITEM_GOLD_TEETH, 1
+	npc_msg 8
+	npc_msg 9
+	goto_if_no_item_space ITEM_HM04, 1, _bagFull
+	giveitem_no_check ITEM_HM04, 1
+	setflag FLAG_P1_GOT_HM04
+_wardenAfter:
+	npc_msg 10
+	wait_button
+	closemsg
+	releaseall
+	end
+
+_noTeeth:
+	npc_msg 5
+	wait_button
+	closemsg
+	releaseall
 	end

@@ -99,6 +99,8 @@ static const struct Part1Map sPart1Maps[] = {
     { 441, 560, 1014, 1026, 892 }, // Rocket Hideout elevator (Goldenrod Dept. Store elevator)
     { 382, 561, 1027, 970, 903 }, // Celadon Game Corner Prize Room
     { 383, 562, 1028, 970, 902 }, // Celadon Restaurant
+    { 357, 563, 1029, 970, 904 }, // Safari Zone (HeartGold's Safari Game)
+    { 173, 564, 119, 380, 135 }, // Safari Zone entrance (HeartGold's scripts; only its door leads to Fuchsia)
 };
 
 #define MAP_HEADERS        ((const u8 *)0x020F6BE0) // sMapHeaders
