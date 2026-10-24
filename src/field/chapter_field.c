@@ -101,6 +101,15 @@ static const struct Part1Map sPart1Maps[] = {
     { 383, 562, 1028, 970, 902 }, // Celadon Restaurant
     { 357, 563, 1029, 970, 904 }, // Safari Zone (HeartGold's Safari Game)
     { 173, 564, 119, 380, 135 }, // Safari Zone entrance (HeartGold's scripts; only its door leads to Fuchsia)
+    { 59,  565, 1030, 1031, 905 }, // Saffron City
+    { 402, 566, 1032, 970, 906 }, // Silph Co. 1F (HeartGold's Silph lobby)
+    { 186, 567, 1032, 970, 906 }, // Silph Co. 2F (Goldenrod Radio Tower 2F)
+    { 187, 568, 1032, 970, 906 }, // Silph Co. 3F (Radio Tower 3F)
+    { 188, 569, 1032, 970, 906 }, // Silph Co. 4F (Radio Tower 4F)
+    { 189, 570, 1032, 970, 906 }, // Silph Co. 5F (Radio Tower 5F)
+    { 398, 571, 1033, 970, 907 }, // Fighting Dojo
+    { 399, 572, 1033, 970, 907 }, // Mr. Psychic's house
+    { 410, 573, 1034, 970, 908 }, // Saffron Gym
 };
 
 #define MAP_HEADERS        ((const u8 *)0x020F6BE0) // sMapHeaders
@@ -176,7 +185,7 @@ BOOL LONG_CALL Chapter_ScrCmd_GetStarterChoice(SCRIPTCONTEXT *ctx)
     u16 *ret = ScriptGetVarPointer(ctx);
 
     // hack: "get_starter_choice VAR_P1_PRIZE" with a prize slot (0-4) in VAR_P1_PRIZE returns that Rocket Game Corner
-    // prize Pokemon instead: a single-stage Pokemon from the slot's base stat band (src/prize_pool.c), fixed per save
+    // prize Pokemon instead: a single-stage Pokemon from the slot's base stat band (src/field/prize_pool.c), fixed per save
     if (ret == GetVarPointer(ctx->fsys, VAR_P1_PRIZE)) {
         u32 slot = *ret;
         if (slot < 5) {

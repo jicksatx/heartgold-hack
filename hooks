@@ -666,6 +666,7 @@ arm9 FieldSystem_RestoreMapObjectsFromSave 0203B9F4 1
 #ifdef RANDOMIZE_WILD_ENCOUNTERS
 # hack: full replacement so encounter tables are randomized as they load (src/randomizer.c)
 arm9 WildEncounters_ReadFromNarc 0203B88C
+arm9 Randomizer_SafariLoadAreaEncounters 020974C4
 #endif
 
 #ifdef NUZLOCKE_MODE

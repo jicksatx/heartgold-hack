@@ -1,2 +1,5 @@
 I’m on guard duty.\nGee, I’m thirsty, though!\rOh, wait there, the road’s closed.\r
 I’m on guard duty.\nGee, I’m thirsty, though!\rOh, wait there, the road’s closed.
+Oh, that Tea...\nIt looks awfully tasty...\r
+Huh? I can have this drink?\nGee, thanks!\f... ...\fGlug, glug...\f... ...\fGulp...\fIf you want to go to Saffron\fCity...\f... ...\fYou can go on through.\rI’ll share this Tea with the other\nguards!
+Hi, how’s it going?

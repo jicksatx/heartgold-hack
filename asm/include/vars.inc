@@ -396,6 +396,10 @@
 .equ VAR_P1_LIFT, 0x4170
 // Game Corner prize Pokemon lookup: set to the slot (0-4), then "get_starter_choice VAR_P1_PRIZE" (src/field/chapter_field.c)
 .equ VAR_P1_PRIZE, 0x4171
+// Saffron: 1 the gate guards got the Tea (the Saffron gates are open)
+.equ VAR_P1_SAFFRON, 0x4172
+// Silph Co.: 1 beat Blue, 2 beat Giovanni (Team Rocket leaves Saffron)
+.equ VAR_P1_SILPH, 0x4173
 .equ VAR_UNK_4167, 0x4167
 .equ VAR_UNK_4168, 0x4168
 .equ VAR_UNK_4169, 0x4169

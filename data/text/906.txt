@@ -1,0 +1,18 @@
+Welcome.\rThe President is in the boardroom\non 11F.
+The door is locked.\nIt needs a Card Key.
+{STRVAR_1 3, 0, 0} used the Card Key!\nThe door opened!\r
+Blue: What kept you, {STRVAR_1 3, 0, 0}?\r
+Blue: Hahaha! I just came by to see\nwhat Silph was up to.\rTeam Rocket took the place over,\nso I figured I’d take them out.\rBut first, {STRVAR_1 3, 0, 0}, let’s see how\nstrong you’ve gotten!\r
+Blue: Fine. I’ll leave Silph to you.\rThe Rocket Boss is upstairs.\nGood luck… You’ll need it!\rSmell ya later!\r
+Oh! Hi! You’re not a Rocket!\nYou came to save us?\fWhy, thank you!\rI want you to have this Pokémon\nfor saving us.\r
+It’s a Lapras.\nIt’s a very intelligent Pokémon.\rWe kept it in our lab, but it will\nbe much better off with you.\rI think you will be a good Trainer\nfor Lapras!\rIt’s a good swimmer.\nIt’ll give you a lift across water!
+Team Rocket’s Boss went to the\nboardroom!\rIs our President okay?\nI’m worried.
+Your party is full!\nPlease come back for it later.
+President: Oh, dear boy!\nThank you for saving Silph.\rI will never forget you saved us in\nour moment of peril.\rI have to thank you in some way.\rBecause I am rich, I can give you\nanything.\rHere, maybe this will do.\r
+President: You can’t buy that\nanywhere.\rIt’s our secret prototype Master\nBall.\rIt will catch any Pokémon without\nfail!\rYou should be quiet about using it,\nthough.
+Secretary: Thank you for rescuing\nall of us.\rWe, from the President down,\nare indebted to you.
+You have no room for this.
+Giovanni: Ah, {STRVAR_1 3, 0, 0}!\nSo we meet again!\rThe President and I are discussing\na vital business proposition.\rKeep your nose out of grown-up\nmatters…\rOr, experience a world of pain!\r
+Giovanni: Blast it all!\nYou ruined our plans for Silph!\rBut, Team Rocket will never fall!\r{STRVAR_1 3, 0, 0}! Never forget that all\nPokémon exist for Team Rocket!\rI must go, but I shall return!\r
+The monitor has Pokémon on it!
+President: You… You aren’t one of\nthem? Please, help us!

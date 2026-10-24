@@ -325,3 +325,4 @@ void LONG_CALL WildEncounters_ReadFromNarc(EncounterData *encData, u32 mapno)
 }
 
 #endif // RANDOMIZE_WILD_ENCOUNTERS
+

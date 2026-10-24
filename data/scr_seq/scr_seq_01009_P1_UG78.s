@@ -25,7 +25,30 @@ scrdef scr_seq_P1_UG78_003 // Route 7 side -> Route 8
 scrdef_end
 
 scr_seq_P1_UG78_001:
-	simple_npc_msg 2
+	play_se SEQ_SE_DP_SELECT
+	lockall
+	faceplayer
+	compare VAR_P1_SAFFRON, 1
+	goto_if_ge _guardHi
+	npc_msg 2
+	goto _guardDone
+
+_guardHi:
+	npc_msg 5
+_guardDone:
+	wait_button
+	closemsg
+	releaseall
+	end
+
+_giveTea:
+	npc_msg 3
+	takeitem_no_check ITEM_TEA, 1
+	setvar VAR_P1_SAFFRON, 1
+	npc_msg 4
+	wait_button
+	closemsg
+	releaseall
 	end
 
 scr_seq_P1_UG78_002:
@@ -33,6 +56,9 @@ scr_seq_P1_UG78_002:
 	get_player_facing VAR_SPECIAL_RESULT
 	compare VAR_SPECIAL_RESULT, 2
 	goto_if_ne _release
+	hasitem ITEM_TEA, 1, VAR_SPECIAL_x8004
+	compare VAR_SPECIAL_x8004, 1
+	goto_if_eq _giveTea
 	npc_msg 0
 	buffer_players_name 0
 	npc_msg 1
@@ -51,6 +77,9 @@ scr_seq_P1_UG78_003:
 	get_player_facing VAR_SPECIAL_RESULT
 	compare VAR_SPECIAL_RESULT, 3
 	goto_if_ne _release
+	hasitem ITEM_TEA, 1, VAR_SPECIAL_x8004
+	compare VAR_SPECIAL_x8004, 1
+	goto_if_eq _giveTea
 	npc_msg 0
 	buffer_players_name 0
 	npc_msg 1

@@ -1,0 +1,7 @@
+Saffron Pokémon Gym\nLeader: Sabrina\rWinning Trainers:\nBlue
+Saffron Pokémon Gym\nLeader: Sabrina\rWinning Trainers:\nBlue, {STRVAR_1 3, 0, 0}
+{STRVAR_1 3, 0, 0} received the Marsh Badge\nfrom Sabrina!\r
+The Marsh Badge makes Pokémon up\nto Lv. 70 obey you.\rStronger Pokémon will become wild,\nignoring your orders in battle.\rJust don’t raise your Pokémon too\nmuch to avoid that problem.\rWait, please take this TM with you.\r
+TM04 is Calm Mind.\rIt makes the Pokémon concentrate\nto raise both Sp. Atk and Sp. Def.
+Yo!\nChamp in the making!\rSabrina’s Pokémon use psychic\npower instead of force.\rFighting Pokémon are especially\nweak against Psychic Pokémon.\rThey’ll get destroyed before they\ncan even aim a punch!
+Psychic power, huh?\rIf I had that, I’d make a bundle\nat the slots!

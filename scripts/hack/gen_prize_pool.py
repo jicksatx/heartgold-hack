@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-hack: generate src/prize_pool.c for Part 1's Rocket Game Corner prize Pokemon.
+hack: generate src/field/prize_pool.c for Part 1's Rocket Game Corner prize Pokemon.
 
 the five FireRed prize Pokemon (Abra, Clefairy, Dratini, Scyther, Porygon) are randomized per save: each slot picks a
 Pokemon that neither evolves nor evolves from anything (a single-stage Pokemon, like RadiantRed's coin prizes), from a
@@ -12,7 +12,7 @@ run from the repo root:  python3 scripts/hack/gen_prize_pool.py
 import re
 
 SPECIES_H = "include/constants/species.h"
-OUT = "src/prize_pool.c"
+OUT = "src/field/prize_pool.c"
 # (min BST, max BST) per prize slot, cheapest first
 BANDS = [(0, 399), (400, 449), (450, 489), (490, 519), (520, 999)]
 

@@ -13,7 +13,7 @@
 #include "config.h"
 
 // hack: the Saffron gatehouses of Routes 5 and 6 in Part 1 (FireRed): the thirsty guard won't let Red into Saffron
-// yet.  events: data/eventdata/part1/513_P1_R05R0301.json / 514_P1_R06R0201.json, text: data/text/875.txt
+// until it gets the Tea (then VAR_P1_SAFFRON 1 and the gates open).  events: data/eventdata/part1/513_P1_R05R0301.json / 514_P1_R06R0201.json, text: data/text/875.txt
 
 .data
 
@@ -22,11 +22,38 @@ scrdef scr_seq_P1_SAFFRON_GATE_002 // road closed (toward Saffron)
 scrdef_end
 
 scr_seq_P1_SAFFRON_GATE_001:
-	simple_npc_msg 1
+	play_se SEQ_SE_DP_SELECT
+	lockall
+	faceplayer
+	compare VAR_P1_SAFFRON, 1
+	goto_if_ge _guardHi
+	npc_msg 1
+	goto _guardDone
+
+_guardHi:
+	npc_msg 4
+_guardDone:
+	wait_button
+	closemsg
+	releaseall
+	end
+
+// with the Tea in the bag, the guard drinks it and the Saffron gates open (FireRed)
+_giveTea:
+	npc_msg 2
+	takeitem_no_check ITEM_TEA, 1
+	setvar VAR_P1_SAFFRON, 1
+	npc_msg 3
+	wait_button
+	closemsg
+	releaseall
 	end
 
 scr_seq_P1_SAFFRON_GATE_002:
 	lockall
+	hasitem ITEM_TEA, 1, VAR_SPECIAL_x8004
+	compare VAR_SPECIAL_x8004, 1
+	goto_if_eq _giveTea
 	get_player_facing VAR_SPECIAL_RESULT
 	compare VAR_SPECIAL_RESULT, 0
 	goto_if_eq _turnBackSouth

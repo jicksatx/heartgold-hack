@@ -1,0 +1,380 @@
+{
+  "bg_events": [
+    {
+      "script": 1,
+      "type": 1,
+      "x": 1292,
+      "z": 210,
+      "y": 0,
+      "player_facing_dir": 4
+    },
+    {
+      "script": 2,
+      "type": 1,
+      "x": 1306,
+      "z": 234,
+      "y": 0,
+      "player_facing_dir": 4
+    },
+    {
+      "script": 3,
+      "type": 1,
+      "x": 1323,
+      "z": 208,
+      "y": 0,
+      "player_facing_dir": 4
+    },
+    {
+      "script": 4,
+      "type": 1,
+      "x": 1330,
+      "z": 208,
+      "y": 0,
+      "player_facing_dir": 4
+    },
+    {
+      "script": 17,
+      "type": 1,
+      "x": 1321,
+      "z": 242,
+      "y": 0,
+      "player_facing_dir": 4
+    },
+    {
+      "script": 18,
+      "type": 1,
+      "x": 1303,
+      "z": 210,
+      "y": 0,
+      "player_facing_dir": 4
+    }
+  ],
+  "object_events": [
+    {
+      "id": 0,
+      "graphics_id": 222,
+      "movement_type": 3,
+      "trainer_type": 0,
+      "hidden_flag": 2645,
+      "script": 5,
+      "initial_dir": 1,
+      "param0": 0,
+      "param1": 0,
+      "param2": 0,
+      "movement_range_x": 1,
+      "movement_range_z": 1,
+      "x": 1325,
+      "z": 211,
+      "y": 0
+    },
+    {
+      "id": 1,
+      "graphics_id": 222,
+      "movement_type": 3,
+      "trainer_type": 0,
+      "hidden_flag": 2645,
+      "script": 6,
+      "initial_dir": 1,
+      "param0": 0,
+      "param1": 0,
+      "param2": 0,
+      "movement_range_x": 1,
+      "movement_range_z": 1,
+      "x": 1299,
+      "z": 212,
+      "y": 0
+    },
+    {
+      "id": 2,
+      "graphics_id": 222,
+      "movement_type": 3,
+      "trainer_type": 0,
+      "hidden_flag": 2645,
+      "script": 7,
+      "initial_dir": 1,
+      "param0": 0,
+      "param1": 0,
+      "param2": 0,
+      "movement_range_x": 1,
+      "movement_range_z": 1,
+      "x": 1293,
+      "z": 220,
+      "y": 0
+    },
+    {
+      "id": 3,
+      "graphics_id": 222,
+      "movement_type": 2,
+      "trainer_type": 0,
+      "hidden_flag": 2645,
+      "script": 8,
+      "initial_dir": 1,
+      "param0": 0,
+      "param1": 0,
+      "param2": 0,
+      "movement_range_x": 1,
+      "movement_range_z": 1,
+      "x": 1324,
+      "z": 220,
+      "y": 0
+    },
+    {
+      "id": 4,
+      "graphics_id": 222,
+      "movement_type": 3,
+      "trainer_type": 0,
+      "hidden_flag": 2645,
+      "script": 9,
+      "initial_dir": 1,
+      "param0": 0,
+      "param1": 0,
+      "param2": 0,
+      "movement_range_x": 1,
+      "movement_range_z": 1,
+      "x": 1332,
+      "z": 236,
+      "y": 0
+    },
+    {
+      "id": 5,
+      "graphics_id": 222,
+      "movement_type": 2,
+      "trainer_type": 0,
+      "hidden_flag": 2645,
+      "script": 10,
+      "initial_dir": 1,
+      "param0": 0,
+      "param1": 0,
+      "param2": 0,
+      "movement_range_x": 1,
+      "movement_range_z": 1,
+      "x": 1301,
+      "z": 224,
+      "y": 0
+    },
+    {
+      "id": 6,
+      "graphics_id": 222,
+      "movement_type": 2,
+      "trainer_type": 0,
+      "hidden_flag": 2645,
+      "script": 11,
+      "initial_dir": 1,
+      "param0": 0,
+      "param1": 0,
+      "param2": 0,
+      "movement_range_x": 1,
+      "movement_range_z": 1,
+      "x": 1311,
+      "z": 234,
+      "y": 0
+    },
+    {
+      "id": 7,
+      "graphics_id": 317,
+      "movement_type": 3,
+      "trainer_type": 0,
+      "hidden_flag": 2646,
+      "script": 12,
+      "initial_dir": 1,
+      "param0": 0,
+      "param1": 0,
+      "param2": 0,
+      "movement_range_x": 1,
+      "movement_range_z": 1,
+      "x": 1325,
+      "z": 211,
+      "y": 0
+    },
+    {
+      "id": 8,
+      "graphics_id": 325,
+      "movement_type": 3,
+      "trainer_type": 0,
+      "hidden_flag": 2646,
+      "script": 13,
+      "initial_dir": 1,
+      "param0": 0,
+      "param1": 0,
+      "param2": 0,
+      "movement_range_x": 1,
+      "movement_range_z": 1,
+      "x": 1299,
+      "z": 212,
+      "y": 0
+    },
+    {
+      "id": 9,
+      "graphics_id": 328,
+      "movement_type": 3,
+      "trainer_type": 0,
+      "hidden_flag": 2646,
+      "script": 14,
+      "initial_dir": 1,
+      "param0": 0,
+      "param1": 0,
+      "param2": 0,
+      "movement_range_x": 1,
+      "movement_range_z": 1,
+      "x": 1293,
+      "z": 220,
+      "y": 0
+    },
+    {
+      "id": 10,
+      "graphics_id": 322,
+      "movement_type": 2,
+      "trainer_type": 0,
+      "hidden_flag": 2646,
+      "script": 15,
+      "initial_dir": 1,
+      "param0": 0,
+      "param1": 0,
+      "param2": 0,
+      "movement_range_x": 1,
+      "movement_range_z": 1,
+      "x": 1324,
+      "z": 220,
+      "y": 0
+    },
+    {
+      "id": 11,
+      "graphics_id": 320,
+      "movement_type": 3,
+      "trainer_type": 0,
+      "hidden_flag": 2646,
+      "script": 16,
+      "initial_dir": 1,
+      "param0": 0,
+      "param1": 0,
+      "param2": 0,
+      "movement_range_x": 1,
+      "movement_range_z": 1,
+      "x": 1332,
+      "z": 236,
+      "y": 0
+    }
+  ],
+  "warp_events": [
+    {
+      "x": 1300,
+      "z": 253,
+      "dest_header_id": 389,
+      "dest_warp_id": 1,
+      "y": 0
+    },
+    {
+      "x": 1301,
+      "z": 253,
+      "dest_header_id": 389,
+      "dest_warp_id": 1,
+      "y": 0
+    },
+    {
+      "x": 1337,
+      "z": 240,
+      "dest_header_id": 390,
+      "dest_warp_id": 0,
+      "y": 0
+    },
+    {
+      "x": 1337,
+      "z": 241,
+      "dest_header_id": 390,
+      "dest_warp_id": 0,
+      "y": 0
+    },
+    {
+      "x": 1300,
+      "z": 197,
+      "dest_header_id": 391,
+      "dest_warp_id": 0,
+      "y": 0
+    },
+    {
+      "x": 1301,
+      "z": 197,
+      "dest_header_id": 391,
+      "dest_warp_id": 0,
+      "y": 0
+    },
+    {
+      "x": 1289,
+      "z": 200,
+      "dest_header_id": 400,
+      "dest_warp_id": 0,
+      "y": 0
+    },
+    {
+      "x": 1297,
+      "z": 218,
+      "dest_header_id": 404,
+      "dest_warp_id": 0,
+      "y": 0
+    },
+    {
+      "x": 1308,
+      "z": 229,
+      "dest_header_id": 402,
+      "dest_warp_id": 0,
+      "y": 0
+    },
+    {
+      "x": 1309,
+      "z": 229,
+      "dest_header_id": 402,
+      "dest_warp_id": 0,
+      "y": 0
+    },
+    {
+      "x": 1321,
+      "z": 204,
+      "dest_header_id": 398,
+      "dest_warp_id": 0,
+      "y": 0
+    },
+    {
+      "x": 1328,
+      "z": 204,
+      "dest_header_id": 410,
+      "dest_warp_id": 0,
+      "y": 0
+    },
+    {
+      "x": 1318,
+      "z": 218,
+      "dest_header_id": 409,
+      "dest_warp_id": 0,
+      "y": 0
+    },
+    {
+      "x": 1294,
+      "z": 242,
+      "dest_header_id": 407,
+      "dest_warp_id": 0,
+      "y": 0
+    },
+    {
+      "x": 1323,
+      "z": 242,
+      "dest_header_id": 399,
+      "dest_warp_id": 0,
+      "y": 0
+    },
+    {
+      "x": 1280,
+      "z": 240,
+      "dest_header_id": 493,
+      "dest_warp_id": 0,
+      "y": 0
+    },
+    {
+      "x": 1280,
+      "z": 241,
+      "dest_header_id": 493,
+      "dest_warp_id": 0,
+      "y": 0
+    }
+  ],
+  "coord_events": []
+}

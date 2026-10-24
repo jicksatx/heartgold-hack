@@ -1,0 +1,10 @@
+Indeed, I have lost!\rBut, I beseech you, do not take\nour emblem as your trophy!\rIn return, I will give you a prized\nFighting Pokémon!\rChoose whichever one you like!
+Grunt!\nStay and train at karate with us!
+You want the hard-kicking\nHitmonlee? {YESNO 0}
+You want the piston-punching\nHitmonchan? {YESNO 0}
+Better not get greedy...
+Fighting Dojo
+...Wait! Don’t say a word!\rYou wanted this!\r
+You already know, don’t you?\nTM29 is Psychic.\rIt’s an attack that may also lower\nthe target’s special stats.
+Your party is full!\nMake some room first.
+Hiyah! Defeat our Karate Master\nto earn a prize!
