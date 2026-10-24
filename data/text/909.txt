@@ -5,3 +5,7 @@ Snorlax calmed down.\rWith a big yawn, it returned to\nthe mountains.
 Oh, dear.\nYou’ve found my secret retreat.\rPlease don’t tell anyone I’m here.\nI’ll make it up to you with this!\r
 HM02 is Fly.\nIt’s a wonderfully convenient move.\rPlease, put it to good use.
 Route 18\nCeladon City - Fuchsia City
+Hi! Remember me?\nI’m one of Professor Oak’s Aides.\rIf your Pokédex has complete data\non 40 species, I’m supposed to\fgive you a reward.\rProfessor Oak entrusted me with an\nAmulet Coin for you.\rSo, {STRVAR_1 3, 0, 0}, let me ask you.\rHave you gathered data on at least\n40 kinds of Pokémon?\r
+Great! You have caught or owned\n{STRVAR_1 52, 1, 0} kinds of Pokémon!\rCongratulations!\nHere you go!\r
+An Amulet Coin is an item to be\nheld by a Pokémon.\rIf the Pokémon appears in a winning\nbattle, you will earn more money.
+Let’s see...\nUh-oh! You have caught only\f{STRVAR_1 52, 1, 0} kinds of Pokémon.\rYou need data on 40 kinds if you\nwant the Amulet Coin.

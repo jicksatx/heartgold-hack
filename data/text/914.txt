@@ -1,0 +1,15 @@
+Pokémon Quiz!\rGet it right, and the door opens to\nthe next room.\rGet it wrong, and face a Trainer!\rIf you want to conserve your\nPokémon for the Gym Leader...\rThen get it right!\nHere we go!\r
+Caterpie evolves into Metapod? {YESNO 0}
+There are nine certified Pokémon\nLeague Badges? {YESNO 0}
+Poliwag evolves three times? {YESNO 0}
+Are electric moves effective\nagainst Ground-type Pokémon? {YESNO 0}
+Pokémon of the same kind and level\nare not identical? {YESNO 0}
+TM28 contains Tombstony? {YESNO 0}
+You’re absolutely correct!\rGo on through!
+Sorry!\nBad call!\r
+{STRVAR_1 3, 0, 0} received the Volcano Badge\nfrom Blaine!\r
+Hah!\rThe Volcano Badge heightens the\nSpecial stats of your Pokémon.\rHere, you can have this, too!\r
+Fire Blast is the ultimate fire\ntechnique.\rDon’t waste it on Water Pokémon.
+Yo!\nChamp in the making!\rThe hotheaded Blaine is a Fire\nPokémon pro.\rDouse his spirits with water!\rYou’d better take some\nBurn Heals, too.
+{STRVAR_1 3, 0, 0}!\nYou beat that firebrand!
+Pokémon Quiz!\rThis one’s been answered already.\nGo on through!

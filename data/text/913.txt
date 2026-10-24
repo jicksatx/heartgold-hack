@@ -1,0 +1,6 @@
+Diary: July 5\nGuyana, South America\rA new Pokémon was discovered deep\nin the jungle.
+Diary: July 10\nWe christened the newly discovered\fPokémon, Mew.
+Diary: Feb. 6\nMew gave birth.\rWe named the newborn Mewtwo.
+Diary: Sept. 1\nMewtwo is far too powerful.\rWe have failed to curb its vicious\ntendencies...
+{STRVAR_1 3, 0, 0} found the Secret Key!\r
+It looks like the key to a door.\nCould it open the Cinnabar Gym?

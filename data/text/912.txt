@@ -1,0 +1,28 @@
+Cinnabar Island\nThe Fiery Town of Burning Desire
+Pokémon Lab\r
+Cinnabar Island Pokémon Gym\nLeader: Blaine\fThe Hotheaded Quiz Master!\r
+The door is locked...
+Cinnabar Gym’s Blaine is quite the\nodd fellow.\rHe’s lived on the island since way\nbefore the Lab was built.
+Scientists conduct experiments \nin the burned-out building.\rYou know, the one they call the\nPokémon Mansion.
+A burned-out mansion...\nIts front door hangs open.\r
+Cinnabar Poké Mart\r
+I came to visit the Cinnabar Gym,\nbut the door is locked tight.\rThere should be a key for it\nsomewhere.\rCould it be in that burned-out\nmansion?\rThe Gym Leader’s friend used to\nlive there, they say.
+Pokémon can still learn techniques\nafter canceling evolution.\rEvolution can wait until new moves\nhave been learned.
+Don’t they have X Attack?\rI like it because it raises the\nAttack stat in battle.
+It never hurts to have extra items.\nYou never know what might happen.
+We study Pokémon extensively\nevery day.\rPeople often bring us rare Pokémon\nfor examination.
+A photo of the Lab’s founder...\nDr. Fuji?!
+I found this most remarkable fossil\ninside Mt. Moon.\rI think it’s of a rare, prehistoric\nPokémon.
+Eevee can evolve into one of three\nkinds of Pokémon.
+There’s an e-mail message.\r... ... ...\rThere are three legendary bird\nPokémon.\rThey are Articuno, Zapdos, and\nMoltres.\rTheir whereabouts are unknown.\rWe plan to explore the cavern\nclose to Cerulean.\rFrom: Pokémon Research Team...
+An amber pipe!
+Hiya!\rI am important doctor.\nYes, very much so, indeed.\rHere, I study rare Pokémon fossils.\nAll the time, I study.\rYou!\nHave you a fossil for me?\r
+No!\nIs too bad!
+Oh!\nThat is Helix Fossil, it is!\rIt is fossil of Omanyte,\na Pokémon that is already extinct!\rMy Resurrection Machine will make\nthat Pokémon live again!\rSo! You hurry and give me that!\r{STRVAR_1 3, 0, 0} handed over the\nHelix Fossil to the weird doctor.\r
+Oh!\nThat is Dome Fossil, it is!\rIt is fossil of Kabuto,\na Pokémon that is already extinct!\rMy Resurrection Machine will make\nthat Pokémon live again!\rSo! You hurry and give me that!\r{STRVAR_1 3, 0, 0} handed over the\nDome Fossil to the weird doctor.\r
+Oh!\nThat is Old Amber, it is!\rIt is fossil of Aerodactyl,\na Pokémon that is already extinct!\rMy Resurrection Machine will make\nthat Pokémon live again!\rSo! You hurry and give me that!\r{STRVAR_1 3, 0, 0} handed over the\nOld Amber to the weird doctor.\r
+Bzzt! Whirr... Ka-chunk!\rYou back already? No need!\nYour fossil is back to life!\r
+{STRVAR_1 3, 0, 0} received Omanyte\nfrom the doctor.\r
+{STRVAR_1 3, 0, 0} received Kabuto\nfrom the doctor.\r
+{STRVAR_1 3, 0, 0} received Aerodactyl\nfrom the doctor.\r
+You have no room for Pokémon!\nYou come back with room, yes?

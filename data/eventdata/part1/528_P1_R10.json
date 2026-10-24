@@ -70,8 +70,8 @@
       "y": 0
     },
     {
-      "x": 1408,
-      "z": 160,
+      "x": 1423,
+      "z": 184,
       "dest_header_id": 467,
       "dest_warp_id": 0,
       "y": 0
@@ -84,5 +84,16 @@
       "y": 0
     }
   ],
-  "coord_events": []
+  "coord_events": [
+    {
+      "script": 4,
+      "x": 1423,
+      "z": 185,
+      "width": 1,
+      "length": 1,
+      "y": 0,
+      "value": 0,
+      "var": 16756
+    }
+  ]
 }

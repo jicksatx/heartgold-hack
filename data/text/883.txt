@@ -1,3 +1,5 @@
 Power Plant
 Rock Tunnel
 Rock Tunnel\nDetour to Lavender Town
+The Power Plant’s door is rusted\nshut. It won’t budge...\r
+The Power Plant’s door is rusted\nshut...\rYour Pokémon used Strength to\nforce it open!\r

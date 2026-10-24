@@ -117,6 +117,22 @@ static const struct Part1Map sPart1Maps[] = {
     { 415, 578, 1035, 970, 909 }, // Route 16 house (HM02 Fly)
     { 362, 579, 1036, 970, 910 }, // Vermilion Pokemon Fan Club (Bike Voucher)
     { 432, 580, 1036, 970, 910 }, // Cerulean bike shop (HeartGold's Bike Maniac's house)
+    { 91,  581, 1037, 970, 911 }, // Route 19
+    { 92,  582, 1037, 970, 911 }, // Route 20
+    { 93,  583, 1037, 970, 911 }, // Route 21
+    { 424, 584, 1037, 970, 911 }, // Route 19 gate (Fuchsia side)
+    { 146, 585, 139, 399, 3 },    // Seafoam Islands 1F (HeartGold's scripts; its Gym door is parked)
+    { 453, 586, 13, 274, 3 },     // Seafoam Islands B1F (HeartGold's scripts, without its NPC)
+    { 454, 587, 139, 399, 3 },    // Seafoam Islands B2F (HeartGold's scripts, without its trainers)
+    { 456, 588, 1037, 970, 911 }, // Seafoam Islands B4F (Articuno)
+    { 467, 589, 1037, 970, 911 }, // Power Plant (HeartGold's repaired plant: Zapdos, Electrodes)
+    { 57,  590, 1038, 970, 912 }, // Cinnabar Island (the ruins; the buildings are doors in its walls)
+    { 508, 591, 1038, 589, 912 }, // Cinnabar Pokemon Center (HeartGold's header: Union Room returns)
+    { 61,  592, 1038, 970, 912 }, // Cinnabar Pokemon Lab (Elm's Lab: the fossil doctor)
+    { 157, 593, 1038, 970, 912 }, // Cinnabar Poke Mart (the Violet Mart)
+    { 457, 594, 1040, 1041, 914 }, // Cinnabar Gym (HeartGold's Seafoam Islands Gym)
+    { 7,   595, 1039, 970, 913 }, // Pokemon Mansion 1F/2F (Burned Tower 1F)
+    { 217, 596, 1039, 970, 913 }, // Pokemon Mansion 3F/B1F (Burned Tower B1F)
 };
 
 #define MAP_HEADERS        ((const u8 *)0x020F6BE0) // sMapHeaders
