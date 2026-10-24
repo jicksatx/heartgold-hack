@@ -34664,6 +34664,1951 @@ const TrainerData sTrainerData[] = {
             },
         },
     },
+
+    // TRAINER_ENGINEER_BAILY (FireRed, VermilionCity_Gym)
+    [820] = {
+        .name = "Baily",
+        .data = {
+            .trainerType = TRAINER_DATA_TYPE_NOTHING,
+            .trainerClass = TRAINERCLASS_WORKER,
+            .items = { ITEM_NONE, ITEM_NONE, ITEM_NONE, ITEM_NONE },
+            .aiFlags = F_PRIORITIZE_SUPER_EFFECTIVE | F_EVALUATE_ATTACKS,
+            .battleType = SINGLE_BATTLE,
+        },
+        .party = {
+            {
+                .ivs = 0,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 21,
+                .species = SPECIES_VOLTORB,
+                .ballSeal = 0,
+            },
+            {
+                .ivs = 0,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 21,
+                .species = SPECIES_MAGNEMITE,
+                .ballSeal = 0,
+            },
+        },
+        .text = {
+            {
+                .type = TRMSG_INTRO,
+                .text = "I’m a lightweight, but I’m good\\nwith electricity!\\rThat’s why I joined this Gym.\\n",
+            },
+            {
+                .type = TRMSG_LOSE,
+                .text = "Fried!\\n",
+            },
+            {
+                .type = TRMSG_AFTER,
+                .text = "Okay, I’ll talk!\\rLt. Surge said he hid door\\nswitches inside something.\\n",
+            },
+        },
+    },
+
+    // TRAINER_SAILOR_DWAYNE (FireRed, VermilionCity_Gym)
+    [821] = {
+        .name = "Dwayne",
+        .data = {
+            .trainerType = TRAINER_DATA_TYPE_NOTHING,
+            .trainerClass = TRAINERCLASS_SAILOR,
+            .items = { ITEM_NONE, ITEM_NONE, ITEM_NONE, ITEM_NONE },
+            .aiFlags = F_PRIORITIZE_SUPER_EFFECTIVE | F_EVALUATE_ATTACKS,
+            .battleType = SINGLE_BATTLE,
+        },
+        .party = {
+            {
+                .ivs = 0,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 21,
+                .species = SPECIES_PIKACHU,
+                .ballSeal = 0,
+            },
+            {
+                .ivs = 0,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 21,
+                .species = SPECIES_PIKACHU,
+                .ballSeal = 0,
+            },
+        },
+        .text = {
+            {
+                .type = TRMSG_INTRO,
+                .text = "This is no place for kids!\\nNot even if you’re good!\\n",
+            },
+            {
+                .type = TRMSG_LOSE,
+                .text = "Wow!\\nSurprised me!\\n",
+            },
+            {
+                .type = TRMSG_AFTER,
+                .text = "Lt. Surge installed the traps in\\nthe Gym himself.\\rHe set up double locks everywhere.\\nLet me give you a hint.\\rWhen you open the first lock, the\\nsecond lock is right next to it.\\n",
+            },
+        },
+    },
+
+    // TRAINER_GENTLEMAN_TUCKER (FireRed, VermilionCity_Gym)
+    [822] = {
+        .name = "Tucker",
+        .data = {
+            .trainerType = TRAINER_DATA_TYPE_NOTHING,
+            .trainerClass = TRAINERCLASS_GENTLEMAN,
+            .items = { ITEM_NONE, ITEM_NONE, ITEM_NONE, ITEM_NONE },
+            .aiFlags = F_PRIORITIZE_SUPER_EFFECTIVE | F_EVALUATE_ATTACKS,
+            .battleType = SINGLE_BATTLE,
+        },
+        .party = {
+            {
+                .ivs = 0,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 23,
+                .species = SPECIES_PIKACHU,
+                .ballSeal = 0,
+            },
+        },
+        .text = {
+            {
+                .type = TRMSG_INTRO,
+                .text = "When I was in the Army, Lt. Surge\\nwas my strict Co.\\rHe was a hard taskmaster.\\n",
+            },
+            {
+                .type = TRMSG_LOSE,
+                .text = "Stop!\\nYou’re very good!\\n",
+            },
+            {
+                .type = TRMSG_AFTER,
+                .text = "It’s not easy opening that door.\\rLt. Surge was always famous for\\nhis cautious nature in the Army.\\n",
+            },
+        },
+    },
+
+    // TRAINER_LEADER_LT_SURGE (FireRed, VermilionCity_Gym)
+    [823] = {
+        .name = "Lt. Surge",
+        .data = {
+            .trainerType = TRAINER_DATA_TYPE_MOVES,
+            .trainerClass = TRAINERCLASS_LEADER_LT_SURGE,
+            .items = { ITEM_SUPER_POTION, ITEM_FULL_HEAL, ITEM_NONE, ITEM_NONE },
+            .aiFlags = F_PRIORITIZE_SUPER_EFFECTIVE | F_EVALUATE_ATTACKS,
+            .battleType = SINGLE_BATTLE,
+        },
+        .party = {
+            {
+                .ivs = 0,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 21,
+                .species = SPECIES_VOLTORB,
+                .moves = { MOVE_SONIC_BOOM, MOVE_TACKLE, MOVE_SCREECH, MOVE_SHOCK_WAVE },
+                .ballSeal = 0,
+            },
+            {
+                .ivs = 0,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 18,
+                .species = SPECIES_PIKACHU,
+                .moves = { MOVE_QUICK_ATTACK, MOVE_THUNDER_WAVE, MOVE_DOUBLE_TEAM, MOVE_SHOCK_WAVE },
+                .ballSeal = 0,
+            },
+            {
+                .ivs = 0,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 24,
+                .species = SPECIES_RAICHU,
+                .moves = { MOVE_QUICK_ATTACK, MOVE_THUNDER_WAVE, MOVE_DOUBLE_TEAM, MOVE_SHOCK_WAVE },
+                .ballSeal = 0,
+            },
+        },
+        .text = {
+            {
+                .type = TRMSG_INTRO,
+                .text = "Hey, kid! What do you think you’re\\ndoing here?\\rYou won’t live long in combat!\\nNot with your puny power!\\rI tell you, kid, electric Pokémon\\nsaved me during the war!\\rThey zapped my enemies into\\nparalysis!\\rThe same as I’ll do to you!\\n",
+            },
+            {
+                .type = TRMSG_LOSE,
+                .text = "Now that’s a shocker!\\rYou’re the real deal, kid!\\rFine, then, take the Thunder Badge!\\n",
+            },
+            {
+                .type = TRMSG_AFTER,
+                .text = "A little word of advice, kid!\\rElectricity is sure powerful!\\rBut, it’s useless against Ground-\\ntype Pokémon!\\n",
+            },
+        },
+    },
+
+    // TRAINER_YOUNGSTER_EDDIE (FireRed, Route11)
+    [824] = {
+        .name = "Eddie",
+        .data = {
+            .trainerType = TRAINER_DATA_TYPE_NOTHING,
+            .trainerClass = TRAINERCLASS_YOUNGSTER,
+            .items = { ITEM_NONE, ITEM_NONE, ITEM_NONE, ITEM_NONE },
+            .aiFlags = F_PRIORITIZE_SUPER_EFFECTIVE | F_EVALUATE_ATTACKS,
+            .battleType = SINGLE_BATTLE,
+        },
+        .party = {
+            {
+                .ivs = 0,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 21,
+                .species = SPECIES_EKANS,
+                .ballSeal = 0,
+            },
+        },
+        .text = {
+            {
+                .type = TRMSG_INTRO,
+                .text = "Let’s go, but don’t cheat!\\n",
+            },
+            {
+                .type = TRMSG_LOSE,
+                .text = "Huh?\\nThat’s not right!\\n",
+            },
+            {
+                .type = TRMSG_AFTER,
+                .text = "I did my best.\\nI have no regrets.\\n",
+            },
+        },
+    },
+
+    // TRAINER_GAMER_HUGO (FireRed, Route11)
+    [825] = {
+        .name = "Hugo",
+        .data = {
+            .trainerType = TRAINER_DATA_TYPE_NOTHING,
+            .trainerClass = TRAINERCLASS_GENTLEMAN,
+            .items = { ITEM_NONE, ITEM_NONE, ITEM_NONE, ITEM_NONE },
+            .aiFlags = F_PRIORITIZE_SUPER_EFFECTIVE | F_EVALUATE_ATTACKS,
+            .battleType = SINGLE_BATTLE,
+        },
+        .party = {
+            {
+                .ivs = 0,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 18,
+                .species = SPECIES_POLIWAG,
+                .ballSeal = 0,
+            },
+            {
+                .ivs = 0,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 18,
+                .species = SPECIES_HORSEA,
+                .ballSeal = 0,
+            },
+        },
+        .text = {
+            {
+                .type = TRMSG_INTRO,
+                .text = "Win, lose, or draw!\\n",
+            },
+            {
+                .type = TRMSG_LOSE,
+                .text = "Atcha!\\nDidn’t go my way!\\n",
+            },
+            {
+                .type = TRMSG_AFTER,
+                .text = "Pokémon is life!\\nAnd to live is to play games!\\n",
+            },
+        },
+    },
+
+    // TRAINER_YOUNGSTER_DILLON (FireRed, Route11)
+    [826] = {
+        .name = "Dillon",
+        .data = {
+            .trainerType = TRAINER_DATA_TYPE_NOTHING,
+            .trainerClass = TRAINERCLASS_YOUNGSTER,
+            .items = { ITEM_NONE, ITEM_NONE, ITEM_NONE, ITEM_NONE },
+            .aiFlags = F_PRIORITIZE_SUPER_EFFECTIVE | F_EVALUATE_ATTACKS,
+            .battleType = SINGLE_BATTLE,
+        },
+        .party = {
+            {
+                .ivs = 0,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 19,
+                .species = SPECIES_SANDSHREW,
+                .ballSeal = 0,
+            },
+            {
+                .ivs = 0,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 19,
+                .species = SPECIES_ZUBAT,
+                .ballSeal = 0,
+            },
+        },
+        .text = {
+            {
+                .type = TRMSG_INTRO,
+                .text = "I just became a Trainer.\\nBut, I think I can win.\\n",
+            },
+            {
+                .type = TRMSG_LOSE,
+                .text = "My Pokémon couldn’t win...\\nHaven’t they grown enough?\\n",
+            },
+            {
+                .type = TRMSG_AFTER,
+                .text = "What now?\\nLeave me alone!\\n",
+            },
+        },
+    },
+
+    // TRAINER_YOUNGSTER_DAVE (FireRed, Route11)
+    [827] = {
+        .name = "Dave",
+        .data = {
+            .trainerType = TRAINER_DATA_TYPE_NOTHING,
+            .trainerClass = TRAINERCLASS_YOUNGSTER,
+            .items = { ITEM_NONE, ITEM_NONE, ITEM_NONE, ITEM_NONE },
+            .aiFlags = F_PRIORITIZE_SUPER_EFFECTIVE | F_EVALUATE_ATTACKS,
+            .battleType = SINGLE_BATTLE,
+        },
+        .party = {
+            {
+                .ivs = 0,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 18,
+                .species = SPECIES_NIDORAN_M,
+                .ballSeal = 0,
+            },
+            {
+                .ivs = 0,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 18,
+                .species = SPECIES_NIDORINO,
+                .ballSeal = 0,
+            },
+        },
+        .text = {
+            {
+                .type = TRMSG_INTRO,
+                .text = "I raised my Pokémon carefully.\\nThey should be ready by now!\\n",
+            },
+            {
+                .type = TRMSG_LOSE,
+                .text = "Bye-bye!\\nThank you, and good-bye!\\n",
+            },
+            {
+                .type = TRMSG_AFTER,
+                .text = "Tch...\\nI better go find stronger ones!\\n",
+            },
+        },
+    },
+
+    // TRAINER_GAMER_JASPER (FireRed, Route11)
+    [828] = {
+        .name = "Jasper",
+        .data = {
+            .trainerType = TRAINER_DATA_TYPE_NOTHING,
+            .trainerClass = TRAINERCLASS_GENTLEMAN,
+            .items = { ITEM_NONE, ITEM_NONE, ITEM_NONE, ITEM_NONE },
+            .aiFlags = F_PRIORITIZE_SUPER_EFFECTIVE | F_EVALUATE_ATTACKS,
+            .battleType = SINGLE_BATTLE,
+        },
+        .party = {
+            {
+                .ivs = 0,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 18,
+                .species = SPECIES_BELLSPROUT,
+                .ballSeal = 0,
+            },
+            {
+                .ivs = 0,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 18,
+                .species = SPECIES_ODDISH,
+                .ballSeal = 0,
+            },
+        },
+        .text = {
+            {
+                .type = TRMSG_INTRO,
+                .text = "Competition!\\nI can’t get enough!\\n",
+            },
+            {
+                .type = TRMSG_LOSE,
+                .text = "I had a chance!\\n",
+            },
+            {
+                .type = TRMSG_AFTER,
+                .text = "You can’t be a coward in the world\\nof Pokémon!\\n",
+            },
+        },
+    },
+
+    // TRAINER_GAMER_DARIAN (FireRed, Route11)
+    [829] = {
+        .name = "Darian",
+        .data = {
+            .trainerType = TRAINER_DATA_TYPE_NOTHING,
+            .trainerClass = TRAINERCLASS_GENTLEMAN,
+            .items = { ITEM_NONE, ITEM_NONE, ITEM_NONE, ITEM_NONE },
+            .aiFlags = F_PRIORITIZE_SUPER_EFFECTIVE | F_EVALUATE_ATTACKS,
+            .battleType = SINGLE_BATTLE,
+        },
+        .party = {
+            {
+                .ivs = 0,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 18,
+                .species = SPECIES_GROWLITHE,
+                .ballSeal = 0,
+            },
+            {
+                .ivs = 0,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 18,
+                .species = SPECIES_VULPIX,
+                .ballSeal = 0,
+            },
+        },
+        .text = {
+            {
+                .type = TRMSG_INTRO,
+                .text = "I have never won before...\\n",
+            },
+            {
+                .type = TRMSG_LOSE,
+                .text = "I saw this coming...\\n",
+            },
+            {
+                .type = TRMSG_AFTER,
+                .text = "I was unlucky, as always.\\n",
+            },
+        },
+    },
+
+    // TRAINER_ENGINEER_BRAXTON (FireRed, Route11)
+    [830] = {
+        .name = "Braxton",
+        .data = {
+            .trainerType = TRAINER_DATA_TYPE_NOTHING,
+            .trainerClass = TRAINERCLASS_WORKER,
+            .items = { ITEM_NONE, ITEM_NONE, ITEM_NONE, ITEM_NONE },
+            .aiFlags = F_PRIORITIZE_SUPER_EFFECTIVE | F_EVALUATE_ATTACKS,
+            .battleType = SINGLE_BATTLE,
+        },
+        .party = {
+            {
+                .ivs = 0,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 21,
+                .species = SPECIES_MAGNEMITE,
+                .ballSeal = 0,
+            },
+        },
+        .text = {
+            {
+                .type = TRMSG_INTRO,
+                .text = "Careful!\\nI’m laying down some cables!\\n",
+            },
+            {
+                .type = TRMSG_LOSE,
+                .text = "That was electric!\\n",
+            },
+            {
+                .type = TRMSG_AFTER,
+                .text = "Spread the word to save energy!\\n",
+            },
+        },
+    },
+
+    // TRAINER_YOUNGSTER_YASU (FireRed, Route11)
+    [831] = {
+        .name = "Yasu",
+        .data = {
+            .trainerType = TRAINER_DATA_TYPE_NOTHING,
+            .trainerClass = TRAINERCLASS_YOUNGSTER,
+            .items = { ITEM_NONE, ITEM_NONE, ITEM_NONE, ITEM_NONE },
+            .aiFlags = F_PRIORITIZE_SUPER_EFFECTIVE | F_EVALUATE_ATTACKS,
+            .battleType = SINGLE_BATTLE,
+        },
+        .party = {
+            {
+                .ivs = 0,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 17,
+                .species = SPECIES_RATTATA,
+                .ballSeal = 0,
+            },
+            {
+                .ivs = 0,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 17,
+                .species = SPECIES_RATTATA,
+                .ballSeal = 0,
+            },
+            {
+                .ivs = 0,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 17,
+                .species = SPECIES_RATICATE,
+                .ballSeal = 0,
+            },
+        },
+        .text = {
+            {
+                .type = TRMSG_INTRO,
+                .text = "I’m the best in my class.\\nI train every morning.\\n",
+            },
+            {
+                .type = TRMSG_LOSE,
+                .text = "Darn!\\nMy Pokémon need to be stronger!\\n",
+            },
+            {
+                .type = TRMSG_AFTER,
+                .text = "There’s a fat Pokémon that comes\\ndown from the mountains.\\rI bet it’d be strong if you can\\ncatch it.\\n",
+            },
+        },
+    },
+
+    // TRAINER_GAMER_DIRK (FireRed, Route11)
+    [832] = {
+        .name = "Dirk",
+        .data = {
+            .trainerType = TRAINER_DATA_TYPE_NOTHING,
+            .trainerClass = TRAINERCLASS_GENTLEMAN,
+            .items = { ITEM_NONE, ITEM_NONE, ITEM_NONE, ITEM_NONE },
+            .aiFlags = F_PRIORITIZE_SUPER_EFFECTIVE | F_EVALUATE_ATTACKS,
+            .battleType = SINGLE_BATTLE,
+        },
+        .party = {
+            {
+                .ivs = 0,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 18,
+                .species = SPECIES_VOLTORB,
+                .ballSeal = 0,
+            },
+            {
+                .ivs = 0,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 18,
+                .species = SPECIES_MAGNEMITE,
+                .ballSeal = 0,
+            },
+        },
+        .text = {
+            {
+                .type = TRMSG_INTRO,
+                .text = "Fwahaha!\\nI have never lost!\\n",
+            },
+            {
+                .type = TRMSG_LOSE,
+                .text = "My first loss!\\n",
+            },
+            {
+                .type = TRMSG_AFTER,
+                .text = "You were just lucky, that’s all.\\n",
+            },
+        },
+    },
+
+    // TRAINER_ENGINEER_BERNIE (FireRed, Route11)
+    [833] = {
+        .name = "Bernie",
+        .data = {
+            .trainerType = TRAINER_DATA_TYPE_NOTHING,
+            .trainerClass = TRAINERCLASS_WORKER,
+            .items = { ITEM_NONE, ITEM_NONE, ITEM_NONE, ITEM_NONE },
+            .aiFlags = F_PRIORITIZE_SUPER_EFFECTIVE | F_EVALUATE_ATTACKS,
+            .battleType = SINGLE_BATTLE,
+        },
+        .party = {
+            {
+                .ivs = 0,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 18,
+                .species = SPECIES_MAGNEMITE,
+                .ballSeal = 0,
+            },
+            {
+                .ivs = 0,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 18,
+                .species = SPECIES_MAGNEMITE,
+                .ballSeal = 0,
+            },
+            {
+                .ivs = 0,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 18,
+                .species = SPECIES_MAGNETON,
+                .ballSeal = 0,
+            },
+        },
+        .text = {
+            {
+                .type = TRMSG_INTRO,
+                .text = "Watch out for live wires!\\n",
+            },
+            {
+                .type = TRMSG_LOSE,
+                .text = "Whoa!\\nYou spark plug!\\n",
+            },
+            {
+                .type = TRMSG_AFTER,
+                .text = "Well, better get back to work.\\n",
+            },
+        },
+    },
+
+    // TRAINER_PICNICKER_ALICIA (FireRed, Route9)
+    [834] = {
+        .name = "Alicia",
+        .data = {
+            .trainerType = TRAINER_DATA_TYPE_NOTHING,
+            .trainerClass = TRAINERCLASS_PICNICKER,
+            .items = { ITEM_NONE, ITEM_NONE, ITEM_NONE, ITEM_NONE },
+            .aiFlags = F_PRIORITIZE_SUPER_EFFECTIVE | F_EVALUATE_ATTACKS,
+            .battleType = SINGLE_BATTLE,
+        },
+        .party = {
+            {
+                .ivs = 0,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 18,
+                .species = SPECIES_ODDISH,
+                .ballSeal = 0,
+            },
+            {
+                .ivs = 0,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 18,
+                .species = SPECIES_BELLSPROUT,
+                .ballSeal = 0,
+            },
+            {
+                .ivs = 0,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 18,
+                .species = SPECIES_ODDISH,
+                .ballSeal = 0,
+            },
+            {
+                .ivs = 0,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 18,
+                .species = SPECIES_BELLSPROUT,
+                .ballSeal = 0,
+            },
+        },
+        .text = {
+            {
+                .type = TRMSG_INTRO,
+                .text = "You have Pokémon with you!\\nYou’re mine!\\n",
+            },
+            {
+                .type = TRMSG_LOSE,
+                .text = "You deceived me...\\n",
+            },
+            {
+                .type = TRMSG_AFTER,
+                .text = "The tunnel coming up is pitch-black\\ninside.\\rYou’ll need Flash to get through\\nthere.\\n",
+            },
+        },
+    },
+
+    // TRAINER_HIKER_JEREMY (FireRed, Route9)
+    [835] = {
+        .name = "Jeremy",
+        .data = {
+            .trainerType = TRAINER_DATA_TYPE_NOTHING,
+            .trainerClass = TRAINERCLASS_HIKER,
+            .items = { ITEM_NONE, ITEM_NONE, ITEM_NONE, ITEM_NONE },
+            .aiFlags = F_PRIORITIZE_SUPER_EFFECTIVE | F_EVALUATE_ATTACKS,
+            .battleType = SINGLE_BATTLE,
+        },
+        .party = {
+            {
+                .ivs = 0,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 20,
+                .species = SPECIES_MACHOP,
+                .ballSeal = 0,
+            },
+            {
+                .ivs = 0,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 20,
+                .species = SPECIES_ONIX,
+                .ballSeal = 0,
+            },
+        },
+        .text = {
+            {
+                .type = TRMSG_INTRO,
+                .text = "Bwahaha!\\nGreat! I was bored, eh!\\n",
+            },
+            {
+                .type = TRMSG_LOSE,
+                .text = "Keep it coming, eh!\\rOh wait.\\nI’m out of Pokémon!\\n",
+            },
+            {
+                .type = TRMSG_AFTER,
+                .text = "You sure had guts standing up to\\nme there, eh?\\n",
+            },
+        },
+    },
+
+    // TRAINER_HIKER_ALAN (FireRed, Route9)
+    [836] = {
+        .name = "Alan",
+        .data = {
+            .trainerType = TRAINER_DATA_TYPE_MOVES,
+            .trainerClass = TRAINERCLASS_HIKER,
+            .items = { ITEM_NONE, ITEM_NONE, ITEM_NONE, ITEM_NONE },
+            .aiFlags = F_PRIORITIZE_SUPER_EFFECTIVE | F_EVALUATE_ATTACKS,
+            .battleType = SINGLE_BATTLE,
+        },
+        .party = {
+            {
+                .ivs = 0,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 21,
+                .species = SPECIES_GEODUDE,
+                .moves = { MOVE_MAGNITUDE, MOVE_ROCK_THROW, MOVE_MUD_SPORT, MOVE_DEFENSE_CURL },
+                .ballSeal = 0,
+            },
+            {
+                .ivs = 0,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 21,
+                .species = SPECIES_ONIX,
+                .moves = { MOVE_HARDEN, MOVE_ROCK_THROW, MOVE_BIND, MOVE_SCREECH },
+                .ballSeal = 0,
+            },
+        },
+        .text = {
+            {
+                .type = TRMSG_INTRO,
+                .text = "Hahahaha!\\nBring it on!\\n",
+            },
+            {
+                .type = TRMSG_LOSE,
+                .text = "Hahahaha!\\nYou beat me fair!\\n",
+            },
+            {
+                .type = TRMSG_AFTER,
+                .text = "Hahahaha!\\nUs hearty guys always laugh!\\n",
+            },
+        },
+    },
+
+    // TRAINER_CAMPER_CHRIS (FireRed, Route9)
+    [837] = {
+        .name = "Chris",
+        .data = {
+            .trainerType = TRAINER_DATA_TYPE_NOTHING,
+            .trainerClass = TRAINERCLASS_CAMPER,
+            .items = { ITEM_NONE, ITEM_NONE, ITEM_NONE, ITEM_NONE },
+            .aiFlags = F_PRIORITIZE_SUPER_EFFECTIVE | F_EVALUATE_ATTACKS,
+            .battleType = SINGLE_BATTLE,
+        },
+        .party = {
+            {
+                .ivs = 0,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 21,
+                .species = SPECIES_GROWLITHE,
+                .ballSeal = 0,
+            },
+            {
+                .ivs = 0,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 21,
+                .species = SPECIES_CHARMANDER,
+                .ballSeal = 0,
+            },
+        },
+        .text = {
+            {
+                .type = TRMSG_INTRO,
+                .text = "Who’s that walking there with those\\ngood-looking Pokémon?\\n",
+            },
+            {
+                .type = TRMSG_LOSE,
+                .text = "Out like a light!\\n",
+            },
+            {
+                .type = TRMSG_AFTER,
+                .text = "Keep walking!\\n",
+            },
+        },
+    },
+
+    // TRAINER_BUG_CATCHER_BRENT (FireRed, Route9)
+    [838] = {
+        .name = "Brent",
+        .data = {
+            .trainerType = TRAINER_DATA_TYPE_NOTHING,
+            .trainerClass = TRAINERCLASS_BUG_CATCHER,
+            .items = { ITEM_NONE, ITEM_NONE, ITEM_NONE, ITEM_NONE },
+            .aiFlags = F_PRIORITIZE_SUPER_EFFECTIVE | F_EVALUATE_ATTACKS,
+            .battleType = SINGLE_BATTLE,
+        },
+        .party = {
+            {
+                .ivs = 0,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 19,
+                .species = SPECIES_BEEDRILL,
+                .ballSeal = 0,
+            },
+            {
+                .ivs = 0,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 19,
+                .species = SPECIES_BEEDRILL,
+                .ballSeal = 0,
+            },
+        },
+        .text = {
+            {
+                .type = TRMSG_INTRO,
+                .text = "I got up early every day to raise\\nmy Pokémon from cocoons!\\n",
+            },
+            {
+                .type = TRMSG_LOSE,
+                .text = "What?\\rWhat a total waste of time!\\n",
+            },
+            {
+                .type = TRMSG_AFTER,
+                .text = "I have to collect more than bugs\\nto get stronger...\\n",
+            },
+        },
+    },
+
+    // TRAINER_BUG_CATCHER_CONNER (FireRed, Route9)
+    [839] = {
+        .name = "Conner",
+        .data = {
+            .trainerType = TRAINER_DATA_TYPE_NOTHING,
+            .trainerClass = TRAINERCLASS_BUG_CATCHER,
+            .items = { ITEM_NONE, ITEM_NONE, ITEM_NONE, ITEM_NONE },
+            .aiFlags = F_PRIORITIZE_SUPER_EFFECTIVE | F_EVALUATE_ATTACKS,
+            .battleType = SINGLE_BATTLE,
+        },
+        .party = {
+            {
+                .ivs = 0,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 20,
+                .species = SPECIES_CATERPIE,
+                .ballSeal = 0,
+            },
+            {
+                .ivs = 0,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 20,
+                .species = SPECIES_WEEDLE,
+                .ballSeal = 0,
+            },
+            {
+                .ivs = 0,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 20,
+                .species = SPECIES_VENONAT,
+                .ballSeal = 0,
+            },
+        },
+        .text = {
+            {
+                .type = TRMSG_INTRO,
+                .text = "Go, my super Bug Pokémon!\\n",
+            },
+            {
+                .type = TRMSG_LOSE,
+                .text = "My bugs...\\n",
+            },
+            {
+                .type = TRMSG_AFTER,
+                .text = "If you don’t like Bug Pokémon,\\nyou bug me!\\n",
+            },
+        },
+    },
+
+    // TRAINER_HIKER_BRICE (FireRed, Route9)
+    [840] = {
+        .name = "Brice",
+        .data = {
+            .trainerType = TRAINER_DATA_TYPE_NOTHING,
+            .trainerClass = TRAINERCLASS_HIKER,
+            .items = { ITEM_NONE, ITEM_NONE, ITEM_NONE, ITEM_NONE },
+            .aiFlags = F_PRIORITIZE_SUPER_EFFECTIVE | F_EVALUATE_ATTACKS,
+            .battleType = SINGLE_BATTLE,
+        },
+        .party = {
+            {
+                .ivs = 0,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 20,
+                .species = SPECIES_GEODUDE,
+                .ballSeal = 0,
+            },
+            {
+                .ivs = 0,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 20,
+                .species = SPECIES_MACHOP,
+                .ballSeal = 0,
+            },
+            {
+                .ivs = 0,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 20,
+                .species = SPECIES_GEODUDE,
+                .ballSeal = 0,
+            },
+        },
+        .text = {
+            {
+                .type = TRMSG_INTRO,
+                .text = "Hahaha!\\nAren’t you a little toughie!\\n",
+            },
+            {
+                .type = TRMSG_LOSE,
+                .text = "What’s that?\\n",
+            },
+            {
+                .type = TRMSG_AFTER,
+                .text = "Hahaha!\\nKids should be tough!\\n",
+            },
+        },
+    },
+
+    // TRAINER_PICNICKER_CAITLIN (FireRed, Route9)
+    [841] = {
+        .name = "Caitlin",
+        .data = {
+            .trainerType = TRAINER_DATA_TYPE_NOTHING,
+            .trainerClass = TRAINERCLASS_PICNICKER,
+            .items = { ITEM_NONE, ITEM_NONE, ITEM_NONE, ITEM_NONE },
+            .aiFlags = F_PRIORITIZE_SUPER_EFFECTIVE | F_EVALUATE_ATTACKS,
+            .battleType = SINGLE_BATTLE,
+        },
+        .party = {
+            {
+                .ivs = 0,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 23,
+                .species = SPECIES_MEOWTH,
+                .ballSeal = 0,
+            },
+        },
+        .text = {
+            {
+                .type = TRMSG_INTRO,
+                .text = "Don’t you dare patronize me!\\n",
+            },
+            {
+                .type = TRMSG_LOSE,
+                .text = "No!\\nYou’re too much.\\n",
+            },
+            {
+                .type = TRMSG_AFTER,
+                .text = "You’re obviously talented.\\nGood luck to you!\\n",
+            },
+        },
+    },
+
+    // TRAINER_CAMPER_DREW (FireRed, Route9)
+    [842] = {
+        .name = "Drew",
+        .data = {
+            .trainerType = TRAINER_DATA_TYPE_NOTHING,
+            .trainerClass = TRAINERCLASS_CAMPER,
+            .items = { ITEM_NONE, ITEM_NONE, ITEM_NONE, ITEM_NONE },
+            .aiFlags = F_PRIORITIZE_SUPER_EFFECTIVE | F_EVALUATE_ATTACKS,
+            .battleType = SINGLE_BATTLE,
+        },
+        .party = {
+            {
+                .ivs = 0,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 19,
+                .species = SPECIES_RATTATA,
+                .ballSeal = 0,
+            },
+            {
+                .ivs = 0,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 19,
+                .species = SPECIES_SANDSHREW,
+                .ballSeal = 0,
+            },
+            {
+                .ivs = 0,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 19,
+                .species = SPECIES_EKANS,
+                .ballSeal = 0,
+            },
+            {
+                .ivs = 0,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 19,
+                .species = SPECIES_SANDSHREW,
+                .ballSeal = 0,
+            },
+        },
+        .text = {
+            {
+                .type = TRMSG_INTRO,
+                .text = "I’m taking the Rock Tunnel to\\ngo to Lavender...\\n",
+            },
+            {
+                .type = TRMSG_LOSE,
+                .text = "Can’t measure up...\\n",
+            },
+            {
+                .type = TRMSG_AFTER,
+                .text = "Are you off to Rock Tunnel, too?\\n",
+            },
+        },
+    },
+
+    // TRAINER_PICNICKER_CAROL (FireRed, Route10)
+    [843] = {
+        .name = "Carol",
+        .data = {
+            .trainerType = TRAINER_DATA_TYPE_NOTHING,
+            .trainerClass = TRAINERCLASS_PICNICKER,
+            .items = { ITEM_NONE, ITEM_NONE, ITEM_NONE, ITEM_NONE },
+            .aiFlags = F_PRIORITIZE_SUPER_EFFECTIVE | F_EVALUATE_ATTACKS,
+            .battleType = SINGLE_BATTLE,
+        },
+        .party = {
+            {
+                .ivs = 0,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 21,
+                .species = SPECIES_PIDGEY,
+                .ballSeal = 0,
+            },
+            {
+                .ivs = 0,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 21,
+                .species = SPECIES_PIDGEOTTO,
+                .ballSeal = 0,
+            },
+        },
+        .text = {
+            {
+                .type = TRMSG_INTRO,
+                .text = "I’m feeling a bit faint.\\nI haven’t hiked in some time.\\n",
+            },
+            {
+                .type = TRMSG_LOSE,
+                .text = "I’m too tired.\\nI wasn’t up for it.\\n",
+            },
+            {
+                .type = TRMSG_AFTER,
+                .text = "The Pokémon here in the mountains\\nare so chunky...\\rI wish there were pink Pokémon\\nwith a floral pattern!\\n",
+            },
+        },
+    },
+
+    // TRAINER_HIKER_CLARK (FireRed, Route10)
+    [844] = {
+        .name = "Clark",
+        .data = {
+            .trainerType = TRAINER_DATA_TYPE_MOVES,
+            .trainerClass = TRAINERCLASS_HIKER,
+            .items = { ITEM_NONE, ITEM_NONE, ITEM_NONE, ITEM_NONE },
+            .aiFlags = F_PRIORITIZE_SUPER_EFFECTIVE | F_EVALUATE_ATTACKS,
+            .battleType = SINGLE_BATTLE,
+        },
+        .party = {
+            {
+                .ivs = 0,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 21,
+                .species = SPECIES_GEODUDE,
+                .moves = { MOVE_MAGNITUDE, MOVE_ROCK_THROW, MOVE_MUD_SPORT, MOVE_DEFENSE_CURL },
+                .ballSeal = 0,
+            },
+            {
+                .ivs = 0,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 21,
+                .species = SPECIES_ONIX,
+                .moves = { MOVE_HARDEN, MOVE_ROCK_THROW, MOVE_BIND, MOVE_SCREECH },
+                .ballSeal = 0,
+            },
+        },
+        .text = {
+            {
+                .type = TRMSG_INTRO,
+                .text = "Ha-hahah-ah-ha!\\n",
+            },
+            {
+                .type = TRMSG_LOSE,
+                .text = "Ha-haha!\\nNot laughing!\\fHa-hay fever! Haha-ha-choo!\\n",
+            },
+            {
+                .type = TRMSG_AFTER,
+                .text = "Haha-ha-choo!\\nHa-choo!\\fSnort! Snivel!\\n",
+            },
+        },
+    },
+
+    // TRAINER_POKEMANIAC_HERMAN (FireRed, Route10)
+    [845] = {
+        .name = "Herman",
+        .data = {
+            .trainerType = TRAINER_DATA_TYPE_NOTHING,
+            .trainerClass = TRAINERCLASS_POKE_MANIAC,
+            .items = { ITEM_NONE, ITEM_NONE, ITEM_NONE, ITEM_NONE },
+            .aiFlags = F_PRIORITIZE_SUPER_EFFECTIVE | F_EVALUATE_ATTACKS,
+            .battleType = SINGLE_BATTLE,
+        },
+        .party = {
+            {
+                .ivs = 30,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 20,
+                .species = SPECIES_CUBONE,
+                .ballSeal = 0,
+            },
+            {
+                .ivs = 30,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 20,
+                .species = SPECIES_SLOWPOKE,
+                .ballSeal = 0,
+            },
+        },
+        .text = {
+            {
+                .type = TRMSG_INTRO,
+                .text = "Hi, kid!\\nWant to see my Pokémon?\\n",
+            },
+            {
+                .type = TRMSG_LOSE,
+                .text = "Oh, no!\\nMy Pokémon!\\n",
+            },
+            {
+                .type = TRMSG_AFTER,
+                .text = "I don’t like you.\\nI don’t like anyone better than me!\\n",
+            },
+        },
+    },
+
+    // TRAINER_HIKER_TRENT (FireRed, Route10)
+    [846] = {
+        .name = "Trent",
+        .data = {
+            .trainerType = TRAINER_DATA_TYPE_NOTHING,
+            .trainerClass = TRAINERCLASS_HIKER,
+            .items = { ITEM_NONE, ITEM_NONE, ITEM_NONE, ITEM_NONE },
+            .aiFlags = F_PRIORITIZE_SUPER_EFFECTIVE | F_EVALUATE_ATTACKS,
+            .battleType = SINGLE_BATTLE,
+        },
+        .party = {
+            {
+                .ivs = 0,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 19,
+                .species = SPECIES_ONIX,
+                .ballSeal = 0,
+            },
+            {
+                .ivs = 0,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 19,
+                .species = SPECIES_GRAVELER,
+                .ballSeal = 0,
+            },
+        },
+        .text = {
+            {
+                .type = TRMSG_INTRO,
+                .text = "Ah!\\nThis mountain air is delicious!\\n",
+            },
+            {
+                .type = TRMSG_LOSE,
+                .text = "That cleared my head!\\n",
+            },
+            {
+                .type = TRMSG_AFTER,
+                .text = "I feel bloated on mountain air!\\n",
+            },
+        },
+    },
+
+    // TRAINER_POKEMANIAC_MARK (FireRed, Route10)
+    [847] = {
+        .name = "Mark",
+        .data = {
+            .trainerType = TRAINER_DATA_TYPE_NOTHING,
+            .trainerClass = TRAINERCLASS_POKE_MANIAC,
+            .items = { ITEM_NONE, ITEM_NONE, ITEM_NONE, ITEM_NONE },
+            .aiFlags = F_PRIORITIZE_SUPER_EFFECTIVE | F_EVALUATE_ATTACKS,
+            .battleType = SINGLE_BATTLE,
+        },
+        .party = {
+            {
+                .ivs = 30,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 29,
+                .species = SPECIES_RHYHORN,
+                .ballSeal = 0,
+            },
+            {
+                .ivs = 30,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 29,
+                .species = SPECIES_LICKITUNG,
+                .ballSeal = 0,
+            },
+        },
+        .text = {
+            {
+                .type = TRMSG_INTRO,
+                .text = "Wow, you came all the way here?\\nMaybe you’re a Pokémaniac, too?\\fWant to see my collection?\\n",
+            },
+            {
+                .type = TRMSG_LOSE,
+                .text = "Humph.\\nI’m not angry!\\n",
+            },
+            {
+                .type = TRMSG_AFTER,
+                .text = "I have more rare Pokémon at home!\\n",
+            },
+        },
+    },
+
+    // TRAINER_PICNICKER_HEIDI (FireRed, Route10)
+    [848] = {
+        .name = "Heidi",
+        .data = {
+            .trainerType = TRAINER_DATA_TYPE_NOTHING,
+            .trainerClass = TRAINERCLASS_PICNICKER,
+            .items = { ITEM_NONE, ITEM_NONE, ITEM_NONE, ITEM_NONE },
+            .aiFlags = F_PRIORITIZE_SUPER_EFFECTIVE | F_EVALUATE_ATTACKS,
+            .battleType = SINGLE_BATTLE,
+        },
+        .party = {
+            {
+                .ivs = 0,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 20,
+                .species = SPECIES_PIKACHU,
+                .ballSeal = 0,
+            },
+            {
+                .ivs = 0,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 20,
+                .species = SPECIES_CLEFAIRY,
+                .ballSeal = 0,
+            },
+        },
+        .text = {
+            {
+                .type = TRMSG_INTRO,
+                .text = "I’ve been out at a Pokémon Gym\\na few times.\\r...But I always lose.\\n",
+            },
+            {
+                .type = TRMSG_LOSE,
+                .text = "Ohh!\\nAfter all my training!\\n",
+            },
+            {
+                .type = TRMSG_AFTER,
+                .text = "I noticed some Pokémaniacs\\nprowling around.\\rCan you imagine? Them?\\nUp here in the mountains?\\n",
+            },
+        },
+    },
+
+    // TRAINER_PICNICKER_DANA (FireRed, RockTunnel_1F)
+    [849] = {
+        .name = "Dana",
+        .data = {
+            .trainerType = TRAINER_DATA_TYPE_NOTHING,
+            .trainerClass = TRAINERCLASS_PICNICKER,
+            .items = { ITEM_NONE, ITEM_NONE, ITEM_NONE, ITEM_NONE },
+            .aiFlags = F_PRIORITIZE_SUPER_EFFECTIVE | F_EVALUATE_ATTACKS,
+            .battleType = SINGLE_BATTLE,
+        },
+        .party = {
+            {
+                .ivs = 0,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 20,
+                .species = SPECIES_MEOWTH,
+                .ballSeal = 0,
+            },
+            {
+                .ivs = 0,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 20,
+                .species = SPECIES_ODDISH,
+                .ballSeal = 0,
+            },
+            {
+                .ivs = 0,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 20,
+                .species = SPECIES_PIDGEY,
+                .ballSeal = 0,
+            },
+        },
+        .text = {
+            {
+                .type = TRMSG_INTRO,
+                .text = "I came this far looking for wild\\nPokémon.\\n",
+            },
+            {
+                .type = TRMSG_LOSE,
+                .text = "I’m out of Pokémon!\\n",
+            },
+            {
+                .type = TRMSG_AFTER,
+                .text = "You looked cute and harmless.\\nWas I ever wrong!\\n",
+            },
+        },
+    },
+
+    // TRAINER_PICNICKER_ARIANA (FireRed, RockTunnel_1F)
+    [850] = {
+        .name = "Ariana",
+        .data = {
+            .trainerType = TRAINER_DATA_TYPE_NOTHING,
+            .trainerClass = TRAINERCLASS_PICNICKER,
+            .items = { ITEM_NONE, ITEM_NONE, ITEM_NONE, ITEM_NONE },
+            .aiFlags = F_PRIORITIZE_SUPER_EFFECTIVE | F_EVALUATE_ATTACKS,
+            .battleType = SINGLE_BATTLE,
+        },
+        .party = {
+            {
+                .ivs = 0,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 19,
+                .species = SPECIES_PIDGEY,
+                .ballSeal = 0,
+            },
+            {
+                .ivs = 0,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 19,
+                .species = SPECIES_RATTATA,
+                .ballSeal = 0,
+            },
+            {
+                .ivs = 0,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 19,
+                .species = SPECIES_RATTATA,
+                .ballSeal = 0,
+            },
+            {
+                .ivs = 0,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 19,
+                .species = SPECIES_BELLSPROUT,
+                .ballSeal = 0,
+            },
+        },
+        .text = {
+            {
+                .type = TRMSG_INTRO,
+                .text = "You have Pokémon!\\nLet’s start!\\n",
+            },
+            {
+                .type = TRMSG_LOSE,
+                .text = "You play hard!\\n",
+            },
+            {
+                .type = TRMSG_AFTER,
+                .text = "Whew!\\nI’m all sweaty now.\\n",
+            },
+        },
+    },
+
+    // TRAINER_PICNICKER_LEAH (FireRed, RockTunnel_1F)
+    [851] = {
+        .name = "Leah",
+        .data = {
+            .trainerType = TRAINER_DATA_TYPE_NOTHING,
+            .trainerClass = TRAINERCLASS_PICNICKER,
+            .items = { ITEM_NONE, ITEM_NONE, ITEM_NONE, ITEM_NONE },
+            .aiFlags = F_PRIORITIZE_SUPER_EFFECTIVE | F_EVALUATE_ATTACKS,
+            .battleType = SINGLE_BATTLE,
+        },
+        .party = {
+            {
+                .ivs = 0,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 22,
+                .species = SPECIES_BELLSPROUT,
+                .ballSeal = 0,
+            },
+            {
+                .ivs = 0,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 22,
+                .species = SPECIES_CLEFAIRY,
+                .ballSeal = 0,
+            },
+        },
+        .text = {
+            {
+                .type = TRMSG_INTRO,
+                .text = "Eek!\\rDon’t try anything funny in the\\ndark!\\n",
+            },
+            {
+                .type = TRMSG_LOSE,
+                .text = "It was too dark...\\n",
+            },
+            {
+                .type = TRMSG_AFTER,
+                .text = "I saw a Machop in this tunnel.\\n",
+            },
+        },
+    },
+
+    // TRAINER_HIKER_LUCAS (FireRed, RockTunnel_1F)
+    [852] = {
+        .name = "Lucas",
+        .data = {
+            .trainerType = TRAINER_DATA_TYPE_MOVES,
+            .trainerClass = TRAINERCLASS_HIKER,
+            .items = { ITEM_NONE, ITEM_NONE, ITEM_NONE, ITEM_NONE },
+            .aiFlags = F_PRIORITIZE_SUPER_EFFECTIVE | F_EVALUATE_ATTACKS,
+            .battleType = SINGLE_BATTLE,
+        },
+        .party = {
+            {
+                .ivs = 0,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 21,
+                .species = SPECIES_GEODUDE,
+                .moves = { MOVE_MAGNITUDE, MOVE_ROCK_THROW, MOVE_MUD_SPORT, MOVE_DEFENSE_CURL },
+                .ballSeal = 0,
+            },
+            {
+                .ivs = 0,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 21,
+                .species = SPECIES_GRAVELER,
+                .moves = { MOVE_MAGNITUDE, MOVE_ROCK_THROW, MOVE_MUD_SPORT, MOVE_DEFENSE_CURL },
+                .ballSeal = 0,
+            },
+        },
+        .text = {
+            {
+                .type = TRMSG_INTRO,
+                .text = "Outsiders like you need to show me\\nsome respect!\\n",
+            },
+            {
+                .type = TRMSG_LOSE,
+                .text = "I give!\\n",
+            },
+            {
+                .type = TRMSG_AFTER,
+                .text = "You’re talented enough to hike!\\n",
+            },
+        },
+    },
+
+    // TRAINER_HIKER_OLIVER (FireRed, RockTunnel_1F)
+    [853] = {
+        .name = "Oliver",
+        .data = {
+            .trainerType = TRAINER_DATA_TYPE_NOTHING,
+            .trainerClass = TRAINERCLASS_HIKER,
+            .items = { ITEM_NONE, ITEM_NONE, ITEM_NONE, ITEM_NONE },
+            .aiFlags = F_PRIORITIZE_SUPER_EFFECTIVE | F_EVALUATE_ATTACKS,
+            .battleType = SINGLE_BATTLE,
+        },
+        .party = {
+            {
+                .ivs = 0,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 20,
+                .species = SPECIES_ONIX,
+                .ballSeal = 0,
+            },
+            {
+                .ivs = 0,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 20,
+                .species = SPECIES_ONIX,
+                .ballSeal = 0,
+            },
+            {
+                .ivs = 0,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 20,
+                .species = SPECIES_GEODUDE,
+                .ballSeal = 0,
+            },
+        },
+        .text = {
+            {
+                .type = TRMSG_INTRO,
+                .text = "Hmm.\\nMaybe I’m lost in here...\\n",
+            },
+            {
+                .type = TRMSG_LOSE,
+                .text = "Ease up!\\nWhat am I doing?\\fWhich way is out?\\n",
+            },
+            {
+                .type = TRMSG_AFTER,
+                .text = "That sleeping Pokémon on Route 12\\nforced me to take this detour.\\n",
+            },
+        },
+    },
+
+    // TRAINER_HIKER_LENNY (FireRed, RockTunnel_1F)
+    [854] = {
+        .name = "Lenny",
+        .data = {
+            .trainerType = TRAINER_DATA_TYPE_NOTHING,
+            .trainerClass = TRAINERCLASS_HIKER,
+            .items = { ITEM_NONE, ITEM_NONE, ITEM_NONE, ITEM_NONE },
+            .aiFlags = F_PRIORITIZE_SUPER_EFFECTIVE | F_EVALUATE_ATTACKS,
+            .battleType = SINGLE_BATTLE,
+        },
+        .party = {
+            {
+                .ivs = 0,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 19,
+                .species = SPECIES_GEODUDE,
+                .ballSeal = 0,
+            },
+            {
+                .ivs = 0,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 19,
+                .species = SPECIES_MACHOP,
+                .ballSeal = 0,
+            },
+            {
+                .ivs = 0,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 19,
+                .species = SPECIES_GEODUDE,
+                .ballSeal = 0,
+            },
+            {
+                .ivs = 0,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 19,
+                .species = SPECIES_GEODUDE,
+                .ballSeal = 0,
+            },
+        },
+        .text = {
+            {
+                .type = TRMSG_INTRO,
+                .text = "This tunnel goes a long way, kid!\\n",
+            },
+            {
+                .type = TRMSG_LOSE,
+                .text = "Doh!\\nYou win!\\n",
+            },
+            {
+                .type = TRMSG_AFTER,
+                .text = "Watch for Onix.\\nThey appear only occasionally.\\rHigh-level ones can put the\\nsqueeze on you!\\n",
+            },
+        },
+    },
+
+    // TRAINER_POKEMANIAC_ASHTON (FireRed, RockTunnel_1F)
+    [855] = {
+        .name = "Ashton",
+        .data = {
+            .trainerType = TRAINER_DATA_TYPE_NOTHING,
+            .trainerClass = TRAINERCLASS_POKE_MANIAC,
+            .items = { ITEM_NONE, ITEM_NONE, ITEM_NONE, ITEM_NONE },
+            .aiFlags = F_PRIORITIZE_SUPER_EFFECTIVE | F_EVALUATE_ATTACKS,
+            .battleType = SINGLE_BATTLE,
+        },
+        .party = {
+            {
+                .ivs = 30,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 23,
+                .species = SPECIES_CUBONE,
+                .ballSeal = 0,
+            },
+            {
+                .ivs = 30,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 23,
+                .species = SPECIES_SLOWPOKE,
+                .ballSeal = 0,
+            },
+        },
+        .text = {
+            {
+                .type = TRMSG_INTRO,
+                .text = "Pokémon fight!\\nReady, go!\\n",
+            },
+            {
+                .type = TRMSG_LOSE,
+                .text = "Game over!\\n",
+            },
+            {
+                .type = TRMSG_AFTER,
+                .text = "Oh well, I’ll get a Zubat as I go!\\n",
+            },
+        },
+    },
+
+    // TRAINER_POKEMANIAC_COOPER (FireRed, RockTunnel_B1F)
+    [856] = {
+        .name = "Cooper",
+        .data = {
+            .trainerType = TRAINER_DATA_TYPE_NOTHING,
+            .trainerClass = TRAINERCLASS_POKE_MANIAC,
+            .items = { ITEM_NONE, ITEM_NONE, ITEM_NONE, ITEM_NONE },
+            .aiFlags = F_PRIORITIZE_SUPER_EFFECTIVE | F_EVALUATE_ATTACKS,
+            .battleType = SINGLE_BATTLE,
+        },
+        .party = {
+            {
+                .ivs = 30,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 20,
+                .species = SPECIES_SLOWPOKE,
+                .ballSeal = 0,
+            },
+            {
+                .ivs = 30,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 20,
+                .species = SPECIES_SLOWPOKE,
+                .ballSeal = 0,
+            },
+            {
+                .ivs = 30,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 20,
+                .species = SPECIES_SLOWPOKE,
+                .ballSeal = 0,
+            },
+        },
+        .text = {
+            {
+                .type = TRMSG_INTRO,
+                .text = "You have a Pokédex?\\nI want one, too.\\n",
+            },
+            {
+                .type = TRMSG_LOSE,
+                .text = "Shoot!\\nI am so jealous!\\n",
+            },
+            {
+                .type = TRMSG_AFTER,
+                .text = "When you finish your Pokédex,\\ncan I have it?\\n",
+            },
+        },
+    },
+
+    // TRAINER_HIKER_DUDLEY (FireRed, RockTunnel_B1F)
+    [857] = {
+        .name = "Dudley",
+        .data = {
+            .trainerType = TRAINER_DATA_TYPE_MOVES,
+            .trainerClass = TRAINERCLASS_HIKER,
+            .items = { ITEM_NONE, ITEM_NONE, ITEM_NONE, ITEM_NONE },
+            .aiFlags = F_PRIORITIZE_SUPER_EFFECTIVE | F_EVALUATE_ATTACKS,
+            .battleType = SINGLE_BATTLE,
+        },
+        .party = {
+            {
+                .ivs = 0,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 21,
+                .species = SPECIES_GEODUDE,
+                .moves = { MOVE_MAGNITUDE, MOVE_ROCK_THROW, MOVE_MUD_SPORT, MOVE_DEFENSE_CURL },
+                .ballSeal = 0,
+            },
+            {
+                .ivs = 0,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 21,
+                .species = SPECIES_GEODUDE,
+                .moves = { MOVE_MAGNITUDE, MOVE_ROCK_THROW, MOVE_MUD_SPORT, MOVE_DEFENSE_CURL },
+                .ballSeal = 0,
+            },
+            {
+                .ivs = 0,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 21,
+                .species = SPECIES_GRAVELER,
+                .moves = { MOVE_MAGNITUDE, MOVE_ROCK_THROW, MOVE_MUD_SPORT, MOVE_DEFENSE_CURL },
+                .ballSeal = 0,
+            },
+        },
+        .text = {
+            {
+                .type = TRMSG_INTRO,
+                .text = "Hahaha!\\nCan you beat my power?\\n",
+            },
+            {
+                .type = TRMSG_LOSE,
+                .text = "Oops!\\nOutmuscled!\\n",
+            },
+            {
+                .type = TRMSG_AFTER,
+                .text = "I go for power because I hate\\nthinking.\\n",
+            },
+        },
+    },
+
+    // TRAINER_PICNICKER_SOFIA (FireRed, RockTunnel_B1F)
+    [858] = {
+        .name = "Sofia",
+        .data = {
+            .trainerType = TRAINER_DATA_TYPE_NOTHING,
+            .trainerClass = TRAINERCLASS_PICNICKER,
+            .items = { ITEM_NONE, ITEM_NONE, ITEM_NONE, ITEM_NONE },
+            .aiFlags = F_PRIORITIZE_SUPER_EFFECTIVE | F_EVALUATE_ATTACKS,
+            .battleType = SINGLE_BATTLE,
+        },
+        .party = {
+            {
+                .ivs = 0,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 21,
+                .species = SPECIES_JIGGLYPUFF,
+                .ballSeal = 0,
+            },
+            {
+                .ivs = 0,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 21,
+                .species = SPECIES_PIDGEY,
+                .ballSeal = 0,
+            },
+            {
+                .ivs = 0,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 21,
+                .species = SPECIES_MEOWTH,
+                .ballSeal = 0,
+            },
+        },
+        .text = {
+            {
+                .type = TRMSG_INTRO,
+                .text = "Do you know how you can avoid\\ngetting lost in the mountains?\\rYou can bend twigs as trail\\nmarkers.\\n",
+            },
+            {
+                .type = TRMSG_LOSE,
+                .text = "Ohhh!\\nI did my best!\\n",
+            },
+            {
+                .type = TRMSG_AFTER,
+                .text = "I want to go home!\\n",
+            },
+        },
+    },
+
+    // TRAINER_HIKER_ALLEN (FireRed, RockTunnel_B1F)
+    [859] = {
+        .name = "Allen",
+        .data = {
+            .trainerType = TRAINER_DATA_TYPE_MOVES,
+            .trainerClass = TRAINERCLASS_HIKER,
+            .items = { ITEM_NONE, ITEM_NONE, ITEM_NONE, ITEM_NONE },
+            .aiFlags = F_PRIORITIZE_SUPER_EFFECTIVE | F_EVALUATE_ATTACKS,
+            .battleType = SINGLE_BATTLE,
+        },
+        .party = {
+            {
+                .ivs = 0,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 25,
+                .species = SPECIES_GEODUDE,
+                .moves = { MOVE_MAGNITUDE, MOVE_ROCK_THROW, MOVE_MUD_SPORT, MOVE_DEFENSE_CURL },
+                .ballSeal = 0,
+            },
+        },
+        .text = {
+            {
+                .type = TRMSG_INTRO,
+                .text = "My Pokémon techniques will leave\\nyou crying!\\n",
+            },
+            {
+                .type = TRMSG_LOSE,
+                .text = "I give!\\nYou’re a better technician!\\n",
+            },
+            {
+                .type = TRMSG_AFTER,
+                .text = "In mountains, you’ll often find\\nRock-type Pokémon.\\n",
+            },
+        },
+    },
+
+    // TRAINER_HIKER_ERIC (FireRed, RockTunnel_B1F)
+    [860] = {
+        .name = "Eric",
+        .data = {
+            .trainerType = TRAINER_DATA_TYPE_NOTHING,
+            .trainerClass = TRAINERCLASS_HIKER,
+            .items = { ITEM_NONE, ITEM_NONE, ITEM_NONE, ITEM_NONE },
+            .aiFlags = F_PRIORITIZE_SUPER_EFFECTIVE | F_EVALUATE_ATTACKS,
+            .battleType = SINGLE_BATTLE,
+        },
+        .party = {
+            {
+                .ivs = 0,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 20,
+                .species = SPECIES_MACHOP,
+                .ballSeal = 0,
+            },
+            {
+                .ivs = 0,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 20,
+                .species = SPECIES_ONIX,
+                .ballSeal = 0,
+            },
+        },
+        .text = {
+            {
+                .type = TRMSG_INTRO,
+                .text = "Hit me with your best shot!\\n",
+            },
+            {
+                .type = TRMSG_LOSE,
+                .text = "Fired away!\\n",
+            },
+            {
+                .type = TRMSG_AFTER,
+                .text = "I’ll raise my Pokémon to beat\\nyours, kid.\\n",
+            },
+        },
+    },
+
+    // TRAINER_POKEMANIAC_STEVE (FireRed, RockTunnel_B1F)
+    [861] = {
+        .name = "Steve",
+        .data = {
+            .trainerType = TRAINER_DATA_TYPE_NOTHING,
+            .trainerClass = TRAINERCLASS_POKE_MANIAC,
+            .items = { ITEM_NONE, ITEM_NONE, ITEM_NONE, ITEM_NONE },
+            .aiFlags = F_PRIORITIZE_SUPER_EFFECTIVE | F_EVALUATE_ATTACKS,
+            .battleType = SINGLE_BATTLE,
+        },
+        .party = {
+            {
+                .ivs = 30,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 22,
+                .species = SPECIES_CHARMANDER,
+                .ballSeal = 0,
+            },
+            {
+                .ivs = 30,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 22,
+                .species = SPECIES_CUBONE,
+                .ballSeal = 0,
+            },
+        },
+        .text = {
+            {
+                .type = TRMSG_INTRO,
+                .text = "Um... Do you know about Pokémon\\ncosplay?\\n",
+            },
+            {
+                .type = TRMSG_LOSE,
+                .text = "Well, that’s that.\\n",
+            },
+            {
+                .type = TRMSG_AFTER,
+                .text = "Pokémon cosplay is dressing up as\\nPokémon for fun.\\rClefairy is a favorite.\\n",
+            },
+        },
+    },
+
+    // TRAINER_PICNICKER_MARTHA (FireRed, RockTunnel_B1F)
+    [862] = {
+        .name = "Martha",
+        .data = {
+            .trainerType = TRAINER_DATA_TYPE_NOTHING,
+            .trainerClass = TRAINERCLASS_PICNICKER,
+            .items = { ITEM_NONE, ITEM_NONE, ITEM_NONE, ITEM_NONE },
+            .aiFlags = F_PRIORITIZE_SUPER_EFFECTIVE | F_EVALUATE_ATTACKS,
+            .battleType = SINGLE_BATTLE,
+        },
+        .party = {
+            {
+                .ivs = 0,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 22,
+                .species = SPECIES_ODDISH,
+                .ballSeal = 0,
+            },
+            {
+                .ivs = 0,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 22,
+                .species = SPECIES_BULBASAUR,
+                .ballSeal = 0,
+            },
+        },
+        .text = {
+            {
+                .type = TRMSG_INTRO,
+                .text = "I don’t often come here, but I will\\nbattle you.\\n",
+            },
+            {
+                .type = TRMSG_LOSE,
+                .text = "Oh!\\nI lost!\\n",
+            },
+            {
+                .type = TRMSG_AFTER,
+                .text = "I like tiny Pokémon.\\nBig ones are too scary!\\n",
+            },
+        },
+    },
+
+    // TRAINER_POKEMANIAC_WINSTON (FireRed, RockTunnel_B1F)
+    [863] = {
+        .name = "Winston",
+        .data = {
+            .trainerType = TRAINER_DATA_TYPE_NOTHING,
+            .trainerClass = TRAINERCLASS_POKE_MANIAC,
+            .items = { ITEM_NONE, ITEM_NONE, ITEM_NONE, ITEM_NONE },
+            .aiFlags = F_PRIORITIZE_SUPER_EFFECTIVE | F_EVALUATE_ATTACKS,
+            .battleType = SINGLE_BATTLE,
+        },
+        .party = {
+            {
+                .ivs = 30,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 25,
+                .species = SPECIES_SLOWPOKE,
+                .ballSeal = 0,
+            },
+        },
+        .text = {
+            {
+                .type = TRMSG_INTRO,
+                .text = "I draw illustrations of Pokémon\\nwhen I’m home.\\n",
+            },
+            {
+                .type = TRMSG_LOSE,
+                .text = "Whew...\\nI’m exhausted...\\n",
+            },
+            {
+                .type = TRMSG_AFTER,
+                .text = "I’m an artist, not a fighter.\\nI’ll go home to draw.\\n",
+            },
+        },
+    },
     // END PART1 GENERATED
 };
 
@@ -35387,6 +37332,50 @@ const u16 sTrainerTextOrder[] = {
     817,
     818,
     819,
+    820,
+    821,
+    822,
+    823,
+    824,
+    825,
+    826,
+    827,
+    828,
+    829,
+    830,
+    831,
+    832,
+    833,
+    834,
+    835,
+    836,
+    837,
+    838,
+    839,
+    840,
+    841,
+    842,
+    843,
+    844,
+    845,
+    846,
+    847,
+    848,
+    849,
+    850,
+    851,
+    852,
+    853,
+    854,
+    855,
+    856,
+    857,
+    858,
+    859,
+    860,
+    861,
+    862,
+    863,
     // END PART1 GENERATED
 };
 

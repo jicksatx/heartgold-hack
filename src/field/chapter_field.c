@@ -60,6 +60,15 @@ static const struct Part1Map sPart1Maps[] = {
     { 328, 521, 998, 970, 878 },
     { 329, 522, 998, 970, 878 }, // S.S. Anne hold
     { 308, 523, 1000, 970, 879 }, // S.S. Anne captain's office
+    { 365, 524, 1001, 1002, 880 }, // Vermilion Gym
+    { 19,  525, 1003, 970, 881 }, // Route 11
+    { 106, 526, 1003, 970, 881 }, // Diglett's Cave
+    { 17,  527, 1004, 970, 882 }, // Route 9
+    { 18,  528, 1005, 970, 883 }, // Route 10 (north)
+    { 388, 529, 1005, 970, 883 }, // Route 10 (south)
+    { 108, 530, 1005, 970, 883 }, // Rock Tunnel 1F
+    { 452, 531, 1005, 970, 883 }, // Rock Tunnel B1F
+    { 53,  532, 1006, 970, 884 }, // Lavender Town
 };
 
 #define MAP_HEADERS        ((const u8 *)0x020F6BE0) // sMapHeaders

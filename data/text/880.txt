@@ -1,0 +1,12 @@
+Yo!\nChamp in the making!\rLt. Surge has a nickname.\rPeople refer to him as the\nLightning American!\rHe’s an expert on electric\nPokémon.\rBird/Water-type Pokémon match\npoorly against the Electric type.\rBeware of paralysis, too.\rLt. Surge is very cautious.\rHe’s locked himself in, so it won’t\nbe easy getting to him.
+Whew!\nThat match was electric!
+Vermilion Pokémon Gym\nLeader: Lt. Surge\rWinning Trainers:\nBlue
+Vermilion Pokémon Gym\nLeader: Lt. Surge\rWinning Trainers:\nBlue, {STRVAR_1 3, 0, 0}
+Nope!\nThere’s only trash here.
+Hey! There’s a switch under the\ntrash! Turn it on!\rThe first electric lock opened!
+Hey! There’s another switch under\nthe trash! Turn it on!
+The second electric lock opened!\nThe motorized door opened!
+Nope!\nThere’s only trash here.\rHey!\nThe electric locks were reset!
+{STRVAR_1 3, 0, 0} received the Thunder Badge\nfrom Lt. Surge!
+The Thunder Badge cranks up your\nPokémon’s Speed!\rIt also lets your Pokémon Fly\nlightning-quick anytime, kid!\rYou’re special, kid!\nTake this!\r
+TM34 contains Shock Wave!\rTeach it to an Electric Pokémon!

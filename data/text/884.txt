@@ -1,0 +1,11 @@
+Lavender Town\nThe Noble Purple Town
+Pokémon Tower\nBecalm the Spirits of Pokémon
+House of Memories\nMay Pokémon Spirits Rest Easy
+Lavender Volunteer\nPokémon House
+(Test build) The Pokémon Tower comes\nin a later build.
+Do you believe in ghosts? {YESNO 0}
+Really?\nSo there are believers...
+Hahaha, I guess not.\rThat white hand on your shoulder...\nI’m just imagining it.
+This town is known as the grave\nsite of Pokémon.\rMemorial services are held in\nPokémon Tower.
+Ghosts appeared in Pokémon Tower.\rI think they’re the spirits of\nPokémon that the Rockets killed.
+(Test build) Part 1 continues past\nhere in a later build.\r

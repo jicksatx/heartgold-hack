@@ -126,6 +126,45 @@ ARCHIVES = {
         ("L", "SSAnne_CaptainsOffice_Text_ExplainCut", N),
         ("L", "SSAnne_CaptainsOffice_Text_SSAnneWillSetSailSoon", N),
     ],
+    880: [  # Vermilion Gym
+        ("L", "VermilionCity_Gym_Text_GymGuyAdvice", N),
+        ("L", "VermilionCity_Gym_Text_GymGuyPostVictory", N),
+        ("L", "VermilionCity_Gym_Text_GymStatue", N),
+        ("L", "VermilionCity_Gym_Text_GymStatuePlayerWon", N),
+        ("L", "VermilionCity_Gym_Text_NopeOnlyTrashHere", N),
+        ("L", "VermilionCity_Gym_Text_SwitchUnderTrashFirstLockOpened", N),
+        ("T", "Hey! There’s another switch under\\nthe trash! Turn it on!"),
+        ("L", "VermilionCity_Gym_Text_SecondLockOpened", N),
+        ("L", "VermilionCity_Gym_Text_OnlyTrashLocksWereReset", N),
+        ("T", P + " received the Thunder Badge\\nfrom Lt. Surge!"),
+        ("L", "VermilionCity_Gym_Text_ExplainThunderBadgeTakeThis", R),
+        ("L", "VermilionCity_Gym_Text_ExplainTM34", N),
+    ],
+    881: [  # Route 11
+        ("L", "Route11_Text_DiglettsCave", N),
+        ("T", "(Test build) Part 1 continues past\\nhere in a later build." + R),
+    ],
+    882: [  # Route 9
+        ("L", "Route9_Text_RouteSign", N),
+    ],
+    883: [  # Route 10
+        ("L", "Route10_Text_PowerPlant", N),
+        ("L", "Route10_Text_RockTunnel", N),
+        ("L", "Route10_Text_RockTunnelDetourToLavender", N),
+    ],
+    884: [  # Lavender Town
+        ("L", "LavenderTown_Text_TownSign", N),
+        ("L", "LavenderTown_Text_PokemonTowerSign", N),
+        ("T", "House of Memories\\nMay Pokémon Spirits Rest Easy"),
+        ("L", "LavenderTown_Text_VolunteerPokemonHouse", N),
+        ("T", "(Test build) The Pokémon Tower comes\\nin a later build."),
+        ("L", "LavenderTown_Text_DoYouBelieveInGhosts", " {YESNO 0}"),
+        ("L", "LavenderTown_Text_SoThereAreBelievers", N),
+        ("L", "LavenderTown_Text_JustImaginingWhiteHand", N),
+        ("L", "LavenderTown_Text_TownKnownAsMonGraveSite", N),
+        ("L", "LavenderTown_Text_GhostsAppearedInTower", N),
+        ("T", "(Test build) Part 1 continues past\\nhere in a later build." + R),
+    ],
 }
 
 

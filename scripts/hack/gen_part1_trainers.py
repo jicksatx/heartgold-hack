@@ -100,6 +100,51 @@ PART1_TRAINERS = [
     ("TRAINER_RIVAL_SS_ANNE_SQUIRTLE", "SSAnne_2F_Corridor"),
     ("TRAINER_RIVAL_SS_ANNE_BULBASAUR", "SSAnne_2F_Corridor"),
     ("TRAINER_RIVAL_SS_ANNE_CHARMANDER", "SSAnne_2F_Corridor"),
+    # Build 19: Lt. Surge, Route 11, Route 9, Route 10, Rock Tunnel
+    ("TRAINER_ENGINEER_BAILY", "VermilionCity_Gym"),
+    ("TRAINER_SAILOR_DWAYNE", "VermilionCity_Gym"),
+    ("TRAINER_GENTLEMAN_TUCKER", "VermilionCity_Gym"),
+    ("TRAINER_LEADER_LT_SURGE", "VermilionCity_Gym"),
+    ("TRAINER_YOUNGSTER_EDDIE", "Route11"),
+    ("TRAINER_GAMER_HUGO", "Route11"),
+    ("TRAINER_YOUNGSTER_DILLON", "Route11"),
+    ("TRAINER_YOUNGSTER_DAVE", "Route11"),
+    ("TRAINER_GAMER_JASPER", "Route11"),
+    ("TRAINER_GAMER_DARIAN", "Route11"),
+    ("TRAINER_ENGINEER_BRAXTON", "Route11"),
+    ("TRAINER_YOUNGSTER_YASU", "Route11"),
+    ("TRAINER_GAMER_DIRK", "Route11"),
+    ("TRAINER_ENGINEER_BERNIE", "Route11"),
+    ("TRAINER_PICNICKER_ALICIA", "Route9"),
+    ("TRAINER_HIKER_JEREMY", "Route9"),
+    ("TRAINER_HIKER_ALAN", "Route9"),
+    ("TRAINER_CAMPER_CHRIS", "Route9"),
+    ("TRAINER_BUG_CATCHER_BRENT", "Route9"),
+    ("TRAINER_BUG_CATCHER_CONNER", "Route9"),
+    ("TRAINER_HIKER_BRICE", "Route9"),
+    ("TRAINER_PICNICKER_CAITLIN", "Route9"),
+    ("TRAINER_CAMPER_DREW", "Route9"),
+    ("TRAINER_PICNICKER_CAROL", "Route10"),
+    ("TRAINER_HIKER_CLARK", "Route10"),
+    ("TRAINER_POKEMANIAC_HERMAN", "Route10"),
+    ("TRAINER_HIKER_TRENT", "Route10"),
+    ("TRAINER_POKEMANIAC_MARK", "Route10"),
+    ("TRAINER_PICNICKER_HEIDI", "Route10"),
+    ("TRAINER_PICNICKER_DANA", "RockTunnel_1F"),
+    ("TRAINER_PICNICKER_ARIANA", "RockTunnel_1F"),
+    ("TRAINER_PICNICKER_LEAH", "RockTunnel_1F"),
+    ("TRAINER_HIKER_LUCAS", "RockTunnel_1F"),
+    ("TRAINER_HIKER_OLIVER", "RockTunnel_1F"),
+    ("TRAINER_HIKER_LENNY", "RockTunnel_1F"),
+    ("TRAINER_POKEMANIAC_ASHTON", "RockTunnel_1F"),
+    ("TRAINER_POKEMANIAC_COOPER", "RockTunnel_B1F"),
+    ("TRAINER_HIKER_DUDLEY", "RockTunnel_B1F"),
+    ("TRAINER_PICNICKER_SOFIA", "RockTunnel_B1F"),
+    ("TRAINER_HIKER_ALLEN", "RockTunnel_B1F"),
+    ("TRAINER_HIKER_ERIC", "RockTunnel_B1F"),
+    ("TRAINER_POKEMANIAC_STEVE", "RockTunnel_B1F"),
+    ("TRAINER_PICNICKER_MARTHA", "RockTunnel_B1F"),
+    ("TRAINER_POKEMANIAC_WINSTON", "RockTunnel_B1F"),
 ]
 
 # HeartGold overworld sprite for each FireRed class (for the events' trainer objects)
@@ -108,7 +153,7 @@ SPRITES = {
     "SUPER_NERD": 338, "TEAM_ROCKET": 222, "SCIENTIST": 29, "POKEMANIAC": 377, "SAILOR": 348, "FISHERMAN": 347,
     "SWIMMER_M": 342, "SWIMMER_F": 343, "BIKER": 229, "CUE_BALL": 229, "GENTLEMAN": 341, "BEAUTY": 326,
     "BIRD_KEEPER": 323, "BLACK_BELT": 344, "PSYCHIC": 227, "CHANNELER": 219, "COOLTRAINER": 324, "RIVAL_EARLY": 375,
-    "RIVAL_LATE": 375, "LEADER": 352,
+    "RIVAL_LATE": 375, "LEADER": 352, "ENGINEER": 324, "GAMER": 330,
 }
 
 
@@ -134,7 +179,7 @@ CLASSES = {
     "BEAUTY": "TRAINERCLASS_BEAUTY",
     "POKEMANIAC": "TRAINERCLASS_POKE_MANIAC",
     "ENGINEER": "TRAINERCLASS_WORKER",
-    "GAMER": "TRAINERCLASS_GUITARIST",
+    "GAMER": "TRAINERCLASS_GENTLEMAN",
     "BIKER": "TRAINERCLASS_BIKER",
     "CUE_BALL": "TRAINERCLASS_ROUGHNECK",
     "BURGLAR": "TRAINERCLASS_BURGLAR",
@@ -282,6 +327,8 @@ def cstr(text):
 
 
 def title(name):
+    if name == "LT. SURGE":
+        return "Lt. Surge"
     return " ".join(w.capitalize() if w not in KEEP_UPPER else w for w in name.split(" "))
 
 

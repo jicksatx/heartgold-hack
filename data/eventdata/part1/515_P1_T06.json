@@ -71,14 +71,6 @@
       "z": 335,
       "y": 0,
       "player_facing_dir": 4
-    },
-    {
-      "script": 8,
-      "type": 0,
-      "x": 1295,
-      "z": 319,
-      "y": 0,
-      "player_facing_dir": 4
     }
   ],
   "object_events": [
@@ -314,8 +306,8 @@
       "y": 0
     },
     {
-      "x": 1282,
-      "z": 286,
+      "x": 1295,
+      "z": 319,
       "dest_header_id": 365,
       "dest_warp_id": 0,
       "y": 0
@@ -328,26 +320,5 @@
       "y": 0
     }
   ],
-  "coord_events": [
-    {
-      "script": 7,
-      "x": 1343,
-      "z": 303,
-      "width": 1,
-      "length": 3,
-      "y": 0,
-      "value": 0,
-      "var": 16746
-    },
-    {
-      "script": 7,
-      "x": 1343,
-      "z": 314,
-      "width": 1,
-      "length": 4,
-      "y": 0,
-      "value": 0,
-      "var": 16746
-    }
-  ]
+  "coord_events": []
 }

@@ -32,10 +32,19 @@ elif args[0] == 'create':
         index = entry.rsplit('_', 1)[-1]
         return (0, int(index), entry) if index.isdigit() else (1, 0, entry)
 
-    for entry in sorted(os.listdir(args[2]), key=member_key):
-        with open(os.path.join(args[2], entry), 'rb') as f:
-            files[idx] = f.read()
-        idx += 1
+    # the same member can be there twice under different zero padding (2_965 from the build, 2_0965 extracted once
+    # the narc passed 1000 members): keep the newest file for each index
+    newest = {}
+    for entry in os.listdir(args[2]):
+        key = member_key(entry)
+        path = os.path.join(args[2], entry)
+        ident = key[1] if key[0] == 0 else entry
+        if ident not in newest or os.path.getmtime(path) >= os.path.getmtime(newest[ident][1]):
+            newest[ident] = (key, path)
+    files = []
+    for key, path in sorted(newest.values()):
+        with open(path, 'rb') as f:
+            files.append(f.read())
 
     narc = ndspy.narc.NARC.fromFilesAndNames(files=files)
     narc.endiannessOfBeginning = '>'
