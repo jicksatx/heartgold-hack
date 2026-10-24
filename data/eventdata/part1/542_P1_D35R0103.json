@@ -58,7 +58,7 @@
       "movement_type": 17,
       "trainer_type": 1,
       "hidden_flag": 0,
-      "script": 3893,
+      "script": 3894,
       "initial_dir": 3,
       "param0": 3,
       "param1": 0,
@@ -98,7 +98,7 @@
     {
       "x": 51,
       "z": 29,
-      "dest_header_id": 249,
+      "dest_header_id": 238,
       "dest_warp_id": 0,
       "y": 0
     },
@@ -119,8 +119,8 @@
     {
       "x": 51,
       "z": 4,
-      "dest_header_id": 249,
-      "dest_warp_id": 3,
+      "dest_header_id": 441,
+      "dest_warp_id": 1,
       "y": 0
     }
   ],

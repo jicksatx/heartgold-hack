@@ -1,3 +1,3 @@
 I’m on guard duty.\nGee, I’m thirsty, though!\rOh, wait there, the road’s closed.\r
-{STRVAR_1 3, 0, 0} took the Underground Path\nunder Saffron City.\r
+{STRVAR_1 3, 0, 0} took the Underground Path\nunder Saffron City instead.\r
 I’m on guard duty.\nGee, I’m thirsty, though!\rOh, wait there, the road’s closed.

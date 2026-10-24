@@ -687,6 +687,8 @@ arm9 Chapter_MapHeader_GetMsgBank 0203B2C0 1
 arm9 Chapter_MapHeader_GetScriptsBank 0203B2D4 1
 arm9 Chapter_MapHeader_GetScriptHeaderBank 0203B2E8 1
 arm9 Chapter_MapHeader_GetEventsBank 0203B358 1
+arm9 Chapter_BufferBattleTrainerClass 0200C344 3
+arm9 Chapter_TrainerClassToMusicCombo 02051868 1
 # hack: rival scripts see randomized/FireRed starters as the Johto starter of the same type
 arm9 Chapter_ScrCmd_GetStarterChoice 02043938 2
 # hack: in Part 1 the field moves' Johto badge checks are answered with FireRed's Kanto badges (src/chapter.c)

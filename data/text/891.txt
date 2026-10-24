@@ -9,3 +9,14 @@ Games are scary!\nIt’s so easy to get hooked!
 The trick is to watch the reels\nclosely.
 Welcome to Rocket Game Corner!\rSorry, we aren’t selling Coins\nright now.
 It’s a poster of a smiling\nPokémon.
+Welcome to Rocket Game Corner!\rDo you need some game Coins?\nWould you like to buy some?
+Oh, I’m sorry.\nYou don’t have a Coin Case.
+You can’t afford the Coins.
+Whoops!\nYour Coin Case is full.
+Thank you.\nHere are your Coins!
+No?\nPlease come play sometime!
+50 Coins\n$1,000
+500 Coins\n$10,000
+No thanks
+A Coin Case is required...
+This slot machine has been\nconverted to Voltorb Flip!\rWant to play? {YESNO 0}

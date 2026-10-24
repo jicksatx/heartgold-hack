@@ -1,0 +1,26 @@
+We exchange your Coins for prizes.\r
+Which prize would you like?
+A Coin Case is required...
+{STRVAR_1 1, 0, 0}\n180 Coins
+{STRVAR_1 1, 1, 0}\n500 Coins
+{STRVAR_1 1, 2, 0}\n2,800 Coins
+{STRVAR_1 1, 3, 0}\n5,500 Coins
+{STRVAR_1 1, 4, 0}\n9,999 Coins
+No thanks
+So, you want the {STRVAR_1 1, 5, 0}? {YESNO 0}
+Sorry, you’ll need more Coins\nthan that.
+Your party is full!\nPlease make some room first.
+Here you go!\r
+{STRVAR_1 3, 0, 0} received the {STRVAR_1 1, 5, 0}!
+{STRVAR_1 8, 0, 0}\n4,000 Coins
+{STRVAR_1 8, 1, 0}\n3,500 Coins
+{STRVAR_1 8, 2, 0}\n4,000 Coins
+{STRVAR_1 8, 3, 0}\n4,500 Coins
+{STRVAR_1 8, 4, 0}\n4,000 Coins
+So, you want the {STRVAR_1 8, 5, 0}? {YESNO 0}
+{STRVAR_1 3, 0, 0} received the\n{STRVAR_1 8, 5, 0}!
+Sorry. You can’t carry any more.
+Today’s prize Pokémon:\n{STRVAR_1 1, 0, 0}, {STRVAR_1 1, 1, 0}, {STRVAR_1 1, 2, 0},\f{STRVAR_1 1, 3, 0} and {STRVAR_1 1, 4, 0}!
+I sure do fancy that {STRVAR_1 1, 4, 0}!\nBut, it’s hard to win at the games!
+Gahaha! I raked it in today!\nIf only every day were like this...
+Prize TMs on display:\nIce Beam, Iron Tail, Thunderbolt,\fShadow Ball and Flamethrower.

@@ -31,6 +31,7 @@ scr_seq_P1_R22_001:
 	get_player_coords VAR_SPECIAL_x8004, VAR_SPECIAL_x8005
 	move_person OBJ_BLUE, 987, VAR_SPECIAL_x8005
 	clearflag FLAG_P1_HIDE_ROUTE22_BLUE
+	callstd 2031 // rival intro music
 	show_person OBJ_BLUE
 	apply_movement OBJ_BLUE, _blueApproach
 	apply_movement obj_player, _faceWest
@@ -53,12 +54,14 @@ _battleVsGrass:
 _battleVsFire:
 	trainer_battle TRAINER_P1_BLUE_ROUTE22_VS_FIRE, 0, 1, 0
 _afterBattle:
+	callstd 2070 // rival outro music
 	heal_party
 	npc_msg 1
 	closemsg
 	apply_movement OBJ_BLUE, _blueLeave
 	wait_movement
 	hide_person OBJ_BLUE
+	callstd 2071 // back to the map music
 	setflag FLAG_P1_HIDE_ROUTE22_BLUE
 	setvar VAR_P1_ROUTE22, 2
 	releaseall

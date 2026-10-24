@@ -58,6 +58,7 @@ scr_seq_P1_D15R0101_006:
 	get_player_coords VAR_SPECIAL_x8004, VAR_SPECIAL_x8005
 	move_person OBJ_BLUE, VAR_SPECIAL_x8004, 20
 	clearflag FLAG_P1_HIDE_TOWER_BLUE
+	callstd 2031 // rival intro music
 	show_person OBJ_BLUE
 	apply_movement OBJ_BLUE, _blueEnter
 	wait_movement
@@ -82,12 +83,14 @@ _afterBattle:
 	check_battle_won VAR_SPECIAL_RESULT
 	compare VAR_SPECIAL_RESULT, 0
 	goto_if_eq _lost
+	callstd 2070 // rival outro music
 	setvar VAR_P1_TOWER, 1
 	npc_msg 1
 	closemsg
 	apply_movement OBJ_BLUE, _blueExit
 	wait_movement
 	hide_person OBJ_BLUE
+	callstd 2071 // back to the map music
 	setflag FLAG_P1_HIDE_TOWER_BLUE
 	releaseall
 	end

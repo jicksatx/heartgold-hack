@@ -291,3 +291,59 @@ BOOL LONG_CALL Chapter_TestBadgeFlag(struct PlayerProfile *profile, s32 badge)
 }
 
 #endif // CHAPTER_SYSTEM
+
+#include "message.h"
+
+#define TRAINERCLASS_LEADER_BLUE_ID 110
+#define CHAR_SPACE 0x01DE
+#define CHAR_EOS   0xFFFF
+
+/**
+ *  @brief replaces BufferTrainerClassNameFromDataStruct (0x0200C344), only called by the battle messages.  the class
+ *         name is buffered with its trailing space (data/text/197.txt has no space between the class and the name),
+ *         so Blue can be buffered as nothing at all: "You are challenged by Blue!" in both parts.
+ */
+void LONG_CALL Chapter_BufferBattleTrainerClass(MessageFormat *msgFmt, u32 fieldno, void *trainer)
+{
+    u8 trainerClass = ((u8 *)trainer)[1];
+    MsgData *msgData = NewMsgDataFromNarc(1, 27, 730, msgFmt->heapId);
+    if (msgData == NULL) {
+        return;
+    }
+    String *buf = msgFmt->buffer;
+    ReadMsgDataIntoString(msgData, trainerClass, buf);
+    if (trainerClass == TRAINERCLASS_LEADER_BLUE_ID) {
+        buf->size = 0;
+        buf->data[0] = CHAR_EOS;
+    } else if (buf->size + 1 < buf->maxsize) {
+        buf->data[buf->size++] = CHAR_SPACE;
+        buf->data[buf->size] = CHAR_EOS;
+    }
+    SetStringAsPlaceholder(msgFmt, fieldno, buf, NULL);
+    DestroyMsgData(msgData);
+}
+
+#ifdef CHAPTER_SYSTEM
+#include "constants/sndseq.h"
+#include "constants/trainerclass.h"
+
+extern u8 TrainerClassToMusicCombo[32][2];
+
+/**
+ *  @brief replaces the trainer class -> battle music combo lookup (0x02051868).  in Part 1 Blue is Red's rival, so he
+ *         gets Silver's rival battle intro and music; in Part 2 he keeps the Kanto Gym Leader theme.
+ */
+u32 LONG_CALL Chapter_TrainerClassToMusicCombo(u32 trainerClass)
+{
+    if (trainerClass == TRAINERCLASS_LEADER_BLUE && Chapter_Get() == CHAPTER_RED) {
+        return ANIM_MUSIC_COMBO_RIVAL;
+    }
+    for (u32 i = 0; i < NELEMS(TrainerClassToMusicCombo); i++) {
+        u16 entry = TrainerClassToMusicCombo[i][0] | (TrainerClassToMusicCombo[i][1] << 8);
+        if ((entry & 0x3FF) == trainerClass) {
+            return entry >> 10;
+        }
+    }
+    return 41;
+}
+#endif

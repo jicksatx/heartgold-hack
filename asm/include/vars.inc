@@ -390,6 +390,12 @@
 .equ VAR_P1_SSANNE, 0x416D
 // Pokemon Tower: 1 beat Blue, 2 calmed the Marowak ghost, 3 rescued Mr. Fuji
 .equ VAR_P1_TOWER, 0x416E
+// 1 while walking the Underground Path tunnel as the Route 7-8 one (its stairs lead to the Route 7/8 gates)
+.equ VAR_P1_UGPATH, 0x416F
+// Rocket Hideout elevator: the floor it is on, 0 B4F, 1 B2F
+.equ VAR_P1_LIFT, 0x4170
+// Game Corner prize Pokemon lookup: set to the slot (0-4), then "get_starter_choice VAR_P1_PRIZE" (src/field/chapter_field.c)
+.equ VAR_P1_PRIZE, 0x4171
 .equ VAR_UNK_4167, 0x4167
 .equ VAR_UNK_4168, 0x4168
 .equ VAR_UNK_4169, 0x4169

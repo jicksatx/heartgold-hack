@@ -3,3 +3,7 @@ Trainer Tips\rLook, look!\nLook to the left of that post!
 Trainer Tips\rUse Select to switch items in the\nItems window.
 Are you the kid who’s working on\na Pokédex?\rProfessor Oak’s Aide came by here.
 Route 15\nWest to Fuchsia City
+Hi! Remember me?\nI’m one of Professor Oak’s Aides.\rIf your Pokédex has complete data\non 50 species, I’m supposed to\fgive you a reward.\rProfessor Oak entrusted me with\nthis Exp. Share.\rSo, {STRVAR_1 3, 0, 0}, let me ask you.\rHave you gathered data on at least\n50 kinds of Pokémon?\r
+Great! You have caught or owned\n{STRVAR_1 52, 1, 0} kinds of Pokémon!\rCongratulations!\nHere you go!\r
+Exp. Share is an item to be held\nby a Pokémon.\rThe Pokémon will receive a share\nof the Exp. Points without having\fto battle.
+Let’s see...\nUh-oh! You have caught only\f{STRVAR_1 52, 1, 0} kinds of Pokémon.\rYou need data on 50 kinds if you\nwant the Exp. Share.

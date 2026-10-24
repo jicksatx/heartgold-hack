@@ -1,0 +1,87 @@
+{
+  "bg_events": [
+    {
+      "script": 8057,
+      "type": 2,
+      "x": 5,
+      "z": 14,
+      "y": 0,
+      "player_facing_dir": 4
+    },
+    {
+      "script": 8058,
+      "type": 2,
+      "x": 7,
+      "z": 30,
+      "y": 0,
+      "player_facing_dir": 4
+    }
+  ],
+  "object_events": [],
+  "warp_events": [
+    {
+      "x": 4,
+      "z": 3,
+      "dest_header_id": 469,
+      "dest_warp_id": 2,
+      "y": 0
+    },
+    {
+      "x": 4,
+      "z": 4,
+      "dest_header_id": 469,
+      "dest_warp_id": 2,
+      "y": 0
+    },
+    {
+      "x": 4,
+      "z": 5,
+      "dest_header_id": 469,
+      "dest_warp_id": 2,
+      "y": 0
+    },
+    {
+      "x": 4,
+      "z": 57,
+      "dest_header_id": 470,
+      "dest_warp_id": 2,
+      "y": 0
+    },
+    {
+      "x": 4,
+      "z": 58,
+      "dest_header_id": 470,
+      "dest_warp_id": 2,
+      "y": 0
+    },
+    {
+      "x": 4,
+      "z": 56,
+      "dest_header_id": 470,
+      "dest_warp_id": 2,
+      "y": 0
+    }
+  ],
+  "coord_events": [
+    {
+      "script": 1,
+      "x": 5,
+      "z": 3,
+      "width": 1,
+      "length": 3,
+      "y": 0,
+      "value": 1,
+      "var": 16751
+    },
+    {
+      "script": 2,
+      "x": 5,
+      "z": 56,
+      "width": 1,
+      "length": 3,
+      "y": 0,
+      "value": 1,
+      "var": 16751
+    }
+  ]
+}

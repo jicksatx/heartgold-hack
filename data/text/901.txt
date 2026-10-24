@@ -1,0 +1,1 @@
+{STRVAR_1 3, 0, 0} came up the stairs on the\nother side of Saffron City.\r

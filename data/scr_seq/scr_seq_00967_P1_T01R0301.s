@@ -224,6 +224,7 @@ scr_seq_P1_T01R0301_009:
 	lockall
 	apply_movement OBJ_BLUE, _blueNotice
 	wait_movement
+	callstd 2031 // rival intro music
 	buffer_players_name 0
 	npc_msg 15
 	closemsg
@@ -242,6 +243,7 @@ _battleVsGrass:
 _battleVsFire:
 	trainer_battle TRAINER_P1_BLUE_LAB_VS_FIRE, 0, 1, 0
 _afterBattle:
+	callstd 2070 // rival outro music
 	heal_party
 	buffer_players_name 0
 	npc_msg 16
@@ -250,6 +252,7 @@ _afterBattle:
 	wait_fade
 	setflag FLAG_P1_HIDE_LAB_BLUE
 	hide_person OBJ_BLUE
+	callstd 2071 // back to the map music
 	setvar VAR_P1_STORY, 4
 	fade_screen 6, 1, 1, 0
 	wait_fade

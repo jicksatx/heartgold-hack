@@ -94,6 +94,11 @@ static const struct Part1Map sPart1Maps[] = {
     { 480, 555, 1023, 970, 899 }, // Fuchsia Gym
     { 481, 556, 1024, 970, 900 }, // Fuchsia southwest house (Fishing Guru's older brother)
     { 483, 557, 1024, 970, 900 }, // Safari Zone Warden's house
+    { 532, 558, 1025, 970, 901 }, // Underground Path tunnel (Routes 5-6, and standing in for Routes 7-8)
+    { 238, 559, 1014, 970, 892 }, // Rocket Hideout B3F (Ice Path B2F's ice puzzle)
+    { 441, 560, 1014, 1026, 892 }, // Rocket Hideout elevator (Goldenrod Dept. Store elevator)
+    { 382, 561, 1027, 970, 903 }, // Celadon Game Corner Prize Room
+    { 383, 562, 1028, 970, 902 }, // Celadon Restaurant
 };
 
 #define MAP_HEADERS        ((const u8 *)0x020F6BE0) // sMapHeaders
@@ -150,7 +155,7 @@ u16 LONG_CALL Chapter_MapHeader_GetEventsBank(u32 mapId)
 #define VAR_PLAYER_STARTER 0x4030
 
 /**
- *  @brief replaces ScrCmd_GetStarterChoice (206, 0x02043938).  the rival scripts pick the rival's team by comparing
+ *  @brief replaces ScrCmd_GetStarterChoice (206, 0x02043938) (and doubles as the prize Pokemon lookup, see below).  the rival scripts pick the rival's team by comparing
  *         the player's starter with Chikorita (152) and Cyndaquil (155), anything else meaning Totodile.  with
  *         randomized starters (and FireRed's in Part 1) that test fails, so the starter is reported as the Johto
  *         starter of the same type: 152 grass, 155 fire, 158 water.
@@ -158,10 +163,25 @@ u16 LONG_CALL Chapter_MapHeader_GetEventsBank(u32 mapId)
  *  @param ctx script context
  *  @return FALSE
  */
+#define VAR_P1_PRIZE 0x4171
+
+extern const u16 *const sPrizeTiers[5];
+extern const u16 sPrizeTierCounts[5];
+
 BOOL LONG_CALL Chapter_ScrCmd_GetStarterChoice(SCRIPTCONTEXT *ctx)
 {
     static const u16 sJohtoStarters[3] = { 152, 155, 158 };
     u16 *ret = ScriptGetVarPointer(ctx);
+
+    // hack: "get_starter_choice VAR_P1_PRIZE" with a prize slot (0-4) in VAR_P1_PRIZE returns that Rocket Game Corner
+    // prize Pokemon instead: a single-stage Pokemon from the slot's base stat band (src/prize_pool.c), fixed per save
+    if (ret == GetVarPointer(ctx->fsys, VAR_P1_PRIZE)) {
+        u32 slot = *ret;
+        if (slot < 5) {
+            *ret = sPrizeTiers[slot][Randomizer_Hash(Randomizer_GetSeed(), 0x50 + slot) % sPrizeTierCounts[slot]];
+        }
+        return FALSE;
+    }
     u16 species = VarGet(ctx->fsys, VAR_PLAYER_STARTER);
 
     for (int i = 0; i < 3; i++) {

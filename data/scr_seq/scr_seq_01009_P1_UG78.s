@@ -13,8 +13,8 @@
 #include "config.h"
 
 // hack: the Route 7 and Route 8 Saffron gatehouses in Part 1 (FireRed).  HeartGold has no Underground Path
-// between Routes 7 and 8, so heading toward Saffron here stands in for it: the thirsty guard turns Red away and he
-// comes out on the other side.  events: data/eventdata/part1/534_P1_R08R0201.json, 535_P1_R07R0101.json,
+// between Routes 7 and 8: heading toward Saffron, the thirsty guard turns Red away and he goes down into the Route 5-6
+// tunnel (VAR_P1_UGPATH 1), whose stairs then lead up to the other gate (scr_seq_01025_P1_R05R0202.s).  events: data/eventdata/part1/534_P1_R08R0201.json, 535_P1_R07R0101.json,
 // text: data/text/887.txt
 
 .data
@@ -39,7 +39,8 @@ scr_seq_P1_UG78_002:
 	closemsg
 	fade_screen 6, 1, 0, 0
 	wait_fade
-	warp MAP_R07, 0, 1272, 240, DIR_WEST
+	setvar VAR_P1_UGPATH, 1
+	warp MAP_R05R0202, 0, 6, 4, DIR_EAST
 	fade_screen 6, 1, 1, 0
 	wait_fade
 	releaseall
@@ -56,7 +57,8 @@ scr_seq_P1_UG78_003:
 	closemsg
 	fade_screen 6, 1, 0, 0
 	wait_fade
-	warp MAP_R08, 0, 1345, 240, DIR_EAST
+	setvar VAR_P1_UGPATH, 1
+	warp MAP_R05R0202, 0, 6, 57, DIR_EAST
 	fade_screen 6, 1, 1, 0
 	wait_fade
 _release:
