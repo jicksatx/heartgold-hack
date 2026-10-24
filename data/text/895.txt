@@ -1,0 +1,7 @@
+Route 12\nNorth to Lavender
+Sportfishing Area
+A Pokémon is sprawled out in\na deep and comfortable slumber.
+{STRVAR_1 3, 0, 0} played the Poké Flute.\rSnorlax woke up!\r
+Snorlax calmed down.\rWith a big yawn, it returned to\nthe mountains.
+My Pokémon’s ashes are stored in\nPokémon Tower.\rYou can have this TM.\nI don’t need it anymore...\r
+TM27 is a move called Return...\rIf you treat your Pokémon good,\nit will return your love by working\fits hardest in battle.

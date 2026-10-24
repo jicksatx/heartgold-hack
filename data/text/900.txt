@@ -1,0 +1,6 @@
+I’m the Fishing Guru’s older\nbrother.\rI simply looove fishing!\nI can’t bear to go without.\rTell me, do you like to fish? {YESNO 0}
+Grand! I like your style.\nI think we can be friends.\rTake this and fish, young friend!\r
+Fishing is a way of life!\nIt is like the finest poetry.\rA crummy Old Rod could only catch\nMagikarp, yes?\rBut with a Good Rod, you can\ncatch much better Pokémon.
+Oh...\nThat’s so disappointing...
+Hello there, {STRVAR_1 3, 0, 0}!\rHow are the fish biting?
+Warden: Hif fuff hefifoo!\rHa lof ha feef ee hafahi ho.\nHeff hee fwee!

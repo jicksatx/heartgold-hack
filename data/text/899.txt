@@ -1,0 +1,7 @@
+Fuchsia Pokémon Gym\nLeader: Koga\rWinning Trainers:\nBlue
+Fuchsia Pokémon Gym\nLeader: Koga\rWinning Trainers:\nBlue, {STRVAR_1 3, 0, 0}
+{STRVAR_1 3, 0, 0} received the Soul Badge\nfrom Koga!\r
+Now that you have the Soul Badge,\nthe Defense of your Pokémon rises.\rIt also lets you Surf outside of\nbattle.\rAh!\nTake this, too!\r
+Sealed within that TM06 lies\nToxic!\rIt is a secret technique dating\nback some four hundred years.
+Yo! Champ in the making!\rFuchsia Gym is a tricked-up place.\nIt’s a maze of walls!\rKoga uses Poison-type Pokémon.\rPsychic and Ground moves work well\nagainst them.
+It’s amazing how ninja can terrify,\neven now!

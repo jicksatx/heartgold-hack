@@ -1,0 +1,10 @@
+Fuchsia City\nBehold! It’s Passion Pink!
+Pokémon Paradise!\nWelcome to the Safari Zone!\fSafari Zone Office
+Safari Zone\nWarden’s Home
+Fuchsia City Pokémon Gym\nLeader: Koga\fThe Poisonous Ninja Master
+Did you try the Safari Game?\rThere are some rare Pokémon that\ncan only be caught there.
+The Safari Zone has a zoo in front\nof the entrance.\rOut back is the Safari Game for\ncatching Pokémon.
+Erik: Where’s Sara?\nI said I’d meet her here.
+That item ball in there...\nWere you wanting that?\rMe, too!\n...Huh? That’s a Pokémon?
+(Test build) The Safari Zone opens\nin a later build.
+(Test build) Part 1 continues past\nhere in a later build.\r

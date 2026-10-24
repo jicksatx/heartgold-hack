@@ -1,0 +1,5 @@
+I’m the Fishing Guru’s younger\nbrother.\rI simply looove fishing!\nI can’t bear to go without.\rTell me, do you like to fish? {YESNO 0}
+Grand! I like your style.\nI think we can be friends.\rTake this and fish, young friend!\r
+Fishing is a way of life!\nIt is like the finest poetry.\rFrom the seas to rivers, go out\nand land the big one, my friend.
+Oh...\nThat’s so disappointing...
+Hello there, {STRVAR_1 3, 0, 0}!\nHave you been fishing?\rTry fishing with the Super Rod in\nany body of water.

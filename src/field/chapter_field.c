@@ -84,6 +84,16 @@ static const struct Part1Map sPart1Maps[] = {
     { 155, 545, 1015, 1016, 893 }, // Pokemon Tower 2F
     { 156, 546, 1015, 1016, 893 }, // Pokemon Tower 3F
     { 435, 547, 1017, 1018, 894 }, // Mr. Fuji's house (Lavender Volunteer Pokemon House)
+    { 20,  548, 1019, 970, 895 }, // Route 12
+    { 533, 549, 1020, 970, 896 }, // Route 12 Fishing House
+    { 21,  550, 1021, 970, 897 }, // Route 13
+    { 22,  551, 1021, 970, 897 }, // Route 14
+    { 23,  552, 1021, 970, 897 }, // Route 15
+    { 392, 553, 1021, 970, 897 }, // Route 15 Fuchsia gatehouse
+    { 56,  554, 1022, 970, 898 }, // Fuchsia City
+    { 480, 555, 1023, 970, 899 }, // Fuchsia Gym
+    { 481, 556, 1024, 970, 900 }, // Fuchsia southwest house (Fishing Guru's older brother)
+    { 483, 557, 1024, 970, 900 }, // Safari Zone Warden's house
 };
 
 #define MAP_HEADERS        ((const u8 *)0x020F6BE0) // sMapHeaders
