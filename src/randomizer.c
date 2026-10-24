@@ -182,22 +182,10 @@ u16 LONG_CALL Randomizer_RemapRivalSpecies(u16 species)
 extern const u16 sBaseStatTotals[1076];
 extern const u16 sWildPool[];
 extern const u16 sWildPoolCount;
-extern const u16 sWildPoolFormCount;
-extern const u16 sWildPoolFormBST[][2];
-
-// base stat total of pool entry i (regional forms have their own, everything else uses sBaseStatTotals)
+// base stat total of pool entry i (regional forms aren't in this pool: they're the Safari Zone's, src/field/regional_pool.c)
 static s32 PoolBST(s32 i)
 {
-    u16 entry = sWildPool[i];
-    if ((entry >> 11) == 0) {
-        return sBaseStatTotals[entry];
-    }
-    for (u32 k = 0; k < sWildPoolFormCount; k++) {
-        if (sWildPoolFormBST[k][0] == i) {
-            return sWildPoolFormBST[k][1];
-        }
-    }
-    return 0;
+    return sBaseStatTotals[sWildPool[i]];
 }
 
 BOOL LONG_CALL MapHeader_HasWildEncounters(u32 mapId);
@@ -259,7 +247,7 @@ u16 LONG_CALL Randomizer_RemapWildSpecies(u16 speciesAndForm, u32 area)
     if (newSpecies == speciesAndForm && count > 1) {
         newSpecies = sWildPool[lo + (pick + 1) % count];
     }
-    return newSpecies; // pool entries already carry their form in the top bits (regional forms)
+    return newSpecies;
 }
 
 static void RemapList(u16 *list, u32 n, u32 area)
