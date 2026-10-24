@@ -76,6 +76,14 @@ static const struct Part1Map sPart1Maps[] = {
     { 55,  537, 1010, 970, 888 }, // Celadon City
     { 395, 538, 1011, 970, 889 }, // Celadon Gym
     { 376, 539, 1012, 970, 890 }, // Celadon Condominiums 1F
+    { 381, 540, 1013, 970, 891 }, // Rocket Game Corner (the Japanese release's Game Corner map)
+    { 247, 541, 1014, 970, 892 }, // Rocket Hideout B1F (Team Rocket HQ)
+    { 248, 542, 1014, 970, 892 }, // Rocket Hideout B2F
+    { 249, 543, 1014, 970, 892 }, // Rocket Hideout B3F
+    { 110, 544, 1015, 1016, 893 }, // Pokemon Tower 1F (Sprout Tower)
+    { 155, 545, 1015, 1016, 893 }, // Pokemon Tower 2F
+    { 156, 546, 1015, 1016, 893 }, // Pokemon Tower 3F
+    { 435, 547, 1017, 1018, 894 }, // Mr. Fuji's house (Lavender Volunteer Pokemon House)
 };
 
 #define MAP_HEADERS        ((const u8 *)0x020F6BE0) // sMapHeaders

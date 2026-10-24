@@ -1,0 +1,9 @@
+That’s odd, Mr. Fuji isn’t here.\nWhere’d he go?
+Mr. Fuji had been praying alone\nfor Cubone’s mother.
+This is really Mr. Fuji’s house.\rHe’s really kind.\rHe looks after abandoned and\norphaned Pokémon.
+Nidorino: Gaoo!
+Psyduck: Gwappa!
+Mr. Fuji: {STRVAR_1 3, 0, 0}...\rYour Pokédex quest is one that\nrequires strong dedication.\rWithout deep love for Pokémon,\nyour quest may fail.\rI’m not sure if this will help you,\nbut I’d like you to have it.\r
+Upon hearing the Poké Flute,\nsleeping Pokémon will spring awake.\rTry using it on Pokémon that are\nsleeping obstacles.
+Mr. Fuji: Has my Poké Flute\nhelped you?
+Pokémon magazines line the shelf.\rPokémon Insider...\rPokémon Fan...

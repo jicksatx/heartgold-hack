@@ -166,6 +166,38 @@ PART1_TRAINERS = [
     ("TRAINER_BEAUTY_LORI", "CeladonCity_Gym"),
     ("TRAINER_COOLTRAINER_MARY", "CeladonCity_Gym"),
     ("TRAINER_LEADER_ERIKA", "CeladonCity_Gym"),
+    ("TRAINER_TEAM_ROCKET_GRUNT_7", "CeladonCity_GameCorner"),
+    ("TRAINER_TEAM_ROCKET_GRUNT_8", "RocketHideout_B1F"),
+    ("TRAINER_TEAM_ROCKET_GRUNT_9", "RocketHideout_B1F"),
+    ("TRAINER_TEAM_ROCKET_GRUNT_10", "RocketHideout_B1F"),
+    ("TRAINER_TEAM_ROCKET_GRUNT_11", "RocketHideout_B1F"),
+    ("TRAINER_TEAM_ROCKET_GRUNT_12", "RocketHideout_B1F"),
+    ("TRAINER_TEAM_ROCKET_GRUNT_13", "RocketHideout_B2F"),
+    ("TRAINER_TEAM_ROCKET_GRUNT_14", "RocketHideout_B3F"),
+    ("TRAINER_TEAM_ROCKET_GRUNT_15", "RocketHideout_B3F"),
+    ("TRAINER_TEAM_ROCKET_GRUNT_16", "RocketHideout_B4F"),
+    ("TRAINER_TEAM_ROCKET_GRUNT_17", "RocketHideout_B4F"),
+    ("TRAINER_TEAM_ROCKET_GRUNT_18", "RocketHideout_B4F"),
+    ("TRAINER_BOSS_GIOVANNI", "RocketHideout_B4F"),
+    ("TRAINER_RIVAL_POKEMON_TOWER_SQUIRTLE", "PokemonTower_2F"),
+    ("TRAINER_RIVAL_POKEMON_TOWER_BULBASAUR", "PokemonTower_2F"),
+    ("TRAINER_RIVAL_POKEMON_TOWER_CHARMANDER", "PokemonTower_2F"),
+    ("TRAINER_CHANNELER_PATRICIA", "PokemonTower_3F"),
+    ("TRAINER_CHANNELER_CARLY", "PokemonTower_3F"),
+    ("TRAINER_CHANNELER_HOPE", "PokemonTower_3F"),
+    ("TRAINER_CHANNELER_PAULA", "PokemonTower_4F"),
+    ("TRAINER_CHANNELER_LAUREL", "PokemonTower_4F"),
+    ("TRAINER_CHANNELER_JODY", "PokemonTower_4F"),
+    ("TRAINER_CHANNELER_TAMMY", "PokemonTower_5F"),
+    ("TRAINER_CHANNELER_RUTH", "PokemonTower_5F"),
+    ("TRAINER_CHANNELER_KARINA", "PokemonTower_5F"),
+    ("TRAINER_CHANNELER_JANAE", "PokemonTower_5F"),
+    ("TRAINER_CHANNELER_ANGELICA", "PokemonTower_6F"),
+    ("TRAINER_CHANNELER_EMILIA", "PokemonTower_6F"),
+    ("TRAINER_CHANNELER_JENNIFER", "PokemonTower_6F"),
+    ("TRAINER_TEAM_ROCKET_GRUNT_19", "PokemonTower_7F"),
+    ("TRAINER_TEAM_ROCKET_GRUNT_20", "PokemonTower_7F"),
+    ("TRAINER_TEAM_ROCKET_GRUNT_21", "PokemonTower_7F"),
 ]
 
 # HeartGold overworld sprite for each FireRed class (for the events' trainer objects)
@@ -214,6 +246,7 @@ CLASSES = {
     "CHANNELER": "TRAINERCLASS_MEDIUM",
     "ROCKER": "TRAINERCLASS_GUITARIST",
     "COOLTRAINER": "TRAINERCLASS_ACE_TRAINER_M",
+    "BOSS": "TRAINERCLASS_ROCKET_BOSS",
 }
 LEADERS = {
     "BROCK": "TRAINERCLASS_LEADER_BROCK",
@@ -226,10 +259,10 @@ LEADERS = {
     "GIOVANNI": "TRAINERCLASS_ROCKET_BOSS",
 }
 
-KEEP_UPPER = {"OK", "TV", "HP", "PP", "TM", "HM", "PC", "S.S.", "LT.", "KO", "ID"}
+KEEP_UPPER = {"OK", "HQ", "TV", "HP", "PP", "TM", "HM", "PC", "S.S.", "LT.", "KO", "ID"}
 WORDS = [
     ("POKéMON", "Pokémon"), ("POKéDEX", "Pokédex"), ("POKé BALL", "Poké Ball"), ("POKé", "Poké"),
-    ("PROF. OAK", "Professor Oak"), ("TEAM ROCKET", "Team Rocket"), ("LT. SURGE", "Lt. Surge"),
+    ("PROF. OAK", "Professor Oak"), ("TEAM ROCKET", "Team Rocket"), ("LT. SURGE", "Lt. Surge"), ("MR. FUJI", "Mr. Fuji"),
 ]
 GENERATED_BEGIN = "// BEGIN PART1 GENERATED (scripts/hack/gen_part1_trainers.py)"
 GENERATED_END = "// END PART1 GENERATED"

@@ -1,0 +1,15 @@
+Blue: Hey, {STRVAR_1 3, 0, 0}!\nWhat brings you here?\fIs your Pokémon dead?\rHey! It’s alive!\rI can at least make them faint!\nLet’s go!\r
+How’s your Pokédex coming?\nI just caught a Cubone!\rI can’t find the bigger Marowak.\nWhere could they be?\rI bet there aren’t any left!\rWell, I better get going.\nI’ve got a lot to accomplish,\funlike you.\rSmell ya later!\r
+Did you come to pay respects?\rBless your Pokémon-loving heart,\nson.
+I came to pray for my dearly\ndeparted Clefairy.\rSniff!\nI’m awash in tears...
+My Growlithe...\nWhy did you die?
+I am a Channeler.\rThere are spirits up to mischief.\nI sense them high in the Tower.
+Come, child!\nI have purified this space.\fYou can rest here.
+Entered the purified and protected\nzone.\r{STRVAR_1 3, 0, 0}’s Pokémon were fully\nhealed.
+Be gone...\nIntruders...\r
+A ghost blocks the way!\nIts identity can’t be made out...\r
+The ghost was the restless spirit\nof Cubone’s mother!\r
+The mother’s spirit was calmed.\rIt departed to the afterlife...\r
+Mr. Fuji: Heh?\nYou came to save me?\rThank you. But, I came here of my\nown free will.\rI came to calm the spirit of\nCubone’s mother.\rI think Marowak’s spirit has\nfinally left us.\rI must thank you for your kind\nconcern.\rFollow me to my home, Pokémon\nHouse, at the foot of this tower.\r
+Pokémon Tower was erected in the\nmemory of Pokémon that died.
+The Silph Scope unveiled the\nghost’s identity!\r

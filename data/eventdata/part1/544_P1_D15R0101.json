@@ -1,0 +1,221 @@
+{
+  "bg_events": [],
+  "object_events": [
+    {
+      "id": 0,
+      "graphics_id": 375,
+      "movement_type": 15,
+      "trainer_type": 0,
+      "hidden_flag": 2631,
+      "script": 1,
+      "initial_dir": 1,
+      "param0": 0,
+      "param1": 0,
+      "param2": 0,
+      "movement_range_x": 0,
+      "movement_range_z": 0,
+      "x": 19,
+      "z": 14,
+      "y": 0
+    },
+    {
+      "id": 1,
+      "graphics_id": 331,
+      "movement_type": 15,
+      "trainer_type": 0,
+      "hidden_flag": 0,
+      "script": 2,
+      "initial_dir": 1,
+      "param0": 0,
+      "param1": 0,
+      "param2": 0,
+      "movement_range_x": 0,
+      "movement_range_z": 0,
+      "x": 17,
+      "z": 24,
+      "y": 0
+    },
+    {
+      "id": 2,
+      "graphics_id": 325,
+      "movement_type": 14,
+      "trainer_type": 0,
+      "hidden_flag": 0,
+      "script": 3,
+      "initial_dir": 0,
+      "param0": 0,
+      "param1": 0,
+      "param2": 0,
+      "movement_range_x": 0,
+      "movement_range_z": 0,
+      "x": 10,
+      "z": 24,
+      "y": 0
+    },
+    {
+      "id": 3,
+      "graphics_id": 322,
+      "movement_type": 16,
+      "trainer_type": 0,
+      "hidden_flag": 0,
+      "script": 4,
+      "initial_dir": 2,
+      "param0": 0,
+      "param1": 0,
+      "param2": 0,
+      "movement_range_x": 0,
+      "movement_range_z": 0,
+      "x": 19,
+      "z": 18,
+      "y": 0
+    },
+    {
+      "id": 4,
+      "graphics_id": 219,
+      "movement_type": 15,
+      "trainer_type": 0,
+      "hidden_flag": 0,
+      "script": 5,
+      "initial_dir": 1,
+      "param0": 0,
+      "param1": 0,
+      "param2": 0,
+      "movement_range_x": 0,
+      "movement_range_z": 0,
+      "x": 20,
+      "z": 14,
+      "y": 0
+    },
+    {
+      "id": 5,
+      "graphics_id": 219,
+      "movement_type": 15,
+      "trainer_type": 1,
+      "hidden_flag": 0,
+      "script": 3903,
+      "initial_dir": 1,
+      "param0": 3,
+      "param1": 0,
+      "param2": 0,
+      "movement_range_x": 0,
+      "movement_range_z": 0,
+      "x": 5,
+      "z": 10,
+      "y": 0
+    },
+    {
+      "id": 6,
+      "graphics_id": 219,
+      "movement_type": 16,
+      "trainer_type": 1,
+      "hidden_flag": 0,
+      "script": 3904,
+      "initial_dir": 2,
+      "param0": 3,
+      "param1": 0,
+      "param2": 0,
+      "movement_range_x": 0,
+      "movement_range_z": 0,
+      "x": 17,
+      "z": 10,
+      "y": 0
+    },
+    {
+      "id": 7,
+      "graphics_id": 219,
+      "movement_type": 14,
+      "trainer_type": 1,
+      "hidden_flag": 0,
+      "script": 3905,
+      "initial_dir": 0,
+      "param0": 3,
+      "param1": 0,
+      "param2": 0,
+      "movement_range_x": 0,
+      "movement_range_z": 0,
+      "x": 23,
+      "z": 13,
+      "y": 0
+    },
+    {
+      "id": 8,
+      "graphics_id": 87,
+      "movement_type": 0,
+      "trainer_type": 0,
+      "hidden_flag": 1061,
+      "script": 7007,
+      "initial_dir": 0,
+      "param0": 0,
+      "param1": 0,
+      "param2": 0,
+      "movement_range_x": 0,
+      "movement_range_z": 0,
+      "x": 24,
+      "z": 16,
+      "y": 0
+    }
+  ],
+  "warp_events": [
+    {
+      "x": 15,
+      "z": 28,
+      "dest_header_id": 53,
+      "dest_warp_id": 6,
+      "y": 0
+    },
+    {
+      "x": 10,
+      "z": 15,
+      "dest_header_id": 155,
+      "dest_warp_id": 0,
+      "y": 0
+    },
+    {
+      "x": 24,
+      "z": 9,
+      "dest_header_id": 155,
+      "dest_warp_id": 1,
+      "y": 0
+    },
+    {
+      "x": 6,
+      "z": 16,
+      "dest_header_id": 155,
+      "dest_warp_id": 2,
+      "y": 0
+    },
+    {
+      "x": 6,
+      "z": 15,
+      "dest_header_id": 155,
+      "dest_warp_id": 2,
+      "y": 0
+    },
+    {
+      "x": 10,
+      "z": 14,
+      "dest_header_id": 155,
+      "dest_warp_id": 0,
+      "y": 0
+    },
+    {
+      "x": 24,
+      "z": 8,
+      "dest_header_id": 155,
+      "dest_warp_id": 1,
+      "y": 0
+    }
+  ],
+  "coord_events": [
+    {
+      "script": 6,
+      "x": 9,
+      "z": 22,
+      "width": 13,
+      "length": 1,
+      "y": 0,
+      "value": 0,
+      "var": 16750
+    }
+  ]
+}

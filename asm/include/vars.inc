@@ -388,6 +388,8 @@
 .equ VAR_P1_BILL, 0x416C
 // S.S. Anne: 1 beat Blue on board, 2 got HM01 Cut (the ship has sailed)
 .equ VAR_P1_SSANNE, 0x416D
+// Pokemon Tower: 1 beat Blue, 2 calmed the Marowak ghost, 3 rescued Mr. Fuji
+.equ VAR_P1_TOWER, 0x416E
 .equ VAR_UNK_4167, 0x4167
 .equ VAR_UNK_4168, 0x4168
 .equ VAR_UNK_4169, 0x4169

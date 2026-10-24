@@ -37576,6 +37576,1416 @@ const TrainerData sTrainerData[] = {
             },
         },
     },
+
+    // TRAINER_TEAM_ROCKET_GRUNT_7 (FireRed, CeladonCity_GameCorner)
+    [884] = {
+        .name = "Grunt",
+        .data = {
+            .trainerType = TRAINER_DATA_TYPE_NOTHING,
+            .trainerClass = TRAINERCLASS_TEAM_ROCKET,
+            .items = { ITEM_NONE, ITEM_NONE, ITEM_NONE, ITEM_NONE },
+            .aiFlags = F_PRIORITIZE_SUPER_EFFECTIVE | F_EVALUATE_ATTACKS,
+            .battleType = SINGLE_BATTLE,
+        },
+        .party = {
+            {
+                .ivs = 0,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 20,
+                .species = SPECIES_RATICATE,
+                .ballSeal = 0,
+            },
+            {
+                .ivs = 0,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 20,
+                .species = SPECIES_ZUBAT,
+                .ballSeal = 0,
+            },
+        },
+        .text = {
+            {
+                .type = TRMSG_INTRO,
+                .text = "I’m guarding this poster!\\nGo away, or else!\\n",
+            },
+            {
+                .type = TRMSG_LOSE,
+                .text = "Dang!\\n",
+            },
+            {
+                .type = TRMSG_AFTER,
+                .text = "The Team Rocket Hideout might\\nbe discovered!\\rI better tell Boss!\\n",
+            },
+        },
+    },
+
+    // TRAINER_TEAM_ROCKET_GRUNT_8 (FireRed, RocketHideout_B1F)
+    [885] = {
+        .name = "Grunt",
+        .data = {
+            .trainerType = TRAINER_DATA_TYPE_NOTHING,
+            .trainerClass = TRAINERCLASS_TEAM_ROCKET,
+            .items = { ITEM_NONE, ITEM_NONE, ITEM_NONE, ITEM_NONE },
+            .aiFlags = F_PRIORITIZE_SUPER_EFFECTIVE | F_EVALUATE_ATTACKS,
+            .battleType = SINGLE_BATTLE,
+        },
+        .party = {
+            {
+                .ivs = 0,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 21,
+                .species = SPECIES_DROWZEE,
+                .ballSeal = 0,
+            },
+            {
+                .ivs = 0,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 21,
+                .species = SPECIES_MACHOP,
+                .ballSeal = 0,
+            },
+        },
+        .text = {
+            {
+                .type = TRMSG_INTRO,
+                .text = "Who are you?\\nHow did you get here?\\n",
+            },
+            {
+                .type = TRMSG_LOSE,
+                .text = "Oww!\\nBeaten!\\n",
+            },
+            {
+                .type = TRMSG_AFTER,
+                .text = "Blast it... You’re dissing Team\\nRocket, aren’t you?\\n",
+            },
+        },
+    },
+
+    // TRAINER_TEAM_ROCKET_GRUNT_9 (FireRed, RocketHideout_B1F)
+    [886] = {
+        .name = "Grunt",
+        .data = {
+            .trainerType = TRAINER_DATA_TYPE_NOTHING,
+            .trainerClass = TRAINERCLASS_TEAM_ROCKET,
+            .items = { ITEM_NONE, ITEM_NONE, ITEM_NONE, ITEM_NONE },
+            .aiFlags = F_PRIORITIZE_SUPER_EFFECTIVE | F_EVALUATE_ATTACKS,
+            .battleType = SINGLE_BATTLE,
+        },
+        .party = {
+            {
+                .ivs = 0,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 21,
+                .species = SPECIES_RATICATE,
+                .ballSeal = 0,
+            },
+            {
+                .ivs = 0,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 21,
+                .species = SPECIES_RATICATE,
+                .ballSeal = 0,
+            },
+        },
+        .text = {
+            {
+                .type = TRMSG_INTRO,
+                .text = "You broke into Team Rocket’s\\noperation? What nerve!\\n",
+            },
+            {
+                .type = TRMSG_LOSE,
+                .text = "Boom!\\n",
+            },
+            {
+                .type = TRMSG_AFTER,
+                .text = "You’re not going to get away with\\nthis, brat!\\n",
+            },
+        },
+    },
+
+    // TRAINER_TEAM_ROCKET_GRUNT_10 (FireRed, RocketHideout_B1F)
+    [887] = {
+        .name = "Grunt",
+        .data = {
+            .trainerType = TRAINER_DATA_TYPE_MOVES,
+            .trainerClass = TRAINERCLASS_TEAM_ROCKET,
+            .items = { ITEM_NONE, ITEM_NONE, ITEM_NONE, ITEM_NONE },
+            .aiFlags = F_PRIORITIZE_SUPER_EFFECTIVE | F_EVALUATE_ATTACKS,
+            .battleType = SINGLE_BATTLE,
+        },
+        .party = {
+            {
+                .ivs = 0,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 20,
+                .species = SPECIES_GRIMER,
+                .moves = { MOVE_MINIMIZE, MOVE_SLUDGE, MOVE_DISABLE, MOVE_HARDEN },
+                .ballSeal = 0,
+            },
+            {
+                .ivs = 0,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 20,
+                .species = SPECIES_KOFFING,
+                .moves = { MOVE_SMOG, MOVE_TACKLE, MOVE_POISON_GAS, MOVE_NONE },
+                .ballSeal = 0,
+            },
+            {
+                .ivs = 0,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 20,
+                .species = SPECIES_KOFFING,
+                .moves = { MOVE_SMOG, MOVE_TACKLE, MOVE_POISON_GAS, MOVE_NONE },
+                .ballSeal = 0,
+            },
+        },
+        .text = {
+            {
+                .type = TRMSG_INTRO,
+                .text = "Intruder alert!\\n",
+            },
+            {
+                .type = TRMSG_LOSE,
+                .text = "I can’t do it!\\n",
+            },
+            {
+                .type = TRMSG_AFTER,
+                .text = "Silph Scope? Humph!\\nI don’t know where it is.\\n",
+            },
+        },
+    },
+
+    // TRAINER_TEAM_ROCKET_GRUNT_11 (FireRed, RocketHideout_B1F)
+    [888] = {
+        .name = "Grunt",
+        .data = {
+            .trainerType = TRAINER_DATA_TYPE_NOTHING,
+            .trainerClass = TRAINERCLASS_TEAM_ROCKET,
+            .items = { ITEM_NONE, ITEM_NONE, ITEM_NONE, ITEM_NONE },
+            .aiFlags = F_PRIORITIZE_SUPER_EFFECTIVE | F_EVALUATE_ATTACKS,
+            .battleType = SINGLE_BATTLE,
+        },
+        .party = {
+            {
+                .ivs = 0,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 19,
+                .species = SPECIES_RATTATA,
+                .ballSeal = 0,
+            },
+            {
+                .ivs = 0,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 19,
+                .species = SPECIES_RATICATE,
+                .ballSeal = 0,
+            },
+            {
+                .ivs = 0,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 19,
+                .species = SPECIES_RATICATE,
+                .ballSeal = 0,
+            },
+            {
+                .ivs = 0,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 19,
+                .species = SPECIES_RATTATA,
+                .ballSeal = 0,
+            },
+        },
+        .text = {
+            {
+                .type = TRMSG_INTRO,
+                .text = "Why did you come here?\\n",
+            },
+            {
+                .type = TRMSG_LOSE,
+                .text = "This won’t do!\\n",
+            },
+            {
+                .type = TRMSG_AFTER,
+                .text = "Okay, I’ll talk...\\nTake the elevator to see my Boss.\\n",
+            },
+        },
+    },
+
+    // TRAINER_TEAM_ROCKET_GRUNT_12 (FireRed, RocketHideout_B1F)
+    [889] = {
+        .name = "Grunt",
+        .data = {
+            .trainerType = TRAINER_DATA_TYPE_MOVES,
+            .trainerClass = TRAINERCLASS_TEAM_ROCKET,
+            .items = { ITEM_NONE, ITEM_NONE, ITEM_NONE, ITEM_NONE },
+            .aiFlags = F_PRIORITIZE_SUPER_EFFECTIVE | F_EVALUATE_ATTACKS,
+            .battleType = SINGLE_BATTLE,
+        },
+        .party = {
+            {
+                .ivs = 0,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 22,
+                .species = SPECIES_GRIMER,
+                .moves = { MOVE_MINIMIZE, MOVE_SLUDGE, MOVE_DISABLE, MOVE_HARDEN },
+                .ballSeal = 0,
+            },
+            {
+                .ivs = 0,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 22,
+                .species = SPECIES_KOFFING,
+                .moves = { MOVE_SLUDGE, MOVE_SMOG, MOVE_TACKLE, MOVE_POISON_GAS },
+                .ballSeal = 0,
+            },
+        },
+        .text = {
+            {
+                .type = TRMSG_INTRO,
+                .text = "Are you lost, you little mouse?\\n",
+            },
+            {
+                .type = TRMSG_LOSE,
+                .text = "Why...?\\n",
+            },
+            {
+                .type = TRMSG_AFTER,
+                .text = "Uh-oh, that ruckus somehow opened\\nthe door!\\n",
+            },
+        },
+    },
+
+    // TRAINER_TEAM_ROCKET_GRUNT_13 (FireRed, RocketHideout_B2F)
+    [890] = {
+        .name = "Grunt",
+        .data = {
+            .trainerType = TRAINER_DATA_TYPE_MOVES,
+            .trainerClass = TRAINERCLASS_TEAM_ROCKET,
+            .items = { ITEM_NONE, ITEM_NONE, ITEM_NONE, ITEM_NONE },
+            .aiFlags = F_PRIORITIZE_SUPER_EFFECTIVE | F_EVALUATE_ATTACKS,
+            .battleType = SINGLE_BATTLE,
+        },
+        .party = {
+            {
+                .ivs = 0,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 17,
+                .species = SPECIES_ZUBAT,
+                .moves = { MOVE_BITE, MOVE_ASTONISH, MOVE_SUPERSONIC, MOVE_LEECH_LIFE },
+                .ballSeal = 0,
+            },
+            {
+                .ivs = 0,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 17,
+                .species = SPECIES_KOFFING,
+                .moves = { MOVE_SMOG, MOVE_TACKLE, MOVE_POISON_GAS, MOVE_NONE },
+                .ballSeal = 0,
+            },
+            {
+                .ivs = 0,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 17,
+                .species = SPECIES_GRIMER,
+                .moves = { MOVE_SLUDGE, MOVE_DISABLE, MOVE_HARDEN, MOVE_POUND },
+                .ballSeal = 0,
+            },
+            {
+                .ivs = 0,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 17,
+                .species = SPECIES_ZUBAT,
+                .moves = { MOVE_BITE, MOVE_ASTONISH, MOVE_SUPERSONIC, MOVE_LEECH_LIFE },
+                .ballSeal = 0,
+            },
+            {
+                .ivs = 0,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 17,
+                .species = SPECIES_RATICATE,
+                .moves = { MOVE_HYPER_FANG, MOVE_QUICK_ATTACK, MOVE_TAIL_WHIP, MOVE_TACKLE },
+                .ballSeal = 0,
+            },
+        },
+        .text = {
+            {
+                .type = TRMSG_INTRO,
+                .text = "Boss said you can see ghosts with\\nthe Silph Scope.\\n",
+            },
+            {
+                .type = TRMSG_LOSE,
+                .text = "I surrender!\\n",
+            },
+            {
+                .type = TRMSG_AFTER,
+                .text = "The Team Rocket HQ has four\\nunderground floors.\\rThink you can reach the Boss?\\n",
+            },
+        },
+    },
+
+    // TRAINER_TEAM_ROCKET_GRUNT_14 (FireRed, RocketHideout_B3F)
+    [891] = {
+        .name = "Grunt",
+        .data = {
+            .trainerType = TRAINER_DATA_TYPE_NOTHING,
+            .trainerClass = TRAINERCLASS_TEAM_ROCKET,
+            .items = { ITEM_NONE, ITEM_NONE, ITEM_NONE, ITEM_NONE },
+            .aiFlags = F_PRIORITIZE_SUPER_EFFECTIVE | F_EVALUATE_ATTACKS,
+            .battleType = SINGLE_BATTLE,
+        },
+        .party = {
+            {
+                .ivs = 0,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 20,
+                .species = SPECIES_RATTATA,
+                .ballSeal = 0,
+            },
+            {
+                .ivs = 0,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 20,
+                .species = SPECIES_RATICATE,
+                .ballSeal = 0,
+            },
+            {
+                .ivs = 0,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 20,
+                .species = SPECIES_DROWZEE,
+                .ballSeal = 0,
+            },
+        },
+        .text = {
+            {
+                .type = TRMSG_INTRO,
+                .text = "Stop meddling in Team Rocket’s\\naffairs or else!\\n",
+            },
+            {
+                .type = TRMSG_LOSE,
+                .text = "Oof!\\nTaken down!\\n",
+            },
+            {
+                .type = TRMSG_AFTER,
+                .text = "Silph Scope?\\nOh, that machine the Boss stole.\\rIt’s here somewhere.\\n",
+            },
+        },
+    },
+
+    // TRAINER_TEAM_ROCKET_GRUNT_15 (FireRed, RocketHideout_B3F)
+    [892] = {
+        .name = "Grunt",
+        .data = {
+            .trainerType = TRAINER_DATA_TYPE_NOTHING,
+            .trainerClass = TRAINERCLASS_TEAM_ROCKET,
+            .items = { ITEM_NONE, ITEM_NONE, ITEM_NONE, ITEM_NONE },
+            .aiFlags = F_PRIORITIZE_SUPER_EFFECTIVE | F_EVALUATE_ATTACKS,
+            .battleType = SINGLE_BATTLE,
+        },
+        .party = {
+            {
+                .ivs = 0,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 21,
+                .species = SPECIES_MACHOP,
+                .ballSeal = 0,
+            },
+            {
+                .ivs = 0,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 21,
+                .species = SPECIES_MACHOP,
+                .ballSeal = 0,
+            },
+        },
+        .text = {
+            {
+                .type = TRMSG_INTRO,
+                .text = "We got word from upstairs that you\\nwere coming!\\n",
+            },
+            {
+                .type = TRMSG_LOSE,
+                .text = "What?\\nI lost? No!\\n",
+            },
+            {
+                .type = TRMSG_AFTER,
+                .text = "Go ahead and go!\\rBut you can’t run the elevator\\nwithout the Lift Key.\\n",
+            },
+        },
+    },
+
+    // TRAINER_TEAM_ROCKET_GRUNT_16 (FireRed, RocketHideout_B4F)
+    [893] = {
+        .name = "Grunt",
+        .data = {
+            .trainerType = TRAINER_DATA_TYPE_NOTHING,
+            .trainerClass = TRAINERCLASS_TEAM_ROCKET,
+            .items = { ITEM_NONE, ITEM_NONE, ITEM_NONE, ITEM_NONE },
+            .aiFlags = F_PRIORITIZE_SUPER_EFFECTIVE | F_EVALUATE_ATTACKS,
+            .battleType = SINGLE_BATTLE,
+        },
+        .party = {
+            {
+                .ivs = 0,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 23,
+                .species = SPECIES_SANDSHREW,
+                .ballSeal = 0,
+            },
+            {
+                .ivs = 0,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 23,
+                .species = SPECIES_EKANS,
+                .ballSeal = 0,
+            },
+            {
+                .ivs = 0,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 23,
+                .species = SPECIES_SANDSLASH,
+                .ballSeal = 0,
+            },
+        },
+        .text = {
+            {
+                .type = TRMSG_INTRO,
+                .text = "I know you!\\nYou ruined our plans at Mt. Moon!\\n",
+            },
+            {
+                .type = TRMSG_LOSE,
+                .text = "Burned again!\\n",
+            },
+            {
+                .type = TRMSG_AFTER,
+                .text = "Do you have something against Team\\nRocket?\\n",
+            },
+        },
+    },
+
+    // TRAINER_TEAM_ROCKET_GRUNT_17 (FireRed, RocketHideout_B4F)
+    [894] = {
+        .name = "Grunt",
+        .data = {
+            .trainerType = TRAINER_DATA_TYPE_NOTHING,
+            .trainerClass = TRAINERCLASS_TEAM_ROCKET,
+            .items = { ITEM_NONE, ITEM_NONE, ITEM_NONE, ITEM_NONE },
+            .aiFlags = F_PRIORITIZE_SUPER_EFFECTIVE | F_EVALUATE_ATTACKS,
+            .battleType = SINGLE_BATTLE,
+        },
+        .party = {
+            {
+                .ivs = 0,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 23,
+                .species = SPECIES_EKANS,
+                .ballSeal = 0,
+            },
+            {
+                .ivs = 0,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 23,
+                .species = SPECIES_SANDSHREW,
+                .ballSeal = 0,
+            },
+            {
+                .ivs = 0,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 23,
+                .species = SPECIES_ARBOK,
+                .ballSeal = 0,
+            },
+        },
+        .text = {
+            {
+                .type = TRMSG_INTRO,
+                .text = "How can you not see the beauty of\\nour evil?\\n",
+            },
+            {
+                .type = TRMSG_LOSE,
+                .text = "Ayaya!\\n",
+            },
+            {
+                .type = TRMSG_AFTER,
+                .text = "Boss!\\nI’m sorry I failed you!\\n",
+            },
+        },
+    },
+
+    // TRAINER_TEAM_ROCKET_GRUNT_18 (FireRed, RocketHideout_B4F)
+    [895] = {
+        .name = "Grunt",
+        .data = {
+            .trainerType = TRAINER_DATA_TYPE_NOTHING,
+            .trainerClass = TRAINERCLASS_TEAM_ROCKET,
+            .items = { ITEM_NONE, ITEM_NONE, ITEM_NONE, ITEM_NONE },
+            .aiFlags = F_PRIORITIZE_SUPER_EFFECTIVE | F_EVALUATE_ATTACKS,
+            .battleType = SINGLE_BATTLE,
+        },
+        .party = {
+            {
+                .ivs = 0,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 21,
+                .species = SPECIES_KOFFING,
+                .ballSeal = 0,
+            },
+            {
+                .ivs = 0,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 21,
+                .species = SPECIES_ZUBAT,
+                .ballSeal = 0,
+            },
+        },
+        .text = {
+            {
+                .type = TRMSG_INTRO,
+                .text = "The elevator doesn’t work?\\nWho has the Lift Key?\\n",
+            },
+            {
+                .type = TRMSG_LOSE,
+                .text = "No!\\n",
+            },
+            {
+                .type = TRMSG_AFTER,
+                .text = "Oh, no!\\nI dropped the Lift Key!\\n",
+            },
+        },
+    },
+
+    // TRAINER_BOSS_GIOVANNI (FireRed, RocketHideout_B4F)
+    [896] = {
+        .name = "Giovanni",
+        .data = {
+            .trainerType = TRAINER_DATA_TYPE_NOTHING,
+            .trainerClass = TRAINERCLASS_ROCKET_BOSS,
+            .items = { ITEM_NONE, ITEM_NONE, ITEM_NONE, ITEM_NONE },
+            .aiFlags = F_PRIORITIZE_SUPER_EFFECTIVE | F_EVALUATE_ATTACKS,
+            .battleType = SINGLE_BATTLE,
+        },
+        .party = {
+            {
+                .ivs = 250,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 25,
+                .species = SPECIES_ONIX,
+                .ballSeal = 0,
+            },
+            {
+                .ivs = 250,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 24,
+                .species = SPECIES_RHYHORN,
+                .ballSeal = 0,
+            },
+            {
+                .ivs = 250,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 29,
+                .species = SPECIES_KANGASKHAN,
+                .ballSeal = 0,
+            },
+        },
+        .text = {
+            {
+                .type = TRMSG_LOSE,
+                .text = "What!\\nThis can’t be!\\n",
+            },
+            {
+                .type = TRMSG_AFTER,
+                .text = "I see that you raise Pokémon with\\nutmost care.\\rA child like you would never\\nunderstand what I hope to achieve.\\rI shall step aside this time!\\rI hope we meet again...\\n",
+            },
+        },
+    },
+
+    // TRAINER_RIVAL_POKEMON_TOWER_SQUIRTLE (FireRed, PokemonTower_2F)
+    [897] = {
+        .name = "Blue",
+        .data = {
+            .trainerType = TRAINER_DATA_TYPE_NOTHING,
+            .trainerClass = TRAINERCLASS_LEADER_BLUE,
+            .items = { ITEM_NONE, ITEM_NONE, ITEM_NONE, ITEM_NONE },
+            .aiFlags = F_PRIORITIZE_SUPER_EFFECTIVE | F_EVALUATE_ATTACKS,
+            .battleType = SINGLE_BATTLE,
+        },
+        .party = {
+            {
+                .ivs = 100,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 25,
+                .species = SPECIES_PIDGEOTTO,
+                .ballSeal = 0,
+            },
+            {
+                .ivs = 100,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 23,
+                .species = SPECIES_GROWLITHE,
+                .ballSeal = 0,
+            },
+            {
+                .ivs = 100,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 22,
+                .species = SPECIES_EXEGGCUTE,
+                .ballSeal = 0,
+            },
+            {
+                .ivs = 100,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 20,
+                .species = SPECIES_KADABRA,
+                .ballSeal = 0,
+            },
+            {
+                .ivs = 100,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 25,
+                .species = SPECIES_WARTORTLE,
+                .ballSeal = 0,
+            },
+        },
+        .text = {
+            {
+                .type = TRMSG_LOSE,
+                .text = "What?\\nYou stinker!\\rI took it easy on you, too!\\n",
+            },
+        },
+    },
+
+    // TRAINER_RIVAL_POKEMON_TOWER_BULBASAUR (FireRed, PokemonTower_2F)
+    [898] = {
+        .name = "Blue",
+        .data = {
+            .trainerType = TRAINER_DATA_TYPE_NOTHING,
+            .trainerClass = TRAINERCLASS_LEADER_BLUE,
+            .items = { ITEM_NONE, ITEM_NONE, ITEM_NONE, ITEM_NONE },
+            .aiFlags = F_PRIORITIZE_SUPER_EFFECTIVE | F_EVALUATE_ATTACKS,
+            .battleType = SINGLE_BATTLE,
+        },
+        .party = {
+            {
+                .ivs = 100,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 25,
+                .species = SPECIES_PIDGEOTTO,
+                .ballSeal = 0,
+            },
+            {
+                .ivs = 100,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 23,
+                .species = SPECIES_GYARADOS,
+                .ballSeal = 0,
+            },
+            {
+                .ivs = 100,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 22,
+                .species = SPECIES_GROWLITHE,
+                .ballSeal = 0,
+            },
+            {
+                .ivs = 100,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 20,
+                .species = SPECIES_KADABRA,
+                .ballSeal = 0,
+            },
+            {
+                .ivs = 100,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 25,
+                .species = SPECIES_IVYSAUR,
+                .ballSeal = 0,
+            },
+        },
+        .text = {
+            {
+                .type = TRMSG_LOSE,
+                .text = "What?\\nYou stinker!\\rI took it easy on you, too!\\n",
+            },
+        },
+    },
+
+    // TRAINER_RIVAL_POKEMON_TOWER_CHARMANDER (FireRed, PokemonTower_2F)
+    [899] = {
+        .name = "Blue",
+        .data = {
+            .trainerType = TRAINER_DATA_TYPE_NOTHING,
+            .trainerClass = TRAINERCLASS_LEADER_BLUE,
+            .items = { ITEM_NONE, ITEM_NONE, ITEM_NONE, ITEM_NONE },
+            .aiFlags = F_PRIORITIZE_SUPER_EFFECTIVE | F_EVALUATE_ATTACKS,
+            .battleType = SINGLE_BATTLE,
+        },
+        .party = {
+            {
+                .ivs = 100,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 25,
+                .species = SPECIES_PIDGEOTTO,
+                .ballSeal = 0,
+            },
+            {
+                .ivs = 100,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 23,
+                .species = SPECIES_EXEGGCUTE,
+                .ballSeal = 0,
+            },
+            {
+                .ivs = 100,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 22,
+                .species = SPECIES_GYARADOS,
+                .ballSeal = 0,
+            },
+            {
+                .ivs = 100,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 20,
+                .species = SPECIES_KADABRA,
+                .ballSeal = 0,
+            },
+            {
+                .ivs = 100,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 25,
+                .species = SPECIES_CHARMELEON,
+                .ballSeal = 0,
+            },
+        },
+        .text = {
+            {
+                .type = TRMSG_LOSE,
+                .text = "What?\\nYou stinker!\\rI took it easy on you, too!\\n",
+            },
+        },
+    },
+
+    // TRAINER_CHANNELER_PATRICIA (FireRed, PokemonTower_3F)
+    [900] = {
+        .name = "Patricia",
+        .data = {
+            .trainerType = TRAINER_DATA_TYPE_NOTHING,
+            .trainerClass = TRAINERCLASS_MEDIUM,
+            .items = { ITEM_NONE, ITEM_NONE, ITEM_NONE, ITEM_NONE },
+            .aiFlags = F_PRIORITIZE_SUPER_EFFECTIVE | F_EVALUATE_ATTACKS,
+            .battleType = SINGLE_BATTLE,
+        },
+        .party = {
+            {
+                .ivs = 0,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 22,
+                .species = SPECIES_GASTLY,
+                .ballSeal = 0,
+            },
+        },
+        .text = {
+            {
+                .type = TRMSG_INTRO,
+                .text = "Be gone!\\nMalevolent spirit!\\n",
+            },
+            {
+                .type = TRMSG_LOSE,
+                .text = "Whew!\\nThe spirit left!\\n",
+            },
+            {
+                .type = TRMSG_AFTER,
+                .text = "The others above...\\nThey must have been possessed.\\n",
+            },
+        },
+    },
+
+    // TRAINER_CHANNELER_CARLY (FireRed, PokemonTower_3F)
+    [901] = {
+        .name = "Carly",
+        .data = {
+            .trainerType = TRAINER_DATA_TYPE_NOTHING,
+            .trainerClass = TRAINERCLASS_MEDIUM,
+            .items = { ITEM_NONE, ITEM_NONE, ITEM_NONE, ITEM_NONE },
+            .aiFlags = F_PRIORITIZE_SUPER_EFFECTIVE | F_EVALUATE_ATTACKS,
+            .battleType = SINGLE_BATTLE,
+        },
+        .party = {
+            {
+                .ivs = 0,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 24,
+                .species = SPECIES_GASTLY,
+                .ballSeal = 0,
+            },
+        },
+        .text = {
+            {
+                .type = TRMSG_INTRO,
+                .text = "Kekeke...\\nKwaaah!\\n",
+            },
+            {
+                .type = TRMSG_LOSE,
+                .text = "Hmm?\\nWhat am I doing?\\n",
+            },
+            {
+                .type = TRMSG_AFTER,
+                .text = "Sorry!\\nI was possessed!\\n",
+            },
+        },
+    },
+
+    // TRAINER_CHANNELER_HOPE (FireRed, PokemonTower_3F)
+    [902] = {
+        .name = "Hope",
+        .data = {
+            .trainerType = TRAINER_DATA_TYPE_NOTHING,
+            .trainerClass = TRAINERCLASS_MEDIUM,
+            .items = { ITEM_NONE, ITEM_NONE, ITEM_NONE, ITEM_NONE },
+            .aiFlags = F_PRIORITIZE_SUPER_EFFECTIVE | F_EVALUATE_ATTACKS,
+            .battleType = SINGLE_BATTLE,
+        },
+        .party = {
+            {
+                .ivs = 0,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 23,
+                .species = SPECIES_GASTLY,
+                .ballSeal = 0,
+            },
+        },
+        .text = {
+            {
+                .type = TRMSG_INTRO,
+                .text = "Urrg... Awaa...\\nHuhu... Graa...\\n",
+            },
+            {
+                .type = TRMSG_LOSE,
+                .text = "Hwa!\\nI’m saved!\\n",
+            },
+            {
+                .type = TRMSG_AFTER,
+                .text = "The ghosts can be identified by\\nthe Silph Scope.\\n",
+            },
+        },
+    },
+
+    // TRAINER_CHANNELER_PAULA (FireRed, PokemonTower_4F)
+    [903] = {
+        .name = "Paula",
+        .data = {
+            .trainerType = TRAINER_DATA_TYPE_NOTHING,
+            .trainerClass = TRAINERCLASS_MEDIUM,
+            .items = { ITEM_NONE, ITEM_NONE, ITEM_NONE, ITEM_NONE },
+            .aiFlags = F_PRIORITIZE_SUPER_EFFECTIVE | F_EVALUATE_ATTACKS,
+            .battleType = SINGLE_BATTLE,
+        },
+        .party = {
+            {
+                .ivs = 0,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 24,
+                .species = SPECIES_GASTLY,
+                .ballSeal = 0,
+            },
+        },
+        .text = {
+            {
+                .type = TRMSG_INTRO,
+                .text = "Ghost! No!\\nKwaaah!\\n",
+            },
+            {
+                .type = TRMSG_LOSE,
+                .text = "Where is the ghost?\\n",
+            },
+            {
+                .type = TRMSG_AFTER,
+                .text = "I must have been dreaming...\\n",
+            },
+        },
+    },
+
+    // TRAINER_CHANNELER_LAUREL (FireRed, PokemonTower_4F)
+    [904] = {
+        .name = "Laurel",
+        .data = {
+            .trainerType = TRAINER_DATA_TYPE_NOTHING,
+            .trainerClass = TRAINERCLASS_MEDIUM,
+            .items = { ITEM_NONE, ITEM_NONE, ITEM_NONE, ITEM_NONE },
+            .aiFlags = F_PRIORITIZE_SUPER_EFFECTIVE | F_EVALUATE_ATTACKS,
+            .battleType = SINGLE_BATTLE,
+        },
+        .party = {
+            {
+                .ivs = 0,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 23,
+                .species = SPECIES_GASTLY,
+                .ballSeal = 0,
+            },
+            {
+                .ivs = 0,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 23,
+                .species = SPECIES_GASTLY,
+                .ballSeal = 0,
+            },
+        },
+        .text = {
+            {
+                .type = TRMSG_INTRO,
+                .text = "Be cursed with me!\\nKwaaah!\\n",
+            },
+            {
+                .type = TRMSG_LOSE,
+                .text = "What!\\n",
+            },
+            {
+                .type = TRMSG_AFTER,
+                .text = "We can’t determine the identity of\\nthe ghosts...\\n",
+            },
+        },
+    },
+
+    // TRAINER_CHANNELER_JODY (FireRed, PokemonTower_4F)
+    [905] = {
+        .name = "Jody",
+        .data = {
+            .trainerType = TRAINER_DATA_TYPE_NOTHING,
+            .trainerClass = TRAINERCLASS_MEDIUM,
+            .items = { ITEM_NONE, ITEM_NONE, ITEM_NONE, ITEM_NONE },
+            .aiFlags = F_PRIORITIZE_SUPER_EFFECTIVE | F_EVALUATE_ATTACKS,
+            .battleType = SINGLE_BATTLE,
+        },
+        .party = {
+            {
+                .ivs = 0,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 22,
+                .species = SPECIES_GASTLY,
+                .ballSeal = 0,
+            },
+        },
+        .text = {
+            {
+                .type = TRMSG_INTRO,
+                .text = "Huhuhu...\\nBeat me not!\\n",
+            },
+            {
+                .type = TRMSG_LOSE,
+                .text = "Huh?\\nWho? What?\\n",
+            },
+            {
+                .type = TRMSG_AFTER,
+                .text = "May the departed Pokémon rest in\\npeace...\\n",
+            },
+        },
+    },
+
+    // TRAINER_CHANNELER_TAMMY (FireRed, PokemonTower_5F)
+    [906] = {
+        .name = "Tammy",
+        .data = {
+            .trainerType = TRAINER_DATA_TYPE_NOTHING,
+            .trainerClass = TRAINERCLASS_MEDIUM,
+            .items = { ITEM_NONE, ITEM_NONE, ITEM_NONE, ITEM_NONE },
+            .aiFlags = F_PRIORITIZE_SUPER_EFFECTIVE | F_EVALUATE_ATTACKS,
+            .battleType = SINGLE_BATTLE,
+        },
+        .party = {
+            {
+                .ivs = 0,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 23,
+                .species = SPECIES_HAUNTER,
+                .ballSeal = 0,
+            },
+        },
+        .text = {
+            {
+                .type = TRMSG_INTRO,
+                .text = "Give...me...\\nyour...all...\\n",
+            },
+            {
+                .type = TRMSG_LOSE,
+                .text = "Gasp!\\n",
+            },
+            {
+                .type = TRMSG_AFTER,
+                .text = "I was under possession.\\n",
+            },
+        },
+    },
+
+    // TRAINER_CHANNELER_RUTH (FireRed, PokemonTower_5F)
+    [907] = {
+        .name = "Ruth",
+        .data = {
+            .trainerType = TRAINER_DATA_TYPE_NOTHING,
+            .trainerClass = TRAINERCLASS_MEDIUM,
+            .items = { ITEM_NONE, ITEM_NONE, ITEM_NONE, ITEM_NONE },
+            .aiFlags = F_PRIORITIZE_SUPER_EFFECTIVE | F_EVALUATE_ATTACKS,
+            .battleType = SINGLE_BATTLE,
+        },
+        .party = {
+            {
+                .ivs = 0,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 22,
+                .species = SPECIES_GASTLY,
+                .ballSeal = 0,
+            },
+        },
+        .text = {
+            {
+                .type = TRMSG_INTRO,
+                .text = "You...shall...\\njoin...us...\\n",
+            },
+            {
+                .type = TRMSG_LOSE,
+                .text = "What a nightmare!\\n",
+            },
+            {
+                .type = TRMSG_AFTER,
+                .text = "I was possessed.\\n",
+            },
+        },
+    },
+
+    // TRAINER_CHANNELER_KARINA (FireRed, PokemonTower_5F)
+    [908] = {
+        .name = "Karina",
+        .data = {
+            .trainerType = TRAINER_DATA_TYPE_NOTHING,
+            .trainerClass = TRAINERCLASS_MEDIUM,
+            .items = { ITEM_NONE, ITEM_NONE, ITEM_NONE, ITEM_NONE },
+            .aiFlags = F_PRIORITIZE_SUPER_EFFECTIVE | F_EVALUATE_ATTACKS,
+            .battleType = SINGLE_BATTLE,
+        },
+        .party = {
+            {
+                .ivs = 0,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 24,
+                .species = SPECIES_GASTLY,
+                .ballSeal = 0,
+            },
+        },
+        .text = {
+            {
+                .type = TRMSG_INTRO,
+                .text = "Zombies!\\n",
+            },
+            {
+                .type = TRMSG_LOSE,
+                .text = "Ha?\\n",
+            },
+            {
+                .type = TRMSG_AFTER,
+                .text = "I regained my senses.\\n",
+            },
+        },
+    },
+
+    // TRAINER_CHANNELER_JANAE (FireRed, PokemonTower_5F)
+    [909] = {
+        .name = "Janae",
+        .data = {
+            .trainerType = TRAINER_DATA_TYPE_NOTHING,
+            .trainerClass = TRAINERCLASS_MEDIUM,
+            .items = { ITEM_NONE, ITEM_NONE, ITEM_NONE, ITEM_NONE },
+            .aiFlags = F_PRIORITIZE_SUPER_EFFECTIVE | F_EVALUATE_ATTACKS,
+            .battleType = SINGLE_BATTLE,
+        },
+        .party = {
+            {
+                .ivs = 0,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 22,
+                .species = SPECIES_GASTLY,
+                .ballSeal = 0,
+            },
+        },
+        .text = {
+            {
+                .type = TRMSG_INTRO,
+                .text = "Urgah...\\nUrff...\\n",
+            },
+            {
+                .type = TRMSG_LOSE,
+                .text = "Whoo!\\n",
+            },
+            {
+                .type = TRMSG_AFTER,
+                .text = "I fell to evil spirits despite my\\ntraining in the mountains...\\n",
+            },
+        },
+    },
+
+    // TRAINER_CHANNELER_ANGELICA (FireRed, PokemonTower_6F)
+    [910] = {
+        .name = "Angelica",
+        .data = {
+            .trainerType = TRAINER_DATA_TYPE_NOTHING,
+            .trainerClass = TRAINERCLASS_MEDIUM,
+            .items = { ITEM_NONE, ITEM_NONE, ITEM_NONE, ITEM_NONE },
+            .aiFlags = F_PRIORITIZE_SUPER_EFFECTIVE | F_EVALUATE_ATTACKS,
+            .battleType = SINGLE_BATTLE,
+        },
+        .party = {
+            {
+                .ivs = 0,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 22,
+                .species = SPECIES_GASTLY,
+                .ballSeal = 0,
+            },
+            {
+                .ivs = 0,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 22,
+                .species = SPECIES_GASTLY,
+                .ballSeal = 0,
+            },
+            {
+                .ivs = 0,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 22,
+                .species = SPECIES_GASTLY,
+                .ballSeal = 0,
+            },
+        },
+        .text = {
+            {
+                .type = TRMSG_INTRO,
+                .text = "Give...me...\\nblood...\\n",
+            },
+            {
+                .type = TRMSG_LOSE,
+                .text = "Groan!\\n",
+            },
+            {
+                .type = TRMSG_AFTER,
+                .text = "I feel anemic and weak...\\n",
+            },
+        },
+    },
+
+    // TRAINER_CHANNELER_EMILIA (FireRed, PokemonTower_6F)
+    [911] = {
+        .name = "Emilia",
+        .data = {
+            .trainerType = TRAINER_DATA_TYPE_NOTHING,
+            .trainerClass = TRAINERCLASS_MEDIUM,
+            .items = { ITEM_NONE, ITEM_NONE, ITEM_NONE, ITEM_NONE },
+            .aiFlags = F_PRIORITIZE_SUPER_EFFECTIVE | F_EVALUATE_ATTACKS,
+            .battleType = SINGLE_BATTLE,
+        },
+        .party = {
+            {
+                .ivs = 0,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 24,
+                .species = SPECIES_GASTLY,
+                .ballSeal = 0,
+            },
+        },
+        .text = {
+            {
+                .type = TRMSG_INTRO,
+                .text = "Urff...\\nKwaah!\\n",
+            },
+            {
+                .type = TRMSG_LOSE,
+                .text = "Something fell out!\\n",
+            },
+            {
+                .type = TRMSG_AFTER,
+                .text = "My hair didn’t fall out!\\nIt was a malevolent spirit!\\n",
+            },
+        },
+    },
+
+    // TRAINER_CHANNELER_JENNIFER (FireRed, PokemonTower_6F)
+    [912] = {
+        .name = "Jennifer",
+        .data = {
+            .trainerType = TRAINER_DATA_TYPE_NOTHING,
+            .trainerClass = TRAINERCLASS_MEDIUM,
+            .items = { ITEM_NONE, ITEM_NONE, ITEM_NONE, ITEM_NONE },
+            .aiFlags = F_PRIORITIZE_SUPER_EFFECTIVE | F_EVALUATE_ATTACKS,
+            .battleType = SINGLE_BATTLE,
+        },
+        .party = {
+            {
+                .ivs = 0,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 24,
+                .species = SPECIES_GASTLY,
+                .ballSeal = 0,
+            },
+        },
+        .text = {
+            {
+                .type = TRMSG_INTRO,
+                .text = "Ke...ke...ke...\\nke...ke...ke!\\n",
+            },
+            {
+                .type = TRMSG_LOSE,
+                .text = "Keee!\\n",
+            },
+            {
+                .type = TRMSG_AFTER,
+                .text = "What’s going on here?\\n",
+            },
+        },
+    },
+
+    // TRAINER_TEAM_ROCKET_GRUNT_19 (FireRed, PokemonTower_7F)
+    [913] = {
+        .name = "Grunt",
+        .data = {
+            .trainerType = TRAINER_DATA_TYPE_NOTHING,
+            .trainerClass = TRAINERCLASS_TEAM_ROCKET,
+            .items = { ITEM_NONE, ITEM_NONE, ITEM_NONE, ITEM_NONE },
+            .aiFlags = F_PRIORITIZE_SUPER_EFFECTIVE | F_EVALUATE_ATTACKS,
+            .battleType = SINGLE_BATTLE,
+        },
+        .party = {
+            {
+                .ivs = 0,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 25,
+                .species = SPECIES_ZUBAT,
+                .ballSeal = 0,
+            },
+            {
+                .ivs = 0,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 25,
+                .species = SPECIES_ZUBAT,
+                .ballSeal = 0,
+            },
+            {
+                .ivs = 0,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 25,
+                .species = SPECIES_GOLBAT,
+                .ballSeal = 0,
+            },
+        },
+        .text = {
+            {
+                .type = TRMSG_INTRO,
+                .text = "What do you want?\\nWhy are you here?\\n",
+            },
+            {
+                .type = TRMSG_LOSE,
+                .text = "I give up!\\n",
+            },
+            {
+                .type = TRMSG_AFTER,
+                .text = "I’m not going to forget this!\\n",
+            },
+        },
+    },
+
+    // TRAINER_TEAM_ROCKET_GRUNT_20 (FireRed, PokemonTower_7F)
+    [914] = {
+        .name = "Grunt",
+        .data = {
+            .trainerType = TRAINER_DATA_TYPE_NOTHING,
+            .trainerClass = TRAINERCLASS_TEAM_ROCKET,
+            .items = { ITEM_NONE, ITEM_NONE, ITEM_NONE, ITEM_NONE },
+            .aiFlags = F_PRIORITIZE_SUPER_EFFECTIVE | F_EVALUATE_ATTACKS,
+            .battleType = SINGLE_BATTLE,
+        },
+        .party = {
+            {
+                .ivs = 0,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 26,
+                .species = SPECIES_KOFFING,
+                .ballSeal = 0,
+            },
+            {
+                .ivs = 0,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 26,
+                .species = SPECIES_DROWZEE,
+                .ballSeal = 0,
+            },
+        },
+        .text = {
+            {
+                .type = TRMSG_INTRO,
+                .text = "This old guy marched right up to\\nour Hideout.\\rThen, he starts ranting about how\\nTeam Rocket’s abusing Pokémon.\\rSo, we’re just talking it over as\\nadults.\\n",
+            },
+            {
+                .type = TRMSG_LOSE,
+                .text = "Please!\\nNo more!\\n",
+            },
+            {
+                .type = TRMSG_AFTER,
+                .text = "Pokémon are only good for making\\nmoney. Why not use them?\\rYou stay out of our business!\\n",
+            },
+        },
+    },
+
+    // TRAINER_TEAM_ROCKET_GRUNT_21 (FireRed, PokemonTower_7F)
+    [915] = {
+        .name = "Grunt",
+        .data = {
+            .trainerType = TRAINER_DATA_TYPE_NOTHING,
+            .trainerClass = TRAINERCLASS_TEAM_ROCKET,
+            .items = { ITEM_NONE, ITEM_NONE, ITEM_NONE, ITEM_NONE },
+            .aiFlags = F_PRIORITIZE_SUPER_EFFECTIVE | F_EVALUATE_ATTACKS,
+            .battleType = SINGLE_BATTLE,
+        },
+        .party = {
+            {
+                .ivs = 0,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 23,
+                .species = SPECIES_ZUBAT,
+                .ballSeal = 0,
+            },
+            {
+                .ivs = 0,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 23,
+                .species = SPECIES_RATTATA,
+                .ballSeal = 0,
+            },
+            {
+                .ivs = 0,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 23,
+                .species = SPECIES_RATICATE,
+                .ballSeal = 0,
+            },
+            {
+                .ivs = 0,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 23,
+                .species = SPECIES_ZUBAT,
+                .ballSeal = 0,
+            },
+        },
+        .text = {
+            {
+                .type = TRMSG_INTRO,
+                .text = "You’re not saving anyone, kid!\\n",
+            },
+            {
+                .type = TRMSG_LOSE,
+                .text = "Don’t fight us Rockets!\\n",
+            },
+            {
+                .type = TRMSG_AFTER,
+                .text = "You’re not getting away with this!\\n",
+            },
+        },
+    },
     // END PART1 GENERATED
 };
 
@@ -38363,6 +39773,38 @@ const u16 sTrainerTextOrder[] = {
     881,
     882,
     883,
+    884,
+    885,
+    886,
+    887,
+    888,
+    889,
+    890,
+    891,
+    892,
+    893,
+    894,
+    895,
+    896,
+    897,
+    898,
+    899,
+    900,
+    901,
+    902,
+    903,
+    904,
+    905,
+    906,
+    907,
+    908,
+    909,
+    910,
+    911,
+    912,
+    913,
+    914,
+    915,
     // END PART1 GENERATED
 };
 
