@@ -1,0 +1,14 @@
+I chair the Pokémon Fan Club!\rI raise more than a hundred\nPokémon!\rI’m very fussy when it comes to\nPokémon! I surely am!\rSo...\rDid you come visit to hear about\nmy Pokémon? {YESNO 0}
+Good!\nThen listen up!\rMy favorite Rapidash...\rIt’s...cute...lovely...smart... \nplus...amazing...you think so?...\foh yes...it’s...stunning...\fkindly...love it!\rHug it...when...sleeping...warm\nand cuddly...spectacular...\fravishing...\f...Oops! Look at the time!\fI kept you too long!\rThanks for hearing me out!\nI want you to have this!\r
+{STRVAR_1 3, 0, 0} received a Bike Voucher\nfrom the Chairman.\r
+Take that Bike Voucher to the\nBike Shop in Cerulean City.\rExchange that for a Bicycle\nfree of charge!\rDon’t worry, my favorite Fearow\nwill Fly me anywhere I need to go.\rSo, I have no need for a Bicycle.\rI hope you like cycling!
+Oh. Come back when you want to\nhear my story!
+Hello, {STRVAR_1 3, 0, 0}!\rDid you come see me about my\nPokémon again?\rNo?\nToo bad!
+Our Chairman is very vocal about\nPokémon.
+Let’s all listen politely to other\nTrainers!
+If someone brags, brag right back!
+Hi!\nWelcome to our Bike Shop.\rHave we got just the Bike for\nyou!\r
+Oh, that’s...\rA Bike Voucher!\rOkay!\nHere you go!\r
+How do you like your new Bicycle?\nDo you like how it rides?\rYou can take it out on Cycling\nRoad and even into caves!
+These bikes are cool, but they’re\nway expensive!
+Hi!\nWelcome to our Bike Shop.\rA brand-new Bicycle is a million.\nYou’ll want a Bike Voucher!

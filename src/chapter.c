@@ -352,3 +352,41 @@ u32 LONG_CALL Chapter_TrainerClassToMusicCombo(u32 trainerClass)
     return 41;
 }
 #endif
+
+/*
+ *  hack: trainer flags.  vanilla keeps one flag per trainer at 1360 + id, which only reaches id 1039 before running
+ *  into the system flags.  Part 1's trainers past id 1009 instead use the flags of HeartGold's own trainers (1360 +
+ *  id - 1010): Part 1 never battles those, and Part 2 starts with fresh flags.  replaces TrainerFlagCheck (0x02040514),
+ *  TrainerFlagSet (0x0204052C) and TrainerFlagClear (0x02040544).
+ */
+#define TRAINER_FLAG_BASE_ID      1360
+#define PART1_REMAP_FIRST_TRAINER 1010
+#define VANILLA_TRAINER_COUNT     734
+
+#define Save_VarsFlags_Get              ((void *(*)(void *))(0x020503D0 | 1))
+#define Save_VarsFlags_CheckFlagInArray ((BOOL (*)(void *, u16))(0x020503DC | 1))
+#define Save_VarsFlags_SetFlagInArray   ((void (*)(void *, u16))(0x02050408 | 1))
+#define Save_VarsFlags_ClearFlagInArray ((void (*)(void *, u16))(0x02050430 | 1))
+
+static u16 TrainerFlagId(u32 trainer)
+{
+    if (trainer >= PART1_REMAP_FIRST_TRAINER && trainer < PART1_REMAP_FIRST_TRAINER + VANILLA_TRAINER_COUNT) {
+        return TRAINER_FLAG_BASE_ID + trainer - PART1_REMAP_FIRST_TRAINER;
+    }
+    return TRAINER_FLAG_BASE_ID + trainer;
+}
+
+BOOL LONG_CALL Chapter_TrainerFlagCheck(void *saveData, u32 trainer)
+{
+    return Save_VarsFlags_CheckFlagInArray(Save_VarsFlags_Get(saveData), TrainerFlagId(trainer));
+}
+
+void LONG_CALL Chapter_TrainerFlagSet(void *saveData, u32 trainer)
+{
+    Save_VarsFlags_SetFlagInArray(Save_VarsFlags_Get(saveData), TrainerFlagId(trainer));
+}
+
+void LONG_CALL Chapter_TrainerFlagClear(void *saveData, u32 trainer)
+{
+    Save_VarsFlags_ClearFlagInArray(Save_VarsFlags_Get(saveData), TrainerFlagId(trainer));
+}

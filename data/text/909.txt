@@ -1,0 +1,7 @@
+Route 16\nCeladon City - Fuchsia City
+A Pokémon is sprawled out in\na deep and comfortable slumber.
+{STRVAR_1 3, 0, 0} played the Poké Flute.\rSnorlax woke up!\r
+Snorlax calmed down.\rWith a big yawn, it returned to\nthe mountains.
+Oh, dear.\nYou’ve found my secret retreat.\rPlease don’t tell anyone I’m here.\nI’ll make it up to you with this!\r
+HM02 is Fly.\nIt’s a wonderfully convenient move.\rPlease, put it to good use.
+Route 18\nCeladon City - Fuchsia City

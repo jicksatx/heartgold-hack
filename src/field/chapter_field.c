@@ -110,6 +110,13 @@ static const struct Part1Map sPart1Maps[] = {
     { 398, 571, 1033, 970, 907 }, // Fighting Dojo
     { 399, 572, 1033, 970, 907 }, // Mr. Psychic's house
     { 410, 573, 1034, 970, 908 }, // Saffron Gym
+    { 24,  574, 1035, 970, 909 }, // Route 16 (Cycling Road's north end)
+    { 422, 575, 1035, 970, 909 }, // Route 16 east of the gate (Snorlax)
+    { 25,  576, 1035, 970, 909 }, // Route 17 (Cycling Road)
+    { 26,  577, 1035, 970, 909 }, // Route 18
+    { 415, 578, 1035, 970, 909 }, // Route 16 house (HM02 Fly)
+    { 362, 579, 1036, 970, 910 }, // Vermilion Pokemon Fan Club (Bike Voucher)
+    { 432, 580, 1036, 970, 910 }, // Cerulean bike shop (HeartGold's Bike Maniac's house)
 };
 
 #define MAP_HEADERS        ((const u8 *)0x020F6BE0) // sMapHeaders

@@ -195,16 +195,5 @@
       "y": 0
     }
   ],
-  "coord_events": [
-    {
-      "script": 10,
-      "x": 1185,
-      "z": 256,
-      "width": 1,
-      "length": 5,
-      "y": 0,
-      "value": 0,
-      "var": 16746
-    }
-  ]
+  "coord_events": []
 }
