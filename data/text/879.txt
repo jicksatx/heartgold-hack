@@ -1,0 +1,5 @@
+Captain: Ooargh...\nI feel hideous...\fUrrp! Seasick...\r
+{STRVAR_1 3, 0, 0} rubbed the Captain’s\nback!\rRub-rub...\nRub-rub...
+Captain: Whew! Thank you!\nI’m feeling much better now.\rYou want to see my hidden Cut\ntechnique?\rI could show you my prized Cut\ntechnique if I weren’t so ill...\rI know! You can have this!\nThis Hidden Machine!\rTeach Cut to your Pokémon, and\nyou can see it Cut anytime!\r
+Using Cut, you can chop down\nsmall trees.\rWhy not try it with the trees\naround Vermilion City?
+Captain: ...Whew!\rNow that I’m not sick anymore,\nI guess it’s time.\rThe S.S. Anne will set sail soon!\rFarewell, until our return to\nVermilion City!

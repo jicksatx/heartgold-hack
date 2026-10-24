@@ -6,6 +6,7 @@
 #include "pokemon.h"
 #include "save.h"
 #include "script.h"
+#include "chapter.h"
 
 #ifdef MART_EXPANSION
 
@@ -255,7 +256,8 @@ BOOL ScrCmd_MartBuy(SCRIPTCONTEXT *ctx)
     u8 index = 0;
     u32 i;
 
-    for (i = 0; i < 16; i++) {
+    // hack: in Part 1 the Johto badge numbers answer with Kanto badges (src/chapter.c), so count only Kanto's there
+    for (i = (Chapter_Get() == CHAPTER_RED) ? 8 : 0; i < 16; i++) {
         if (PlayerProfile_TestBadgeFlag(Sav2_PlayerData_GetProfileAddr(ctx->fsys->savedata), i) == TRUE) {
             badgeCount++;
         }

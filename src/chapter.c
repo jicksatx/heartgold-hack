@@ -263,3 +263,31 @@ void LONG_CALL Chapter_OakSpeechAskGender(void *data)
 }
 
 #endif // CHAPTER_SYSTEM
+
+#ifdef CHAPTER_SYSTEM
+
+/**
+ *  @brief replaces PlayerProfile_TestBadgeFlag (0x02028F98).  the field moves ask for a Johto badge (Cut: Hive,
+ *         Surf: Fog, ...); Red only ever has Kanto badges, so in Part 1 a Johto badge is answered with the Kanto
+ *         badge that allows the same move in FireRed (Flash: Boulder, Cut: Cascade, Fly: Thunder, Strength: Rainbow,
+ *         Surf: Soul, Waterfall: Volcano).
+ */
+BOOL LONG_CALL Chapter_TestBadgeFlag(struct PlayerProfile *profile, s32 badge)
+{
+    // Zephyr, Hive, Plain, Fog, Storm, Mineral, Glacier, Rising -> Kanto badge (8 = Boulder)
+    static const u8 sPart1Badge[8] = { 8, 9, 11, 12, 10, 13, 14, 14 };
+    const u8 *raw = (const u8 *)profile;
+
+    if (badge < 8 && Chapter_Get() == CHAPTER_RED) {
+        badge = sPart1Badge[badge];
+    }
+    if (badge >= 16) {
+        return FALSE;
+    }
+    if (badge < 8) {
+        return (raw[0x1A] >> badge) & 1; // johtoBadges
+    }
+    return (raw[0x1F] >> (badge - 8)) & 1; // kantoBadges
+}
+
+#endif // CHAPTER_SYSTEM

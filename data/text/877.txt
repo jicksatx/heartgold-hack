@@ -1,0 +1,5 @@
+Welcome to the S.S. Anne!
+Welcome to the S.S. Anne!\rExcuse me, do you have a ticket?\r
+Great!\nWelcome to the S.S. Anne!\r
+Sorry!\rYou need a ticket to get aboard.\r
+The ship set sail.\r

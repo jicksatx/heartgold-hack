@@ -87,6 +87,45 @@ ARCHIVES = {
         ("L", "CeruleanCity_Gym_Text_ExplainCascadeBadge", R),
         ("L", "CeruleanCity_Gym_Text_ExplainTM03", N),
     ],
+    873: [  # Route 5
+        ("L", "Route5_Text_UndergroundPathSign", N),
+    ],
+    874: [  # Route 6
+        ("L", "Route6_Text_UndergroundPathSign", N),
+    ],
+    875: [  # Saffron gatehouses (Routes 5 and 6)
+        ("L", "Route5_SouthEntrance_Text_ThirstyOnGuardDuty", R),
+        ("L", "Route5_SouthEntrance_Text_ThirstyOnGuardDuty", N),
+    ],
+    876: [  # Vermilion City
+        ("L", "VermilionCity_Text_CitySign", N),
+        ("L", "VermilionCity_Text_GymSign", N),
+        ("L", "VermilionCity_Text_PokemonFanClubSign", N),
+        ("L", "VermilionCity_Text_VermilionHarbor", N),
+        ("L", "VermilionCity_Text_GrimerMultipliesInSludge", N),
+        ("L", "VermilionCity_Text_DidYouSeeSSAnneInHarbor", N),
+        ("L", "VermilionCity_Text_SSAnneHasDepartedForYear", N),
+        ("T", "(Test build) Part 1 continues past\\nhere in a later build." + R),
+        ("T", "(Test build) Lt. Surge’s Gym opens in\\na later build."),
+    ],
+    877: [  # Vermilion port
+        ("L", "VermilionCity_Text_WelcomeToTheSSAnne", N),
+        ("L", "VermilionCity_Text_DoYouHaveATicket", R),
+        ("L", "VermilionCity_Text_FlashedSSTicket", R),
+        ("L", "VermilionCity_Text_DontHaveNeededSSTicket", R),
+        ("L", "VermilionCity_Text_TheShipSetSail", R),
+    ],
+    878: [  # S.S. Anne (HeartGold's S.S. Aqua decks and cabins)
+        ("L", "SSAnne_2F_Corridor_Text_RivalIntro", R),
+        ("L", "SSAnne_2F_Corridor_Text_RivalPostBattle", R),
+    ],
+    879: [  # S.S. Anne captain's office
+        ("L", "SSAnne_CaptainsOffice_Text_CaptainIFeelSeasick", R),
+        ("L", "SSAnne_CaptainsOffice_Text_RubbedCaptainsBack", N),
+        ("L", "SSAnne_CaptainsOffice_Text_ThankYouHaveHMForCut", R),
+        ("L", "SSAnne_CaptainsOffice_Text_ExplainCut", N),
+        ("L", "SSAnne_CaptainsOffice_Text_SSAnneWillSetSailSoon", N),
+    ],
 }
 
 

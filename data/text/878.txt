@@ -1,0 +1,2 @@
+Blue: Bonjour!\n{STRVAR_1 3, 0, 0}!\rImagine seeing you here!\n{STRVAR_1 3, 0, 0}, were you really invited?\rSo how’s your Pokédex coming?\rI already caught 40 kinds, pal.\nDifferent kinds are everywhere.\rCrawl around in grassy areas, and\nlook hard for them.\r
+Blue: I heard there was a Cut\nmaster on board.\rBut he was just a seasick old man!\rCut itself is really useful.\nYup, it’ll be handy.\rYou should go see him, too.\nSmell ya!\r

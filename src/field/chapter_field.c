@@ -47,6 +47,19 @@ static const struct Part1Map sPart1Maps[] = {
     { 29,  508, 988, 970, 870 }, // Route 25
     { 440, 509, 989, 990, 871 }, // Sea Cottage
     { 427, 510, 991, 970, 872 }, // Cerulean Gym
+    { 13,  511, 993, 970, 873 }, // Route 5
+    { 14,  512, 994, 970, 874 }, // Route 6
+    { 391, 513, 995, 970, 875 }, // Route 5 Saffron gatehouse
+    { 389, 514, 995, 970, 875 }, // Route 6 Saffron gatehouse
+    { 54,  515, 996, 970, 876 }, // Vermilion City
+    { 386, 516, 997, 970, 877 }, // Vermilion harbor building
+    { 307, 517, 998, 999, 878 }, // S.S. Anne (S.S. Aqua) deck
+    { 310, 518, 998, 970, 878 }, // S.S. Anne cabins
+    { 309, 519, 998, 970, 878 },
+    { 311, 520, 998, 970, 878 },
+    { 328, 521, 998, 970, 878 },
+    { 329, 522, 998, 970, 878 }, // S.S. Anne hold
+    { 308, 523, 1000, 970, 879 }, // S.S. Anne captain's office
 };
 
 #define MAP_HEADERS        ((const u8 *)0x020F6BE0) // sMapHeaders
