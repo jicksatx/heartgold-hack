@@ -42,7 +42,11 @@ static const struct Part1Map sPart1Maps[] = {
     { 11,  503, 982, 970, 865 }, // Route 3
     { 107, 504, 983, 984, 866 }, // Mt. Moon
     { 12,  505, 985, 970, 867 }, // Route 4
-    { 52,  506, 986, 970, 868 }, // Cerulean City
+    { 52,  506, 986, 992, 868 }, // Cerulean City
+    { 28,  507, 987, 970, 869 }, // Route 24 (Nugget Bridge)
+    { 29,  508, 988, 970, 870 }, // Route 25
+    { 440, 509, 989, 990, 871 }, // Sea Cottage
+    { 427, 510, 991, 970, 872 }, // Cerulean Gym
 };
 
 #define MAP_HEADERS        ((const u8 *)0x020F6BE0) // sMapHeaders

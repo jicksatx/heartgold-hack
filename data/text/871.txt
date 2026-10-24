@@ -1,0 +1,8 @@
+Hiya! I’m a Pokémon...\n...No I’m not!\rCall me Bill!\nI’m a true-blue Pokémaniac!\rHey!\nWhat’s with that skeptical look?\rI’m not joshing you, pal.\rI screwed up an experiment and got\ncombined with a Pokémon!\rSo, how about it?\nHelp me out here! {YESNO 0}
+No!?\nNow don’t be so cold!\rCome on, you gotta help a guy in\ndeep, deep trouble!\rWhat do you say, chief?\nPlease?\fOkay?\fAll right!\r
+Wait till I get inside the\nTeleporter.\rWhen I do, go to my PC and run\nthe Cell Separation System.\r
+{STRVAR_1 3, 0, 0} initiated the Teleporter’s\nCell Separator.\r
+Bill: Yeehah!\nThanks, bud! I owe you one!\rSo, did you come to see my\nPokémon collection?\rYou didn’t?\nThat’s a bummer.\rI’ve got to thank you...\nOh, here, maybe this’ll do.\r
+That cruise ship S.S. Anne is in\nVermilion City.\rI hear there are lots of Trainers\non board, too.\rThey invited me to their party, but\nI can’t stand fancy do’s.\rWhy don’t you go instead of me?\nGo on and have a good time.
+Bill: Feel like checking out some\nof my rare Pokémon on my PC?\rGo on, check out my PC.
+You’ve got too much stuff!

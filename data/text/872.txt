@@ -1,0 +1,7 @@
+Yo!\nChamp in the making!\rLet me give you some advice!\rThe Leader, Misty, is a pro who\nuses Water-type Pokémon.\rYou can drain all their water with\nGrass-type Pokémon.\rOr, you might use Electric-type\nPokémon and zap them!
+You beat Misty!\nSee, what’d I tell ya?\rYou and me, kid, we make a pretty\ndarn-good team!
+Cerulean Pokémon Gym\nLeader: Misty\rWinning Trainers:\nBlue
+Cerulean Pokémon Gym\nLeader: Misty\rWinning Trainers:\nBlue, {STRVAR_1 3, 0, 0}
+{STRVAR_1 3, 0, 0} received the Cascade Badge\nfrom Misty!
+The Cascade Badge makes all\nPokémon up to Lv. 30 obey.\rThat includes even outsiders you\ngot in trades.\rThere’s more. You can now use Cut\nanytime, even out of battle.\rYou can Cut down small trees to\nopen new pathways.\rYou can also have my favorite TM.\r
+TM03 teaches Water Pulse.\rUse it on an aquatic Pokémon!

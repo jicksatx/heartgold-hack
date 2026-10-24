@@ -55,6 +55,37 @@ ARCHIVES = {
         ("T", "(Test build) Part 1 continues past\\nhere in a later build." + R),
         ("T", "(Test build) Misty’s Gym opens in a\\nlater build."),
         ("T", "Rt. 24 Ahead\\nNorth to Nugget Bridge"),
+        ("L", "CeruleanCity_Text_GruntIntro", R),
+        ("L", "CeruleanCity_Text_OkayIllReturnStolenTM", R),
+        ("L", "CeruleanCity_Text_BetterGetMovingBye", N),
+    ],
+    869: [  # Route 24 (Nugget Bridge)
+        ("L", "Route24_Text_JustEarnedFabulousPrize", R),
+        ("L", "Route24_Text_JoinTeamRocket", R),
+        ("L", "Route24_Text_YoudBecomeTopRocketLeader", N),
+        ("L", "Route24_Text_YouDontHaveAnyRoom", R),
+    ],
+    870: [  # Route 25
+        ("L", "Route25_Text_SeaCottageSign", N),
+    ],
+    871: [  # Sea Cottage
+        ("L", "Route25_SeaCottage_Text_ImBillHelpMeOutPal", " {YESNO 0}"),
+        ("L", "Route25_SeaCottage_Text_NoPleaseChief", R),
+        ("L", "Route25_SeaCottage_Text_RunCellSeparationOnPC", R),
+        ("L", "Route25_SeaCottage_Text_InitiatedTeleportersCellSeparator", R),
+        ("L", "Route25_SeaCottage_Text_ThanksBudTakeThis", R),
+        ("L", "Route25_SeaCottage_Text_SSAnnePartyYouGoInstead", N),
+        ("L", "Route25_SeaCottage_Text_CheckOutRareMonsOnPC", N),
+        ("L", "Route25_SeaCottage_Text_YouveGotTooMuchStuff", N),
+    ],
+    872: [  # Cerulean Gym
+        ("L", "CeruleanCity_Gym_Text_GymGuyAdvice", N),
+        ("L", "CeruleanCity_Gym_Text_WeMakePrettyGoodTeam", N),
+        ("L", "CeruleanCity_Gym_Text_GymStatue", N),
+        ("L", "CeruleanCity_Gym_Text_GymStatuePlayerWon", N),
+        ("T", P + " received the Cascade Badge\\nfrom Misty!"),
+        ("L", "CeruleanCity_Gym_Text_ExplainCascadeBadge", R),
+        ("L", "CeruleanCity_Gym_Text_ExplainTM03", N),
     ],
 }
 

@@ -13,10 +13,11 @@
 #include "config.h"
 
 // hack: Cerulean City in Part 1 (FireRed).  events: data/eventdata/part1/506_P1_T04.json, text: data/text/868.txt.
-// Blue battles Red at the road north to Nugget Bridge.  no Cerulean Cave warp in Part 1; the Gym and the exits
-// south / east / north (after Blue) are test-build stops for now.
+// Blue battles Red at the road north to Nugget Bridge.  no Cerulean Cave warp in Part 1.  after Bill's S.S.
+// Ticket the Rocket burglar shows up.  the exits south / east are test-build stops for now.
 
 .equ OBJ_BLUE, 0
+.equ OBJ_GRUNT, 3
 
 .data
 
@@ -30,6 +31,8 @@ scrdef scr_seq_P1_T04_007 // old man (robbery)
 scrdef scr_seq_P1_T04_008 // test build stop
 scrdef scr_seq_P1_T04_009 // Gym door (test build)
 scrdef scr_seq_P1_T04_010 // Rt. 24 sign
+scrdef scr_seq_P1_T04_011 // Team Rocket burglar (after the S.S. Ticket)
+scrdef scr_seq_P1_T04_012 // on transition
 scrdef_end
 
 scr_seq_P1_T04_001:
@@ -149,6 +152,50 @@ scr_seq_P1_T04_010:
 	scrcmd_058
 	scrcmd_060 VAR_SPECIAL_RESULT
 	callstd std_signpost
+	end
+
+// FireRed: the Rocket who robbed the house returns the stolen TM28
+scr_seq_P1_T04_011:
+	play_se SEQ_SE_DP_SELECT
+	lockall
+	faceplayer
+	goto_if_defeated TRAINER_P1_TEAM_ROCKET_GRUNT_5, _gruntGiveTM
+	npc_msg 12
+	closemsg
+	trainer_battle TRAINER_P1_TEAM_ROCKET_GRUNT_5, 0, 0, 0
+	check_battle_won VAR_SPECIAL_RESULT
+	compare VAR_SPECIAL_RESULT, 0
+	goto_if_eq _lost
+_gruntGiveTM:
+	npc_msg 13
+	goto_if_no_item_space ITEM_TM028, 1, _gruntBagFull
+	giveitem_no_check ITEM_TM028, 1
+	setflag FLAG_P1_GOT_TM28
+	npc_msg 14
+	wait_button
+	closemsg
+	fade_screen 6, 1, 0, 0
+	wait_fade
+	hide_person OBJ_GRUNT
+	setflag FLAG_P1_HIDE_CERULEAN_GRUNT
+	fade_screen 6, 1, 1, 0
+	wait_fade
+	releaseall
+	end
+
+_gruntBagFull:
+	callstd std_bag_is_full
+	closemsg
+	releaseall
+	end
+
+scr_seq_P1_T04_012:
+	setflag FLAG_P1_HIDE_CERULEAN_GRUNT
+	goto_if_set FLAG_P1_GOT_TM28, _onTransitionDone
+	compare VAR_P1_BILL, 2
+	goto_if_ne _onTransitionDone
+	clearflag FLAG_P1_HIDE_CERULEAN_GRUNT
+_onTransitionDone:
 	end
 
 	.balign 4

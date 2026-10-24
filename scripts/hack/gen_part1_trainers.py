@@ -53,6 +53,27 @@ PART1_TRAINERS = [
     ("TRAINER_RIVAL_CERULEAN_SQUIRTLE", "CeruleanCity"),
     ("TRAINER_RIVAL_CERULEAN_BULBASAUR", "CeruleanCity"),
     ("TRAINER_RIVAL_CERULEAN_CHARMANDER", "CeruleanCity"),
+    # Build 17: Nugget Bridge, Route 25, Misty, the Cerulean burglar
+    ("TRAINER_BUG_CATCHER_CALE", "Route24"),
+    ("TRAINER_LASS_ALI", "Route24"),
+    ("TRAINER_YOUNGSTER_TIMMY", "Route24"),
+    ("TRAINER_LASS_RELI", "Route24"),
+    ("TRAINER_CAMPER_ETHAN", "Route24"),
+    ("TRAINER_CAMPER_SHANE", "Route24"),
+    ("TRAINER_TEAM_ROCKET_GRUNT_6", "Route24"),
+    ("TRAINER_YOUNGSTER_JOEY", "Route25"),
+    ("TRAINER_YOUNGSTER_DAN", "Route25"),
+    ("TRAINER_YOUNGSTER_CHAD", "Route25"),
+    ("TRAINER_PICNICKER_KELSEY", "Route25"),
+    ("TRAINER_LASS_HALEY", "Route25"),
+    ("TRAINER_HIKER_FRANKLIN", "Route25"),
+    ("TRAINER_HIKER_NOB", "Route25"),
+    ("TRAINER_HIKER_WAYNE", "Route25"),
+    ("TRAINER_CAMPER_FLINT", "Route25"),
+    ("TRAINER_PICNICKER_DIANA", "CeruleanCity_Gym"),
+    ("TRAINER_SWIMMER_MALE_LUIS", "CeruleanCity_Gym"),
+    ("TRAINER_LEADER_MISTY", "CeruleanCity_Gym"),
+    ("TRAINER_TEAM_ROCKET_GRUNT_5", "CeruleanCity"),
 ]
 
 # HeartGold overworld sprite for each FireRed class (for the events' trainer objects)
@@ -137,7 +158,7 @@ def frlg_text(text, player=None):
 
     def fix(m):
         w = m.group(0)
-        if w in KEEP_UPPER or len(w) < 2:
+        if w in KEEP_UPPER or w.rstrip(".") in KEEP_UPPER or len(w) < 2:
             return w
         return w[0] + w[1:].lower()
 

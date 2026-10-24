@@ -382,6 +382,10 @@
 .equ VAR_P1_CERULEAN, 0x4169
 // never set: coord events on it always fire (test-build stops at the edge of what's built)
 .equ VAR_P1_TESTBLOCK, 0x416A
+// Nugget Bridge Rocket: 1 beaten
+.equ VAR_P1_ROUTE24, 0x416B
+// Bill: 1 back to human, 2 gave the S.S. Ticket
+.equ VAR_P1_BILL, 0x416C
 .equ VAR_UNK_4167, 0x4167
 .equ VAR_UNK_4168, 0x4168
 .equ VAR_UNK_4169, 0x4169
