@@ -148,16 +148,6 @@
   "coord_events": [
     {
       "script": 9,
-      "x": 1409,
-      "z": 238,
-      "width": 1,
-      "length": 4,
-      "y": 0,
-      "value": 0,
-      "var": 16746
-    },
-    {
-      "script": 9,
       "x": 1422,
       "z": 254,
       "width": 4,

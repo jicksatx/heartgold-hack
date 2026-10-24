@@ -145,6 +145,27 @@ PART1_TRAINERS = [
     ("TRAINER_POKEMANIAC_STEVE", "RockTunnel_B1F"),
     ("TRAINER_PICNICKER_MARTHA", "RockTunnel_B1F"),
     ("TRAINER_POKEMANIAC_WINSTON", "RockTunnel_B1F"),
+    # Build 20: Route 8, Celadon Gym
+    ("TRAINER_LASS_PAIGE", "Route8"),
+    ("TRAINER_LASS_ANDREA", "Route8"),
+    ("TRAINER_LASS_MEGAN", "Route8"),
+    ("TRAINER_LASS_JULIA", "Route8"),
+    ("TRAINER_SUPER_NERD_AIDAN", "Route8"),
+    ("TRAINER_SUPER_NERD_GLENN", "Route8"),
+    ("TRAINER_SUPER_NERD_LESLIE", "Route8"),
+    ("TRAINER_GAMER_STAN", "Route8"),
+    ("TRAINER_GAMER_RICH", "Route8"),
+    ("TRAINER_TWINS_ELI_ANNE", "Route8"),
+    ("TRAINER_BIKER_RICARDO", "Route8"),
+    ("TRAINER_BIKER_JAREN", "Route8"),
+    ("TRAINER_LASS_KAY", "CeladonCity_Gym"),
+    ("TRAINER_LASS_LISA", "CeladonCity_Gym"),
+    ("TRAINER_PICNICKER_TINA", "CeladonCity_Gym"),
+    ("TRAINER_BEAUTY_BRIDGET", "CeladonCity_Gym"),
+    ("TRAINER_BEAUTY_TAMIA", "CeladonCity_Gym"),
+    ("TRAINER_BEAUTY_LORI", "CeladonCity_Gym"),
+    ("TRAINER_COOLTRAINER_MARY", "CeladonCity_Gym"),
+    ("TRAINER_LEADER_ERIKA", "CeladonCity_Gym"),
 ]
 
 # HeartGold overworld sprite for each FireRed class (for the events' trainer objects)
@@ -153,7 +174,7 @@ SPRITES = {
     "SUPER_NERD": 338, "TEAM_ROCKET": 222, "SCIENTIST": 29, "POKEMANIAC": 377, "SAILOR": 348, "FISHERMAN": 347,
     "SWIMMER_M": 342, "SWIMMER_F": 343, "BIKER": 229, "CUE_BALL": 229, "GENTLEMAN": 341, "BEAUTY": 326,
     "BIRD_KEEPER": 323, "BLACK_BELT": 344, "PSYCHIC": 227, "CHANNELER": 219, "COOLTRAINER": 324, "RIVAL_EARLY": 375,
-    "RIVAL_LATE": 375, "LEADER": 352, "ENGINEER": 324, "GAMER": 330,
+    "RIVAL_LATE": 375, "LEADER": 352, "ENGINEER": 324, "GAMER": 330, "TWINS": 316,
 }
 
 
@@ -163,6 +184,7 @@ def trainer_id(const):
 
 # FireRed class -> HeartGold class
 CLASSES = {
+    "TWINS": "TRAINERCLASS_TWINS",
     "BUG_CATCHER": "TRAINERCLASS_BUG_CATCHER",
     "CAMPER": "TRAINERCLASS_CAMPER",
     "PICNICKER": "TRAINERCLASS_PICNICKER",
@@ -257,6 +279,7 @@ def parse_texts(map_name):
 
 
 _ALL_TEXTS = {}
+NOT_ENOUGH = {}
 
 
 def parse_all_texts():
@@ -273,6 +296,8 @@ def parse_battle_texts(map_name, const):
         m = re.match(r"\s*trainerbattle_\w+ " + const + r", (\w+)(?:, (\w+))?(?:, .*)?\s*$", line)
         if not m:
             continue
+        md = re.match(r"\s*trainerbattle_double " + const + r", \w+, \w+, (\w+)", line)
+        NOT_ENOUGH[const] = md.group(1) if md else None
         if m.group(2):
             intro, defeat = m.group(1), m.group(2)
         else:
@@ -299,6 +324,7 @@ def parse_trainers():
         party = re.search(r"\.party = (\w+)\((\w+)\)", body)
         items = re.search(r"\.items = \{(.*?)\}", body).group(1)
         out[m.group(1)] = dict(cls=cls, name=name, kind=party.group(1), party=party.group(2),
+                               double=".doubleBattle = TRUE" in body,
                                items=[x.strip() for x in items.split(",") if x.strip()])
     return out
 
@@ -363,7 +389,7 @@ def main():
              f"            .trainerClass = {cls},",
              f"            .items = {{ {', '.join(items)} }},",
              "            .aiFlags = F_PRIORITIZE_SUPER_EFFECTIVE | F_EVALUATE_ATTACKS,",
-             "            .battleType = SINGLE_BATTLE,", "        },", "        .party = {"]
+             f"            .battleType = {'DOUBLE_BATTLE' if t['double'] else 'SINGLE_BATTLE'},", "        },", "        .party = {"]
         for mon in mons:
             e += ["            {", f"                .ivs = {mon['iv']},",
                   "                .abilitySlot = TRAINER_POKEMON_ABILITY_1,",
@@ -374,7 +400,14 @@ def main():
                 e.append(f"                .moves = {{ {', '.join(mon['moves'])} }},")
             e += ["                .ballSeal = 0,", "            },"]
         e += ["        },", "        .text = {"]
-        for kind, label in (("TRMSG_INTRO", intro), ("TRMSG_LOSE", defeat), ("TRMSG_AFTER", after)):
+        kinds = (("TRMSG_INTRO", intro), ("TRMSG_LOSE", defeat), ("TRMSG_AFTER", after))
+        if t["double"]:
+            # both trainers of a double battle say the same lines (HeartGold asks for each one's)
+            one = NOT_ENOUGH.get(const)
+            kinds = (("TRMSG_DBL_INTRO_1", intro), ("TRMSG_DBL_LOSE_1", defeat), ("TRMSG_DBL_AFTER_1", after),
+                     ("TRMSG_DBL_1POKE_1", one), ("TRMSG_DBL_INTRO_2", intro), ("TRMSG_DBL_LOSE_2", defeat),
+                     ("TRMSG_DBL_AFTER_2", after), ("TRMSG_DBL_1POKE_2", one))
+        for kind, label in kinds:
             if label:
                 e += ["            {", f"                .type = {kind},",
                       f'                .text = "{cstr(frlg_text(texts[label]))}\\\\n",', "            },"]

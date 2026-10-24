@@ -1,0 +1,5 @@
+Celadon Pokémon Gym\nLeader: Erika\rWinning Trainers:\nBlue
+Celadon Pokémon Gym\nLeader: Erika\rWinning Trainers:\nBlue, {STRVAR_1 3, 0, 0}
+{STRVAR_1 3, 0, 0} received the Rainbow Badge\nfrom Erika!
+The Rainbow Badge will make\nPokémon up to Lv. 50 obey.\rIt also allows Pokémon to use\nStrength in and out of battle.\rPlease also take this with you.\r
+TM19 contains Giga Drain.\rHalf the damage it inflicts is\ndrained to heal your Pokémon.\rWouldn’t you agree that it’s a\nwonderful move?

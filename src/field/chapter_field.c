@@ -69,6 +69,13 @@ static const struct Part1Map sPart1Maps[] = {
     { 108, 530, 1005, 970, 883 }, // Rock Tunnel 1F
     { 452, 531, 1005, 970, 883 }, // Rock Tunnel B1F
     { 53,  532, 1006, 970, 884 }, // Lavender Town
+    { 16,  533, 1008, 970, 885 }, // Route 8
+    { 390, 534, 1009, 970, 887 }, // Route 8 Saffron gatehouse
+    { 493, 535, 1009, 970, 887 }, // Route 7 Saffron gatehouse
+    { 15,  536, 1007, 970, 886 }, // Route 7
+    { 55,  537, 1010, 970, 888 }, // Celadon City
+    { 395, 538, 1011, 970, 889 }, // Celadon Gym
+    { 376, 539, 1012, 970, 890 }, // Celadon Condominiums 1F
 };
 
 #define MAP_HEADERS        ((const u8 *)0x020F6BE0) // sMapHeaders

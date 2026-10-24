@@ -165,6 +165,41 @@ ARCHIVES = {
         ("L", "LavenderTown_Text_GhostsAppearedInTower", N),
         ("T", "(Test build) Part 1 continues past\\nhere in a later build." + R),
     ],
+    885: [  # Route 8
+        ("L", "Route8_Text_UndergroundPathSign", N),
+    ],
+    886: [  # Route 7
+        ("L", "Route7_Text_UndergroundPathSign", N),
+    ],
+    887: [  # Route 7 / Route 8 Saffron gatehouses (and the Underground Path standing in for FireRed's)
+        ("L", "Route5_SouthEntrance_Text_ThirstyOnGuardDuty", R),
+        ("T", P + " took the Underground Path\\nunder Saffron City." + R),
+        ("L", "Route5_SouthEntrance_Text_ThirstyOnGuardDuty", N),
+    ],
+    888: [  # Celadon City
+        ("L", "CeladonCity_Text_CitySign", N),
+        ("L", "CeladonCity_Text_GymSign", N),
+        ("L", "CeladonCity_Text_MansionSign", N),
+        ("L", "CeladonCity_Text_DeptStoreSign", N),
+        ("L", "CeladonCity_Text_PrizeExchangeSign", N),
+        ("L", "CeladonCity_Text_GameCornerSign", N),
+        ("L", "CeladonCity_Text_GymIsGreatFullOfWomen", N),
+        ("L", "CeladonCity_Text_GameCornerIsBadForCitysImage", N),
+        ("L", "CeladonCity_Text_ScaldedTongueOnTea", N),
+        ("T", "(Test build) Part 1 continues past\\nhere in a later build." + R),
+    ],
+    889: [  # Celadon Gym
+        ("L", "CeladonCity_Gym_Text_GymStatue", N),
+        ("L", "CeladonCity_Gym_Text_GymStatuePlayerWon", N),
+        ("T", P + " received the Rainbow Badge\\nfrom Erika!"),
+        ("L", "CeladonCity_Gym_Text_ExplainRainbowBadgeTakeThis", R),
+        ("L", "CeladonCity_Gym_Text_ExplainTM19", N),
+    ],
+    890: [  # Celadon Condominiums 1F
+        ("L", "CeladonCity_Condominiums_1F_Text_TryThisDrinkInstead", R),
+        ("L", "CeladonCity_Condominiums_1F_Text_NothingBeatsThirstLikeTea", N),
+        ("L", "CeladonCity_Condominiums_1F_Text_ManagersSuite", N),
+    ],
 }
 
 

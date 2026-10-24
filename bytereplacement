@@ -581,3 +581,8 @@ arm9 0206E336 00 20 C0 46
 # battles never award EVs: BattleScript_CalcEffortValues returns immediately ("bx lr")
 0012 022463E8 70 47
 #endif // REMOVE_EVS
+
+# hack: Rock Tunnel 1F/B1F are lit (map header weather 11 "Flash darkness" -> 0), so Flash isn't needed there.
+# byte = regionNo (bit 0, Kanto) | weather << 1
+arm9 020F7614 01
+arm9 020F9654 01
