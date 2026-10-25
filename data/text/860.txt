@@ -2,3 +2,5 @@ Blue: Hey! {STRVAR_1 3, 0, 0}!\rYou’re going to the Pokémon League?\rForget i
 Blue: I heard the Pokémon League has\nmany tough Trainers.\rI have to figure out how to get past\nthem.\rYou should quit dawdling and get a\nmove on!\r
 Pokémon League Front Gate\rOnly Trainers with all eight Kanto\nBadges may enter.
 Route 22\nPokémon League Front Gate
+Blue: What? {STRVAR_1 3, 0, 0}!\nWhat a surprise to see you here!\rSo you’re going to the Pokémon\nLeague?\rYou collected all the Badges, too?\nThat’s cool!\rThen I’ll whip you, {STRVAR_1 3, 0, 0}, as a\nwarm-up for the Pokémon League!\rCome on!\r
+That loosened me up.\nI’m ready for the Pokémon League!\r{STRVAR_1 3, 0, 0}, you need more practice.\rBut hey, you know that!\nI’m out of here. Smell ya!\r

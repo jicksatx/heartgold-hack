@@ -401,6 +401,7 @@
 // Silph Co.: 1 beat Blue, 2 beat Giovanni (Team Rocket leaves Saffron)
 .equ VAR_P1_SILPH, 0x4173
 .equ VAR_P1_POWER_PLANT, 0x4174
+.equ VAR_P1_VIRIDIAN_GYM, 0x4175
 .equ VAR_UNK_4167, 0x4167
 .equ VAR_UNK_4168, 0x4168
 .equ VAR_UNK_4169, 0x4169

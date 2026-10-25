@@ -586,3 +586,8 @@ arm9 0206E336 00 20 C0 46
 # byte = regionNo (bit 0, Kanto) | weather << 1
 arm9 020F7614 01
 arm9 020F9654 01
+
+# hack: the Power Plant (map 467) gets an encounter bank: 11, Ruins of Alph's unused main-room table.  Part 1 reads
+# FireRed's Power Plant table from member 143 + 11 (data/EncountersPart1.inc); the plant's floor only counts as an
+# encounter tile in Part 1 (Chapter_CanGenerateWalkingEncounters, src/field/chapter_field.c), so Part 2 stays empty.
+arm9 020F97A8 0B

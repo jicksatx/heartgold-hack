@@ -157,7 +157,8 @@ void MakeTrainerPokemonParty(struct BATTLE_PARAM *bp, int num, int heapID)
         // Part 1, where he is always the rival (include/chapter.h)
         if (bp->trainer_data[num].tr_type == TRAINERCLASS_RIVAL
 #ifdef CHAPTER_SYSTEM
-            || (bp->trainer_data[num].tr_type == TRAINERCLASS_LEADER_BLUE && Chapter_Get() == CHAPTER_RED)
+            || ((bp->trainer_data[num].tr_type == TRAINERCLASS_LEADER_BLUE || bp->trainer_data[num].tr_type == TRAINERCLASS_P1_CHAMPION_BLUE)
+                && Chapter_Get() == CHAPTER_RED)
 #endif
         ) {
             species = Randomizer_RemapRivalSpecies(species);

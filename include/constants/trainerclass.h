@@ -140,6 +140,12 @@
 #define TRAINERCLASS_LEADER_CANDICE      135
 #define TRAINERCLASS_LEADER_VOLKNER      136
 #define TRAINERCLASS_CHAMPION_CYNTHIA    137
+// hack: Part 1 (FireRed) classes, pics made by scripts/hack/make_fr_trainer_pics.py
+#define TRAINERCLASS_ELITE_FOUR_LORELEI  138
+#define TRAINERCLASS_ELITE_FOUR_AGATHA   139
+#define TRAINERCLASS_P1_CHAMPION_BLUE    140
+#define TRAINERCLASS_P1_ELITE_FOUR_LANCE 141
+#define TRAINERCLASS_P1_LEADER_GIOVANNI  142
 // Only used to display attributes of phone contacts
 #define TRAINERCLASS_PHONE_MOM               200
 #define TRAINERCLASS_PHONE_POKEMON_PROFESSOR 201

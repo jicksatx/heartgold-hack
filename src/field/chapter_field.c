@@ -133,6 +133,19 @@ static const struct Part1Map sPart1Maps[] = {
     { 457, 594, 1040, 1041, 914 }, // Cinnabar Gym (HeartGold's Seafoam Islands Gym)
     { 7,   595, 1039, 970, 913 }, // Pokemon Mansion 1F/2F (Burned Tower 1F)
     { 217, 596, 1039, 970, 913 }, // Pokemon Mansion 3F/B1F (Burned Tower B1F)
+    { 496, 597, 1042, 970, 915 }, // Viridian Gym (Giovanni)
+    { 299, 598, 1043, 970, 916 }, // Pokemon League reception gate (Route 23's badge checks)
+    { 58,  599, 1044, 970, 917 }, // Indigo Plateau
+    { 300, 600, 1044, 1045, 917 }, // Pokemon League lobby (resets the Elite Four)
+    { 301, 601, 1046, 1047, 918 }, // Lorelei (Will's room)
+    { 302, 602, 1046, 1048, 918 }, // Bruno (Koga's room)
+    { 303, 603, 1046, 1049, 918 }, // Agatha (Bruno's room)
+    { 304, 604, 1046, 1050, 918 }, // Lance (Karen's room)
+    { 305, 605, 1046, 1051, 918 }, // Champion Blue (Lance's room)
+    { 306, 606, 1046, 1052, 918 }, // Hall of Fame
+    { 124, 607, 139, 399, 3 },    // Victory Road 1F (HeartGold's scripts)
+    { 178, 608, 109, 370, 3 },    // Victory Road 2F (HeartGold's scripts: landing from 3F's holes)
+    { 179, 609, 110, 371, 128 },  // Victory Road 3F (HeartGold's scripts: its holes; Silver's battle removed)
 };
 
 #define MAP_HEADERS        ((const u8 *)0x020F6BE0) // sMapHeaders
@@ -182,6 +195,23 @@ u16 LONG_CALL Chapter_MapHeader_GetScriptHeaderBank(u32 mapId)
 u16 LONG_CALL Chapter_MapHeader_GetEventsBank(u32 mapId)
 {
     return Part1Map_GetBank(mapId, PART1_EVENTS, 16);
+}
+
+#define TILE_BEHAVIOR_FLAGS ((const u8 *)0x020FCA74) // sMetatileBehaviorFlags
+#define MAP_POWER_PLANT     467
+
+/**
+ *  @brief replaces MetatileBehavior_CanGenerateWalkingEncounters (0x0205B994, field encounter checks only).  in Part 1
+ *         the Power Plant's plain floor (behavior 0) counts as an encounter tile like a cave floor, so FireRed's Power
+ *         Plant table (encounter bank 11, see bytereplacement) is used; HeartGold's plant has no encounter tiles.
+ */
+BOOL LONG_CALL Chapter_CanGenerateWalkingEncounters(u8 tile)
+{
+    if (TILE_BEHAVIOR_FLAGS[tile] & 2) {
+        return TRUE;
+    }
+    return tile == 0 && Chapter_Get() == CHAPTER_RED && gFieldSysPtr != NULL && gFieldSysPtr->location != NULL
+        && (u32)gFieldSysPtr->location->mapId == MAP_POWER_PLANT;
 }
 
 #endif // CHAPTER_SYSTEM

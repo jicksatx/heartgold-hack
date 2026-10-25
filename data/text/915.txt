@@ -1,0 +1,7 @@
+{STRVAR_1 3, 0, 0} received the Earth Badge\nfrom Giovanni!\r
+The Earth Badge makes Pokémon of\nany level obey without question.\rIt is evidence of your mastery as\na Pokémon Trainer.\rWith it, you can challenge the\nPokémon League.\rAlso, take this TM.\rConsider it a gift for your Pokémon\nLeague challenge.\r
+TM26 contains Earthquake.\rIt is a powerful attack that causes\na massive tremor.\rI made it when I ran the Gym here,\nfar too long ago... 
+Yo!\nChamp in the making!\rEven I don’t know the Viridian\nLeader’s identity.\rBut one thing’s certain.\nThis will be the toughest of all\fthe Gym Leaders.\rAlso, I heard that the Trainers\nhere like Ground-type Pokémon.
+Blow me away! Giovanni was the\nGym Leader of Viridian?
+Viridian Pokémon Gym\nLeader: ?\rWinning Trainers:\nBlue
+Viridian Pokémon Gym\nLeader: Giovanni\rWinning Trainers:\nBlue, {STRVAR_1 3, 0, 0}

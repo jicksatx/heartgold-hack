@@ -354,6 +354,37 @@ PART1_TRAINERS = [
     ("TRAINER_BURGLAR_DUSTY", "CinnabarIsland_Gym"),
     ("TRAINER_SUPER_NERD_ZAC", "CinnabarIsland_Gym"),
     ("TRAINER_LEADER_BLAINE", "CinnabarIsland_Gym"),
+    ("TRAINER_TAMER_JASON", "ViridianCity_Gym"),
+    ("TRAINER_TAMER_COLE", "ViridianCity_Gym"),
+    ("TRAINER_BLACK_BELT_ATSUSHI", "ViridianCity_Gym"),
+    ("TRAINER_BLACK_BELT_KIYO", "ViridianCity_Gym"),
+    ("TRAINER_BLACK_BELT_TAKASHI", "ViridianCity_Gym"),
+    ("TRAINER_COOLTRAINER_SAMUEL", "ViridianCity_Gym"),
+    ("TRAINER_COOLTRAINER_YUJI", "ViridianCity_Gym"),
+    ("TRAINER_COOLTRAINER_WARREN", "ViridianCity_Gym"),
+    ("TRAINER_LEADER_GIOVANNI", "ViridianCity_Gym"),
+    ("TRAINER_RIVAL_ROUTE22_LATE_SQUIRTLE", "Route22"),
+    ("TRAINER_RIVAL_ROUTE22_LATE_BULBASAUR", "Route22"),
+    ("TRAINER_RIVAL_ROUTE22_LATE_CHARMANDER", "Route22"),
+    ("TRAINER_COOLTRAINER_NAOMI", "VictoryRoad_1F"),
+    ("TRAINER_COOLTRAINER_ROLANDO", "VictoryRoad_1F"),
+    ("TRAINER_POKEMANIAC_DAWSON", "VictoryRoad_2F"),
+    ("TRAINER_BLACK_BELT_DAISUKE", "VictoryRoad_2F"),
+    ("TRAINER_JUGGLER_NELSON", "VictoryRoad_2F"),
+    ("TRAINER_JUGGLER_GREGORY", "VictoryRoad_2F"),
+    ("TRAINER_TAMER_VINCENT", "VictoryRoad_2F"),
+    ("TRAINER_COOLTRAINER_GEORGE", "VictoryRoad_3F"),
+    ("TRAINER_COOLTRAINER_COLBY", "VictoryRoad_3F"),
+    ("TRAINER_COOLTRAINER_CAROLINE", "VictoryRoad_3F"),
+    ("TRAINER_COOLTRAINER_ALEXA", "VictoryRoad_3F"),
+    ("TRAINER_COOL_COUPLE_RAY_TYRA", "VictoryRoad_3F"),
+    ("TRAINER_ELITE_FOUR_LORELEI", "PokemonLeague_LoreleisRoom"),
+    ("TRAINER_ELITE_FOUR_BRUNO", "PokemonLeague_BrunosRoom"),
+    ("TRAINER_ELITE_FOUR_AGATHA", "PokemonLeague_AgathasRoom"),
+    ("TRAINER_ELITE_FOUR_LANCE", "PokemonLeague_LancesRoom"),
+    ("TRAINER_CHAMPION_FIRST_SQUIRTLE", "PokemonLeague_ChampionsRoom"),
+    ("TRAINER_CHAMPION_FIRST_BULBASAUR", "PokemonLeague_ChampionsRoom"),
+    ("TRAINER_CHAMPION_FIRST_CHARMANDER", "PokemonLeague_ChampionsRoom"),
 ]
 
 # HeartGold overworld sprite for each FireRed class (for the events' trainer objects)
@@ -361,7 +392,7 @@ SPRITES = {
     "BUG_CATCHER": 318, "YOUNGSTER": 317, "LASS": 319, "CAMPER": 345, "PICNICKER": 346, "HIKER": 333,
     "SUPER_NERD": 338, "TEAM_ROCKET": 222, "SCIENTIST": 29, "POKEMANIAC": 377, "SAILOR": 348, "FISHERMAN": 347,
     "SWIMMER_M": 342, "SWIMMER_F": 343, "BIKER": 229, "CUE_BALL": 229, "GENTLEMAN": 341, "BEAUTY": 326,
-    "BIRD_KEEPER": 323, "BLACK_BELT": 344, "PSYCHIC": 227, "CHANNELER": 219, "JUGGLER": 378, "TAMER": 378, "ROCKER": 322, "YOUNG_COUPLE": 323, "CRUSH_KIN": 344, "BURGLAR": 218, "SIS_AND_BRO": 342, "COOLTRAINER": 324, "RIVAL_EARLY": 375,
+    "BIRD_KEEPER": 323, "BLACK_BELT": 344, "PSYCHIC": 227, "CHANNELER": 219, "JUGGLER": 378, "TAMER": 378, "ROCKER": 322, "YOUNG_COUPLE": 323, "CRUSH_KIN": 344, "BURGLAR": 218, "SIS_AND_BRO": 342, "COOL_COUPLE": 324, "COOLTRAINER": 324, "RIVAL_EARLY": 375,
     "RIVAL_LATE": 375, "LEADER": 352, "ENGINEER": 324, "GAMER": 330, "TWINS": 316,
 }
 
@@ -405,6 +436,7 @@ CLASSES = {
     "BOSS": "TRAINERCLASS_ROCKET_BOSS",
     "YOUNG_COUPLE": "TRAINERCLASS_YOUNG_COUPLE",
     "CRUSH_KIN": "TRAINERCLASS_DOUBLE_TEAM",
+    "COOL_COUPLE": "TRAINERCLASS_DOUBLE_TEAM",
     "SIS_AND_BRO": "TRAINERCLASS_DOUBLE_TEAM",
 }
 LEADERS = {
@@ -415,13 +447,21 @@ LEADERS = {
     "KOGA": "TRAINERCLASS_ELITE_FOUR_KOGA",
     "SABRINA": "TRAINERCLASS_LEADER_SABRINA",
     "BLAINE": "TRAINERCLASS_LEADER_BLAINE",
-    "GIOVANNI": "TRAINERCLASS_ROCKET_BOSS",
+    "GIOVANNI": "TRAINERCLASS_P1_LEADER_GIOVANNI",  # the Viridian Gym battle (the Rocket Boss battles are class BOSS)
+}
+
+ELITE_FOUR = {
+    "LORELEI": "TRAINERCLASS_ELITE_FOUR_LORELEI",
+    "BRUNO": "TRAINERCLASS_ELITE_FOUR_BRUNO",
+    "AGATHA": "TRAINERCLASS_ELITE_FOUR_AGATHA",
+    "LANCE": "TRAINERCLASS_P1_ELITE_FOUR_LANCE",
 }
 
 KEEP_UPPER = {"OK", "HQ", "TV", "HP", "PP", "TM", "HM", "PC", "S.S.", "LT.", "KO", "ID"}
 WORDS = [
     ("POKéMON", "Pokémon"), ("POKéDEX", "Pokédex"), ("POKé BALL", "Poké Ball"), ("POKé", "Poké"),
     ("PROF. OAK", "Professor Oak"), ("TEAM ROCKET", "Team Rocket"), ("LT. SURGE", "Lt. Surge"), ("MR. FUJI", "Mr. Fuji"),
+    ("HALL OF\\n", "Hall of\\n"), ("HALL OF FAMERS", "Hall of Famers"), ("HALL OF FAME", "Hall of Fame"),
 ]
 GENERATED_BEGIN = "// BEGIN PART1 GENERATED (scripts/hack/gen_part1_trainers.py)"
 GENERATED_END = "// END PART1 GENERATED"
@@ -436,6 +476,7 @@ def frlg_text(text, player=None):
     # a leader's defeat line narrates getting the badge in another font; the gym script does that part here
     text = re.sub(r"\{FONT_NORMAL\}.*?\{FONT_MALE\}", "", text)
     text = text.replace("{PLAYER}", "\x01" if player else "you").replace("{RIVAL}", "Blue")
+    text = re.sub(r"\{[A-Z_]+ 0x[0-9A-Fa-f]+\}", "", text)  # {PAUSE 0xFE}
     text = re.sub(r"\{[A-Z0-9_ ]+\}", "", text)
     text = re.sub(r"([A-Z]+)BADGE", lambda m: m.group(1) + " Badge", text)
     for a, b in WORDS:
@@ -450,6 +491,8 @@ def frlg_text(text, player=None):
     text = re.sub(r"[A-Zé]{2,}(?:\.)?", fix, text)
     text = text.replace("\\l", "\\f").replace("\\p", "\\r")
     text = text.replace("'", "’").replace("…", "...")
+    while text.endswith("\\n"):  # a line left empty once a {PAUSE} or music command is dropped
+        text = text[:-2]
     if player:
         text = text.replace("\x01", player)
     return text
@@ -521,6 +564,9 @@ def parse_trainers():
     return out
 
 
+MOVE_NAMES = {"MOVE_FAINT_ATTACK": "MOVE_FEINT_ATTACK"}  # FireRed spelling -> hg-engine
+
+
 def parse_parties():
     src = read(f"{PFR}/src/data/trainer_parties.h")
     out = {}
@@ -534,7 +580,7 @@ def parse_parties():
             item = re.search(r"\.heldItem = (\w+)", body)
             moves = re.search(r"\.moves = \{(.*?)\}", body)
             mon["item"] = item.group(1) if item else None
-            mon["moves"] = [x.strip() for x in moves.group(1).split(",")] if moves else None
+            mon["moves"] = [MOVE_NAMES.get(x.strip(), x.strip()) for x in moves.group(1).split(",")] if moves else None
             mons.append(mon)
         out[m.group(1)] = mons
     return out
@@ -565,6 +611,10 @@ def main():
         intro, defeat, after = parse_battle_texts(map_name, const)
         if t["cls"].startswith("RIVAL"):
             cls, t = "TRAINERCLASS_LEADER_BLUE", dict(t, name="BLUE")  # Part 1's rival is always Blue (enemy_party.c)
+        elif t["cls"] == "CHAMPION":
+            cls, t = "TRAINERCLASS_P1_CHAMPION_BLUE", dict(t, name="BLUE")
+        elif t["cls"] == "ELITE_FOUR":
+            cls = ELITE_FOUR[t["name"]]
         else:
             cls = LEADERS.get(t["name"]) if t["cls"] == "LEADER" else CLASSES[t["cls"]]
         has_items = "ITEM" in t["kind"] and "NO_ITEM" not in t["kind"]

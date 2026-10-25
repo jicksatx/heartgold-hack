@@ -343,6 +343,14 @@ u32 LONG_CALL Chapter_TrainerClassToMusicCombo(u32 trainerClass)
     if (trainerClass == TRAINERCLASS_LEADER_BLUE && Chapter_Get() == CHAPTER_RED) {
         return ANIM_MUSIC_COMBO_RIVAL;
     }
+    if (trainerClass == TRAINERCLASS_ELITE_FOUR_LORELEI || trainerClass == TRAINERCLASS_ELITE_FOUR_AGATHA
+        || trainerClass == TRAINERCLASS_P1_ELITE_FOUR_LANCE) {
+        trainerClass = TRAINERCLASS_ELITE_FOUR_WILL;
+    } else if (trainerClass == TRAINERCLASS_P1_CHAMPION_BLUE) {
+        trainerClass = TRAINERCLASS_CHAMPION;
+    } else if (trainerClass == TRAINERCLASS_P1_LEADER_GIOVANNI) {
+        trainerClass = TRAINERCLASS_LEADER_BLAINE; // Kanto Gym Leader music
+    }
     for (u32 i = 0; i < NELEMS(TrainerClassToMusicCombo); i++) {
         u16 entry = TrainerClassToMusicCombo[i][0] | (TrainerClassToMusicCombo[i][1] << 8);
         if ((entry & 0x3FF) == trainerClass) {

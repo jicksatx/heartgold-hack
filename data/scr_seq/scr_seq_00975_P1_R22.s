@@ -14,7 +14,7 @@
 
 // hack: Route 22 in Part 1 (FireRed).  events: data/eventdata/part1/497_P1_R22.json, text: data/text/860.txt,
 // header scr_seq_00976_P1_R22_hdr.s.  Blue's first Route 22 battle (after the Pokedex, a battle Red may lose).
-// the League gate has no warp in Part 1 yet.
+// Blue's second battle once Red has the Earth Badge (VAR_P1_ROUTE22 3 -> 4).
 
 .equ OBJ_BLUE, 0
 
@@ -24,6 +24,7 @@ scrdef scr_seq_P1_R22_001 // Blue's challenge
 scrdef scr_seq_P1_R22_002 // League gate
 scrdef scr_seq_P1_R22_003 // route sign
 scrdef scr_seq_P1_R22_004 // on transition
+scrdef scr_seq_P1_R22_005 // Blue's second Route 22 battle (after the Earth Badge, VAR_P1_ROUTE22 3)
 scrdef_end
 
 scr_seq_P1_R22_001:
@@ -64,6 +65,55 @@ _afterBattle:
 	callstd 2071 // back to the map music
 	setflag FLAG_P1_HIDE_ROUTE22_BLUE
 	setvar VAR_P1_ROUTE22, 2
+	releaseall
+	end
+
+scr_seq_P1_R22_005:
+	lockall
+	get_player_coords VAR_SPECIAL_x8004, VAR_SPECIAL_x8005
+	move_person OBJ_BLUE, 987, VAR_SPECIAL_x8005
+	clearflag FLAG_P1_HIDE_ROUTE22_BLUE
+	callstd 2031 // rival intro music
+	show_person OBJ_BLUE
+	apply_movement OBJ_BLUE, _blueApproach
+	apply_movement obj_player, _faceWest
+	wait_movement
+	buffer_players_name 0
+	npc_msg 4
+	closemsg
+	get_starter_choice VAR_TEMP_x4001
+	compare VAR_TEMP_x4001, 152
+	goto_if_eq _lateVsGrass
+	compare VAR_TEMP_x4001, 155
+	goto_if_eq _lateVsFire
+	trainer_battle TRAINER_P1_RIVAL_ROUTE22_LATE_BULBASAUR, 0, 0, 0
+	goto _lateAfter
+
+_lateVsGrass:
+	trainer_battle TRAINER_P1_RIVAL_ROUTE22_LATE_CHARMANDER, 0, 0, 0
+	goto _lateAfter
+
+_lateVsFire:
+	trainer_battle TRAINER_P1_RIVAL_ROUTE22_LATE_SQUIRTLE, 0, 0, 0
+_lateAfter:
+	check_battle_won VAR_SPECIAL_RESULT
+	compare VAR_SPECIAL_RESULT, 0
+	goto_if_eq _lateLost
+	callstd 2070 // rival outro music
+	buffer_players_name 0
+	npc_msg 5
+	closemsg
+	apply_movement OBJ_BLUE, _blueLeave
+	wait_movement
+	hide_person OBJ_BLUE
+	callstd 2071 // back to the map music
+	setflag FLAG_P1_HIDE_ROUTE22_BLUE
+	setvar VAR_P1_ROUTE22, 4
+	releaseall
+	end
+
+_lateLost:
+	white_out
 	releaseall
 	end
 

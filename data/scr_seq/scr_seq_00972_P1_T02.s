@@ -30,6 +30,7 @@ scrdef scr_seq_P1_T02_009 // Trainer House sign
 scrdef scr_seq_P1_T02_010 // Gym door
 scrdef scr_seq_P1_T02_011 // road north blocked
 scrdef scr_seq_P1_T02_012 // test build: end of what's built so far
+scrdef scr_seq_P1_T02_013 // in front of the Gym door (VAR_P1_VIRIDIAN_GYM 0): open once Red has 7 Badges
 scrdef_end
 
 scr_seq_P1_T02_001:
@@ -127,6 +128,29 @@ scr_seq_P1_T02_011:
 	wait_movement
 	releaseall
 	end
+
+scr_seq_P1_T02_013:
+	lockall
+	count_badges VAR_SPECIAL_RESULT
+	compare VAR_SPECIAL_RESULT, 7
+	goto_if_ge _gymOpen
+	npc_msg 14
+	wait_button
+	closemsg
+	apply_movement obj_player, _stepBackSouth
+	wait_movement
+	releaseall
+	end
+
+_gymOpen:
+	setvar VAR_P1_VIRIDIAN_GYM, 1
+	releaseall
+	end
+
+	.balign 4
+_stepBackSouth:
+	step 13, 1
+	step_end
 
 scr_seq_P1_T02_012:
 	lockall

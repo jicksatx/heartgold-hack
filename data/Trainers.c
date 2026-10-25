@@ -46563,6 +46563,1880 @@ const TrainerData sTrainerData[] = {
             },
         },
     },
+
+    // TRAINER_TAMER_JASON (FireRed, ViridianCity_Gym)
+    [1075] = {
+        .name = "Jason",
+        .data = {
+            .trainerType = TRAINER_DATA_TYPE_NOTHING,
+            .trainerClass = TRAINERCLASS_JUGGLER,
+            .items = { ITEM_NONE, ITEM_NONE, ITEM_NONE, ITEM_NONE },
+            .aiFlags = F_PRIORITIZE_SUPER_EFFECTIVE | F_EVALUATE_ATTACKS,
+            .battleType = SINGLE_BATTLE,
+        },
+        .party = {
+            {
+                .ivs = 40,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 43,
+                .species = SPECIES_RHYHORN,
+                .ballSeal = 0,
+            },
+        },
+        .text = {
+            {
+                .type = TRMSG_INTRO,
+                .text = "Pokémon and I, we make wonderful\\nmusic together!\\n",
+            },
+            {
+                .type = TRMSG_LOSE,
+                .text = "You are in perfect harmony!\\n",
+            },
+            {
+                .type = TRMSG_AFTER,
+                .text = "Do you know the identity of our\\nGym Leader?\\n",
+            },
+        },
+    },
+
+    // TRAINER_TAMER_COLE (FireRed, ViridianCity_Gym)
+    [1076] = {
+        .name = "Cole",
+        .data = {
+            .trainerType = TRAINER_DATA_TYPE_NOTHING,
+            .trainerClass = TRAINERCLASS_JUGGLER,
+            .items = { ITEM_NONE, ITEM_NONE, ITEM_NONE, ITEM_NONE },
+            .aiFlags = F_PRIORITIZE_SUPER_EFFECTIVE | F_EVALUATE_ATTACKS,
+            .battleType = SINGLE_BATTLE,
+        },
+        .party = {
+            {
+                .ivs = 40,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 39,
+                .species = SPECIES_ARBOK,
+                .ballSeal = 0,
+            },
+            {
+                .ivs = 40,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 39,
+                .species = SPECIES_TAUROS,
+                .ballSeal = 0,
+            },
+        },
+        .text = {
+            {
+                .type = TRMSG_INTRO,
+                .text = "Your Pokémon will cower at the\\ncrack of my whip!\\n",
+            },
+            {
+                .type = TRMSG_LOSE,
+                .text = "Yowch!\\nWhiplash!\\n",
+            },
+            {
+                .type = TRMSG_AFTER,
+                .text = "Wait!\\nI was just careless!\\n",
+            },
+        },
+    },
+
+    // TRAINER_BLACK_BELT_ATSUSHI (FireRed, ViridianCity_Gym)
+    [1077] = {
+        .name = "Atsushi",
+        .data = {
+            .trainerType = TRAINER_DATA_TYPE_ITEMS,
+            .trainerClass = TRAINERCLASS_BLACK_BELT,
+            .items = { ITEM_NONE, ITEM_NONE, ITEM_NONE, ITEM_NONE },
+            .aiFlags = F_PRIORITIZE_SUPER_EFFECTIVE | F_EVALUATE_ATTACKS,
+            .battleType = SINGLE_BATTLE,
+        },
+        .party = {
+            {
+                .ivs = 100,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 40,
+                .species = SPECIES_MACHOP,
+                .item = ITEM_BLACK_BELT,
+                .ballSeal = 0,
+            },
+            {
+                .ivs = 100,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 40,
+                .species = SPECIES_MACHOKE,
+                .item = ITEM_BLACK_BELT,
+                .ballSeal = 0,
+            },
+        },
+        .text = {
+            {
+                .type = TRMSG_INTRO,
+                .text = "Rrrroar!\\nI’m working myself into a rage!\\n",
+            },
+            {
+                .type = TRMSG_LOSE,
+                .text = "Wargh!\\n",
+            },
+            {
+                .type = TRMSG_AFTER,
+                .text = "I’m still not worthy!\\n",
+            },
+        },
+    },
+
+    // TRAINER_BLACK_BELT_KIYO (FireRed, ViridianCity_Gym)
+    [1078] = {
+        .name = "Kiyo",
+        .data = {
+            .trainerType = TRAINER_DATA_TYPE_ITEMS,
+            .trainerClass = TRAINERCLASS_BLACK_BELT,
+            .items = { ITEM_NONE, ITEM_NONE, ITEM_NONE, ITEM_NONE },
+            .aiFlags = F_PRIORITIZE_SUPER_EFFECTIVE | F_EVALUATE_ATTACKS,
+            .battleType = SINGLE_BATTLE,
+        },
+        .party = {
+            {
+                .ivs = 100,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 43,
+                .species = SPECIES_MACHOKE,
+                .item = ITEM_BLACK_BELT,
+                .ballSeal = 0,
+            },
+        },
+        .text = {
+            {
+                .type = TRMSG_INTRO,
+                .text = "Karate is the ultimate form of\\nmartial arts!\\n",
+            },
+            {
+                .type = TRMSG_LOSE,
+                .text = "Aiyah!\\n",
+            },
+            {
+                .type = TRMSG_AFTER,
+                .text = "If my Pokémon were as good at\\nkarate as I...\\n",
+            },
+        },
+    },
+
+    // TRAINER_BLACK_BELT_TAKASHI (FireRed, ViridianCity_Gym)
+    [1079] = {
+        .name = "Takashi",
+        .data = {
+            .trainerType = TRAINER_DATA_TYPE_ITEMS,
+            .trainerClass = TRAINERCLASS_BLACK_BELT,
+            .items = { ITEM_NONE, ITEM_NONE, ITEM_NONE, ITEM_NONE },
+            .aiFlags = F_PRIORITIZE_SUPER_EFFECTIVE | F_EVALUATE_ATTACKS,
+            .battleType = SINGLE_BATTLE,
+        },
+        .party = {
+            {
+                .ivs = 100,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 38,
+                .species = SPECIES_MACHOKE,
+                .item = ITEM_BLACK_BELT,
+                .ballSeal = 0,
+            },
+            {
+                .ivs = 100,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 38,
+                .species = SPECIES_MACHOP,
+                .item = ITEM_BLACK_BELT,
+                .ballSeal = 0,
+            },
+            {
+                .ivs = 100,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 38,
+                .species = SPECIES_MACHOKE,
+                .item = ITEM_BLACK_BELT,
+                .ballSeal = 0,
+            },
+        },
+        .text = {
+            {
+                .type = TRMSG_INTRO,
+                .text = "I’m the Karate King!\\nYour fate rests with me!\\n",
+            },
+            {
+                .type = TRMSG_LOSE,
+                .text = "Ayah!\\n",
+            },
+            {
+                .type = TRMSG_AFTER,
+                .text = "The Pokémon League?\\nYou? Don’t get cocky!\\n",
+            },
+        },
+    },
+
+    // TRAINER_COOLTRAINER_SAMUEL (FireRed, ViridianCity_Gym)
+    [1080] = {
+        .name = "Samuel",
+        .data = {
+            .trainerType = TRAINER_DATA_TYPE_MOVES,
+            .trainerClass = TRAINERCLASS_ACE_TRAINER_M,
+            .items = { ITEM_SUPER_POTION, ITEM_NONE, ITEM_NONE, ITEM_NONE },
+            .aiFlags = F_PRIORITIZE_SUPER_EFFECTIVE | F_EVALUATE_ATTACKS,
+            .battleType = SINGLE_BATTLE,
+        },
+        .party = {
+            {
+                .ivs = 100,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 37,
+                .species = SPECIES_SANDSLASH,
+                .moves = { MOVE_SLASH, MOVE_SWIFT, MOVE_SAND_ATTACK, MOVE_POISON_STING },
+                .ballSeal = 0,
+            },
+            {
+                .ivs = 100,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 37,
+                .species = SPECIES_SANDSLASH,
+                .moves = { MOVE_SLASH, MOVE_SWIFT, MOVE_SAND_ATTACK, MOVE_POISON_STING },
+                .ballSeal = 0,
+            },
+            {
+                .ivs = 100,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 38,
+                .species = SPECIES_RHYHORN,
+                .moves = { MOVE_TAKE_DOWN, MOVE_ROCK_BLAST, MOVE_FURY_ATTACK, MOVE_SCARY_FACE },
+                .ballSeal = 0,
+            },
+            {
+                .ivs = 100,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 39,
+                .species = SPECIES_NIDORINO,
+                .moves = { MOVE_FURY_ATTACK, MOVE_HORN_ATTACK, MOVE_POISON_STING, MOVE_DOUBLE_KICK },
+                .ballSeal = 0,
+            },
+            {
+                .ivs = 100,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 39,
+                .species = SPECIES_NIDOKING,
+                .moves = { MOVE_THRASH, MOVE_DOUBLE_KICK, MOVE_POISON_STING, MOVE_FOCUS_ENERGY },
+                .ballSeal = 0,
+            },
+        },
+        .text = {
+            {
+                .type = TRMSG_INTRO,
+                .text = "Viridian Gym was closed for a\\nlong time.\\rBut now, our Leader is back!\\n",
+            },
+            {
+                .type = TRMSG_LOSE,
+                .text = "I was beaten?\\n",
+            },
+            {
+                .type = TRMSG_AFTER,
+                .text = "You can go on to the Pokémon\\nLeague only by defeating our Gym\\fLeader!\\n",
+            },
+        },
+    },
+
+    // TRAINER_COOLTRAINER_YUJI (FireRed, ViridianCity_Gym)
+    [1081] = {
+        .name = "Yuji",
+        .data = {
+            .trainerType = TRAINER_DATA_TYPE_MOVES,
+            .trainerClass = TRAINERCLASS_ACE_TRAINER_M,
+            .items = { ITEM_HYPER_POTION, ITEM_NONE, ITEM_NONE, ITEM_NONE },
+            .aiFlags = F_PRIORITIZE_SUPER_EFFECTIVE | F_EVALUATE_ATTACKS,
+            .battleType = SINGLE_BATTLE,
+        },
+        .party = {
+            {
+                .ivs = 100,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 38,
+                .species = SPECIES_SANDSLASH,
+                .moves = { MOVE_SLASH, MOVE_SWIFT, MOVE_SAND_ATTACK, MOVE_POISON_STING },
+                .ballSeal = 0,
+            },
+            {
+                .ivs = 100,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 38,
+                .species = SPECIES_GRAVELER,
+                .moves = { MOVE_ROCK_BLAST, MOVE_MAGNITUDE, MOVE_MUD_SPORT, MOVE_DEFENSE_CURL },
+                .ballSeal = 0,
+            },
+            {
+                .ivs = 100,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 38,
+                .species = SPECIES_ONIX,
+                .moves = { MOVE_DRAGON_BREATH, MOVE_SANDSTORM, MOVE_ROCK_THROW, MOVE_BIND },
+                .ballSeal = 0,
+            },
+            {
+                .ivs = 100,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 38,
+                .species = SPECIES_GRAVELER,
+                .moves = { MOVE_ROCK_BLAST, MOVE_MAGNITUDE, MOVE_ROLLOUT, MOVE_DEFENSE_CURL },
+                .ballSeal = 0,
+            },
+            {
+                .ivs = 100,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 38,
+                .species = SPECIES_MAROWAK,
+                .moves = { MOVE_BONEMERANG, MOVE_HEADBUTT, MOVE_LEER, MOVE_GROWL },
+                .ballSeal = 0,
+            },
+        },
+        .text = {
+            {
+                .type = TRMSG_INTRO,
+                .text = "Heh!\\nYou must be running out of steam\\fby now!\\n",
+            },
+            {
+                .type = TRMSG_LOSE,
+                .text = "I ran out of gas!\\n",
+            },
+            {
+                .type = TRMSG_AFTER,
+                .text = "You’ll need power to keep up with\\nour Gym Leader.\\n",
+            },
+        },
+    },
+
+    // TRAINER_COOLTRAINER_WARREN (FireRed, ViridianCity_Gym)
+    [1082] = {
+        .name = "Warren",
+        .data = {
+            .trainerType = TRAINER_DATA_TYPE_MOVES,
+            .trainerClass = TRAINERCLASS_ACE_TRAINER_M,
+            .items = { ITEM_HYPER_POTION, ITEM_NONE, ITEM_NONE, ITEM_NONE },
+            .aiFlags = F_PRIORITIZE_SUPER_EFFECTIVE | F_EVALUATE_ATTACKS,
+            .battleType = SINGLE_BATTLE,
+        },
+        .party = {
+            {
+                .ivs = 100,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 37,
+                .species = SPECIES_MAROWAK,
+                .moves = { MOVE_BONEMERANG, MOVE_HEADBUTT, MOVE_LEER, MOVE_GROWL },
+                .ballSeal = 0,
+            },
+            {
+                .ivs = 100,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 37,
+                .species = SPECIES_MAROWAK,
+                .moves = { MOVE_BONEMERANG, MOVE_HEADBUTT, MOVE_LEER, MOVE_GROWL },
+                .ballSeal = 0,
+            },
+            {
+                .ivs = 100,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 38,
+                .species = SPECIES_RHYHORN,
+                .moves = { MOVE_TAKE_DOWN, MOVE_ROCK_BLAST, MOVE_FURY_ATTACK, MOVE_SCARY_FACE },
+                .ballSeal = 0,
+            },
+            {
+                .ivs = 100,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 39,
+                .species = SPECIES_NIDORINA,
+                .moves = { MOVE_FURY_SWIPES, MOVE_BITE, MOVE_POISON_STING, MOVE_DOUBLE_KICK },
+                .ballSeal = 0,
+            },
+            {
+                .ivs = 100,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 39,
+                .species = SPECIES_NIDOQUEEN,
+                .moves = { MOVE_BODY_SLAM, MOVE_BITE, MOVE_POISON_STING, MOVE_DOUBLE_KICK },
+                .ballSeal = 0,
+            },
+        },
+        .text = {
+            {
+                .type = TRMSG_INTRO,
+                .text = "The truly talented win with style.\\n",
+            },
+            {
+                .type = TRMSG_LOSE,
+                .text = "I lost my grip!\\n",
+            },
+            {
+                .type = TRMSG_AFTER,
+                .text = "The Leader will scold me for\\nlosing this way...\\n",
+            },
+        },
+    },
+
+    // TRAINER_LEADER_GIOVANNI (FireRed, ViridianCity_Gym)
+    [1083] = {
+        .name = "Giovanni",
+        .data = {
+            .trainerType = TRAINER_DATA_TYPE_MOVES,
+            .trainerClass = TRAINERCLASS_P1_LEADER_GIOVANNI,
+            .items = { ITEM_HYPER_POTION, ITEM_HYPER_POTION, ITEM_FULL_HEAL, ITEM_NONE },
+            .aiFlags = F_PRIORITIZE_SUPER_EFFECTIVE | F_EVALUATE_ATTACKS,
+            .battleType = SINGLE_BATTLE,
+        },
+        .party = {
+            {
+                .ivs = 0,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 45,
+                .species = SPECIES_RHYHORN,
+                .moves = { MOVE_TAKE_DOWN, MOVE_ROCK_BLAST, MOVE_SCARY_FACE, MOVE_EARTHQUAKE },
+                .ballSeal = 0,
+            },
+            {
+                .ivs = 0,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 42,
+                .species = SPECIES_DUGTRIO,
+                .moves = { MOVE_SLASH, MOVE_SAND_TOMB, MOVE_MUD_SLAP, MOVE_EARTHQUAKE },
+                .ballSeal = 0,
+            },
+            {
+                .ivs = 0,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 44,
+                .species = SPECIES_NIDOQUEEN,
+                .moves = { MOVE_BODY_SLAM, MOVE_DOUBLE_KICK, MOVE_POISON_STING, MOVE_EARTHQUAKE },
+                .ballSeal = 0,
+            },
+            {
+                .ivs = 0,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 45,
+                .species = SPECIES_NIDOKING,
+                .moves = { MOVE_THRASH, MOVE_DOUBLE_KICK, MOVE_POISON_STING, MOVE_EARTHQUAKE },
+                .ballSeal = 0,
+            },
+            {
+                .ivs = 0,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 50,
+                .species = SPECIES_RHYHORN,
+                .moves = { MOVE_TAKE_DOWN, MOVE_ROCK_BLAST, MOVE_SCARY_FACE, MOVE_EARTHQUAKE },
+                .ballSeal = 0,
+            },
+        },
+        .text = {
+            {
+                .type = TRMSG_INTRO,
+                .text = "Fwahahaha!\\nWelcome to my hideout!\\rIt shall be so until I can restore\\nTeam Rocket to its former glory.\\rBut, you have found me again.\\nSo be it.\\fThis time, I’m not holding back!\\rOnce more, you shall face\\nGiovanni, the greatest Trainer!\\n",
+            },
+            {
+                .type = TRMSG_LOSE,
+                .text = "Ha!\\nThat was a truly intense fight.\\fYou have won!\\rAs proof, here is the Earth Badge!\\n",
+            },
+            {
+                .type = TRMSG_AFTER,
+                .text = "Having lost in this fashion, \\nI can’t face my followers.\\fI have betrayed their trust.\\rAs of today, Team Rocket is\\nfinished forever!\\rAs for myself, I shall dedicate\\nmy life to training again.\\rLet us meet again someday!\\nFarewell!\\n",
+            },
+        },
+    },
+
+    // TRAINER_RIVAL_ROUTE22_LATE_SQUIRTLE (FireRed, Route22)
+    [1084] = {
+        .name = "Blue",
+        .data = {
+            .trainerType = TRAINER_DATA_TYPE_MOVES,
+            .trainerClass = TRAINERCLASS_LEADER_BLUE,
+            .items = { ITEM_NONE, ITEM_NONE, ITEM_NONE, ITEM_NONE },
+            .aiFlags = F_PRIORITIZE_SUPER_EFFECTIVE | F_EVALUATE_ATTACKS,
+            .battleType = SINGLE_BATTLE,
+        },
+        .party = {
+            {
+                .ivs = 150,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 47,
+                .species = SPECIES_PIDGEOT,
+                .moves = { MOVE_FEATHER_DANCE, MOVE_WING_ATTACK, MOVE_GUST, MOVE_QUICK_ATTACK },
+                .ballSeal = 0,
+            },
+            {
+                .ivs = 150,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 45,
+                .species = SPECIES_RHYHORN,
+                .moves = { MOVE_TAKE_DOWN, MOVE_HORN_DRILL, MOVE_ROCK_BLAST, MOVE_FURY_ATTACK },
+                .ballSeal = 0,
+            },
+            {
+                .ivs = 150,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 45,
+                .species = SPECIES_GROWLITHE,
+                .moves = { MOVE_FLAME_WHEEL, MOVE_TAKE_DOWN, MOVE_LEER, MOVE_AGILITY },
+                .ballSeal = 0,
+            },
+            {
+                .ivs = 150,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 45,
+                .species = SPECIES_EXEGGCUTE,
+                .moves = { MOVE_SOLAR_BEAM, MOVE_SLEEP_POWDER, MOVE_POISON_POWDER, MOVE_STUN_SPORE },
+                .ballSeal = 0,
+            },
+            {
+                .ivs = 150,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 47,
+                .species = SPECIES_ALAKAZAM,
+                .moves = { MOVE_PSYCHIC, MOVE_CALM_MIND, MOVE_FUTURE_SIGHT, MOVE_DISABLE },
+                .ballSeal = 0,
+            },
+            {
+                .ivs = 250,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 53,
+                .species = SPECIES_BLASTOISE,
+                .moves = { MOVE_WATER_GUN, MOVE_RAIN_DANCE, MOVE_BITE, MOVE_RAPID_SPIN },
+                .ballSeal = 0,
+            },
+        },
+        .text = {
+            {
+                .type = TRMSG_LOSE,
+                .text = "What!?\\rI was just careless, you!\\n",
+            },
+        },
+    },
+
+    // TRAINER_RIVAL_ROUTE22_LATE_BULBASAUR (FireRed, Route22)
+    [1085] = {
+        .name = "Blue",
+        .data = {
+            .trainerType = TRAINER_DATA_TYPE_MOVES,
+            .trainerClass = TRAINERCLASS_LEADER_BLUE,
+            .items = { ITEM_NONE, ITEM_NONE, ITEM_NONE, ITEM_NONE },
+            .aiFlags = F_PRIORITIZE_SUPER_EFFECTIVE | F_EVALUATE_ATTACKS,
+            .battleType = SINGLE_BATTLE,
+        },
+        .party = {
+            {
+                .ivs = 150,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 47,
+                .species = SPECIES_PIDGEOT,
+                .moves = { MOVE_FEATHER_DANCE, MOVE_WING_ATTACK, MOVE_GUST, MOVE_QUICK_ATTACK },
+                .ballSeal = 0,
+            },
+            {
+                .ivs = 150,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 45,
+                .species = SPECIES_RHYHORN,
+                .moves = { MOVE_TAKE_DOWN, MOVE_HORN_DRILL, MOVE_ROCK_BLAST, MOVE_FURY_ATTACK },
+                .ballSeal = 0,
+            },
+            {
+                .ivs = 150,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 45,
+                .species = SPECIES_GYARADOS,
+                .moves = { MOVE_HYDRO_PUMP, MOVE_TWISTER, MOVE_LEER, MOVE_RAIN_DANCE },
+                .ballSeal = 0,
+            },
+            {
+                .ivs = 150,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 45,
+                .species = SPECIES_GROWLITHE,
+                .moves = { MOVE_FLAME_WHEEL, MOVE_TAKE_DOWN, MOVE_LEER, MOVE_AGILITY },
+                .ballSeal = 0,
+            },
+            {
+                .ivs = 150,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 47,
+                .species = SPECIES_ALAKAZAM,
+                .moves = { MOVE_PSYCHIC, MOVE_CALM_MIND, MOVE_FUTURE_SIGHT, MOVE_DISABLE },
+                .ballSeal = 0,
+            },
+            {
+                .ivs = 250,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 53,
+                .species = SPECIES_VENUSAUR,
+                .moves = { MOVE_RAZOR_LEAF, MOVE_SWEET_SCENT, MOVE_GROWTH, MOVE_SYNTHESIS },
+                .ballSeal = 0,
+            },
+        },
+        .text = {
+            {
+                .type = TRMSG_LOSE,
+                .text = "What!?\\rI was just careless, you!\\n",
+            },
+        },
+    },
+
+    // TRAINER_RIVAL_ROUTE22_LATE_CHARMANDER (FireRed, Route22)
+    [1086] = {
+        .name = "Blue",
+        .data = {
+            .trainerType = TRAINER_DATA_TYPE_MOVES,
+            .trainerClass = TRAINERCLASS_LEADER_BLUE,
+            .items = { ITEM_NONE, ITEM_NONE, ITEM_NONE, ITEM_NONE },
+            .aiFlags = F_PRIORITIZE_SUPER_EFFECTIVE | F_EVALUATE_ATTACKS,
+            .battleType = SINGLE_BATTLE,
+        },
+        .party = {
+            {
+                .ivs = 150,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 47,
+                .species = SPECIES_PIDGEOT,
+                .moves = { MOVE_FEATHER_DANCE, MOVE_WING_ATTACK, MOVE_GUST, MOVE_QUICK_ATTACK },
+                .ballSeal = 0,
+            },
+            {
+                .ivs = 150,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 45,
+                .species = SPECIES_RHYHORN,
+                .moves = { MOVE_TAKE_DOWN, MOVE_HORN_DRILL, MOVE_ROCK_BLAST, MOVE_FURY_ATTACK },
+                .ballSeal = 0,
+            },
+            {
+                .ivs = 150,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 45,
+                .species = SPECIES_EXEGGCUTE,
+                .moves = { MOVE_SOLAR_BEAM, MOVE_SLEEP_POWDER, MOVE_POISON_POWDER, MOVE_STUN_SPORE },
+                .ballSeal = 0,
+            },
+            {
+                .ivs = 150,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 45,
+                .species = SPECIES_GYARADOS,
+                .moves = { MOVE_HYDRO_PUMP, MOVE_TWISTER, MOVE_LEER, MOVE_RAIN_DANCE },
+                .ballSeal = 0,
+            },
+            {
+                .ivs = 150,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 47,
+                .species = SPECIES_ALAKAZAM,
+                .moves = { MOVE_PSYCHIC, MOVE_CALM_MIND, MOVE_FUTURE_SIGHT, MOVE_DISABLE },
+                .ballSeal = 0,
+            },
+            {
+                .ivs = 250,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 53,
+                .species = SPECIES_CHARIZARD,
+                .moves = { MOVE_FLAMETHROWER, MOVE_WING_ATTACK, MOVE_SLASH, MOVE_SCARY_FACE },
+                .ballSeal = 0,
+            },
+        },
+        .text = {
+            {
+                .type = TRMSG_LOSE,
+                .text = "What!?\\rI was just careless, you!\\n",
+            },
+        },
+    },
+
+    // TRAINER_COOLTRAINER_NAOMI (FireRed, VictoryRoad_1F)
+    [1087] = {
+        .name = "Naomi",
+        .data = {
+            .trainerType = TRAINER_DATA_TYPE_MOVES,
+            .trainerClass = TRAINERCLASS_ACE_TRAINER_M,
+            .items = { ITEM_HYPER_POTION, ITEM_NONE, ITEM_NONE, ITEM_NONE },
+            .aiFlags = F_PRIORITIZE_SUPER_EFFECTIVE | F_EVALUATE_ATTACKS,
+            .battleType = SINGLE_BATTLE,
+        },
+        .party = {
+            {
+                .ivs = 100,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 42,
+                .species = SPECIES_PERSIAN,
+                .moves = { MOVE_FURY_SWIPES, MOVE_SCREECH, MOVE_FEINT_ATTACK, MOVE_PAY_DAY },
+                .ballSeal = 0,
+            },
+            {
+                .ivs = 100,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 42,
+                .species = SPECIES_PONYTA,
+                .moves = { MOVE_AGILITY, MOVE_TAKE_DOWN, MOVE_FIRE_SPIN, MOVE_STOMP },
+                .ballSeal = 0,
+            },
+            {
+                .ivs = 100,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 42,
+                .species = SPECIES_RAPIDASH,
+                .moves = { MOVE_FURY_ATTACK, MOVE_FIRE_SPIN, MOVE_STOMP, MOVE_GROWL },
+                .ballSeal = 0,
+            },
+            {
+                .ivs = 100,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 42,
+                .species = SPECIES_VULPIX,
+                .moves = { MOVE_FLAMETHROWER, MOVE_CONFUSE_RAY, MOVE_QUICK_ATTACK, MOVE_IMPRISON },
+                .ballSeal = 0,
+            },
+            {
+                .ivs = 100,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 42,
+                .species = SPECIES_NINETALES,
+                .moves = { MOVE_SAFEGUARD, MOVE_WILL_O_WISP, MOVE_CONFUSE_RAY, MOVE_FIRE_SPIN },
+                .ballSeal = 0,
+            },
+        },
+        .text = {
+            {
+                .type = TRMSG_INTRO,
+                .text = "I wonder if you are good enough\\nfor me?\\n",
+            },
+            {
+                .type = TRMSG_LOSE,
+                .text = "I lost out...\\n",
+            },
+            {
+                .type = TRMSG_AFTER,
+                .text = "I never wanted to lose to anybody,\\nespecially to a younger kid...\\n",
+            },
+        },
+    },
+
+    // TRAINER_COOLTRAINER_ROLANDO (FireRed, VictoryRoad_1F)
+    [1088] = {
+        .name = "Rolando",
+        .data = {
+            .trainerType = TRAINER_DATA_TYPE_MOVES,
+            .trainerClass = TRAINERCLASS_ACE_TRAINER_M,
+            .items = { ITEM_HYPER_POTION, ITEM_NONE, ITEM_NONE, ITEM_NONE },
+            .aiFlags = F_PRIORITIZE_SUPER_EFFECTIVE | F_EVALUATE_ATTACKS,
+            .battleType = SINGLE_BATTLE,
+        },
+        .party = {
+            {
+                .ivs = 100,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 42,
+                .species = SPECIES_RATICATE,
+                .moves = { MOVE_SUPER_FANG, MOVE_PURSUIT, MOVE_SCARY_FACE, MOVE_QUICK_ATTACK },
+                .ballSeal = 0,
+            },
+            {
+                .ivs = 100,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 42,
+                .species = SPECIES_IVYSAUR,
+                .moves = { MOVE_RAZOR_LEAF, MOVE_SLEEP_POWDER, MOVE_SWEET_SCENT, MOVE_SYNTHESIS },
+                .ballSeal = 0,
+            },
+            {
+                .ivs = 100,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 42,
+                .species = SPECIES_WARTORTLE,
+                .moves = { MOVE_WATER_GUN, MOVE_BITE, MOVE_RAPID_SPIN, MOVE_TAIL_WHIP },
+                .ballSeal = 0,
+            },
+            {
+                .ivs = 100,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 42,
+                .species = SPECIES_CHARMELEON,
+                .moves = { MOVE_FLAMETHROWER, MOVE_SLASH, MOVE_SMOKESCREEN, MOVE_SCARY_FACE },
+                .ballSeal = 0,
+            },
+            {
+                .ivs = 100,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 42,
+                .species = SPECIES_CHARIZARD,
+                .moves = { MOVE_FLAMETHROWER, MOVE_WING_ATTACK, MOVE_SMOKESCREEN, MOVE_SCARY_FACE },
+                .ballSeal = 0,
+            },
+        },
+        .text = {
+            {
+                .type = TRMSG_INTRO,
+                .text = "I can see you’re good.\\nLet me see exactly how good!\\n",
+            },
+            {
+                .type = TRMSG_LOSE,
+                .text = "I had a chance...\\n",
+            },
+            {
+                .type = TRMSG_AFTER,
+                .text = "Tch!\\nI concede, you are better than I!\\n",
+            },
+        },
+    },
+
+    // TRAINER_POKEMANIAC_DAWSON (FireRed, VictoryRoad_2F)
+    [1089] = {
+        .name = "Dawson",
+        .data = {
+            .trainerType = TRAINER_DATA_TYPE_NOTHING,
+            .trainerClass = TRAINERCLASS_POKE_MANIAC,
+            .items = { ITEM_NONE, ITEM_NONE, ITEM_NONE, ITEM_NONE },
+            .aiFlags = F_PRIORITIZE_SUPER_EFFECTIVE | F_EVALUATE_ATTACKS,
+            .battleType = SINGLE_BATTLE,
+        },
+        .party = {
+            {
+                .ivs = 30,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 40,
+                .species = SPECIES_CHARMELEON,
+                .ballSeal = 0,
+            },
+            {
+                .ivs = 30,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 40,
+                .species = SPECIES_LAPRAS,
+                .ballSeal = 0,
+            },
+            {
+                .ivs = 30,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 40,
+                .species = SPECIES_LICKITUNG,
+                .ballSeal = 0,
+            },
+        },
+        .text = {
+            {
+                .type = TRMSG_INTRO,
+                .text = "If you can get through here,\\nyou can go meet the Elite Four.\\n",
+            },
+            {
+                .type = TRMSG_LOSE,
+                .text = "No!\\nUnbelievable!\\n",
+            },
+            {
+                .type = TRMSG_AFTER,
+                .text = "I can beat you when it comes to\\nknowledge about Pokémon!\\n",
+            },
+        },
+    },
+
+    // TRAINER_BLACK_BELT_DAISUKE (FireRed, VictoryRoad_2F)
+    [1090] = {
+        .name = "Daisuke",
+        .data = {
+            .trainerType = TRAINER_DATA_TYPE_ITEMS,
+            .trainerClass = TRAINERCLASS_BLACK_BELT,
+            .items = { ITEM_NONE, ITEM_NONE, ITEM_NONE, ITEM_NONE },
+            .aiFlags = F_PRIORITIZE_SUPER_EFFECTIVE | F_EVALUATE_ATTACKS,
+            .battleType = SINGLE_BATTLE,
+        },
+        .party = {
+            {
+                .ivs = 100,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 43,
+                .species = SPECIES_MACHOKE,
+                .item = ITEM_BLACK_BELT,
+                .ballSeal = 0,
+            },
+            {
+                .ivs = 100,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 43,
+                .species = SPECIES_MACHOP,
+                .item = ITEM_BLACK_BELT,
+                .ballSeal = 0,
+            },
+            {
+                .ivs = 100,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 43,
+                .species = SPECIES_MACHOKE,
+                .item = ITEM_BLACK_BELT,
+                .ballSeal = 0,
+            },
+        },
+        .text = {
+            {
+                .type = TRMSG_INTRO,
+                .text = "This here is Victory Road.\\nIt’s the final test for Trainers!\\n",
+            },
+            {
+                .type = TRMSG_LOSE,
+                .text = "Atcho!\\n",
+            },
+            {
+                .type = TRMSG_AFTER,
+                .text = "If you get stuck, try moving some\\nboulders around.\\n",
+            },
+        },
+    },
+
+    // TRAINER_JUGGLER_NELSON (FireRed, VictoryRoad_2F)
+    [1091] = {
+        .name = "Nelson",
+        .data = {
+            .trainerType = TRAINER_DATA_TYPE_NOTHING,
+            .trainerClass = TRAINERCLASS_JUGGLER,
+            .items = { ITEM_NONE, ITEM_NONE, ITEM_NONE, ITEM_NONE },
+            .aiFlags = F_PRIORITIZE_SUPER_EFFECTIVE | F_EVALUATE_ATTACKS,
+            .battleType = SINGLE_BATTLE,
+        },
+        .party = {
+            {
+                .ivs = 0,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 41,
+                .species = SPECIES_DROWZEE,
+                .ballSeal = 0,
+            },
+            {
+                .ivs = 0,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 41,
+                .species = SPECIES_HYPNO,
+                .ballSeal = 0,
+            },
+            {
+                .ivs = 0,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 41,
+                .species = SPECIES_KADABRA,
+                .ballSeal = 0,
+            },
+            {
+                .ivs = 0,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 41,
+                .species = SPECIES_KADABRA,
+                .ballSeal = 0,
+            },
+        },
+        .text = {
+            {
+                .type = TRMSG_INTRO,
+                .text = "Ah, so you wish to challenge the\\nElite Four?\\n",
+            },
+            {
+                .type = TRMSG_LOSE,
+                .text = "You got me!\\n",
+            },
+            {
+                .type = TRMSG_AFTER,
+                .text = "Blue also came through here.\\n",
+            },
+        },
+    },
+
+    // TRAINER_JUGGLER_GREGORY (FireRed, VictoryRoad_2F)
+    [1092] = {
+        .name = "Gregory",
+        .data = {
+            .trainerType = TRAINER_DATA_TYPE_MOVES,
+            .trainerClass = TRAINERCLASS_JUGGLER,
+            .items = { ITEM_NONE, ITEM_NONE, ITEM_NONE, ITEM_NONE },
+            .aiFlags = F_PRIORITIZE_SUPER_EFFECTIVE | F_EVALUATE_ATTACKS,
+            .battleType = SINGLE_BATTLE,
+        },
+        .party = {
+            {
+                .ivs = 0,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 48,
+                .species = SPECIES_MR_MIME,
+                .moves = { MOVE_PSYCHIC, MOVE_ROLE_PLAY, MOVE_DOUBLE_SLAP, MOVE_ENCORE },
+                .ballSeal = 0,
+            },
+        },
+        .text = {
+            {
+                .type = TRMSG_INTRO,
+                .text = "Is Victory Road too tough?\\n",
+            },
+            {
+                .type = TRMSG_LOSE,
+                .text = "Well done!\\n",
+            },
+            {
+                .type = TRMSG_AFTER,
+                .text = "Many Trainers give up their\\nchallenge here and go home.\\n",
+            },
+        },
+    },
+
+    // TRAINER_TAMER_VINCENT (FireRed, VictoryRoad_2F)
+    [1093] = {
+        .name = "Vincent",
+        .data = {
+            .trainerType = TRAINER_DATA_TYPE_NOTHING,
+            .trainerClass = TRAINERCLASS_JUGGLER,
+            .items = { ITEM_NONE, ITEM_NONE, ITEM_NONE, ITEM_NONE },
+            .aiFlags = F_PRIORITIZE_SUPER_EFFECTIVE | F_EVALUATE_ATTACKS,
+            .battleType = SINGLE_BATTLE,
+        },
+        .party = {
+            {
+                .ivs = 40,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 44,
+                .species = SPECIES_PERSIAN,
+                .ballSeal = 0,
+            },
+            {
+                .ivs = 40,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 44,
+                .species = SPECIES_GOLDUCK,
+                .ballSeal = 0,
+            },
+        },
+        .text = {
+            {
+                .type = TRMSG_INTRO,
+                .text = "Come on!\\nI’ll whip you!\\n",
+            },
+            {
+                .type = TRMSG_LOSE,
+                .text = "I got whipped!\\n",
+            },
+            {
+                .type = TRMSG_AFTER,
+                .text = "You earned the right to be on\\nVictory Road...\\n",
+            },
+        },
+    },
+
+    // TRAINER_COOLTRAINER_GEORGE (FireRed, VictoryRoad_3F)
+    [1094] = {
+        .name = "George",
+        .data = {
+            .trainerType = TRAINER_DATA_TYPE_MOVES,
+            .trainerClass = TRAINERCLASS_ACE_TRAINER_M,
+            .items = { ITEM_HYPER_POTION, ITEM_NONE, ITEM_NONE, ITEM_NONE },
+            .aiFlags = F_PRIORITIZE_SUPER_EFFECTIVE | F_EVALUATE_ATTACKS,
+            .battleType = SINGLE_BATTLE,
+        },
+        .party = {
+            {
+                .ivs = 100,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 42,
+                .species = SPECIES_EXEGGUTOR,
+                .moves = { MOVE_EGG_BOMB, MOVE_CONFUSION, MOVE_STUN_SPORE, MOVE_SLEEP_POWDER },
+                .ballSeal = 0,
+            },
+            {
+                .ivs = 100,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 42,
+                .species = SPECIES_SANDSLASH,
+                .moves = { MOVE_FURY_SWIPES, MOVE_SWIFT, MOVE_POISON_STING, MOVE_SAND_ATTACK },
+                .ballSeal = 0,
+            },
+            {
+                .ivs = 100,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 42,
+                .species = SPECIES_CLOYSTER,
+                .moves = { MOVE_SPIKE_CANNON, MOVE_SPIKES, MOVE_AURORA_BEAM, MOVE_SUPERSONIC },
+                .ballSeal = 0,
+            },
+            {
+                .ivs = 100,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 42,
+                .species = SPECIES_ELECTRODE,
+                .moves = { MOVE_SPARK, MOVE_SONIC_BOOM, MOVE_SCREECH, MOVE_LIGHT_SCREEN },
+                .ballSeal = 0,
+            },
+            {
+                .ivs = 100,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 42,
+                .species = SPECIES_ARCANINE,
+                .moves = { MOVE_FLAME_WHEEL, MOVE_ROAR, MOVE_BITE, MOVE_TAKE_DOWN },
+                .ballSeal = 0,
+            },
+        },
+        .text = {
+            {
+                .type = TRMSG_INTRO,
+                .text = "I heard rumors of a child prodigy.\\n",
+            },
+            {
+                .type = TRMSG_LOSE,
+                .text = "The rumors were true!\\n",
+            },
+            {
+                .type = TRMSG_AFTER,
+                .text = "So, it was you who beat Giovanni\\nof Team Rocket?\\n",
+            },
+        },
+    },
+
+    // TRAINER_COOLTRAINER_COLBY (FireRed, VictoryRoad_3F)
+    [1095] = {
+        .name = "Colby",
+        .data = {
+            .trainerType = TRAINER_DATA_TYPE_MOVES,
+            .trainerClass = TRAINERCLASS_ACE_TRAINER_M,
+            .items = { ITEM_HYPER_POTION, ITEM_NONE, ITEM_NONE, ITEM_NONE },
+            .aiFlags = F_PRIORITIZE_SUPER_EFFECTIVE | F_EVALUATE_ATTACKS,
+            .battleType = SINGLE_BATTLE,
+        },
+        .party = {
+            {
+                .ivs = 100,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 41,
+                .species = SPECIES_KINGLER,
+                .moves = { MOVE_GUILLOTINE, MOVE_STOMP, MOVE_MUD_SHOT, MOVE_BUBBLE },
+                .ballSeal = 0,
+            },
+            {
+                .ivs = 100,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 42,
+                .species = SPECIES_POLIWHIRL,
+                .moves = { MOVE_BODY_SLAM, MOVE_DOUBLE_SLAP, MOVE_WATER_GUN, MOVE_HYPNOSIS },
+                .ballSeal = 0,
+            },
+            {
+                .ivs = 100,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 42,
+                .species = SPECIES_TENTACRUEL,
+                .moves = { MOVE_BARRIER, MOVE_WRAP, MOVE_BUBBLE_BEAM, MOVE_ACID },
+                .ballSeal = 0,
+            },
+            {
+                .ivs = 100,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 42,
+                .species = SPECIES_SEADRA,
+                .moves = { MOVE_WATER_GUN, MOVE_SMOKESCREEN, MOVE_TWISTER, MOVE_LEER },
+                .ballSeal = 0,
+            },
+            {
+                .ivs = 100,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 43,
+                .species = SPECIES_BLASTOISE,
+                .moves = { MOVE_WATER_GUN, MOVE_BITE, MOVE_RAPID_SPIN, MOVE_RAIN_DANCE },
+                .ballSeal = 0,
+            },
+        },
+        .text = {
+            {
+                .type = TRMSG_INTRO,
+                .text = "Only the chosen can pass here!\\n",
+            },
+            {
+                .type = TRMSG_LOSE,
+                .text = "I don’t believe it!\\n",
+            },
+            {
+                .type = TRMSG_AFTER,
+                .text = "All Trainers here are headed to\\nthe Pokémon League.\\rDon’t let down your guard.\\n",
+            },
+        },
+    },
+
+    // TRAINER_COOLTRAINER_CAROLINE (FireRed, VictoryRoad_3F)
+    [1096] = {
+        .name = "Caroline",
+        .data = {
+            .trainerType = TRAINER_DATA_TYPE_MOVES,
+            .trainerClass = TRAINERCLASS_ACE_TRAINER_M,
+            .items = { ITEM_HYPER_POTION, ITEM_NONE, ITEM_NONE, ITEM_NONE },
+            .aiFlags = F_PRIORITIZE_SUPER_EFFECTIVE | F_EVALUATE_ATTACKS,
+            .battleType = SINGLE_BATTLE,
+        },
+        .party = {
+            {
+                .ivs = 100,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 42,
+                .species = SPECIES_BELLSPROUT,
+                .moves = { MOVE_RAZOR_LEAF, MOVE_ACID, MOVE_STUN_SPORE, MOVE_POISON_POWDER },
+                .ballSeal = 0,
+            },
+            {
+                .ivs = 100,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 42,
+                .species = SPECIES_WEEPINBELL,
+                .moves = { MOVE_RAZOR_LEAF, MOVE_ACID, MOVE_SLEEP_POWDER, MOVE_POISON_POWDER },
+                .ballSeal = 0,
+            },
+            {
+                .ivs = 100,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 42,
+                .species = SPECIES_VICTREEBEL,
+                .moves = { MOVE_RAZOR_LEAF, MOVE_ACID, MOVE_STUN_SPORE, MOVE_SLEEP_POWDER },
+                .ballSeal = 0,
+            },
+            {
+                .ivs = 100,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 42,
+                .species = SPECIES_PARAS,
+                .moves = { MOVE_GROWTH, MOVE_SLASH, MOVE_LEECH_LIFE, MOVE_STUN_SPORE },
+                .ballSeal = 0,
+            },
+            {
+                .ivs = 100,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 42,
+                .species = SPECIES_PARASECT,
+                .moves = { MOVE_SPORE, MOVE_SLASH, MOVE_LEECH_LIFE, MOVE_POISON_POWDER },
+                .ballSeal = 0,
+            },
+        },
+        .text = {
+            {
+                .type = TRMSG_INTRO,
+                .text = "I’ll show you just how good you\\nare. Not!\\n",
+            },
+            {
+                .type = TRMSG_LOSE,
+                .text = "I’m furious!\\n",
+            },
+            {
+                .type = TRMSG_AFTER,
+                .text = "You showed me just how good\\nI was...\\n",
+            },
+        },
+    },
+
+    // TRAINER_COOLTRAINER_ALEXA (FireRed, VictoryRoad_3F)
+    [1097] = {
+        .name = "Alexa",
+        .data = {
+            .trainerType = TRAINER_DATA_TYPE_MOVES,
+            .trainerClass = TRAINERCLASS_ACE_TRAINER_M,
+            .items = { ITEM_FULL_RESTORE, ITEM_NONE, ITEM_NONE, ITEM_NONE },
+            .aiFlags = F_PRIORITIZE_SUPER_EFFECTIVE | F_EVALUATE_ATTACKS,
+            .battleType = SINGLE_BATTLE,
+        },
+        .party = {
+            {
+                .ivs = 100,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 42,
+                .species = SPECIES_CLEFAIRY,
+                .moves = { MOVE_LIGHT_SCREEN, MOVE_COSMIC_POWER, MOVE_DOUBLE_SLAP, MOVE_ENCORE },
+                .ballSeal = 0,
+            },
+            {
+                .ivs = 100,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 42,
+                .species = SPECIES_JIGGLYPUFF,
+                .moves = { MOVE_SING, MOVE_BODY_SLAM, MOVE_ROLLOUT, MOVE_DISABLE },
+                .ballSeal = 0,
+            },
+            {
+                .ivs = 100,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 42,
+                .species = SPECIES_PERSIAN,
+                .moves = { MOVE_PAY_DAY, MOVE_FEINT_ATTACK, MOVE_BITE, MOVE_SCREECH },
+                .ballSeal = 0,
+            },
+            {
+                .ivs = 100,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 42,
+                .species = SPECIES_DEWGONG,
+                .moves = { MOVE_SHEER_COLD, MOVE_TAKE_DOWN, MOVE_REST, MOVE_AURORA_BEAM },
+                .ballSeal = 0,
+            },
+            {
+                .ivs = 100,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 42,
+                .species = SPECIES_CHANSEY,
+                .moves = { MOVE_SING, MOVE_EGG_BOMB, MOVE_SOFT_BOILED, MOVE_MINIMIZE },
+                .ballSeal = 0,
+            },
+        },
+        .text = {
+            {
+                .type = TRMSG_INTRO,
+                .text = "Trainers live to seek stronger\\nopponents.\\n",
+            },
+            {
+                .type = TRMSG_LOSE,
+                .text = "Oh!\\nSo strong!\\n",
+            },
+            {
+                .type = TRMSG_AFTER,
+                .text = "By fighting tough battles, you get\\nstronger.\\n",
+            },
+        },
+    },
+
+    // TRAINER_COOL_COUPLE_RAY_TYRA (FireRed, VictoryRoad_3F)
+    [1098] = {
+        .name = "Ray & Tyra",
+        .data = {
+            .trainerType = TRAINER_DATA_TYPE_MOVES,
+            .trainerClass = TRAINERCLASS_DOUBLE_TEAM,
+            .items = { ITEM_NONE, ITEM_NONE, ITEM_NONE, ITEM_NONE },
+            .aiFlags = F_PRIORITIZE_SUPER_EFFECTIVE | F_EVALUATE_ATTACKS,
+            .battleType = DOUBLE_BATTLE,
+        },
+        .party = {
+            {
+                .ivs = 100,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 45,
+                .species = SPECIES_NIDOQUEEN,
+                .moves = { MOVE_SUPERPOWER, MOVE_BODY_SLAM, MOVE_DOUBLE_KICK, MOVE_POISON_STING },
+                .ballSeal = 0,
+            },
+            {
+                .ivs = 100,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 45,
+                .species = SPECIES_NIDOKING,
+                .moves = { MOVE_MEGAHORN, MOVE_THRASH, MOVE_DOUBLE_KICK, MOVE_POISON_STING },
+                .ballSeal = 0,
+            },
+        },
+        .text = {
+            {
+                .type = TRMSG_DBL_INTRO_1,
+                .text = "Ray: Together, the two of us are\\ndestined for greatness!\\n",
+            },
+            {
+                .type = TRMSG_DBL_LOSE_1,
+                .text = "Ray: Ludicrous!\\nThis can’t be!\\n",
+            },
+            {
+                .type = TRMSG_DBL_AFTER_1,
+                .text = "Ray: You’ve beaten us.\\nGreatness remains elusive...\\n",
+            },
+            {
+                .type = TRMSG_DBL_1POKE_1,
+                .text = "Ray: Together, the two of us are\\nstriving for the pinnacle.\\rWe need you to bring two Pokémon\\ninto battle with us.\\n",
+            },
+            {
+                .type = TRMSG_DBL_INTRO_2,
+                .text = "Ray: Together, the two of us are\\ndestined for greatness!\\n",
+            },
+            {
+                .type = TRMSG_DBL_LOSE_2,
+                .text = "Ray: Ludicrous!\\nThis can’t be!\\n",
+            },
+            {
+                .type = TRMSG_DBL_AFTER_2,
+                .text = "Ray: You’ve beaten us.\\nGreatness remains elusive...\\n",
+            },
+            {
+                .type = TRMSG_DBL_1POKE_2,
+                .text = "Ray: Together, the two of us are\\nstriving for the pinnacle.\\rWe need you to bring two Pokémon\\ninto battle with us.\\n",
+            },
+        },
+    },
+
+    // TRAINER_ELITE_FOUR_LORELEI (FireRed, PokemonLeague_LoreleisRoom)
+    [1099] = {
+        .name = "Lorelei",
+        .data = {
+            .trainerType = TRAINER_DATA_TYPE_MOVES | TRAINER_DATA_TYPE_ITEMS,
+            .trainerClass = TRAINERCLASS_ELITE_FOUR_LORELEI,
+            .items = { ITEM_FULL_RESTORE, ITEM_FULL_RESTORE, ITEM_NONE, ITEM_NONE },
+            .aiFlags = F_PRIORITIZE_SUPER_EFFECTIVE | F_EVALUATE_ATTACKS,
+            .battleType = SINGLE_BATTLE,
+        },
+        .party = {
+            {
+                .ivs = 250,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 52,
+                .species = SPECIES_DEWGONG,
+                .item = ITEM_NONE,
+                .moves = { MOVE_ICE_BEAM, MOVE_SURF, MOVE_HAIL, MOVE_SAFEGUARD },
+                .ballSeal = 0,
+            },
+            {
+                .ivs = 250,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 51,
+                .species = SPECIES_CLOYSTER,
+                .item = ITEM_NONE,
+                .moves = { MOVE_SPIKES, MOVE_PROTECT, MOVE_HAIL, MOVE_DIVE },
+                .ballSeal = 0,
+            },
+            {
+                .ivs = 250,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 52,
+                .species = SPECIES_SLOWBRO,
+                .item = ITEM_NONE,
+                .moves = { MOVE_ICE_BEAM, MOVE_SURF, MOVE_AMNESIA, MOVE_YAWN },
+                .ballSeal = 0,
+            },
+            {
+                .ivs = 250,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 54,
+                .species = SPECIES_JYNX,
+                .item = ITEM_NONE,
+                .moves = { MOVE_ICE_PUNCH, MOVE_DOUBLE_SLAP, MOVE_LOVELY_KISS, MOVE_ATTRACT },
+                .ballSeal = 0,
+            },
+            {
+                .ivs = 250,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 54,
+                .species = SPECIES_LAPRAS,
+                .item = ITEM_SITRUS_BERRY,
+                .moves = { MOVE_CONFUSE_RAY, MOVE_ICE_BEAM, MOVE_SURF, MOVE_BODY_SLAM },
+                .ballSeal = 0,
+            },
+        },
+        .text = {
+            {
+                .type = TRMSG_LOSE,
+                .text = "...Things shouldn’t be this way!\\n",
+            },
+        },
+    },
+
+    // TRAINER_ELITE_FOUR_BRUNO (FireRed, PokemonLeague_BrunosRoom)
+    [1100] = {
+        .name = "Bruno",
+        .data = {
+            .trainerType = TRAINER_DATA_TYPE_MOVES | TRAINER_DATA_TYPE_ITEMS,
+            .trainerClass = TRAINERCLASS_ELITE_FOUR_BRUNO,
+            .items = { ITEM_FULL_RESTORE, ITEM_FULL_RESTORE, ITEM_NONE, ITEM_NONE },
+            .aiFlags = F_PRIORITIZE_SUPER_EFFECTIVE | F_EVALUATE_ATTACKS,
+            .battleType = SINGLE_BATTLE,
+        },
+        .party = {
+            {
+                .ivs = 250,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 51,
+                .species = SPECIES_ONIX,
+                .item = ITEM_NONE,
+                .moves = { MOVE_EARTHQUAKE, MOVE_ROCK_TOMB, MOVE_IRON_TAIL, MOVE_ROAR },
+                .ballSeal = 0,
+            },
+            {
+                .ivs = 250,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 53,
+                .species = SPECIES_HITMONCHAN,
+                .item = ITEM_NONE,
+                .moves = { MOVE_SKY_UPPERCUT, MOVE_MACH_PUNCH, MOVE_ROCK_TOMB, MOVE_COUNTER },
+                .ballSeal = 0,
+            },
+            {
+                .ivs = 250,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 53,
+                .species = SPECIES_HITMONLEE,
+                .item = ITEM_NONE,
+                .moves = { MOVE_MEGA_KICK, MOVE_FORESIGHT, MOVE_BRICK_BREAK, MOVE_FACADE },
+                .ballSeal = 0,
+            },
+            {
+                .ivs = 250,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 54,
+                .species = SPECIES_ONIX,
+                .item = ITEM_NONE,
+                .moves = { MOVE_DOUBLE_EDGE, MOVE_EARTHQUAKE, MOVE_IRON_TAIL, MOVE_SAND_TOMB },
+                .ballSeal = 0,
+            },
+            {
+                .ivs = 250,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 56,
+                .species = SPECIES_MACHAMP,
+                .item = ITEM_SITRUS_BERRY,
+                .moves = { MOVE_CROSS_CHOP, MOVE_BULK_UP, MOVE_SCARY_FACE, MOVE_ROCK_TOMB },
+                .ballSeal = 0,
+            },
+        },
+        .text = {
+            {
+                .type = TRMSG_LOSE,
+                .text = "Why?\\nHow could I lose?\\n",
+            },
+        },
+    },
+
+    // TRAINER_ELITE_FOUR_AGATHA (FireRed, PokemonLeague_AgathasRoom)
+    [1101] = {
+        .name = "Agatha",
+        .data = {
+            .trainerType = TRAINER_DATA_TYPE_MOVES | TRAINER_DATA_TYPE_ITEMS,
+            .trainerClass = TRAINERCLASS_ELITE_FOUR_AGATHA,
+            .items = { ITEM_FULL_RESTORE, ITEM_FULL_RESTORE, ITEM_NONE, ITEM_NONE },
+            .aiFlags = F_PRIORITIZE_SUPER_EFFECTIVE | F_EVALUATE_ATTACKS,
+            .battleType = SINGLE_BATTLE,
+        },
+        .party = {
+            {
+                .ivs = 250,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 54,
+                .species = SPECIES_GENGAR,
+                .item = ITEM_NONE,
+                .moves = { MOVE_SHADOW_PUNCH, MOVE_CONFUSE_RAY, MOVE_TOXIC, MOVE_DOUBLE_TEAM },
+                .ballSeal = 0,
+            },
+            {
+                .ivs = 250,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 54,
+                .species = SPECIES_GOLBAT,
+                .item = ITEM_NONE,
+                .moves = { MOVE_CONFUSE_RAY, MOVE_POISON_FANG, MOVE_AIR_CUTTER, MOVE_BITE },
+                .ballSeal = 0,
+            },
+            {
+                .ivs = 250,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 53,
+                .species = SPECIES_HAUNTER,
+                .item = ITEM_NONE,
+                .moves = { MOVE_HYPNOSIS, MOVE_DREAM_EATER, MOVE_CURSE, MOVE_MEAN_LOOK },
+                .ballSeal = 0,
+            },
+            {
+                .ivs = 250,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 56,
+                .species = SPECIES_ARBOK,
+                .item = ITEM_NONE,
+                .moves = { MOVE_SLUDGE_BOMB, MOVE_SCREECH, MOVE_IRON_TAIL, MOVE_BITE },
+                .ballSeal = 0,
+            },
+            {
+                .ivs = 250,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 58,
+                .species = SPECIES_GENGAR,
+                .item = ITEM_SITRUS_BERRY,
+                .moves = { MOVE_SHADOW_BALL, MOVE_SLUDGE_BOMB, MOVE_HYPNOSIS, MOVE_NIGHTMARE },
+                .ballSeal = 0,
+            },
+        },
+        .text = {
+            {
+                .type = TRMSG_LOSE,
+                .text = "Oh, my!\\nYou’re something special, child!\\n",
+            },
+        },
+    },
+
+    // TRAINER_ELITE_FOUR_LANCE (FireRed, PokemonLeague_LancesRoom)
+    [1102] = {
+        .name = "Lance",
+        .data = {
+            .trainerType = TRAINER_DATA_TYPE_MOVES | TRAINER_DATA_TYPE_ITEMS,
+            .trainerClass = TRAINERCLASS_P1_ELITE_FOUR_LANCE,
+            .items = { ITEM_FULL_RESTORE, ITEM_FULL_RESTORE, ITEM_NONE, ITEM_NONE },
+            .aiFlags = F_PRIORITIZE_SUPER_EFFECTIVE | F_EVALUATE_ATTACKS,
+            .battleType = SINGLE_BATTLE,
+        },
+        .party = {
+            {
+                .ivs = 250,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 56,
+                .species = SPECIES_GYARADOS,
+                .item = ITEM_NONE,
+                .moves = { MOVE_HYPER_BEAM, MOVE_DRAGON_RAGE, MOVE_TWISTER, MOVE_BITE },
+                .ballSeal = 0,
+            },
+            {
+                .ivs = 250,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 54,
+                .species = SPECIES_DRAGONAIR,
+                .item = ITEM_NONE,
+                .moves = { MOVE_HYPER_BEAM, MOVE_SAFEGUARD, MOVE_DRAGON_RAGE, MOVE_OUTRAGE },
+                .ballSeal = 0,
+            },
+            {
+                .ivs = 250,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 54,
+                .species = SPECIES_DRAGONAIR,
+                .item = ITEM_NONE,
+                .moves = { MOVE_HYPER_BEAM, MOVE_SAFEGUARD, MOVE_THUNDER_WAVE, MOVE_OUTRAGE },
+                .ballSeal = 0,
+            },
+            {
+                .ivs = 250,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 58,
+                .species = SPECIES_AERODACTYL,
+                .item = ITEM_NONE,
+                .moves = { MOVE_HYPER_BEAM, MOVE_ANCIENT_POWER, MOVE_WING_ATTACK, MOVE_SCARY_FACE },
+                .ballSeal = 0,
+            },
+            {
+                .ivs = 250,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 60,
+                .species = SPECIES_DRAGONITE,
+                .item = ITEM_SITRUS_BERRY,
+                .moves = { MOVE_HYPER_BEAM, MOVE_SAFEGUARD, MOVE_OUTRAGE, MOVE_WING_ATTACK },
+                .ballSeal = 0,
+            },
+        },
+        .text = {
+            {
+                .type = TRMSG_LOSE,
+                .text = "That’s it!\\rI hate to admit it, but you are a\\nPokémon master!\\n",
+            },
+        },
+    },
+
+    // TRAINER_CHAMPION_FIRST_SQUIRTLE (FireRed, PokemonLeague_ChampionsRoom)
+    [1103] = {
+        .name = "Blue",
+        .data = {
+            .trainerType = TRAINER_DATA_TYPE_MOVES | TRAINER_DATA_TYPE_ITEMS,
+            .trainerClass = TRAINERCLASS_P1_CHAMPION_BLUE,
+            .items = { ITEM_FULL_RESTORE, ITEM_FULL_RESTORE, ITEM_FULL_RESTORE, ITEM_FULL_RESTORE },
+            .aiFlags = F_PRIORITIZE_SUPER_EFFECTIVE | F_EVALUATE_ATTACKS,
+            .battleType = SINGLE_BATTLE,
+        },
+        .party = {
+            {
+                .ivs = 255,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 59,
+                .species = SPECIES_PIDGEOT,
+                .item = ITEM_NONE,
+                .moves = { MOVE_AERIAL_ACE, MOVE_FEATHER_DANCE, MOVE_SAND_ATTACK, MOVE_WHIRLWIND },
+                .ballSeal = 0,
+            },
+            {
+                .ivs = 255,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 57,
+                .species = SPECIES_ALAKAZAM,
+                .item = ITEM_NONE,
+                .moves = { MOVE_PSYCHIC, MOVE_FUTURE_SIGHT, MOVE_RECOVER, MOVE_REFLECT },
+                .ballSeal = 0,
+            },
+            {
+                .ivs = 255,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 59,
+                .species = SPECIES_RHYDON,
+                .item = ITEM_NONE,
+                .moves = { MOVE_TAKE_DOWN, MOVE_EARTHQUAKE, MOVE_ROCK_TOMB, MOVE_SCARY_FACE },
+                .ballSeal = 0,
+            },
+            {
+                .ivs = 255,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 59,
+                .species = SPECIES_ARCANINE,
+                .item = ITEM_NONE,
+                .moves = { MOVE_EXTREME_SPEED, MOVE_FLAMETHROWER, MOVE_ROAR, MOVE_BITE },
+                .ballSeal = 0,
+            },
+            {
+                .ivs = 255,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 61,
+                .species = SPECIES_EXEGGUTOR,
+                .item = ITEM_NONE,
+                .moves = { MOVE_GIGA_DRAIN, MOVE_EGG_BOMB, MOVE_SLEEP_POWDER, MOVE_LIGHT_SCREEN },
+                .ballSeal = 0,
+            },
+            {
+                .ivs = 255,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 63,
+                .species = SPECIES_BLASTOISE,
+                .item = ITEM_SITRUS_BERRY,
+                .moves = { MOVE_HYDRO_PUMP, MOVE_RAIN_DANCE, MOVE_SKULL_BASH, MOVE_BITE },
+                .ballSeal = 0,
+            },
+        },
+        .text = {
+            {
+                .type = TRMSG_LOSE,
+                .text = "No!\\nThat can’t be!\\fYou beat me at my best!\\rAfter all that work to become\\nthe League Champ?\\rMy reign is over already?\\nIt’s not fair!\\n",
+            },
+        },
+    },
+
+    // TRAINER_CHAMPION_FIRST_BULBASAUR (FireRed, PokemonLeague_ChampionsRoom)
+    [1104] = {
+        .name = "Blue",
+        .data = {
+            .trainerType = TRAINER_DATA_TYPE_MOVES | TRAINER_DATA_TYPE_ITEMS,
+            .trainerClass = TRAINERCLASS_P1_CHAMPION_BLUE,
+            .items = { ITEM_FULL_RESTORE, ITEM_FULL_RESTORE, ITEM_FULL_RESTORE, ITEM_FULL_RESTORE },
+            .aiFlags = F_PRIORITIZE_SUPER_EFFECTIVE | F_EVALUATE_ATTACKS,
+            .battleType = SINGLE_BATTLE,
+        },
+        .party = {
+            {
+                .ivs = 255,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 59,
+                .species = SPECIES_PIDGEOT,
+                .item = ITEM_NONE,
+                .moves = { MOVE_AERIAL_ACE, MOVE_FEATHER_DANCE, MOVE_SAND_ATTACK, MOVE_WHIRLWIND },
+                .ballSeal = 0,
+            },
+            {
+                .ivs = 255,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 57,
+                .species = SPECIES_ALAKAZAM,
+                .item = ITEM_NONE,
+                .moves = { MOVE_PSYCHIC, MOVE_FUTURE_SIGHT, MOVE_RECOVER, MOVE_REFLECT },
+                .ballSeal = 0,
+            },
+            {
+                .ivs = 255,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 59,
+                .species = SPECIES_RHYDON,
+                .item = ITEM_NONE,
+                .moves = { MOVE_TAKE_DOWN, MOVE_EARTHQUAKE, MOVE_ROCK_TOMB, MOVE_SCARY_FACE },
+                .ballSeal = 0,
+            },
+            {
+                .ivs = 255,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 59,
+                .species = SPECIES_GYARADOS,
+                .item = ITEM_NONE,
+                .moves = { MOVE_HYDRO_PUMP, MOVE_DRAGON_RAGE, MOVE_BITE, MOVE_THRASH },
+                .ballSeal = 0,
+            },
+            {
+                .ivs = 255,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 61,
+                .species = SPECIES_ARCANINE,
+                .item = ITEM_NONE,
+                .moves = { MOVE_EXTREME_SPEED, MOVE_FLAMETHROWER, MOVE_ROAR, MOVE_BITE },
+                .ballSeal = 0,
+            },
+            {
+                .ivs = 255,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 63,
+                .species = SPECIES_VENUSAUR,
+                .item = ITEM_SITRUS_BERRY,
+                .moves = { MOVE_SOLAR_BEAM, MOVE_SYNTHESIS, MOVE_SUNNY_DAY, MOVE_GROWTH },
+                .ballSeal = 0,
+            },
+        },
+        .text = {
+            {
+                .type = TRMSG_LOSE,
+                .text = "No!\\nThat can’t be!\\fYou beat me at my best!\\rAfter all that work to become\\nthe League Champ?\\rMy reign is over already?\\nIt’s not fair!\\n",
+            },
+        },
+    },
+
+    // TRAINER_CHAMPION_FIRST_CHARMANDER (FireRed, PokemonLeague_ChampionsRoom)
+    [1105] = {
+        .name = "Blue",
+        .data = {
+            .trainerType = TRAINER_DATA_TYPE_MOVES | TRAINER_DATA_TYPE_ITEMS,
+            .trainerClass = TRAINERCLASS_P1_CHAMPION_BLUE,
+            .items = { ITEM_FULL_RESTORE, ITEM_FULL_RESTORE, ITEM_FULL_RESTORE, ITEM_FULL_RESTORE },
+            .aiFlags = F_PRIORITIZE_SUPER_EFFECTIVE | F_EVALUATE_ATTACKS,
+            .battleType = SINGLE_BATTLE,
+        },
+        .party = {
+            {
+                .ivs = 255,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 59,
+                .species = SPECIES_PIDGEOT,
+                .item = ITEM_NONE,
+                .moves = { MOVE_AERIAL_ACE, MOVE_FEATHER_DANCE, MOVE_SAND_ATTACK, MOVE_WHIRLWIND },
+                .ballSeal = 0,
+            },
+            {
+                .ivs = 255,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 57,
+                .species = SPECIES_ALAKAZAM,
+                .item = ITEM_NONE,
+                .moves = { MOVE_PSYCHIC, MOVE_FUTURE_SIGHT, MOVE_RECOVER, MOVE_REFLECT },
+                .ballSeal = 0,
+            },
+            {
+                .ivs = 255,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 59,
+                .species = SPECIES_RHYDON,
+                .item = ITEM_NONE,
+                .moves = { MOVE_TAKE_DOWN, MOVE_EARTHQUAKE, MOVE_ROCK_TOMB, MOVE_SCARY_FACE },
+                .ballSeal = 0,
+            },
+            {
+                .ivs = 255,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 59,
+                .species = SPECIES_EXEGGUTOR,
+                .item = ITEM_NONE,
+                .moves = { MOVE_GIGA_DRAIN, MOVE_EGG_BOMB, MOVE_SLEEP_POWDER, MOVE_LIGHT_SCREEN },
+                .ballSeal = 0,
+            },
+            {
+                .ivs = 255,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 61,
+                .species = SPECIES_GYARADOS,
+                .item = ITEM_NONE,
+                .moves = { MOVE_HYDRO_PUMP, MOVE_DRAGON_RAGE, MOVE_BITE, MOVE_THRASH },
+                .ballSeal = 0,
+            },
+            {
+                .ivs = 255,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 63,
+                .species = SPECIES_CHARIZARD,
+                .item = ITEM_SITRUS_BERRY,
+                .moves = { MOVE_FIRE_BLAST, MOVE_AERIAL_ACE, MOVE_SLASH, MOVE_FIRE_SPIN },
+                .ballSeal = 0,
+            },
+        },
+        .text = {
+            {
+                .type = TRMSG_LOSE,
+                .text = "No!\\nThat can’t be!\\fYou beat me at my best!\\rAfter all that work to become\\nthe League Champ?\\rMy reign is over already?\\nIt’s not fair!\\n",
+            },
+        },
+    },
     // END PART1 GENERATED
 };
 
@@ -47541,6 +49415,37 @@ const u16 sTrainerTextOrder[] = {
     1072,
     1073,
     1074,
+    1075,
+    1076,
+    1077,
+    1078,
+    1079,
+    1080,
+    1081,
+    1082,
+    1083,
+    1084,
+    1085,
+    1086,
+    1087,
+    1088,
+    1089,
+    1090,
+    1091,
+    1092,
+    1093,
+    1094,
+    1095,
+    1096,
+    1097,
+    1098,
+    1099,
+    1100,
+    1101,
+    1102,
+    1103,
+    1104,
+    1105,
     // END PART1 GENERATED
 };
 
