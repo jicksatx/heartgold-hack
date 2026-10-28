@@ -41,3 +41,10 @@ Thanks, you’re a pal!
 That’s too bad.
 ...This is no {STRVAR_1 1, 0, 0}.\rIf you get one, trade it with me.
 How is my old {STRVAR_1 1, 1, 0}?\nMy {STRVAR_1 1, 0, 0} is doing great!
+Huh?\nHey, if it isn’t {STRVAR_1 3, 0, 0}!\r
+Look, it’s me, Bill.\nLong time no see!\rI hope you’re still using my\nPC system.\rWell, listen, since we met up here,\nhow about spending time with me?\rThere’s this little island in the far\nsouth called One Island.\rA friend invited me, so I’m on my\nway out there.\rHow about it?\nDo you feel like coming with me? {YESNO 0}
+All right, then.\nLet’s go!\r
+Looks like my pal’s boat arrived,\ntoo.\rHe sent it specially here to\nCinnabar to pick me up.
+What, are you too busy?\rWell, all right.\nThe boat hasn’t arrived yet anyway.\rI’ll be waiting at the Pokémon\nCenter over there.\rCome see me when you’re done with\nyour business here.
+Bill: Oh, {STRVAR_1 3, 0, 0}!\nAre you ready to go to One Island? {YESNO 0}
+Bill: No rush. Come see me when\nyou’re done with your business here.

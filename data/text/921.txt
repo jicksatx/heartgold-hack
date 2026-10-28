@@ -1,0 +1,61 @@
+I’m the Fishing Guru!\rI simply looove fishing!\nI can’t bear to go without.\rTell me, do you like to fish? {YESNO 0}
+Grand! I like your style.\nI think we can be friends.\rTake this and fish, young friend!\r
+Fishing is a way of life!\nIt is like the finest poetry.\rFrom the seas to rivers, go out\nand land the big one, my friend.
+Oh...\nThat’s so disappointing...
+Hello there, {STRVAR_1 3, 0, 0}!\rHow are the fish biting?
+Please enjoy yourself.
+Ssh! Listen, I need to share a\nsecret with someone.\rI think that this chunk of Amber\ncontains Pokémon DNA!\rIt would be a shattering scientific\nbreakthrough if Pokémon could be\fresurrected from it.\rBut, my colleagues just ignore\nwhat I have to say.\rSo, I have a favor to ask!\rI want you to get this examined at\na Pokémon Lab somewhere.\r
+Ssh!\nGet the Old Amber checked!
+Amber contains the genetic matter\nof ancient Pokémon.\rThere’s a Lab somewhere trying to\nresurrect Pokémon from Amber.
+Amber is actually sap, that gooey\nstuff that oozes from trees.\rThe ancient sap fossilized over\ntime to become rock-hard Amber.
+I should be grateful for my long\nlife.\rNever did I think I would get to\nsee the bones of a dragon!
+We have two fossils of rare,\nprehistoric Pokémon on exhibit.
+Moon Stone, huh?\rWhat’s so special about it?\nLooks like an ordinary rock to me.
+I want a Pikachu!\nIt’s so cute!\rI asked my daddy to catch me one!
+Aerodactyl Fossil\nA primitive and rare Pokémon.
+Kabutops Fossil\nA primitive and rare Pokémon.
+There is a beautiful piece of\nAmber in a clear gold color.
+Space Shuttle
+A meteorite that fell on Mt. Moon.\nIt is thought to be a Moon Stone.
+This month, we’re running a space\nexhibit.
+There is nothing that I don’t know,\nlike I wrote on the blackboard.\rI know about the world of Pokémon\nin your Game Boy Advance!\rGet together with your friends and\nenjoy trading Pokémon!
+{STRVAR_1 3, 0, 0} obtained an Eevee!
+There’s no room in your party for\nanother Pokémon.
+It’s a Poké Ball.\nThere’s a Pokémon inside!\r
+It’s a pamphlet on TMs.\r... ...\rThere are fifty TMs in all.\rThere are also seven HMs that\ncan be used repeatedly.\rSilph Co.
+I’m thirsty!\nI want something to drink!
+I’m thirsty!\nI want something to drink!\rGive her a drink? {YESNO 0}
+Yay!\rFresh Water!\rThank you!\nYou can have this from me!\r
+Yay!\rSoda Pop!\rThank you!\nYou can have this from me!\r
+Yay!\rLemonade!\rThank you!\nYou can have this from me!\r
+TM16 contains Light Screen.\rIt’s a move that weakens the power\nof special attacks by your foe.
+TM20 contains Safeguard.\rIt’s a move that prevents status\nproblems among your Pokémon.
+TM33 contains Reflect.\rIt’s a move that weakens the power\nof physical attacks by your foe.
+No, thank you!\nI’m not thirsty after all!
+My sister is a Trainer, believe it\nor not.\rBut, she’s so immature, she drives\nme nuts!
+Rooftop Square:\nVending Machines
+A vending machine!\nWhat does it have?
+Fresh Water ¥200
+Soda Pop ¥300
+Lemonade ¥350
+Exit
+Oops, not enough money!
+There’s no more room for stuff!
+A can popped out!
+I’m not thirsty anymore!\nThank you for the drinks!
+The types of Pokémon match up\ndifferently with each other.\rEvery type is stronger than some\ntypes and weaker than others.
+A Nugget is totally useless.\nSo I sold it for ¥5000.
+I heard that ghosts haunt\nLavender Town.
+Oh... {STRVAR_1 3, 0, 0}!\nI’ve been looking for you!\rIt’s me, one of the ever-present\nAides to Professor Oak.\rIf your Pokédex has complete data\non twenty species, I’m supposed to\fgive you a reward from Professor Oak.\rHe entrusted me with this\nEverstone.\rSo, {STRVAR_1 3, 0, 0}, let me ask you.\rHave you gathered data on at least\ntwenty kinds of Pokémon?\r
+Great! You have caught or owned\n{STRVAR_1 52, 1, 0} kinds of Pokémon!\rCongratulations!\nHere you go!\r
+Making Pokémon evolve certainly\ncan add to the Pokédex.\rHowever, at times, you may not\nwant a certain Pokémon to evolve.\rIn that case, give the Everstone\nto that Pokémon.\rIt will prevent evolution according\nto the Professor.
+Let’s see...\nUh-oh! You have caught only\f{STRVAR_1 52, 1, 0} kinds of Pokémon!\rYou need twenty kinds if you\nwant the Everstone.
+Man: Hello there, laddie!\nHave I got a deal just for you!\rI’ll let you have a secret Pokémon\n- a Magikarp - for just ¥500!\rSo, you’ll buy it, am I right? {YESNO 0}
+{STRVAR_1 3, 0, 0} paid an outrageous ¥500\nand bought the Magikarp...
+No? You say no? I’m only doing this\nas a favor to you!
+There’s no more room for any more\nPokémon, it looks like.
+You’ll need more money than that!
+Man: Well, I don’t give refunds.\nYou knew what you were getting!
+Okay, set six Poké BallS in my\nbelt...\rYeah, that’ll do it. At most, you\ncan have six Pokémon with you.
+Team Rocket attacks Cerulean\ncitizens...\rNot a day goes by without Team\nRocket being in the news.
+Sometimes, you’ll have too many\nPokémon with you to add any more.\rIn that case, you should just\nstore some using any PC.

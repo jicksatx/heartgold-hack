@@ -402,6 +402,9 @@
 .equ VAR_P1_SILPH, 0x4173
 .equ VAR_P1_POWER_PLANT, 0x4174
 .equ VAR_P1_VIRIDIAN_GYM, 0x4175
+// Sevii Islands: 1 Bill waits outside Cinnabar Gym, 2 Bill waits in Cinnabar's Pokemon Center, 3 sailing to One
+// Island, 4 got the Meteorite and Tri-Pass, 5 Moon Stone from the Game Corner owner, 6 back in Kanto (scr_seq_01055)
+.equ VAR_P1_SEVII, 0x4176
 .equ VAR_UNK_4167, 0x4167
 .equ VAR_UNK_4168, 0x4168
 .equ VAR_UNK_4169, 0x4169

@@ -78,6 +78,7 @@ ARCHIVES = {
         ("L", "CeruleanCity_Text_GruntIntro", R),
         ("L", "CeruleanCity_Text_OkayIllReturnStolenTM", R),
         ("L", "CeruleanCity_Text_BetterGetMovingBye", N),
+        ("L", "CeruleanCity_Text_ThisIsCeruleanCave", N),  # the Cerulean Cave guard (Part 1 keeps the cave closed)
     ],
     869: [  # Route 24 (Nugget Bridge)
         ("L", "Route24_Text_JustEarnedFabulousPrize", R),
@@ -604,6 +605,21 @@ ARCHIVES = {
 }
 
 
+# the Sevii Islands (scripts/hack/gen_sevii.py): their own archive, plus Bill's lines at Cinnabar and the Vermilion
+# harbor's Seagallop sailor
+import gen_sevii  # noqa: E402
+
+assert len(ARCHIVES[912]) == gen_sevii.CINNABAR_BASE and len(ARCHIVES[877]) == gen_sevii.VERMILION_BASE
+ARCHIVES[920] = gen_sevii.TEXT_LINES
+ARCHIVES[912] = ARCHIVES[912] + gen_sevii.CINNABAR_TEXT
+ARCHIVES[877] = ARCHIVES[877] + gen_sevii.SAIL_TEXT
+
+# FireRed's remaining gifts in Kanto interiors (scripts/hack/gen_gifts.py)
+import gen_gifts  # noqa: E402
+
+ARCHIVES[921] = gen_gifts.TEXT_LINES
+
+
 def main():
     texts = g.parse_all_texts()
     for archive, lines in ARCHIVES.items():
@@ -615,7 +631,7 @@ def main():
             text = g.frlg_text(texts[line[1]], player=P)
             while text.endswith("\\n") or text.endswith("\\r"):
                 text = text[:-2]
-            out.append(text + line[2])
+            out.append(text + line[2])  # "LS": a suffix such as the yes/no prompt
         with open(f"data/text/{archive}.txt", "w", encoding="utf-8", newline="\n") as f:
             f.write("\n".join(out) + "\n")
         print(f"data/text/{archive}.txt: {len(out)} lines")

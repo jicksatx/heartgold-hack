@@ -1,0 +1,117 @@
+Ahoy, there!\nWhere do you want to sail?
+All right!\nAll aboard Seagallop Hi-Speed!
+Ahoy! The Seagallop ferries sail\nthe waters of the Sevii Islands.\rYou’ll need a Tri-Pass to come\naboard, though.
+One Island
+Two Island
+Three Island
+Vermilion City
+Exit
+One Island\nFriends Gather at Knot Island
+Expanding the Pokémon World!\nPokémon Net Center
+Here we are on an island smack in\nthe middle of nowhere.\rWe’re lucky to have an upstanding\nyoung man like Celio here.\rMy granddaughter was in a tizzy\nover Celio’s friend.\rSomething about a famous\nPokémaniac?\rI’m not sure what that means, but\nCelio is quite the man!
+My granddaughter was in a tizzy\nover a new breakthrough.\rShe said we now have PC linkage\nwith people in Kanto.\rI’m not sure what that means, but\nCelio is quite the man!
+Hi, sight-seeing, are you?\nIsn’t the warm climate here great?
+Bill: Hey, there!\nCelio!\r
+Celio: Bill!\nI can’t believe you came out here.\r
+Bill: Well, absolutely!\nHow’s your research coming along?\r...Oh, wait a sec.\r
+{STRVAR_1 3, 0, 0}, this is my buddy Celio.\nHe’s one dedicated PC Maniac!\r
+Celio, this is {STRVAR_1 3, 0, 0}, a rising\ncontender as the Pokémon Champ!\r
+Celio: That’s really impressive.\rI hate to say it, but I have zero\naptitude for battling.\rAnyways, I’m glad to meet you.\r
+Bill: So, bring me up to speed.\nHow’s your machine running?\r
+Celio: It’s running fine, but we’re\ntoo remote out here.\rThe PCs on this island just can’t\nlink with your PC, Bill.\r
+Bill: Oh, yeah?\nOkay, let me take a look-see.\r...Hang on here...\nI think we can make it work.\fLet me help you, okay?\r
+{STRVAR_1 3, 0, 0}, can I get you to wait for\nme just a bit?\r...Actually, can I get you to do\nme a favor?\rThe island next to this one’s\ncalled Two Island.\rThere’s a guy there that runs\na Game Corner.\rHe has this thing for rare rocks\nand gems.\rWe keep in touch, being fellow\nmaniacs.\rSo, can I get you to deliver this\nMeteorite to him?\r
+{STRVAR_1 3, 0, 0} accepted the Meteorite\nfrom Bill.
+Celio: {STRVAR_1 3, 0, 0}, if you are going\nto Two Island, please take this.\r
+Obtained the Tri-Pass!
+It’s a Pass for the ferry service\nserving the local islands.\rIt will let you travel between the\nIslands One, Two, and Three.\rThe ferries also call at Vermilion\nCity’s harbor.\r
+Bill: I’ll catch you later!\nSay hi to the guy for me!
+Hmm...\rHow about we try this like this...
+I’m sorry for taking up so much of\nBill’s time.\rI’m also sorry for being such a \npoor host on your visit here.
+Celio: Hello!\nYou look awfully busy as always.\rHow am I doing?\rWell, I’m modifying my Network\nMachine.\rWhen I get done with the machine,\nI hope you’ll be first to use it,\f{STRVAR_1 3, 0, 0}.
+Bill: Oh, hey!\n{STRVAR_1 3, 0, 0}!\r
+Bill: What kept you so long?\nBeen out having a good time?\rWe got it done.\nThe PCs are up and running!\r
+Celio: The job went incredibly\nquick.\rBill is one amazing guy...\r
+Bill: No, no! There was almost\nnothing left for me to do.\rCelio, I have to hand it to you.\nYou’ve learned a lot.\r
+Celio: Oh, really?\nEhehe...\r
+Bill: Well, there you have it.\nI’m finished with the job.\fWe should head back to Kanto.\rCelio, I’ll be seeing you again.\r
+Celio: {STRVAR_1 3, 0, 0}, I’m really sorry\nthat we sent you off alone today.\rI promise, I will show you around\nthese islands sometime.
+Oh, you’re a stranger here!\nHi! Where did you come from?\r...Pallet Town?\nI don’t know it!
+On this island, there’s an enormous\nvolcano.\rIt hasn’t erupted lately, so why\nnot enjoy a hike?
+I wish I could trade Pokémon with\nmy boyfriend who lives far away...
+Network Machine\nLink Level 0\r...Pokémon Storage System under\nadjustment...
+Network Machine\nLink Level 1\rLink established with the Kanto\nregion.
+On sunny days, I step out and gaze\nupon the volcano.\rThat’s my daily routine.
+Let me think... When was the last\ntime Mt. Ember erupted?
+Young people all want to go off to\nbig cities.\rBut I want to stay here forever!
+This is Kindle Road.\rGo straight for Mt. Ember.
+Light the Fire in Your Heart!\nEmber Spa
+Hot springs go hand-in-hand with\nvolcanoes.\rThe Ember Spa here, well,\nI made it years ago.\rI hewed the pool right out of a\ngigantic boulder by hand.\rI was using this at the time.\nI suppose I can part with it.\r
+That shatters boulders as if they\nwere made of crackers.
+Hm!\nHaaaaaaaaaaah!\rAaaah! This is heavenly!\nThe water warms me to my core!\rYou should jump in, too.\rGo to the middle, relax, and get\ngood and warm!
+My favorite part of bathing comes\nup right after this.\rI enjoy a bowl of chowder to\nwarm me from the inside, too!
+After an honest day of training,\nnothing beats a relaxing soak in\fthe hot spring pool.\rBruno, who’s a senior ahead of me,\nvisits the Spa on occasion.\rHe comes to rehab injuries, both\nhis own and his Pokémon’s.
+Welcome to the Ember Spa!\rPlease, have a good long soak in\nour hot spring.\r
+The water is perfectly warm.\nIt feels exquisite...\r{STRVAR_1 3, 0, 0} and the Pokémon were\nfully refreshed!
+Good things get washed up by the\nocean current onto this beach.\rThat’s why I often come here for\nsome beachcombing.
+The currents here are fast and\ntreacherous.\rYou can’t go any farther this way.
+Two Island\nBoon Island for Two
+Skip & Chomp!\nJoyful Game Corner
+Danger! Fast Current!\nFishing and surfing prohibited!
+Oh!\nHello, welcome to my shop!\rWe’ve only opened up recently.\rOur merchandise is limited, but I\nhope we can serve your needs.\r
+That fellow there, he moved here\nfrom Celadon City.\rHe started up a shop with his\nyounger brother.\rYou have to wonder if he knew what\nhe was getting into.
+Listen, listen.\nDid you know?\rA famous Trainer came to the\nIsland a little while back.\rHe’s one of the Elite Four.\nHis name is Bruno.\rHe went away disappointed when he\nfound out that they were all sold\fout of Rage Candybars.
+There’s an old woman who lives in\na cottage out on the cape.\rShe gives the eye to Pokémon.\nIt’s a bit unnerving.
+Have you visited the Game Corner\nalready?\rIt’s no good to go alone.\nYou have to take a friend along.
+Not many people live on\nTwo Island.\rThere is this old lady who lives\nout on the cape.\rShe’s been there since I don’t know\nwhen.
+Hm? You, there!\nAre you a friend of Lostelle’s?\rHave you seen Lostelle around?\nI don’t know where she might be.\fShe should’ve been here long ago.\rLostelle’s a cutie - she got my\nlooks - so what if someone...\rWhat if something’s happened to\nmy Lostelle?!\rPlease, help me find her!\nPlease go search Three Island!
+So you rescued Lostelle?\nHow can I thank you?\rLostelle, darling, forgive me!\rDaddy didn’t know you were scared\nand in trouble!\r
+Oh, what’s that?\nYou’re saying that this is for me?\rHow did you know that I love rare\nrocks and gems?\rYou sure know how to make a guy\nhappy.\r
+{STRVAR_1 3, 0, 0} handed the Meteorite\nto Lostelle’s daddy.
+Oh, I see, this is from Bill!\nYou have to thank him for me!\rYou know, you’ve been fantastic.\nI want you to have this.\r
+Your Bag’s not going to fit another\nthing...
+All right, I’ll get the Game Corner\nrunning right away.\rYou have to come visit with a\nfriend.
+I’m sorry.\nWe’re not running any games today.
+We’ll get the games going soon\nfor you!
+Lostelle: It’s okay, Daddy.\nI got to be friends with {STRVAR_1 3, 0, 0}!
+I’m the Pokémon Move Maniac.\rI know every single move that\nPokémon learn growing up.\rI’m also a mushroom maniac.\nMushrooms are so very fine...
+Oh? I see the spark of a true\nTrainer in your Pokémon.\rI have taught ultimate moves to\nthe Pokémon of great Trainers.\rCome back once you have become\nthe Champion, child.
+Three Island\nKin Island of Family Bonding
+You, what are you staring at?\nDon’t you know it’s not polite?\rYou wanna make something of it\nor what? {YESNO 0}
+That’s smart.\nKeep your nose out of this.
+Heh, I like your guts.\nYou’ll be losing money to me, but...
+Aww, man...\nDon’t you dare laugh!\r
+Aren’t you from Kanto?\nYou should be on our side!
+What’s the matter with you,\ngetting all hot like that?\rTotally uncool, man!\r
+We invited the boss out here,\nbut you had to mess it up!\rYou embarrassed us, man!
+Boss, I’m telling you, you’ve gotta\ndo something about this kid!\r
+I’ve been watching you, and I’d say\nyou’ve done enough.\rWhat are you, their friend or\nsomething?\rThen I guess you’ll be battling me\nin their place.
+Humph! Yeah, go right on hanging\naround with these hayseeds!
+We don’t need you people bringing\nyour noise and trouble here!\rWe’re asking you to go back to\nKanto!
+Thank you! Those goons were\nnothing but bad trouble.\rOh, look, your Pokémon got hurt\non my account.\r
+You’ve got seriously impressive\nPokémon with you.
+Oh?\nYour Bag is full.
+It’d be fantastic if someone as\nstrong as you lived here.\rI hope you’ll at least stay here\na while.\r...I beg your pardon?\nYou’re looking for Lostelle?\rLostelle went off towards Bond\nBridge a while ago.
+Three Island is actually the most\npopulous of the islands here.\rStill, it could be less sleepy.\rBut I wouldn’t want to see goons\nlike those Bikers here again.
+I’m going to train my Doduo in the\nBerry Forest.\rWhen it evolves, I’m going to play\na game on Two Island.
+Hey, did you hear the news?\rThe PC network here can now link\nwith PCs in Kanto.\rI don’t know how that came about,\nbut it’s fantastic!
+It’s impossible to Surf between the\nislands around these parts.\rThe tides are too fast and\ntreacherous.
+Let’s crush Berries!\n...That’d be wasting Berries?\rYou can always find some Berries\non the ground in Berry Forest.
+Is it true?\rCeladon Dept. Store is several\ntimes bigger than this shop?
+I sometimes buy medicine here.\rBut a lot of people heal Pokémon\nwith Berries from Berry Forest.\rAfter all, Berries are free and\nthey never run out.
+Those Bikers were about to trash\nthis Pokémon Mart.\rAm I glad they decided to leave!
+Rare rocks and gems are displayed.
+Me?\nI’m not Lostelle.\rShe’s probably gone to the\nBerry Forest, I think.\rShe picks Berries there for making\nlunch.
+You must never, ever go out to\nthe Berry Forest alone.\rWhy?\nThere are ghosts there.
+Papa keeps lying to me, and won’t\nlet me go out and play!
+I bought this house because I\nwanted to live somewhere quiet.\rToday, I think I’ll go out fishing.
+Bond Bridge\nPlease be quiet when crossing.\rBerry Forest Ahead
+Berry Forest Ahead
+Welcome to the Berry Forest\rBe friendly and share Berries with\nothers and Pokémon.
+Beware of wild, Berry-loving\nPokémon!
+Lostelle: Whimper... Sniff...\nOh! Please, help!\rA scary Pokémon appeared there\na little while ago.\rIt kept scaring.\nIt made Lostelle scared.\rI’m too scared to move!\nBut I want to go home...\r
+Oh! Here it comes again!\nNo! Go away! It’s scaring me!\rWaaaaaaah!\nI want my daddy!
+Ohh! That was so scary!\nThank you!\rLostelle came to pick some\nBerries.\rYou can have this!\r
+Your Berry Pouch is full.\nI guess you don’t want this.\r
+What’s your name?\rLostelle’s scared, so can I go\nwith you to my daddy’s house?\rOkay!\nLet’s go home!
+The Berry Forest lies just past\nthis gate.\rWild Pokémon love the Berries\nthere, so take care!

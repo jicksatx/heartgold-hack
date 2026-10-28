@@ -116,6 +116,23 @@
       "x": 1045,
       "z": 497,
       "y": 0
+    },
+    {
+      "id": 3,
+      "graphics_id": 235,
+      "movement_type": 16,
+      "trainer_type": 0,
+      "hidden_flag": 2692,
+      "script": 24,
+      "initial_dir": 2,
+      "param0": 0,
+      "param1": 0,
+      "param2": 0,
+      "movement_range_x": 0,
+      "movement_range_z": 0,
+      "x": 1048,
+      "z": 485,
+      "y": 0
     }
   ],
   "warp_events": [

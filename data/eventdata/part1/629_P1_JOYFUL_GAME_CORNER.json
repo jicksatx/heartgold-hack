@@ -1,0 +1,100 @@
+{
+  "bg_events": [],
+  "object_events": [
+    {
+      "id": 0,
+      "graphics_id": 330,
+      "movement_type": 15,
+      "trainer_type": 0,
+      "hidden_flag": 0,
+      "script": 40,
+      "initial_dir": 1,
+      "param0": 0,
+      "param1": 0,
+      "param2": 0,
+      "movement_range_x": 0,
+      "movement_range_z": 0,
+      "x": 7,
+      "z": 8,
+      "y": 0
+    },
+    {
+      "id": 1,
+      "graphics_id": 334,
+      "movement_type": 15,
+      "trainer_type": 0,
+      "hidden_flag": 0,
+      "script": 41,
+      "initial_dir": 1,
+      "param0": 0,
+      "param1": 0,
+      "param2": 0,
+      "movement_range_x": 0,
+      "movement_range_z": 0,
+      "x": 11,
+      "z": 4,
+      "y": 0
+    },
+    {
+      "id": 2,
+      "graphics_id": 316,
+      "movement_type": 17,
+      "trainer_type": 0,
+      "hidden_flag": 2696,
+      "script": 42,
+      "initial_dir": 3,
+      "param0": 0,
+      "param1": 0,
+      "param2": 0,
+      "movement_range_x": 0,
+      "movement_range_z": 0,
+      "x": 5,
+      "z": 8,
+      "y": 0
+    },
+    {
+      "id": 3,
+      "graphics_id": 299,
+      "movement_type": 0,
+      "trainer_type": 0,
+      "hidden_flag": 680,
+      "script": 10202,
+      "initial_dir": 1,
+      "param0": 0,
+      "param1": 0,
+      "param2": 0,
+      "movement_range_x": 0,
+      "movement_range_z": 0,
+      "x": 3,
+      "z": 8,
+      "y": 0
+    },
+    {
+      "id": 4,
+      "graphics_id": 193,
+      "movement_type": 0,
+      "trainer_type": 0,
+      "hidden_flag": 679,
+      "script": 10201,
+      "initial_dir": 1,
+      "param0": 0,
+      "param1": 0,
+      "param2": 0,
+      "movement_range_x": 0,
+      "movement_range_z": 0,
+      "x": 2,
+      "z": 8,
+      "y": 0
+    }
+  ],
+  "warp_events": [
+    {
+      "x": 4,
+      "z": 11,
+      "dest_header_id": 67,
+      "dest_warp_id": 1,
+      "y": 0
+    }
+  ],
+  "coord_events": []
+}

@@ -385,6 +385,32 @@ PART1_TRAINERS = [
     ("TRAINER_CHAMPION_FIRST_SQUIRTLE", "PokemonLeague_ChampionsRoom"),
     ("TRAINER_CHAMPION_FIRST_BULBASAUR", "PokemonLeague_ChampionsRoom"),
     ("TRAINER_CHAMPION_FIRST_CHARMANDER", "PokemonLeague_ChampionsRoom"),
+    ("TRAINER_SWIMMER_FEMALE_MARIA", "OneIsland_KindleRoad"),
+    ("TRAINER_SWIMMER_FEMALE_ABIGAIL", "OneIsland_KindleRoad"),
+    ("TRAINER_SWIMMER_MALE_FINN", "OneIsland_KindleRoad"),
+    ("TRAINER_SWIMMER_MALE_GARRETT", "OneIsland_KindleRoad"),
+    ("TRAINER_FISHERMAN_TOMMY", "OneIsland_KindleRoad"),
+    ("TRAINER_CRUSH_GIRL_SHARON", "OneIsland_KindleRoad"),
+    ("TRAINER_CRUSH_GIRL_TANYA", "OneIsland_KindleRoad"),
+    ("TRAINER_BLACK_BELT_SHEA", "OneIsland_KindleRoad"),
+    ("TRAINER_BLACK_BELT_HUGH", "OneIsland_KindleRoad"),
+    ("TRAINER_CAMPER_BRYCE", "OneIsland_KindleRoad"),
+    ("TRAINER_PICNICKER_CLAIRE", "OneIsland_KindleRoad"),
+    ("TRAINER_CRUSH_KIN_MIK_KIA", "OneIsland_KindleRoad"),
+    ("TRAINER_SWIMMER_FEMALE_AMARA", "OneIsland_TreasureBeach"),
+    ("TRAINER_CRUSH_GIRL_JOCELYN", "MtEmber_Exterior"),
+    ("TRAINER_PKMN_RANGER_BETH", "MtEmber_Exterior"),
+    ("TRAINER_PKMN_RANGER_LOGAN", "MtEmber_Exterior"),
+    ("TRAINER_BIKER_GOON", "ThreeIsland"),
+    ("TRAINER_BIKER_GOON_2", "ThreeIsland"),
+    ("TRAINER_BIKER_GOON_3", "ThreeIsland"),
+    ("TRAINER_CUE_BALL_PAXTON", "ThreeIsland"),
+    ("TRAINER_AROMA_LADY_NIKKI", "ThreeIsland_BondBridge"),
+    ("TRAINER_AROMA_LADY_VIOLET", "ThreeIsland_BondBridge"),
+    ("TRAINER_SWIMMER_FEMALE_TISHA", "ThreeIsland_BondBridge"),
+    ("TRAINER_TUBER_ALEXIS", "ThreeIsland_BondBridge"),
+    ("TRAINER_TUBER_AMIRA", "ThreeIsland_BondBridge"),
+    ("TRAINER_TWINS_JOY_MEG", "ThreeIsland_BondBridge"),
 ]
 
 # HeartGold overworld sprite for each FireRed class (for the events' trainer objects)
@@ -392,7 +418,7 @@ SPRITES = {
     "BUG_CATCHER": 318, "YOUNGSTER": 317, "LASS": 319, "CAMPER": 345, "PICNICKER": 346, "HIKER": 333,
     "SUPER_NERD": 338, "TEAM_ROCKET": 222, "SCIENTIST": 29, "POKEMANIAC": 377, "SAILOR": 348, "FISHERMAN": 347,
     "SWIMMER_M": 342, "SWIMMER_F": 343, "BIKER": 229, "CUE_BALL": 229, "GENTLEMAN": 341, "BEAUTY": 326,
-    "BIRD_KEEPER": 323, "BLACK_BELT": 344, "PSYCHIC": 227, "CHANNELER": 219, "JUGGLER": 378, "TAMER": 378, "ROCKER": 322, "YOUNG_COUPLE": 323, "CRUSH_KIN": 344, "BURGLAR": 218, "SIS_AND_BRO": 342, "COOL_COUPLE": 324, "COOLTRAINER": 324, "RIVAL_EARLY": 375,
+    "BIRD_KEEPER": 323, "BLACK_BELT": 344, "PSYCHIC": 227, "CHANNELER": 219, "JUGGLER": 378, "TAMER": 378, "ROCKER": 322, "YOUNG_COUPLE": 323, "CRUSH_KIN": 344, "BURGLAR": 218, "SIS_AND_BRO": 342, "COOL_COUPLE": 324, "CRUSH_GIRL": 321, "PKMN_RANGER": 324, "TUBER": 316, "AROMA_LADY": 327, "COOLTRAINER": 324, "RIVAL_EARLY": 375,
     "RIVAL_LATE": 375, "LEADER": 352, "ENGINEER": 324, "GAMER": 330, "TWINS": 316,
 }
 
@@ -437,6 +463,12 @@ CLASSES = {
     "YOUNG_COUPLE": "TRAINERCLASS_YOUNG_COUPLE",
     "CRUSH_KIN": "TRAINERCLASS_DOUBLE_TEAM",
     "COOL_COUPLE": "TRAINERCLASS_DOUBLE_TEAM",
+    "CRUSH_GIRL": "TRAINERCLASS_BATTLE_GIRL",
+    "PKMN_RANGER_M": "TRAINERCLASS_PKMN_RANGER_M",
+    "PKMN_RANGER_F": "TRAINERCLASS_PKMN_RANGER_F",
+    "TUBER_M": "TRAINERCLASS_TUBER_M",
+    "TUBER_F": "TRAINERCLASS_TUBER_F",
+    "AROMA_LADY": "TRAINERCLASS_AROMA_LADY",
     "SIS_AND_BRO": "TRAINERCLASS_DOUBLE_TEAM",
 }
 LEADERS = {
@@ -457,7 +489,7 @@ ELITE_FOUR = {
     "LANCE": "TRAINERCLASS_P1_ELITE_FOUR_LANCE",
 }
 
-KEEP_UPPER = {"OK", "HQ", "TV", "HP", "PP", "TM", "HM", "PC", "S.S.", "LT.", "KO", "ID"}
+KEEP_UPPER = {"OK", "HQ", "TV", "HP", "PP", "TM", "HM", "PC", "S.S.", "LT.", "KO", "ID", "DNA"}
 WORDS = [
     ("POKéMON", "Pokémon"), ("POKéDEX", "Pokédex"), ("POKé BALL", "Poké Ball"), ("POKé", "Poké"),
     ("PROF. OAK", "Professor Oak"), ("TEAM ROCKET", "Team Rocket"), ("LT. SURGE", "Lt. Surge"), ("MR. FUJI", "Mr. Fuji"),
@@ -557,7 +589,10 @@ def parse_trainers():
         cls = re.search(r"\.trainerClass = TRAINER_CLASS_(\w+)", body).group(1)
         name = re.search(r'\.trainerName = _\("(.*?)"\)', body).group(1)
         party = re.search(r"\.party = (\w+)\((\w+)\)", body)
+        pic = re.search(r"\.trainerPic = TRAINER_PIC_(\w+)", body)
         items = re.search(r"\.items = \{(.*?)\}", body).group(1)
+        if cls in ("TUBER", "PKMN_RANGER"):  # gendered in HeartGold
+            cls += "_F" if pic and pic.group(1).endswith("_F") else "_M"
         out[m.group(1)] = dict(cls=cls, name=name, kind=party.group(1), party=party.group(2),
                                double=".doubleBattle = TRUE" in body,
                                items=[x.strip() for x in items.split(",") if x.strip()])

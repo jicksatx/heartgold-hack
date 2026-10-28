@@ -3,3 +3,11 @@ Welcome to the S.S. Anne!\rExcuse me, do you have a ticket?\r
 Great!\nWelcome to the S.S. Anne!\r
 Sorry!\rYou need a ticket to get aboard.\r
 The ship set sail.\r
+Ahoy, there!\nWhere do you want to sail?
+All right!\nAll aboard Seagallop Hi-Speed!
+Ahoy! The Seagallop ferries sail\nthe waters of the Sevii Islands.\rYou’ll need a Tri-Pass to come\naboard, though.
+One Island
+Two Island
+Three Island
+Vermilion City
+Exit

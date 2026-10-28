@@ -2004,7 +2004,39 @@
 .equ FLAG_P1_GYM_ASIDE_6, 2689
 .equ FLAG_P1_HIDE_VIRIDIAN_GIOVANNI, 2690
 .equ FLAG_P1_GOT_TM26, 2691
-// 2692-2700 unused; 2701-2719 (before the daily flags at 2720); then 2094-2103 and 2370-2399 (trainer-flag gaps, see src/chapter.c)
+// Sevii Islands (scripts/hack/gen_sevii.py)
+.equ FLAG_P1_HIDE_CINNABAR_BILL, 2692
+.equ FLAG_P1_HIDE_CINNABAR_PC_BILL, 2693
+.equ FLAG_P1_HIDE_ONE_ISLAND_BILL, 2694
+.equ FLAG_P1_RESCUED_LOSTELLE, 2695
+.equ FLAG_P1_HIDE_HOME_LOSTELLE, 2696
+.equ FLAG_P1_BEAT_THREE_ISLAND_BIKERS, 2697
+.equ FLAG_P1_GOT_THREE_ISLAND_FULL_RESTORE, 2698
+.equ FLAG_P1_HIDE_MOLTRES, 2699
+.equ FLAG_P1_GOT_HM06, 2700
+.equ FLAG_P1_ITEM_SEVII_00, 1172 // kindle ITEM_ETHER (HeartGold's Johto item-ball flag, unused in Part 1)
+.equ FLAG_P1_ITEM_SEVII_01, 1173 // kindle ITEM_MAX_REPEL (HeartGold's Johto item-ball flag, unused in Part 1)
+.equ FLAG_P1_ITEM_SEVII_02, 1174 // kindle ITEM_CARBOS (HeartGold's Johto item-ball flag, unused in Part 1)
+.equ FLAG_P1_ITEM_SEVII_03, 1175 // beach ITEM_STAR_PIECE (HeartGold's Johto item-ball flag, unused in Part 1)
+.equ FLAG_P1_ITEM_SEVII_04, 1176 // beach ITEM_BIG_PEARL (HeartGold's Johto item-ball flag, unused in Part 1)
+.equ FLAG_P1_ITEM_SEVII_05, 1177 // beach ITEM_PEARL (HeartGold's Johto item-ball flag, unused in Part 1)
+.equ FLAG_P1_ITEM_SEVII_06, 1178 // beach ITEM_ULTRA_BALL (HeartGold's Johto item-ball flag, unused in Part 1)
+.equ FLAG_P1_ITEM_SEVII_07, 1179 // ember ITEM_ULTRA_BALL (HeartGold's Johto item-ball flag, unused in Part 1)
+.equ FLAG_P1_ITEM_SEVII_08, 1180 // ember ITEM_FIRE_STONE (HeartGold's Johto item-ball flag, unused in Part 1)
+.equ FLAG_P1_ITEM_SEVII_09, 1181 // ember ITEM_DIRE_HIT (HeartGold's Johto item-ball flag, unused in Part 1)
+.equ FLAG_P1_ITEM_SEVII_10, 1182 // two ITEM_REVIVE (HeartGold's Johto item-ball flag, unused in Part 1)
+.equ FLAG_P1_ITEM_SEVII_11, 1183 // cape ITEM_PP_MAX (HeartGold's Johto item-ball flag, unused in Part 1)
+.equ FLAG_P1_ITEM_SEVII_12, 1184 // cape ITEM_RARE_CANDY (HeartGold's Johto item-ball flag, unused in Part 1)
+.equ FLAG_P1_ITEM_SEVII_13, 1185 // three ITEM_ZINC (HeartGold's Johto item-ball flag, unused in Part 1)
+.equ FLAG_P1_ITEM_SEVII_14, 1186 // three ITEM_PP_UP (HeartGold's Johto item-ball flag, unused in Part 1)
+.equ FLAG_P1_ITEM_SEVII_15, 1187 // bond ITEM_MAX_REPEL (HeartGold's Johto item-ball flag, unused in Part 1)
+.equ FLAG_P1_ITEM_SEVII_16, 1188 // bond ITEM_PEARL (HeartGold's Johto item-ball flag, unused in Part 1)
+.equ FLAG_P1_ITEM_SEVII_17, 1189 // bond ITEM_STARDUST (HeartGold's Johto item-ball flag, unused in Part 1)
+.equ FLAG_P1_ITEM_SEVII_18, 1190 // berry ITEM_MAX_ETHER (HeartGold's Johto item-ball flag, unused in Part 1)
+.equ FLAG_P1_ITEM_SEVII_19, 1191 // berry ITEM_FULL_HEAL (HeartGold's Johto item-ball flag, unused in Part 1)
+.equ FLAG_P1_ITEM_SEVII_20, 1192 // berry ITEM_MAX_ELIXIR (HeartGold's Johto item-ball flag, unused in Part 1)
+// 2692-2719 are all used now; still free: 2094-2103 and 2370-2399 (trainer-flag gaps, see src/chapter.c), and
+// HeartGold Johto item-ball flags (1193-1195, 1198, 1201-1203, 1212-1221, ...) for Part 1 items
 .equ FLAG_P1_TRADE_MR_MIME, 2701
 .equ FLAG_P1_TRADE_JYNX, 2702
 .equ FLAG_P1_TRADE_NIDORAN, 2703
@@ -2016,6 +2048,15 @@
 .equ FLAG_P1_TRADE_SEEL, 2709
 .equ FLAG_P1_GOT_TM70, 2710
 .equ FLAG_P1_GOT_ITEMFINDER, 2711
+// FireRed's remaining gifts (scripts/hack/gen_gifts.py)
+.equ FLAG_P1_GOT_OLD_ROD, 2712
+.equ FLAG_P1_GOT_OLD_AMBER, 2713
+.equ FLAG_P1_GOT_EEVEE, 2714
+.equ FLAG_P1_GOT_TM16, 2715
+.equ FLAG_P1_GOT_TM20, 2716
+.equ FLAG_P1_GOT_TM33, 2717
+.equ FLAG_P1_GOT_EVERSTONE, 2718
+.equ FLAG_P1_BOUGHT_MAGIKARP, 2719
 .equ FLAG_UNK_A2C, 2604
 .equ FLAG_UNK_A2D, 2605
 .equ FLAG_UNK_A2E, 2606

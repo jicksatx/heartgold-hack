@@ -33,6 +33,7 @@ scrdef scr_seq_P1_T04_009 // Gym door (test build)
 scrdef scr_seq_P1_T04_010 // Rt. 24 sign
 scrdef scr_seq_P1_T04_011 // Team Rocket burglar (after the S.S. Ticket)
 scrdef scr_seq_P1_T04_012 // on transition
+scrdef scr_seq_P1_T04_013 // Cerulean Cave guard
 scrdef_end
 
 scr_seq_P1_T04_001:
@@ -226,3 +227,7 @@ _stepNorth:
 _backWest:
 	step 14, 1
 	step_end
+
+scr_seq_P1_T04_013: // Cerulean Cave stays closed in Part 1 (its door is parked); HeartGold's rules apply in Part 2
+	simple_npc_msg 15
+	end
