@@ -534,6 +534,7 @@ endif
 
 	@echo "headbutt trees:"
 	cp $(HEADBUTT_NARC) $(HEADBUTT_TARGET)
+	cp $(NPCTRADE_NARC) $(NPCTRADE_TARGET)
 
 	@echo "trainer gfx:"
 	cp $(TRAINER_GFX_NARC) $(TRAINER_GFX_TARGET)

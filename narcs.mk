@@ -822,6 +822,19 @@ $(HEADBUTT_NARC): $(HEADBUTT_DEPENDENCIES)
 NARC_FILES += $(HEADBUTT_NARC)
 
 
+# hack: in-game trades (HeartGold's + Part 1's FireRed ones), data/NpcTrades.c from scripts/hack/gen_npc_trades.py
+NPCTRADE_NARC := $(BUILD_NARC)/npc_trade.narc
+NPCTRADE_TARGET := $(FILESYS)/a/1/1/2
+NPCTRADE_DEPENDENCIES := data/NpcTrades.c
+NPCTRADE_OBJS := $(patsubst data/%.c,build/%.o,$(NPCTRADE_DEPENDENCIES))
+
+$(NPCTRADE_NARC): $(NPCTRADE_DEPENDENCIES)
+	$(CC) $(CFLAGS) -c $(NPCTRADE_DEPENDENCIES) -o $(NPCTRADE_OBJS)
+	$(O2NARC) $(NPCTRADE_OBJS) $@ -n
+
+NARC_FILES += $(NPCTRADE_NARC)
+
+
 OVERWORLD_DATA_NARC := $(BUILD_NARC)/overworld_properties.narc
 OVERWORLD_DATA_TARGET := $(FILESYS)/a/1/4/1
 OVERWORLD_DATA_DEPENDENCIES := data/FollowerProperties.c

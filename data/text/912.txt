@@ -26,3 +26,18 @@ Bzzt! Whirr... Ka-chunk!\rYou back already? No need!\nYour fossil is back to lif
 {STRVAR_1 3, 0, 0} received Kabuto\nfrom the doctor.\r
 {STRVAR_1 3, 0, 0} received Aerodactyl\nfrom the doctor.\r
 You have no room for Pokémon!\nYou come back with room, yes?
+I’m looking for the Pokémon\n{STRVAR_1 1, 0, 0}!\rWanna trade one for my\n{STRVAR_1 1, 1, 0}? {YESNO 0}
+Hey, thanks!
+Awww!\nOh, well...
+What?\nThat’s no {STRVAR_1 1, 0, 0}!
+Isn’t my old {STRVAR_1 1, 1, 0} great?
+Hello, there! Do you happen to\nhave a {STRVAR_1 1, 0, 0}?\rWould you agree to a trade for\nmy {STRVAR_1 1, 1, 0}? {YESNO 0}
+Thanks!
+Well, if you don’t want to...
+Hmmm?\nThis isn’t a {STRVAR_1 1, 0, 0}.\rThink of me if you get one.
+The {STRVAR_1 1, 1, 0} that I traded you,\nhas it grown stronger?
+Hi!\nDo you have a {STRVAR_1 1, 0, 0}?\rWant to trade it for my\n{STRVAR_1 1, 1, 0}? {YESNO 0}
+Thanks, you’re a pal!
+That’s too bad.
+...This is no {STRVAR_1 1, 0, 0}.\rIf you get one, trade it with me.
+How is my old {STRVAR_1 1, 1, 0}?\nMy {STRVAR_1 1, 0, 0} is doing great!

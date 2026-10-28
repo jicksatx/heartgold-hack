@@ -19,6 +19,26 @@ if len(sys.argv) > 1:
 
 P = "{STRVAR_1 3, 0, 0}"  # the player's name (buffer_players_name 0)
 R, N = "\\r", ""
+S1, S2, NUM = "{STRVAR_1 1, 0, 0}", "{STRVAR_1 1, 1, 0}", "{STRVAR_1 52, 1, 0}"
+# FireRed's in-game trade lines (data/text/ingame_trade.inc), 3 sets of 5: ask (yes/no), thanks, declined, wrong
+# Pokemon, afterwards.  slot 0 = the Pokemon asked for, slot 1 = the one offered (scr_seq_01053 / 01038)
+TRADE_LINES = [
+    ("T", "I’m looking for the Pokémon\\n" + S1 + "!\\rWanna trade one for my\\n" + S2 + "? {YESNO 0}"),
+    ("T", "Hey, thanks!"),
+    ("T", "Awww!\\nOh, well..."),
+    ("T", "What?\\nThat’s no " + S1 + "!"),
+    ("T", "Isn’t my old " + S2 + " great?"),
+    ("T", "Hello, there! Do you happen to\\nhave a " + S1 + "?\\rWould you agree to a trade for\\nmy " + S2 + "? {YESNO 0}"),
+    ("T", "Thanks!"),
+    ("T", "Well, if you don’t want to..."),
+    ("T", "Hmmm?\\nThis isn’t a " + S1 + ".\\rThink of me if you get one."),
+    ("T", "The " + S2 + " that I traded you,\\nhas it grown stronger?"),
+    ("T", "Hi!\\nDo you have a " + S1 + "?\\rWant to trade it for my\\n" + S2 + "? {YESNO 0}"),
+    ("T", "Thanks, you’re a pal!"),
+    ("T", "That’s too bad."),
+    ("T", "...This is no " + S1 + ".\\rIf you get one, trade it with me."),
+    ("T", "How is my old " + S2 + "?\\nMy " + S1 + " is doing great!"),
+]
 
 ARCHIVES = {
     865: [  # Route 3
@@ -496,7 +516,7 @@ ARCHIVES = {
         ("T", P + " received Kabuto\\nfrom the doctor." + R),
         ("T", P + " received Aerodactyl\\nfrom the doctor." + R),
         ("T", "You have no room for Pokémon!\\nYou come back with room, yes?"),
-    ],
+    ] + TRADE_LINES,  # 28-42: the Lab's three trades
     913: [  # Pokemon Mansion (HeartGold's Burned Tower)
         ("L", "PokemonMansion_1F_Text_NewMonDiscoveredInGuyanaJungle", N),
         ("L", "PokemonMansion_1F_Text_ChristenedDiscoveredMonMew", N),
@@ -559,6 +579,24 @@ ARCHIVES = {
         ("L", "PokemonLeague_ChampionsRoom_Text_OakImDisappointedRival", R),
         ("L", "PokemonLeague_ChampionsRoom_Text_OakPlayerComeWithMe", R),
         ("L", "PokemonLeague_HallOfFame_Text_OakCongratulations", R),
+    ],
+    919: TRADE_LINES + [  # Kanto houses and gates with FireRed's trades and Professor Oak's Aides (scr_seq_01053)
+        ("T", "Hi! Remember me?\\nI’m one of Professor Oak’s Aides.\\rIf your Pokédex has complete data\\non ten species, I’m supposed to\\fgive you a reward.\\rProfessor Oak entrusted me with\\nTM70 for you.\\rSo, " + P + ", let me ask you.\\rHave you gathered data on at least\\nten kinds of Pokémon?" + R),
+        ("T", "Great! You have caught or owned\\n" + NUM + " kinds of Pokémon!\\rCongratulations!\\nHere you go!" + R),
+        ("T", "TM70 contains Flash.\\rFlash lights up even the darkest\\nof caves and dungeons."),
+        ("T", "Let’s see...\\nUh-oh! You have caught only\\f" + NUM + " kinds of Pokémon!\\rYou need ten kinds\\nif you want TM70."),
+        ("T", "Hi! Remember me?\\nI’m one of Professor Oak’s Aides.\\rIf your Pokédex has complete data\\non 30 species, I’m supposed to\\fgive you a reward.\\rProfessor Oak entrusted me with the\\nDowsing Machine for you.\\rSo, " + P + ", let me ask you.\\rHave you gathered data on at least\\n30 kinds of Pokémon?" + R),
+        ("T", "There are items on the ground that\\nmay be hidden from view.\\rUse the Dowsing Machine to detect\\nany hidden items close to you."),
+        ("T", "Let’s see...\\nUh-oh! You have caught only\\f" + NUM + " kinds of Pokémon!\\rYou need 30 kinds if you\\nwant the Dowsing Machine."),
+        ("L", "Route2_House_Text_FaintedMonsCanUseFieldMoves", N),
+        ("L", "Route2_EastBuilding_Text_CanGetThroughRockTunnel", N),
+        ("L", "CeruleanCity_House3_Text_PleaseTradeWithMyHusband", N),
+        ("L", "Route11_EastEntrance_1F_Text_RockTunnelToReachLavender", N),
+        ("L", "Route11_EastEntrance_2F_Text_BigMonAsleepOnRoad", N),
+        ("L", "Route18_EastEntrance_1F_Text_CyclingRoadAllUphillFromHere", N),
+        ("L", "Route18_EastEntrance_1F_Text_NeedBicycleForCyclingRoad", R),
+        ("L", "Route18_EastEntrance_2F_Text_PalletTownInWest", N),
+        ("L", "Route11_EastEntrance_2F_Text_WhatABreathtakingView", N),
     ],
     901: [  # Underground Path (Route 5-6 tunnel, also standing in for the Route 7-8 one)
         ("T", P + " came up the stairs on the\\nother side of Saffron City." + R),

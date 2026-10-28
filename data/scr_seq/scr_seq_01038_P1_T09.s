@@ -44,6 +44,9 @@ scrdef scr_seq_P1_T09_017 // Lab: Eevee researcher
 scrdef scr_seq_P1_T09_018 // Lab: e-mail
 scrdef scr_seq_P1_T09_019 // Lab: amber pipe
 scrdef scr_seq_P1_T09_020 // Lab: the fossil doctor
+scrdef scr_seq_P1_T09_021 // Lab: Electrode trade
+scrdef scr_seq_P1_T09_022 // Lab: Tangela trade
+scrdef scr_seq_P1_T09_023 // Lab: Seel trade
 scrdef_end
 
 scr_seq_P1_T09_001:
@@ -250,3 +253,166 @@ _labDone:
 	closemsg
 	releaseall
 	end
+
+scr_seq_P1_T09_021:
+	play_se SEQ_SE_DP_SELECT
+	lockall
+	faceplayer
+	load_npc_trade 32
+	get_offered_species VAR_SPECIAL_x8006
+	npc_trade_get_req_species VAR_SPECIAL_x8007
+	npc_trade_end
+	buffer_species_name 0, VAR_SPECIAL_x8007, 0, 0
+	buffer_species_name 1, VAR_SPECIAL_x8006, 0, 0
+	goto_if_set FLAG_P1_TRADE_ELECTRODE, _tradeAfterLab1
+	npc_msg 33
+	touchscreen_menu_hide
+	getmenuchoice VAR_SPECIAL_RESULT
+	touchscreen_menu_show
+	compare VAR_SPECIAL_RESULT, 1
+	goto_if_eq _tradeDeclineLab1
+	closemsg
+	fade_screen 6, 1, 0, 0
+	wait_fade
+	scrcmd_566
+	get_party_selection VAR_SPECIAL_RESULT
+	restore_overworld
+	fade_screen 6, 1, 1, 0
+	wait_fade
+	compare VAR_SPECIAL_RESULT, 255
+	goto_if_eq _tradeDeclineLab1
+	copyvar VAR_SPECIAL_x8004, VAR_SPECIAL_RESULT
+	get_partymon_species VAR_SPECIAL_x8004, VAR_SPECIAL_x8005
+	compare_var_to_var VAR_SPECIAL_x8005, VAR_SPECIAL_x8007
+	goto_if_ne _tradeWrongLab1
+	load_npc_trade 32
+	npc_trade_exec VAR_SPECIAL_x8004
+	npc_trade_end
+	setflag FLAG_P1_TRADE_ELECTRODE
+	npc_msg 34
+	goto _tradeDoneLab1
+
+_tradeWrongLab1:
+	npc_msg 36
+	goto _tradeDoneLab1
+
+_tradeDeclineLab1:
+	npc_msg 35
+	goto _tradeDoneLab1
+
+_tradeAfterLab1:
+	npc_msg 37
+_tradeDoneLab1:
+	wait_button
+	closemsg
+	releaseall
+	end
+
+scr_seq_P1_T09_022:
+	play_se SEQ_SE_DP_SELECT
+	lockall
+	faceplayer
+	load_npc_trade 33
+	get_offered_species VAR_SPECIAL_x8006
+	npc_trade_get_req_species VAR_SPECIAL_x8007
+	npc_trade_end
+	buffer_species_name 0, VAR_SPECIAL_x8007, 0, 0
+	buffer_species_name 1, VAR_SPECIAL_x8006, 0, 0
+	goto_if_set FLAG_P1_TRADE_TANGELA, _tradeAfterLab2
+	npc_msg 38
+	touchscreen_menu_hide
+	getmenuchoice VAR_SPECIAL_RESULT
+	touchscreen_menu_show
+	compare VAR_SPECIAL_RESULT, 1
+	goto_if_eq _tradeDeclineLab2
+	closemsg
+	fade_screen 6, 1, 0, 0
+	wait_fade
+	scrcmd_566
+	get_party_selection VAR_SPECIAL_RESULT
+	restore_overworld
+	fade_screen 6, 1, 1, 0
+	wait_fade
+	compare VAR_SPECIAL_RESULT, 255
+	goto_if_eq _tradeDeclineLab2
+	copyvar VAR_SPECIAL_x8004, VAR_SPECIAL_RESULT
+	get_partymon_species VAR_SPECIAL_x8004, VAR_SPECIAL_x8005
+	compare_var_to_var VAR_SPECIAL_x8005, VAR_SPECIAL_x8007
+	goto_if_ne _tradeWrongLab2
+	load_npc_trade 33
+	npc_trade_exec VAR_SPECIAL_x8004
+	npc_trade_end
+	setflag FLAG_P1_TRADE_TANGELA
+	npc_msg 39
+	goto _tradeDoneLab2
+
+_tradeWrongLab2:
+	npc_msg 41
+	goto _tradeDoneLab2
+
+_tradeDeclineLab2:
+	npc_msg 40
+	goto _tradeDoneLab2
+
+_tradeAfterLab2:
+	npc_msg 42
+_tradeDoneLab2:
+	wait_button
+	closemsg
+	releaseall
+	end
+
+scr_seq_P1_T09_023:
+	play_se SEQ_SE_DP_SELECT
+	lockall
+	faceplayer
+	load_npc_trade 34
+	get_offered_species VAR_SPECIAL_x8006
+	npc_trade_get_req_species VAR_SPECIAL_x8007
+	npc_trade_end
+	buffer_species_name 0, VAR_SPECIAL_x8007, 0, 0
+	buffer_species_name 1, VAR_SPECIAL_x8006, 0, 0
+	goto_if_set FLAG_P1_TRADE_SEEL, _tradeAfterLab3
+	npc_msg 28
+	touchscreen_menu_hide
+	getmenuchoice VAR_SPECIAL_RESULT
+	touchscreen_menu_show
+	compare VAR_SPECIAL_RESULT, 1
+	goto_if_eq _tradeDeclineLab3
+	closemsg
+	fade_screen 6, 1, 0, 0
+	wait_fade
+	scrcmd_566
+	get_party_selection VAR_SPECIAL_RESULT
+	restore_overworld
+	fade_screen 6, 1, 1, 0
+	wait_fade
+	compare VAR_SPECIAL_RESULT, 255
+	goto_if_eq _tradeDeclineLab3
+	copyvar VAR_SPECIAL_x8004, VAR_SPECIAL_RESULT
+	get_partymon_species VAR_SPECIAL_x8004, VAR_SPECIAL_x8005
+	compare_var_to_var VAR_SPECIAL_x8005, VAR_SPECIAL_x8007
+	goto_if_ne _tradeWrongLab3
+	load_npc_trade 34
+	npc_trade_exec VAR_SPECIAL_x8004
+	npc_trade_end
+	setflag FLAG_P1_TRADE_SEEL
+	npc_msg 29
+	goto _tradeDoneLab3
+
+_tradeWrongLab3:
+	npc_msg 31
+	goto _tradeDoneLab3
+
+_tradeDeclineLab3:
+	npc_msg 30
+	goto _tradeDoneLab3
+
+_tradeAfterLab3:
+	npc_msg 32
+_tradeDoneLab3:
+	wait_button
+	closemsg
+	releaseall
+	end
+

@@ -146,6 +146,13 @@ static const struct Part1Map sPart1Maps[] = {
     { 124, 607, 139, 399, 3 },    // Victory Road 1F (HeartGold's scripts)
     { 178, 608, 109, 370, 3 },    // Victory Road 2F (HeartGold's scripts: landing from 3F's holes)
     { 179, 609, 110, 371, 128 },  // Victory Road 3F (HeartGold's scripts: its holes; Silver's battle removed)
+    { 417, 610, 1053, 970, 919 }, // Route 2 house (Mr. Mime trade)
+    { 418, 611, 1053, 970, 919 }, // Route 2 gatehouse (Oak's Aide: TM70 Flash)
+    { 431, 612, 1053, 970, 919 }, // Cerulean west house (Jynx trade)
+    { 469, 613, 1053, 970, 919 }, // Underground Path, Route 5 gate (Nidoran trade)
+    { 364, 614, 1053, 970, 919 }, // Vermilion south house (Farfetch'd trade)
+    { 425, 615, 1053, 970, 919 }, // Route 11-12 gate (Nidorina trade, Oak's Aide: Dowsing Machine)
+    { 423, 616, 1053, 1054, 919 }, // Route 18 gate (Lickitung trade; HeartGold's Cycling Road check)
 };
 
 #define MAP_HEADERS        ((const u8 *)0x020F6BE0) // sMapHeaders
