@@ -185,6 +185,40 @@ static const struct Part1Map sPart1Maps[] = {
     { 375, 644, 1059, 970, 921 }, // Celadon Dept. Store roof (the thirsty girl's TMs, vending machines)
     { 466, 645, 1059, 589, 921 }, // Route 10 Pokemon Center (Oak's Aide: Everstone)
     { 511, 646, 1059, 589, 921 }, // Route 3 Pokemon Center (the Magikarp salesman)
+    // FireRed's people in the Kanto interiors that kept HeartGold's (Build 31, scratch build32_interiors.py)
+    { 503, 647, 1060, 970, 922 }, // PalletTown_PlayersHouse_1F (HeartGold map 503)
+    { 501, 648, 1060, 589, 922 }, // ViridianCity_PokemonCenter_1F (HeartGold map 501)
+    { 497, 649, 1060, 970, 922 }, // ViridianCity_House (HeartGold map 497)
+    { 498, 650, 1060, 970, 922 }, // ViridianCity_School (HeartGold map 498)
+    { 475, 651, 1060, 589, 922 }, // PewterCity_PokemonCenter_1F (HeartGold map 475)
+    { 474, 652, 1060, 970, 922 }, // PewterCity_Mart (HeartGold map 474)
+    { 472, 653, 1060, 970, 922 }, // PewterCity_House1 (HeartGold map 472)
+    { 477, 654, 1060, 970, 922 }, // PewterCity_House2 (HeartGold map 477)
+    { 428, 655, 1060, 589, 922 }, // CeruleanCity_PokemonCenter_1F (HeartGold map 428)
+    { 426, 656, 1060, 970, 922 }, // CeruleanCity_Mart (HeartGold map 426)
+    { 429, 657, 1060, 970, 922 }, // CeruleanCity_House1 (HeartGold map 429)
+    { 430, 658, 1060, 970, 922 }, // CeruleanCity_House2 (HeartGold map 430)
+    { 358, 659, 1060, 589, 922 }, // VermilionCity_PokemonCenter_1F (HeartGold map 358)
+    { 360, 660, 1060, 970, 922 }, // VermilionCity_Mart (HeartGold map 360)
+    { 363, 661, 1060, 970, 922 }, // VermilionCity_House3 (HeartGold map 363)
+    { 434, 662, 1060, 589, 922 }, // LavenderTown_PokemonCenter_1F (HeartGold map 434)
+    { 433, 663, 1060, 970, 922 }, // LavenderTown_Mart (HeartGold map 433)
+    { 436, 664, 1060, 970, 922 }, // LavenderTown_House1 (HeartGold map 436)
+    { 393, 665, 1060, 589, 922 }, // CeladonCity_PokemonCenter_1F (HeartGold map 393)
+    { 370, 666, 1060, 970, 922 }, // CeladonCity_DepartmentStore_1F (HeartGold map 370)
+    { 371, 667, 1060, 970, 922 }, // CeladonCity_DepartmentStore_2F (HeartGold map 371)
+    { 372, 668, 1060, 970, 922 }, // CeladonCity_DepartmentStore_3F (HeartGold map 372)
+    { 373, 669, 1060, 970, 922 }, // CeladonCity_DepartmentStore_4F (HeartGold map 373)
+    { 374, 670, 1060, 970, 922 }, // CeladonCity_DepartmentStore_5F (HeartGold map 374)
+    { 482, 671, 1060, 589, 922 }, // FuchsiaCity_PokemonCenter_1F (HeartGold map 482)
+    { 478, 672, 1060, 970, 922 }, // FuchsiaCity_Mart (HeartGold map 478)
+    { 407, 673, 1060, 589, 922 }, // SaffronCity_PokemonCenter_1F (HeartGold map 407)
+    { 409, 674, 1060, 970, 922 }, // SaffronCity_Mart (HeartGold map 409)
+    { 404, 675, 1060, 970, 922 }, // SaffronCity_CopycatsHouse_1F (HeartGold map 404)
+    { 405, 676, 1060, 970, 922 }, // SaffronCity_CopycatsHouse_2F (HeartGold map 405)
+    { 419, 677, 1060, 970, 922 }, // Route2_ViridianForest_SouthEntrance (HeartGold map 419)
+    { 420, 678, 1060, 970, 922 }, // Route2_ViridianForest_NorthEntrance (HeartGold map 420)
+    { 421, 679, 1060, 970, 922 }, // Route16_NorthEntrance_1F (HeartGold map 421)
 };
 
 #define MAP_HEADERS        ((const u8 *)0x020F6BE0) // sMapHeaders
@@ -234,6 +268,57 @@ u16 LONG_CALL Chapter_MapHeader_GetScriptHeaderBank(u32 mapId)
 u16 LONG_CALL Chapter_MapHeader_GetEventsBank(u32 mapId)
 {
     return Part1Map_GetBank(mapId, PART1_EVENTS, 16);
+}
+
+#define FontID_String_GetWidth ((u32 (*)(u32, void *, u32))(0x02002F30 | 1))
+#define MapHeader_GetMapSec    ((u32 (*)(u32))(0x0203B36C | 1))
+
+// Sevii Islands place names, appended to the place-name archive (data/text/279.txt lines 235+)
+enum {
+    PLACE_ONE_ISLAND = 235,
+    PLACE_KINDLE_ROAD,
+    PLACE_MT_EMBER,
+    PLACE_TWO_ISLAND,
+    PLACE_CAPE_BRINK,
+    PLACE_THREE_ISLAND,
+    PLACE_BOND_BRIDGE,
+    PLACE_BERRY_FOREST,
+};
+
+static const u16 sSeviiPlaceNames[][2] = {
+    { 75, PLACE_ONE_ISLAND },    // Cianwood City
+    { 279, PLACE_KINDLE_ROAD },  // Cliff Edge Gate
+    { 151, PLACE_KINDLE_ROAD },  // Route 47
+    { 122, PLACE_MT_EMBER },     // Mt. Silver 1F
+    { 463, PLACE_MT_EMBER },     // Mt. Silver 2F
+    { 465, PLACE_MT_EMBER },     // Mt. Silver summit
+    { 67, PLACE_TWO_ISLAND },    // Cherrygrove City
+    { 34, PLACE_CAPE_BRINK },    // Route 30
+    { 74, PLACE_THREE_ISLAND },  // Azalea Town
+    { 37, PLACE_BOND_BRIDGE },   // Route 33
+    { 117, PLACE_BERRY_FOREST }, // Ilex Forest
+};
+
+/**
+ *  @brief replaces MsgData_ReadMsgIntoStringAndGetWidth (0x02068F84), which reads a place name from the place-name
+ *         archive for the map-name pop-up and the Pokegear map.  in Part 1, on a Sevii stand-in map, its Johto name
+ *         is swapped for the Sevii one.  (met locations still record the stand-in's map section)
+ */
+u32 LONG_CALL Chapter_ReadPlaceNameAndGetWidth(void *msgData, u32 mapsec, void *dest)
+{
+    if (Chapter_Get() == CHAPTER_RED && gFieldSysPtr != NULL && gFieldSysPtr->location != NULL) {
+        u32 mapId = gFieldSysPtr->location->mapId;
+        for (u32 i = 0; i < NELEMS(sSeviiPlaceNames); i++) {
+            if (sSeviiPlaceNames[i][0] == mapId) {
+                if (mapsec == MapHeader_GetMapSec(mapId)) {
+                    mapsec = sSeviiPlaceNames[i][1];
+                }
+                break;
+            }
+        }
+    }
+    ReadMsgDataIntoString(msgData, mapsec, dest);
+    return FontID_String_GetWidth(0, dest, 0);
 }
 
 #define TILE_BEHAVIOR_FLAGS ((const u8 *)0x020FCA74) // sMetatileBehaviorFlags

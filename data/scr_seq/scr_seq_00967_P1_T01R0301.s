@@ -248,14 +248,22 @@ _afterBattle:
 	buffer_players_name 0
 	npc_msg 16
 	closemsg
-	fade_screen 6, 1, 0, 0
-	wait_fade
+	// FireRed: Blue walks out of the lab (down column 9, or column 5 if Red stands in column 9)
+	get_player_coords VAR_TEMP_x4002, VAR_TEMP_x4003
+	compare VAR_TEMP_x4002, 9
+	goto_if_eq _blueOutWest
+	apply_movement OBJ_BLUE, _blueOutEast
+	goto _blueOut
+
+_blueOutWest:
+	apply_movement OBJ_BLUE, _blueOutWestSteps
+_blueOut:
+	wait_movement
+	play_se SEQ_SE_DP_KAIDAN2
 	setflag FLAG_P1_HIDE_LAB_BLUE
 	hide_person OBJ_BLUE
 	callstd 2071 // back to the map music
 	setvar VAR_P1_STORY, 4
-	fade_screen 6, 1, 1, 0
-	wait_fade
 	releaseall
 	end
 
@@ -283,6 +291,24 @@ _blueWalkIn:
 	.balign 4
 _blueWalkOut:
 	step 13, 3  // walk south
+	step 69, 1  // invisible
+	step_end
+
+	.balign 4
+_blueOutEast:
+	step 15, 3  // walk east
+	step 13, 6  // walk south
+	step 14, 1  // walk west
+	step 13, 1  // onto the door
+	step 69, 1  // invisible
+	step_end
+
+	.balign 4
+_blueOutWestSteps:
+	step 14, 1  // walk west
+	step 13, 6  // walk south
+	step 15, 3  // walk east
+	step 13, 1  // onto the door
 	step 69, 1  // invisible
 	step_end
 

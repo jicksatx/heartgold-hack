@@ -96,12 +96,10 @@ _afterBattle:
 	setvar VAR_P1_SILPH, 1
 	npc_msg 5
 	closemsg
-	fade_screen 6, 1, 0, 0
-	wait_fade
+	apply_movement OBJ_BLUE, _blueLeave
+	wait_movement
 	hide_person OBJ_BLUE
 	setflag FLAG_P1_HIDE_SILPH_BLUE
-	fade_screen 6, 1, 1, 0
-	wait_fade
 	callstd 2071 // back to the map music
 	releaseall
 	end
@@ -200,6 +198,13 @@ _presidentWaits:
 scr_seq_P1_SILPH_009:
 	simple_npc_msg 12
 	end
+
+	.balign 4
+_blueLeave: // along the corridor to the stairs down
+	step 15, 6  // walk east
+	step 12, 1  // walk north
+	step 69, 1  // invisible
+	step_end
 
 	.balign 4
 _blueNotice:

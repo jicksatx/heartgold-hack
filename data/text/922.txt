@@ -1,0 +1,77 @@
+Mom: ...Right.\nAll boys leave home someday.\fIt said so on TV.\rOh, yes. Professor Oak, next door, was\nlooking for you.
+Mom: {STRVAR_1 3, 0, 0}!\nYou should take a quick rest.\r
+Mom: Oh, good! You and your\nPokémon are looking great.\fTake care now!
+There’s a movie on TV.\nFour boys are walking on railroad\ftracks.\r...I better go, too.
+Please feel free to use that PC in\nthe corner.\rThe receptionist told me so.\nIt’s so kind of her!
+There’s a Pokémon Center in every\ntown ahead.\rThey charge no money, so don’t\nbe shy about healing Pokémon.
+Pokémon Centers heal your tired,\nhurt, or fainted Pokémon.\rThey make all Pokémon completely\nhealthy.
+Coming up with nicknames is fun,\nbut it’s not so easy to do.\rClever names are nice, but simple\nnames are easier to remember.
+My daddy loves Pokémon, too.
+Okay!\rBe sure to read what’s on the\nblackboard carefully!
+Whew! I’m trying to memorize all my\nnotes.
+What!?\rTeam Rocket is at Mt. Moon?\nHuh?\rI’m on the phone!\nScram!
+Yawn!\rWhen Jigglypuff sings, Pokémon get\ndrowsy...\r...Me, too...\nSnore...
+I really want a Pikachu, so I’m\ntrading my Clefairy for one.
+I’m trading Pokémon with that kid\nthere.\rI had two Pikachu, so I figured\nI might as well trade one.
+A shady old guy sucked me into\nbuying this weird fish Pokémon!\rIt’s totally weak and it cost ¥500!
+Good things can happen if you raise\nPokémon diligently.\rEven the weak ones can surprise\nyou if you don’t give up on them.
+Our Pokémon’s an outsider, so it’s\nfinicky and hard to handle.\rAn outsider is a Pokémon that you\nget in a trade.\rIt grows fast, but it may ignore an\nunskilled Trainer in battle.\rIf only we had some Badges...
+Nidoran, sit!
+Pokémon learn new techniques as\nthey grow.\rBut some moves must be taught to\nthem by people.
+A Pokémon becomes easier to \ncatch if it has a status problem.\rSleep, poison, burn, or paralysis...\nThose are all effective.\rBut catching Pokémon is never\na sure thing!
+Have you heard about Bill?\rEveryone calls him a Pokémaniac!\rI think people are just jealous of\nBill, though.\rWho wouldn’t want to boast about\ntheir Pokémon?
+That Bill!\rI heard that he’ll do whatever it\ntakes to get rare Pokémon.\rHe’s not above doing all sorts\nof things, I’ve heard.
+Bill has lots of Pokémon!\nHe collects rare ones, too!
+Why don’t you go upstairs and try\ntrading Pokémon with your friends?\rYou could get a lot more variety\nby trading.\rThe Pokémon you get in trades grow\nquickly, too.
+Do you know about Rare Candy?\nThey don’t sell it in shops.\rI think it makes Pokémon grow\nvery quickly all of a sudden.
+Repel not only keeps bugs away,\nit also works on weak Pokémon.\rPut your strongest Pokémon at the\nleft of the Pokémon List.\rIf your first Pokémon is strong,\nRepel’s effect is boosted.
+Only skilled Trainers can collect\nPokémon Badges.\rI see you have at least one.\rThose Badges have amazing secrets,\ndid you know?
+Those miserable Rockets!\rLook what they’ve done to my\nhouse!\rThey stole a TM for teaching\nPokémon how to Dig holes!\rI was going to use it on a\nMankey or a Sandshrew...\rThat cost me a bundle, it did!
+Team Rocket must be trying to Dig\ntheir way into no good!
+My Pokémon was poisoned!\nIt fainted while we were walking!
+Even if they are the same level,\nPokémon can have very different\fstats and abilities.\rA Pokémon raised by a Trainer is\nstronger than one in the wild.
+It is true that a higher-level\nPokémon will be more powerful...\rBut, all Pokémon will have weak\npoints against specific types.\rSo, there appears to be no\nuniversally strong Pokémon.
+I think Pokémon can be good or\nbad. It depends on the Trainer.
+There are wicked people who will\nuse Pokémon for criminal acts.\rTeam Rocket traffics in rare\nPokémon, for example.\rThey also abandon Pokémon that\nthey consider unpopular or useless.\rThat’s the sort of horrid people\nthey are, Team Rocket.
+I’m getting my Pidgey to fly a\nletter to Saffron in the north.
+I want to exchange Mail with all\nsorts of people.\rI send my Pidgey to a Union Room\nto exchange Mail for me.
+Team Rocket will do anything for\nthe sake of money!\rThere is no job too dirty, no deed\ntoo heinous, no crime too wicked!
+I saw Cubone’s mother trying to\nescape from Team Rocket.\rShe was killed trying to get away...
+You know how the Cubone species\nwears skulls, right?\rPeople will pay a lot for one.
+I’m searching for items that raise\nthe stats of Pokémon.\rThey’re effective over the course\nof a single battle.\rX Attack, X Defend, X Speed, \nand X Special are what I’m after.\rDo you know where I can get them?
+Did you buy some Revives?\nThey revive any fainted Pokémon!
+Sometimes, a Trainer duo will\nchallenge you with two Pokémon\fat the same time.\rIf that happens, you have to send\nout two Pokémon to battle, too.
+Those horrible Rockets!\nThey deserve no mercy!\rThat poor Cubone’s mother...\rIt was killed trying to escape from\nTeam Rocket.
+A Poké Flute awakens sleeping\nPokémon. You know that.\rIt does so with a sound that only\nthey can hear.
+I rode here from Fuchsia.\rIt’s an uphill ride on Cycling\nRoad, so I’m exhausted.
+If I had a Bike, I would go to\nCycling Road!
+Hello!\nWelcome to Celadon Dept. Store.\rThe board on the right describes\nthe store layout.
+For long outings, you should buy\nRevive.
+Captured Pokémon are registered\nwith an ID No. and the Ot.\rOt stands for “Original Trainer” -\nthe Trainer that caught it first.
+Come on, Haunter!\rI love Haunter!\nI collect them!\rHuh?\rHaunter turned into a different\nPokémon while being traded!
+All right!\rMy buddy’s going to trade me his\nKangaskhan for my Haunter!
+You can identify Pokémon you get\nin trades by their ID Numbers.
+I’m getting a present for my\ngirlfriend.\rI guess a Poké Doll will be it.\nIt’s the popular thing.
+I heard something useful.\rIf a wild Pokémon appears, you can\ndistract it with a Poké Doll.\rYou can run away while the wild\nPokémon is distracted.
+Pokémon stat enhancers can be\nbought only here.\rHP Up increases the base HP of a\nPokémon.\rCalcium raises the base Sp. Atk\nstat of one Pokémon.\rZinc boosts the base Sp. Def stat\nof one Pokémon.\rCarbos enhances the base Speed\nstat.
+I’m here for Pokémon stat\nenhancers.\rProtein increases the base Attack\npower.\rIron increases the base Defense\nstat.
+You can’t become a good Trainer\nwith just one strong Pokémon.\rBut raising many Pokémon evenly\nis no easy task, either.
+There’s a narrow trail west of\nViridian City.\rIt goes to the Pokémon League HQ.\nThe HQ governs all Trainers.
+If you’re working on a Pokédex,\nvisit the Safari Zone.\rAll sorts of rare Pokémon breed\nthere.
+Don’t they have any pennants\npromoting the Safari Zone?\rHow about some paper lanterns?\nAren’t there even any calendars?
+Did you try X Speed?\nIt speeds up a Pokémon in battle.
+Silph Co. is widely known to all.\rIt’s a victim of its own fame - it\nattracted Team Rocket.
+Pokémon growth rates differ from\nspecies to species.
+Sigh...\nWouldn’t this be great?\rIf the Elite Four came and\nstomped Team Rocket?
+Max Repel keeps weaker Pokémon\nfrom appearing.\rMax Repel stays effective longer\nthan Super Repel.
+Revive is costly, but it revives\nfainted Pokémon!
+My daughter likes to mimic people.\nIt’s rather vexing.\rHer mimicry has earned her the\nnickname Copycat around here.
+My daughter is so self-centered.\nShe has but a few friends.
+{STRVAR_1 3, 0, 0}: Hi!\nDo you like Pokémon?\r{STRVAR_1 3, 0, 0}: Uh, no, I just asked you.\r{STRVAR_1 3, 0, 0}: Huh?\nYou’re strange!\rCopycat: Hmm? Quit mimicking?\nBut, that’s my favorite hobby!
+Are you going to Viridian Forest?\nIt’s a natural maze in there.\fBe careful you don’t get lost.
+Rattata may be small, but don’t\nunderestimate its wicked bite.\rHave you caught one already?
+Many Pokémon live only in forests \nand caves.\rYou need to be persistent and look\neverywhere to get different kinds.
+Have you noticed the skinny trees\non the roadside?\rThey can be cut down by a special\nPokémon move, I hear.
+Do you know the evolution-cancel\ntechnique?\rWhen a Pokémon is evolving, you\ncan stop the process.\rIt’s a technique for raising\nPokémon the way they are.
+Cycling Road is a downhill course\nby the sea. It’s a great ride.
+How’d you get in?\nGood effort!

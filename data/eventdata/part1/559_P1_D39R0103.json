@@ -93,22 +93,22 @@
       "y": 0
     },
     {
-      "x": 50,
-      "z": 5,
+      "x": 0,
+      "z": 0,
       "dest_header_id": 239,
       "dest_warp_id": 2,
       "y": 0
     },
     {
-      "x": 43,
-      "z": 22,
+      "x": 0,
+      "z": 0,
       "dest_header_id": 237,
       "dest_warp_id": 3,
       "y": 0
     },
     {
-      "x": 43,
-      "z": 21,
+      "x": 0,
+      "z": 0,
       "dest_header_id": 237,
       "dest_warp_id": 3,
       "y": 0

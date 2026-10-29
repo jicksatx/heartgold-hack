@@ -688,6 +688,7 @@ arm9 Chapter_MapHeader_GetMsgBank 0203B2C0 1
 arm9 Chapter_MapHeader_GetScriptsBank 0203B2D4 1
 arm9 Chapter_MapHeader_GetScriptHeaderBank 0203B2E8 1
 arm9 Chapter_MapHeader_GetEventsBank 0203B358 1
+arm9 Chapter_ReadPlaceNameAndGetWidth 02068F84 1
 arm9 Chapter_CanGenerateWalkingEncounters 0205B994 1
 arm9 Chapter_BufferBattleTrainerClass 0200C344 3
 arm9 Chapter_TrainerClassToMusicCombo 02051868 1
