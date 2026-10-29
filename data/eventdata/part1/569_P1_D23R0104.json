@@ -204,6 +204,40 @@
       "x": 25,
       "z": 7,
       "y": 0
+    },
+    {
+      "id": 12,
+      "graphics_id": 87,
+      "movement_type": 0,
+      "trainer_type": 0,
+      "hidden_flag": 1211,
+      "script": 2173,
+      "initial_dir": 0,
+      "param0": 0,
+      "param1": 0,
+      "param2": 0,
+      "movement_range_x": 0,
+      "movement_range_z": 0,
+      "x": 25,
+      "z": 13,
+      "y": 0
+    },
+    {
+      "id": 13,
+      "graphics_id": 87,
+      "movement_type": 0,
+      "trainer_type": 0,
+      "hidden_flag": 1212,
+      "script": 2174,
+      "initial_dir": 0,
+      "param0": 0,
+      "param1": 0,
+      "param2": 0,
+      "movement_range_x": 0,
+      "movement_range_z": 0,
+      "x": 12,
+      "z": 11,
+      "y": 0
     }
   ],
   "warp_events": [

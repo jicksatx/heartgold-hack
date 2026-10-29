@@ -101,6 +101,136 @@ scrdef scr_seq_0003_072_repels
 scrdef scr_seq_0003_073_autobattle_testing
 scrdef scr_seq_0003_074_move_relearner
 scrdef scr_seq_0003_075_nuzlocke_game_over
+scrdef scr_seq_0003_p1ball_2076
+scrdef scr_seq_0003_p1ball_2077
+scrdef scr_seq_0003_p1ball_2078
+scrdef scr_seq_0003_p1ball_2079
+scrdef scr_seq_0003_p1ball_2080
+scrdef scr_seq_0003_p1ball_2081
+scrdef scr_seq_0003_p1ball_2082
+scrdef scr_seq_0003_p1ball_2083
+scrdef scr_seq_0003_p1ball_2084
+scrdef scr_seq_0003_p1ball_2085
+scrdef scr_seq_0003_p1ball_2086
+scrdef scr_seq_0003_p1ball_2087
+scrdef scr_seq_0003_p1ball_2088
+scrdef scr_seq_0003_p1ball_2089
+scrdef scr_seq_0003_p1ball_2090
+scrdef scr_seq_0003_p1ball_2091
+scrdef scr_seq_0003_p1ball_2092
+scrdef scr_seq_0003_p1ball_2093
+scrdef scr_seq_0003_p1ball_2094
+scrdef scr_seq_0003_p1ball_2095
+scrdef scr_seq_0003_p1ball_2096
+scrdef scr_seq_0003_p1ball_2097
+scrdef scr_seq_0003_p1ball_2098
+scrdef scr_seq_0003_p1ball_2099
+scrdef scr_seq_0003_p1ball_2100
+scrdef scr_seq_0003_p1ball_2101
+scrdef scr_seq_0003_p1ball_2102
+scrdef scr_seq_0003_p1ball_2103
+scrdef scr_seq_0003_p1ball_2104
+scrdef scr_seq_0003_p1ball_2105
+scrdef scr_seq_0003_p1ball_2106
+scrdef scr_seq_0003_p1ball_2107
+scrdef scr_seq_0003_p1ball_2108
+scrdef scr_seq_0003_p1ball_2109
+scrdef scr_seq_0003_p1ball_2110
+scrdef scr_seq_0003_p1ball_2111
+scrdef scr_seq_0003_p1ball_2112
+scrdef scr_seq_0003_p1ball_2113
+scrdef scr_seq_0003_p1ball_2114
+scrdef scr_seq_0003_p1ball_2115
+scrdef scr_seq_0003_p1ball_2116
+scrdef scr_seq_0003_p1ball_2117
+scrdef scr_seq_0003_p1ball_2118
+scrdef scr_seq_0003_p1ball_2119
+scrdef scr_seq_0003_p1ball_2120
+scrdef scr_seq_0003_p1ball_2121
+scrdef scr_seq_0003_p1ball_2122
+scrdef scr_seq_0003_p1ball_2123
+scrdef scr_seq_0003_p1ball_2124
+scrdef scr_seq_0003_p1ball_2125
+scrdef scr_seq_0003_p1ball_2126
+scrdef scr_seq_0003_p1ball_2127
+scrdef scr_seq_0003_p1ball_2128
+scrdef scr_seq_0003_p1ball_2129
+scrdef scr_seq_0003_p1ball_2130
+scrdef scr_seq_0003_p1ball_2131
+scrdef scr_seq_0003_p1ball_2132
+scrdef scr_seq_0003_p1ball_2133
+scrdef scr_seq_0003_p1ball_2134
+scrdef scr_seq_0003_p1ball_2135
+scrdef scr_seq_0003_p1ball_2136
+scrdef scr_seq_0003_p1ball_2137
+scrdef scr_seq_0003_p1ball_2138
+scrdef scr_seq_0003_p1ball_2139
+scrdef scr_seq_0003_p1ball_2140
+scrdef scr_seq_0003_p1ball_2141
+scrdef scr_seq_0003_p1ball_2142
+scrdef scr_seq_0003_p1ball_2143
+scrdef scr_seq_0003_p1ball_2144
+scrdef scr_seq_0003_p1ball_2145
+scrdef scr_seq_0003_p1ball_2146
+scrdef scr_seq_0003_p1ball_2147
+scrdef scr_seq_0003_p1ball_2148
+scrdef scr_seq_0003_p1ball_2149
+scrdef scr_seq_0003_p1ball_2150
+scrdef scr_seq_0003_p1ball_2151
+scrdef scr_seq_0003_p1ball_2152
+scrdef scr_seq_0003_p1ball_2153
+scrdef scr_seq_0003_p1ball_2154
+scrdef scr_seq_0003_p1ball_2155
+scrdef scr_seq_0003_p1ball_2156
+scrdef scr_seq_0003_p1ball_2157
+scrdef scr_seq_0003_p1ball_2158
+scrdef scr_seq_0003_p1ball_2159
+scrdef scr_seq_0003_p1ball_2160
+scrdef scr_seq_0003_p1ball_2161
+scrdef scr_seq_0003_p1ball_2162
+scrdef scr_seq_0003_p1ball_2163
+scrdef scr_seq_0003_p1ball_2164
+scrdef scr_seq_0003_p1ball_2165
+scrdef scr_seq_0003_p1ball_2166
+scrdef scr_seq_0003_p1ball_2167
+scrdef scr_seq_0003_p1ball_2168
+scrdef scr_seq_0003_p1ball_2169
+scrdef scr_seq_0003_p1ball_2170
+scrdef scr_seq_0003_p1ball_2171
+scrdef scr_seq_0003_p1ball_2172
+scrdef scr_seq_0003_p1ball_2173
+scrdef scr_seq_0003_p1ball_2174
+scrdef scr_seq_0003_p1ball_2175
+scrdef scr_seq_0003_p1ball_2176
+scrdef scr_seq_0003_p1ball_2177
+scrdef scr_seq_0003_p1ball_2178
+scrdef scr_seq_0003_p1ball_2179
+scrdef scr_seq_0003_p1ball_2180
+scrdef scr_seq_0003_p1ball_2181
+scrdef scr_seq_0003_p1ball_2182
+scrdef scr_seq_0003_p1ball_2183
+scrdef scr_seq_0003_p1ball_2184
+scrdef scr_seq_0003_p1ball_2185
+scrdef scr_seq_0003_p1ball_2186
+scrdef scr_seq_0003_p1ball_2187
+scrdef scr_seq_0003_p1ball_2188
+scrdef scr_seq_0003_p1ball_2189
+scrdef scr_seq_0003_p1ball_2190
+scrdef scr_seq_0003_p1ball_2191
+scrdef scr_seq_0003_p1ball_2192
+scrdef scr_seq_0003_p1ball_2193
+scrdef scr_seq_0003_p1ball_2194
+scrdef scr_seq_0003_p1ball_2195
+scrdef scr_seq_0003_p1ball_2196
+scrdef scr_seq_0003_p1ball_2197
+scrdef scr_seq_0003_p1ball_2198
+scrdef scr_seq_0003_p1ball_2199
+scrdef scr_seq_0003_p1ball_2200
+scrdef scr_seq_0003_p1ball_2201
+scrdef scr_seq_0003_p1ball_2202
+scrdef scr_seq_0003_p1ball_2203
+scrdef scr_seq_0003_p1ball_2204
+scrdef scr_seq_0003_p1ball_2205
 scrdef_end
 
 scr_seq_0003_002:
@@ -1870,3 +2000,1441 @@ _nuzlockeGameOverLoop:
     npc_msg 129
     wait_button
     goto _nuzlockeGameOverLoop
+
+// ---- Part 1: FireRed's hidden items as item balls (generated, scratch build33_items.py) ----
+
+scr_seq_0003_p1ball_2076: // CeladonCity -> map 55
+    play_se SEQ_SE_DP_SELECT
+    lockall
+    goto_if_no_item_space ITEM_PP_UP, 1, _p1BallFull
+    hide_person VAR_SPECIAL_LAST_TALKED
+    setflag 1057
+    giveitem_no_check ITEM_PP_UP, 1
+    closemsg
+    releaseall
+    end
+
+scr_seq_0003_p1ball_2077: // CeruleanCity -> map 52
+    play_se SEQ_SE_DP_SELECT
+    lockall
+    goto_if_no_item_space ITEM_RARE_CANDY, 1, _p1BallFull
+    hide_person VAR_SPECIAL_LAST_TALKED
+    setflag 1058
+    giveitem_no_check ITEM_RARE_CANDY, 1
+    closemsg
+    releaseall
+    end
+
+scr_seq_0003_p1ball_2078: // FuchsiaCity -> map 56
+    play_se SEQ_SE_DP_SELECT
+    lockall
+    goto_if_no_item_space ITEM_MAX_REVIVE, 1, _p1BallFull
+    hide_person VAR_SPECIAL_LAST_TALKED
+    setflag 1059
+    giveitem_no_check ITEM_MAX_REVIVE, 1
+    closemsg
+    releaseall
+    end
+
+scr_seq_0003_p1ball_2079: // MtEmber_Exterior -> map 122
+    play_se SEQ_SE_DP_SELECT
+    lockall
+    goto_if_no_item_space ITEM_FIRE_STONE, 1, _p1BallFull
+    hide_person VAR_SPECIAL_LAST_TALKED
+    setflag 1060
+    giveitem_no_check ITEM_FIRE_STONE, 1
+    closemsg
+    releaseall
+    end
+
+scr_seq_0003_p1ball_2080: // MtEmber_Exterior -> map 122
+    play_se SEQ_SE_DP_SELECT
+    lockall
+    goto_if_no_item_space ITEM_ULTRA_BALL, 1, _p1BallFull
+    hide_person VAR_SPECIAL_LAST_TALKED
+    setflag 1065
+    giveitem_no_check ITEM_ULTRA_BALL, 1
+    closemsg
+    releaseall
+    end
+
+scr_seq_0003_p1ball_2081: // MtMoon_B1F -> map 107
+    play_se SEQ_SE_DP_SELECT
+    lockall
+    goto_if_no_item_space ITEM_TINY_MUSHROOM, 1, _p1BallFull
+    hide_person VAR_SPECIAL_LAST_TALKED
+    setflag 1066
+    giveitem_no_check ITEM_TINY_MUSHROOM, 1
+    closemsg
+    releaseall
+    end
+
+scr_seq_0003_p1ball_2082: // MtMoon_B1F -> map 107
+    play_se SEQ_SE_DP_SELECT
+    lockall
+    goto_if_no_item_space ITEM_TINY_MUSHROOM, 1, _p1BallFull
+    hide_person VAR_SPECIAL_LAST_TALKED
+    setflag 1067
+    giveitem_no_check ITEM_TINY_MUSHROOM, 1
+    closemsg
+    releaseall
+    end
+
+scr_seq_0003_p1ball_2083: // MtMoon_B1F -> map 107
+    play_se SEQ_SE_DP_SELECT
+    lockall
+    goto_if_no_item_space ITEM_TINY_MUSHROOM, 1, _p1BallFull
+    hide_person VAR_SPECIAL_LAST_TALKED
+    setflag 1068
+    giveitem_no_check ITEM_TINY_MUSHROOM, 1
+    closemsg
+    releaseall
+    end
+
+scr_seq_0003_p1ball_2084: // MtMoon_B1F -> map 107
+    play_se SEQ_SE_DP_SELECT
+    lockall
+    goto_if_no_item_space ITEM_BIG_MUSHROOM, 1, _p1BallFull
+    hide_person VAR_SPECIAL_LAST_TALKED
+    setflag 1069
+    giveitem_no_check ITEM_BIG_MUSHROOM, 1
+    closemsg
+    releaseall
+    end
+
+scr_seq_0003_p1ball_2085: // MtMoon_B1F -> map 107
+    play_se SEQ_SE_DP_SELECT
+    lockall
+    goto_if_no_item_space ITEM_BIG_MUSHROOM, 1, _p1BallFull
+    hide_person VAR_SPECIAL_LAST_TALKED
+    setflag 1070
+    giveitem_no_check ITEM_BIG_MUSHROOM, 1
+    closemsg
+    releaseall
+    end
+
+scr_seq_0003_p1ball_2086: // MtMoon_B1F -> map 107
+    play_se SEQ_SE_DP_SELECT
+    lockall
+    goto_if_no_item_space ITEM_BIG_MUSHROOM, 1, _p1BallFull
+    hide_person VAR_SPECIAL_LAST_TALKED
+    setflag 1071
+    giveitem_no_check ITEM_BIG_MUSHROOM, 1
+    closemsg
+    releaseall
+    end
+
+scr_seq_0003_p1ball_2087: // MtMoon_B2F -> map 107
+    play_se SEQ_SE_DP_SELECT
+    lockall
+    goto_if_no_item_space ITEM_MOON_STONE, 1, _p1BallFull
+    hide_person VAR_SPECIAL_LAST_TALKED
+    setflag 1072
+    giveitem_no_check ITEM_MOON_STONE, 1
+    closemsg
+    releaseall
+    end
+
+scr_seq_0003_p1ball_2088: // MtMoon_B2F -> map 107
+    play_se SEQ_SE_DP_SELECT
+    lockall
+    goto_if_no_item_space ITEM_ETHER, 1, _p1BallFull
+    hide_person VAR_SPECIAL_LAST_TALKED
+    setflag 1075
+    giveitem_no_check ITEM_ETHER, 1
+    closemsg
+    releaseall
+    end
+
+scr_seq_0003_p1ball_2089: // OneIsland_TreasureBeach -> map 75
+    play_se SEQ_SE_DP_SELECT
+    lockall
+    goto_if_no_item_space ITEM_STARDUST, 1, _p1BallFull
+    hide_person VAR_SPECIAL_LAST_TALKED
+    setflag 1076
+    giveitem_no_check ITEM_STARDUST, 1
+    closemsg
+    releaseall
+    end
+
+scr_seq_0003_p1ball_2090: // OneIsland_TreasureBeach -> map 75
+    play_se SEQ_SE_DP_SELECT
+    lockall
+    goto_if_no_item_space ITEM_STARDUST, 1, _p1BallFull
+    hide_person VAR_SPECIAL_LAST_TALKED
+    setflag 1078
+    giveitem_no_check ITEM_STARDUST, 1
+    closemsg
+    releaseall
+    end
+
+scr_seq_0003_p1ball_2091: // OneIsland_TreasureBeach -> map 75
+    play_se SEQ_SE_DP_SELECT
+    lockall
+    goto_if_no_item_space ITEM_PEARL, 1, _p1BallFull
+    hide_person VAR_SPECIAL_LAST_TALKED
+    setflag 1079
+    giveitem_no_check ITEM_PEARL, 1
+    closemsg
+    releaseall
+    end
+
+scr_seq_0003_p1ball_2092: // OneIsland_TreasureBeach -> map 75
+    play_se SEQ_SE_DP_SELECT
+    lockall
+    goto_if_no_item_space ITEM_ULTRA_BALL, 1, _p1BallFull
+    hide_person VAR_SPECIAL_LAST_TALKED
+    setflag 1081
+    giveitem_no_check ITEM_ULTRA_BALL, 1
+    closemsg
+    releaseall
+    end
+
+scr_seq_0003_p1ball_2093: // PewterCity -> map 51
+    play_se SEQ_SE_DP_SELECT
+    lockall
+    goto_if_no_item_space ITEM_POKE_BALL, 1, _p1BallFull
+    hide_person VAR_SPECIAL_LAST_TALKED
+    setflag 1082
+    giveitem_no_check ITEM_POKE_BALL, 1
+    closemsg
+    releaseall
+    end
+
+scr_seq_0003_p1ball_2094: // PokemonMansion_1F -> map 7
+    play_se SEQ_SE_DP_SELECT
+    lockall
+    goto_if_no_item_space ITEM_MOON_STONE, 1, _p1BallFull
+    hide_person VAR_SPECIAL_LAST_TALKED
+    setflag 1083
+    giveitem_no_check ITEM_MOON_STONE, 1
+    closemsg
+    releaseall
+    end
+
+scr_seq_0003_p1ball_2095: // PokemonMansion_3F -> map 217
+    play_se SEQ_SE_DP_SELECT
+    lockall
+    goto_if_no_item_space ITEM_RARE_CANDY, 1, _p1BallFull
+    hide_person VAR_SPECIAL_LAST_TALKED
+    setflag 1087
+    giveitem_no_check ITEM_RARE_CANDY, 1
+    closemsg
+    releaseall
+    end
+
+scr_seq_0003_p1ball_2096: // PokemonMansion_B1F -> map 217
+    play_se SEQ_SE_DP_SELECT
+    lockall
+    goto_if_no_item_space ITEM_ELIXIR, 1, _p1BallFull
+    hide_person VAR_SPECIAL_LAST_TALKED
+    setflag 1090
+    giveitem_no_check ITEM_ELIXIR, 1
+    closemsg
+    releaseall
+    end
+
+scr_seq_0003_p1ball_2097: // PokemonTower_5F -> map 156
+    play_se SEQ_SE_DP_SELECT
+    lockall
+    goto_if_no_item_space ITEM_BIG_MUSHROOM, 1, _p1BallFull
+    hide_person VAR_SPECIAL_LAST_TALKED
+    setflag 1091
+    giveitem_no_check ITEM_BIG_MUSHROOM, 1
+    closemsg
+    releaseall
+    end
+
+scr_seq_0003_p1ball_2098: // PokemonTower_7F -> map 156
+    play_se SEQ_SE_DP_SELECT
+    lockall
+    goto_if_no_item_space ITEM_SOOTHE_BELL, 1, _p1BallFull
+    hide_person VAR_SPECIAL_LAST_TALKED
+    setflag 1092
+    giveitem_no_check ITEM_SOOTHE_BELL, 1
+    closemsg
+    releaseall
+    end
+
+scr_seq_0003_p1ball_2099: // PowerPlant -> map 467
+    play_se SEQ_SE_DP_SELECT
+    lockall
+    goto_if_no_item_space ITEM_MAX_ELIXIR, 1, _p1BallFull
+    hide_person VAR_SPECIAL_LAST_TALKED
+    setflag 1093
+    giveitem_no_check ITEM_MAX_ELIXIR, 1
+    closemsg
+    releaseall
+    end
+
+scr_seq_0003_p1ball_2100: // PowerPlant -> map 467
+    play_se SEQ_SE_DP_SELECT
+    lockall
+    goto_if_no_item_space ITEM_THUNDER_STONE, 1, _p1BallFull
+    hide_person VAR_SPECIAL_LAST_TALKED
+    setflag 1094
+    giveitem_no_check ITEM_THUNDER_STONE, 1
+    closemsg
+    releaseall
+    end
+
+scr_seq_0003_p1ball_2101: // RocketHideout_B1F -> map 247
+    play_se SEQ_SE_DP_SELECT
+    lockall
+    goto_if_no_item_space ITEM_PP_UP, 1, _p1BallFull
+    hide_person VAR_SPECIAL_LAST_TALKED
+    setflag 1095
+    giveitem_no_check ITEM_PP_UP, 1
+    closemsg
+    releaseall
+    end
+
+scr_seq_0003_p1ball_2102: // RocketHideout_B3F -> map 238
+    play_se SEQ_SE_DP_SELECT
+    lockall
+    goto_if_no_item_space ITEM_NUGGET, 1, _p1BallFull
+    hide_person VAR_SPECIAL_LAST_TALKED
+    setflag 1096
+    giveitem_no_check ITEM_NUGGET, 1
+    closemsg
+    releaseall
+    end
+
+scr_seq_0003_p1ball_2103: // RocketHideout_B4F -> map 249
+    play_se SEQ_SE_DP_SELECT
+    lockall
+    goto_if_no_item_space ITEM_NEST_BALL, 1, _p1BallFull
+    hide_person VAR_SPECIAL_LAST_TALKED
+    setflag 1097
+    giveitem_no_check ITEM_NEST_BALL, 1
+    closemsg
+    releaseall
+    end
+
+scr_seq_0003_p1ball_2104: // RocketHideout_B4F -> map 249
+    play_se SEQ_SE_DP_SELECT
+    lockall
+    goto_if_no_item_space ITEM_NET_BALL, 1, _p1BallFull
+    hide_person VAR_SPECIAL_LAST_TALKED
+    setflag 1098
+    giveitem_no_check ITEM_NET_BALL, 1
+    closemsg
+    releaseall
+    end
+
+scr_seq_0003_p1ball_2105: // Route10 -> map 18
+    play_se SEQ_SE_DP_SELECT
+    lockall
+    goto_if_no_item_space ITEM_SUPER_POTION, 1, _p1BallFull
+    hide_person VAR_SPECIAL_LAST_TALKED
+    setflag 1099
+    giveitem_no_check ITEM_SUPER_POTION, 1
+    closemsg
+    releaseall
+    end
+
+scr_seq_0003_p1ball_2106: // Route10 -> map 18
+    play_se SEQ_SE_DP_SELECT
+    lockall
+    goto_if_no_item_space ITEM_MAX_ETHER, 1, _p1BallFull
+    hide_person VAR_SPECIAL_LAST_TALKED
+    setflag 1100
+    giveitem_no_check ITEM_MAX_ETHER, 1
+    closemsg
+    releaseall
+    end
+
+scr_seq_0003_p1ball_2107: // Route10 -> map 18
+    play_se SEQ_SE_DP_SELECT
+    lockall
+    goto_if_no_item_space ITEM_CHERI_BERRY, 1, _p1BallFull
+    hide_person VAR_SPECIAL_LAST_TALKED
+    setflag 1101
+    giveitem_no_check ITEM_CHERI_BERRY, 1
+    closemsg
+    releaseall
+    end
+
+scr_seq_0003_p1ball_2108: // Route10 -> map 18
+    play_se SEQ_SE_DP_SELECT
+    lockall
+    goto_if_no_item_space ITEM_PERSIM_BERRY, 1, _p1BallFull
+    hide_person VAR_SPECIAL_LAST_TALKED
+    setflag 1111
+    giveitem_no_check ITEM_PERSIM_BERRY, 1
+    closemsg
+    releaseall
+    end
+
+scr_seq_0003_p1ball_2109: // Route10 -> map 18
+    play_se SEQ_SE_DP_SELECT
+    lockall
+    goto_if_no_item_space ITEM_NANAB_BERRY, 1, _p1BallFull
+    hide_person VAR_SPECIAL_LAST_TALKED
+    setflag 1112
+    giveitem_no_check ITEM_NANAB_BERRY, 1
+    closemsg
+    releaseall
+    end
+
+scr_seq_0003_p1ball_2110: // Route11 -> map 19
+    play_se SEQ_SE_DP_SELECT
+    lockall
+    goto_if_no_item_space ITEM_ESCAPE_ROPE, 1, _p1BallFull
+    hide_person VAR_SPECIAL_LAST_TALKED
+    setflag 1113
+    giveitem_no_check ITEM_ESCAPE_ROPE, 1
+    closemsg
+    releaseall
+    end
+
+scr_seq_0003_p1ball_2111: // Route12 -> map 20
+    play_se SEQ_SE_DP_SELECT
+    lockall
+    goto_if_no_item_space ITEM_HYPER_POTION, 1, _p1BallFull
+    hide_person VAR_SPECIAL_LAST_TALKED
+    setflag 1114
+    giveitem_no_check ITEM_HYPER_POTION, 1
+    closemsg
+    releaseall
+    end
+
+scr_seq_0003_p1ball_2112: // Route12 -> map 20
+    play_se SEQ_SE_DP_SELECT
+    lockall
+    goto_if_no_item_space ITEM_LEFTOVERS, 1, _p1BallFull
+    hide_person VAR_SPECIAL_LAST_TALKED
+    setflag 1115
+    giveitem_no_check ITEM_LEFTOVERS, 1
+    closemsg
+    releaseall
+    end
+
+scr_seq_0003_p1ball_2113: // Route12 -> map 20
+    play_se SEQ_SE_DP_SELECT
+    lockall
+    goto_if_no_item_space ITEM_RARE_CANDY, 1, _p1BallFull
+    hide_person VAR_SPECIAL_LAST_TALKED
+    setflag 1116
+    giveitem_no_check ITEM_RARE_CANDY, 1
+    closemsg
+    releaseall
+    end
+
+scr_seq_0003_p1ball_2114: // Route13 -> map 21
+    play_se SEQ_SE_DP_SELECT
+    lockall
+    goto_if_no_item_space ITEM_PP_UP, 1, _p1BallFull
+    hide_person VAR_SPECIAL_LAST_TALKED
+    setflag 1117
+    giveitem_no_check ITEM_PP_UP, 1
+    closemsg
+    releaseall
+    end
+
+scr_seq_0003_p1ball_2115: // Route14 -> map 22
+    play_se SEQ_SE_DP_SELECT
+    lockall
+    goto_if_no_item_space ITEM_ZINC, 1, _p1BallFull
+    hide_person VAR_SPECIAL_LAST_TALKED
+    setflag 1118
+    giveitem_no_check ITEM_ZINC, 1
+    closemsg
+    releaseall
+    end
+
+scr_seq_0003_p1ball_2116: // Route14 -> map 22
+    play_se SEQ_SE_DP_SELECT
+    lockall
+    goto_if_no_item_space ITEM_PINAP_BERRY, 1, _p1BallFull
+    hide_person VAR_SPECIAL_LAST_TALKED
+    setflag 1128
+    giveitem_no_check ITEM_PINAP_BERRY, 1
+    closemsg
+    releaseall
+    end
+
+scr_seq_0003_p1ball_2117: // Route16 -> map 24
+    play_se SEQ_SE_DP_SELECT
+    lockall
+    goto_if_no_item_space ITEM_LEFTOVERS, 1, _p1BallFull
+    hide_person VAR_SPECIAL_LAST_TALKED
+    setflag 1129
+    giveitem_no_check ITEM_LEFTOVERS, 1
+    closemsg
+    releaseall
+    end
+
+scr_seq_0003_p1ball_2118: // Route17 -> map 25
+    play_se SEQ_SE_DP_SELECT
+    lockall
+    goto_if_no_item_space ITEM_RARE_CANDY, 1, _p1BallFull
+    hide_person VAR_SPECIAL_LAST_TALKED
+    setflag 1130
+    giveitem_no_check ITEM_RARE_CANDY, 1
+    closemsg
+    releaseall
+    end
+
+scr_seq_0003_p1ball_2119: // Route17 -> map 25
+    play_se SEQ_SE_DP_SELECT
+    lockall
+    goto_if_no_item_space ITEM_FULL_RESTORE, 1, _p1BallFull
+    hide_person VAR_SPECIAL_LAST_TALKED
+    setflag 1131
+    giveitem_no_check ITEM_FULL_RESTORE, 1
+    closemsg
+    releaseall
+    end
+
+scr_seq_0003_p1ball_2120: // Route17 -> map 25
+    play_se SEQ_SE_DP_SELECT
+    lockall
+    goto_if_no_item_space ITEM_PP_UP, 1, _p1BallFull
+    hide_person VAR_SPECIAL_LAST_TALKED
+    setflag 1132
+    giveitem_no_check ITEM_PP_UP, 1
+    closemsg
+    releaseall
+    end
+
+scr_seq_0003_p1ball_2121: // Route17 -> map 25
+    play_se SEQ_SE_DP_SELECT
+    lockall
+    goto_if_no_item_space ITEM_MAX_REVIVE, 1, _p1BallFull
+    hide_person VAR_SPECIAL_LAST_TALKED
+    setflag 1133
+    giveitem_no_check ITEM_MAX_REVIVE, 1
+    closemsg
+    releaseall
+    end
+
+scr_seq_0003_p1ball_2122: // Route17 -> map 25
+    play_se SEQ_SE_DP_SELECT
+    lockall
+    goto_if_no_item_space ITEM_MAX_ELIXIR, 1, _p1BallFull
+    hide_person VAR_SPECIAL_LAST_TALKED
+    setflag 1134
+    giveitem_no_check ITEM_MAX_ELIXIR, 1
+    closemsg
+    releaseall
+    end
+
+scr_seq_0003_p1ball_2123: // Route20 -> map 92
+    play_se SEQ_SE_DP_SELECT
+    lockall
+    goto_if_no_item_space ITEM_STARDUST, 1, _p1BallFull
+    hide_person VAR_SPECIAL_LAST_TALKED
+    setflag 1135
+    giveitem_no_check ITEM_STARDUST, 1
+    closemsg
+    releaseall
+    end
+
+scr_seq_0003_p1ball_2124: // Route21_North -> map 93
+    play_se SEQ_SE_DP_SELECT
+    lockall
+    goto_if_no_item_space ITEM_PEARL, 1, _p1BallFull
+    hide_person VAR_SPECIAL_LAST_TALKED
+    setflag 1136
+    giveitem_no_check ITEM_PEARL, 1
+    closemsg
+    releaseall
+    end
+
+scr_seq_0003_p1ball_2125: // Route23 -> map 124
+    play_se SEQ_SE_DP_SELECT
+    lockall
+    goto_if_no_item_space ITEM_FULL_RESTORE, 1, _p1BallFull
+    hide_person VAR_SPECIAL_LAST_TALKED
+    setflag 1137
+    giveitem_no_check ITEM_FULL_RESTORE, 1
+    closemsg
+    releaseall
+    end
+
+scr_seq_0003_p1ball_2126: // Route23 -> map 124
+    play_se SEQ_SE_DP_SELECT
+    lockall
+    goto_if_no_item_space ITEM_ULTRA_BALL, 1, _p1BallFull
+    hide_person VAR_SPECIAL_LAST_TALKED
+    setflag 1138
+    giveitem_no_check ITEM_ULTRA_BALL, 1
+    closemsg
+    releaseall
+    end
+
+scr_seq_0003_p1ball_2127: // Route23 -> map 124
+    play_se SEQ_SE_DP_SELECT
+    lockall
+    goto_if_no_item_space ITEM_MAX_ETHER, 1, _p1BallFull
+    hide_person VAR_SPECIAL_LAST_TALKED
+    setflag 1139
+    giveitem_no_check ITEM_MAX_ETHER, 1
+    closemsg
+    releaseall
+    end
+
+scr_seq_0003_p1ball_2128: // Route23 -> map 124
+    play_se SEQ_SE_DP_SELECT
+    lockall
+    goto_if_no_item_space ITEM_LUM_BERRY, 1, _p1BallFull
+    hide_person VAR_SPECIAL_LAST_TALKED
+    setflag 1140
+    giveitem_no_check ITEM_LUM_BERRY, 1
+    closemsg
+    releaseall
+    end
+
+scr_seq_0003_p1ball_2129: // Route23 -> map 124
+    play_se SEQ_SE_DP_SELECT
+    lockall
+    goto_if_no_item_space ITEM_SITRUS_BERRY, 1, _p1BallFull
+    hide_person VAR_SPECIAL_LAST_TALKED
+    setflag 1141
+    giveitem_no_check ITEM_SITRUS_BERRY, 1
+    closemsg
+    releaseall
+    end
+
+scr_seq_0003_p1ball_2130: // Route23 -> map 124
+    play_se SEQ_SE_DP_SELECT
+    lockall
+    goto_if_no_item_space ITEM_ASPEAR_BERRY, 1, _p1BallFull
+    hide_person VAR_SPECIAL_LAST_TALKED
+    setflag 1142
+    giveitem_no_check ITEM_ASPEAR_BERRY, 1
+    closemsg
+    releaseall
+    end
+
+scr_seq_0003_p1ball_2131: // Route23 -> map 124
+    play_se SEQ_SE_DP_SELECT
+    lockall
+    goto_if_no_item_space ITEM_LEPPA_BERRY, 1, _p1BallFull
+    hide_person VAR_SPECIAL_LAST_TALKED
+    setflag 1143
+    giveitem_no_check ITEM_LEPPA_BERRY, 1
+    closemsg
+    releaseall
+    end
+
+scr_seq_0003_p1ball_2132: // Route23 -> map 124
+    play_se SEQ_SE_DP_SELECT
+    lockall
+    goto_if_no_item_space ITEM_MAX_ELIXIR, 1, _p1BallFull
+    hide_person VAR_SPECIAL_LAST_TALKED
+    setflag 1144
+    giveitem_no_check ITEM_MAX_ELIXIR, 1
+    closemsg
+    releaseall
+    end
+
+scr_seq_0003_p1ball_2133: // VictoryRoad_1F -> map 124
+    play_se SEQ_SE_DP_SELECT
+    lockall
+    goto_if_no_item_space ITEM_ULTRA_BALL, 1, _p1BallFull
+    hide_person VAR_SPECIAL_LAST_TALKED
+    setflag 1145
+    giveitem_no_check ITEM_ULTRA_BALL, 1
+    closemsg
+    releaseall
+    end
+
+scr_seq_0003_p1ball_2134: // VictoryRoad_1F -> map 124
+    play_se SEQ_SE_DP_SELECT
+    lockall
+    goto_if_no_item_space ITEM_FULL_RESTORE, 1, _p1BallFull
+    hide_person VAR_SPECIAL_LAST_TALKED
+    setflag 1146
+    giveitem_no_check ITEM_FULL_RESTORE, 1
+    closemsg
+    releaseall
+    end
+
+scr_seq_0003_p1ball_2135: // Route24 -> map 28
+    play_se SEQ_SE_DP_SELECT
+    lockall
+    goto_if_no_item_space ITEM_PECHA_BERRY, 1, _p1BallFull
+    hide_person VAR_SPECIAL_LAST_TALKED
+    setflag 1147
+    giveitem_no_check ITEM_PECHA_BERRY, 1
+    closemsg
+    releaseall
+    end
+
+scr_seq_0003_p1ball_2136: // Route25 -> map 29
+    play_se SEQ_SE_DP_SELECT
+    lockall
+    goto_if_no_item_space ITEM_ELIXIR, 1, _p1BallFull
+    hide_person VAR_SPECIAL_LAST_TALKED
+    setflag 1148
+    giveitem_no_check ITEM_ELIXIR, 1
+    closemsg
+    releaseall
+    end
+
+scr_seq_0003_p1ball_2137: // Route25 -> map 29
+    play_se SEQ_SE_DP_SELECT
+    lockall
+    goto_if_no_item_space ITEM_ETHER, 1, _p1BallFull
+    hide_person VAR_SPECIAL_LAST_TALKED
+    setflag 1149
+    giveitem_no_check ITEM_ETHER, 1
+    closemsg
+    releaseall
+    end
+
+scr_seq_0003_p1ball_2138: // Route25 -> map 29
+    play_se SEQ_SE_DP_SELECT
+    lockall
+    goto_if_no_item_space ITEM_ORAN_BERRY, 1, _p1BallFull
+    hide_person VAR_SPECIAL_LAST_TALKED
+    setflag 1150
+    giveitem_no_check ITEM_ORAN_BERRY, 1
+    closemsg
+    releaseall
+    end
+
+scr_seq_0003_p1ball_2139: // Route25 -> map 29
+    play_se SEQ_SE_DP_SELECT
+    lockall
+    goto_if_no_item_space ITEM_BLUK_BERRY, 1, _p1BallFull
+    hide_person VAR_SPECIAL_LAST_TALKED
+    setflag 1151
+    giveitem_no_check ITEM_BLUK_BERRY, 1
+    closemsg
+    releaseall
+    end
+
+scr_seq_0003_p1ball_2140: // Route3 -> map 11
+    play_se SEQ_SE_DP_SELECT
+    lockall
+    goto_if_no_item_space ITEM_ORAN_BERRY, 1, _p1BallFull
+    hide_person VAR_SPECIAL_LAST_TALKED
+    setflag 1152
+    giveitem_no_check ITEM_ORAN_BERRY, 1
+    closemsg
+    releaseall
+    end
+
+scr_seq_0003_p1ball_2141: // Route4 -> map 12
+    play_se SEQ_SE_DP_SELECT
+    lockall
+    goto_if_no_item_space ITEM_GREAT_BALL, 1, _p1BallFull
+    hide_person VAR_SPECIAL_LAST_TALKED
+    setflag 1153
+    giveitem_no_check ITEM_GREAT_BALL, 1
+    closemsg
+    releaseall
+    end
+
+scr_seq_0003_p1ball_2142: // Route4 -> map 12
+    play_se SEQ_SE_DP_SELECT
+    lockall
+    goto_if_no_item_space ITEM_PERSIM_BERRY, 1, _p1BallFull
+    hide_person VAR_SPECIAL_LAST_TALKED
+    setflag 1154
+    giveitem_no_check ITEM_PERSIM_BERRY, 1
+    closemsg
+    releaseall
+    end
+
+scr_seq_0003_p1ball_2143: // Route4 -> map 12
+    play_se SEQ_SE_DP_SELECT
+    lockall
+    goto_if_no_item_space ITEM_RAZZ_BERRY, 1, _p1BallFull
+    hide_person VAR_SPECIAL_LAST_TALKED
+    setflag 1155
+    giveitem_no_check ITEM_RAZZ_BERRY, 1
+    closemsg
+    releaseall
+    end
+
+scr_seq_0003_p1ball_2144: // Route6 -> map 14
+    play_se SEQ_SE_DP_SELECT
+    lockall
+    goto_if_no_item_space ITEM_SITRUS_BERRY, 1, _p1BallFull
+    hide_person VAR_SPECIAL_LAST_TALKED
+    setflag 1156
+    giveitem_no_check ITEM_SITRUS_BERRY, 1
+    closemsg
+    releaseall
+    end
+
+scr_seq_0003_p1ball_2145: // Route6 -> map 14
+    play_se SEQ_SE_DP_SELECT
+    lockall
+    goto_if_no_item_space ITEM_RARE_CANDY, 1, _p1BallFull
+    hide_person VAR_SPECIAL_LAST_TALKED
+    setflag 1157
+    giveitem_no_check ITEM_RARE_CANDY, 1
+    closemsg
+    releaseall
+    end
+
+scr_seq_0003_p1ball_2146: // Route7 -> map 15
+    play_se SEQ_SE_DP_SELECT
+    lockall
+    goto_if_no_item_space ITEM_WEPEAR_BERRY, 1, _p1BallFull
+    hide_person VAR_SPECIAL_LAST_TALKED
+    setflag 1158
+    giveitem_no_check ITEM_WEPEAR_BERRY, 1
+    closemsg
+    releaseall
+    end
+
+scr_seq_0003_p1ball_2147: // Route8 -> map 16
+    play_se SEQ_SE_DP_SELECT
+    lockall
+    goto_if_no_item_space ITEM_RAWST_BERRY, 1, _p1BallFull
+    hide_person VAR_SPECIAL_LAST_TALKED
+    setflag 1159
+    giveitem_no_check ITEM_RAWST_BERRY, 1
+    closemsg
+    releaseall
+    end
+
+scr_seq_0003_p1ball_2148: // Route8 -> map 16
+    play_se SEQ_SE_DP_SELECT
+    lockall
+    goto_if_no_item_space ITEM_LUM_BERRY, 1, _p1BallFull
+    hide_person VAR_SPECIAL_LAST_TALKED
+    setflag 1160
+    giveitem_no_check ITEM_LUM_BERRY, 1
+    closemsg
+    releaseall
+    end
+
+scr_seq_0003_p1ball_2149: // Route8 -> map 16
+    play_se SEQ_SE_DP_SELECT
+    lockall
+    goto_if_no_item_space ITEM_LEPPA_BERRY, 1, _p1BallFull
+    hide_person VAR_SPECIAL_LAST_TALKED
+    setflag 1161
+    giveitem_no_check ITEM_LEPPA_BERRY, 1
+    closemsg
+    releaseall
+    end
+
+scr_seq_0003_p1ball_2150: // Route9 -> map 17
+    play_se SEQ_SE_DP_SELECT
+    lockall
+    goto_if_no_item_space ITEM_ETHER, 1, _p1BallFull
+    hide_person VAR_SPECIAL_LAST_TALKED
+    setflag 1162
+    giveitem_no_check ITEM_ETHER, 1
+    closemsg
+    releaseall
+    end
+
+scr_seq_0003_p1ball_2151: // Route9 -> map 17
+    play_se SEQ_SE_DP_SELECT
+    lockall
+    goto_if_no_item_space ITEM_RARE_CANDY, 1, _p1BallFull
+    hide_person VAR_SPECIAL_LAST_TALKED
+    setflag 1163
+    giveitem_no_check ITEM_RARE_CANDY, 1
+    closemsg
+    releaseall
+    end
+
+scr_seq_0003_p1ball_2152: // Route9 -> map 17
+    play_se SEQ_SE_DP_SELECT
+    lockall
+    goto_if_no_item_space ITEM_CHESTO_BERRY, 1, _p1BallFull
+    hide_person VAR_SPECIAL_LAST_TALKED
+    setflag 1164
+    giveitem_no_check ITEM_CHESTO_BERRY, 1
+    closemsg
+    releaseall
+    end
+
+scr_seq_0003_p1ball_2153: // SSAnne_B1F_Corridor -> map 329
+    play_se SEQ_SE_DP_SELECT
+    lockall
+    goto_if_no_item_space ITEM_HYPER_POTION, 1, _p1BallFull
+    hide_person VAR_SPECIAL_LAST_TALKED
+    setflag 1165
+    giveitem_no_check ITEM_HYPER_POTION, 1
+    closemsg
+    releaseall
+    end
+
+scr_seq_0003_p1ball_2154: // SSAnne_Exterior -> map 307
+    play_se SEQ_SE_DP_SELECT
+    lockall
+    goto_if_no_item_space ITEM_LAVA_COOKIE, 1, _p1BallFull
+    hide_person VAR_SPECIAL_LAST_TALKED
+    setflag 1166
+    giveitem_no_check ITEM_LAVA_COOKIE, 1
+    closemsg
+    releaseall
+    end
+
+scr_seq_0003_p1ball_2155: // SSAnne_Kitchen -> map 310
+    play_se SEQ_SE_DP_SELECT
+    lockall
+    goto_if_no_item_space ITEM_CHESTO_BERRY, 1, _p1BallFull
+    hide_person VAR_SPECIAL_LAST_TALKED
+    setflag 1167
+    giveitem_no_check ITEM_CHESTO_BERRY, 1
+    closemsg
+    releaseall
+    end
+
+scr_seq_0003_p1ball_2156: // SSAnne_Kitchen -> map 310
+    play_se SEQ_SE_DP_SELECT
+    lockall
+    goto_if_no_item_space ITEM_PECHA_BERRY, 1, _p1BallFull
+    hide_person VAR_SPECIAL_LAST_TALKED
+    setflag 1168
+    giveitem_no_check ITEM_PECHA_BERRY, 1
+    closemsg
+    releaseall
+    end
+
+scr_seq_0003_p1ball_2157: // SSAnne_Kitchen -> map 310
+    play_se SEQ_SE_DP_SELECT
+    lockall
+    goto_if_no_item_space ITEM_CHERI_BERRY, 1, _p1BallFull
+    hide_person VAR_SPECIAL_LAST_TALKED
+    setflag 1169
+    giveitem_no_check ITEM_CHERI_BERRY, 1
+    closemsg
+    releaseall
+    end
+
+scr_seq_0003_p1ball_2158: // SafariZone_Center -> map 173
+    play_se SEQ_SE_DP_SELECT
+    lockall
+    goto_if_no_item_space ITEM_LEAF_STONE, 1, _p1BallFull
+    hide_person VAR_SPECIAL_LAST_TALKED
+    setflag 1170
+    giveitem_no_check ITEM_LEAF_STONE, 1
+    closemsg
+    releaseall
+    end
+
+scr_seq_0003_p1ball_2159: // SafariZone_West -> map 173
+    play_se SEQ_SE_DP_SELECT
+    lockall
+    goto_if_no_item_space ITEM_REVIVE, 1, _p1BallFull
+    hide_person VAR_SPECIAL_LAST_TALKED
+    setflag 1171
+    giveitem_no_check ITEM_REVIVE, 1
+    closemsg
+    releaseall
+    end
+
+scr_seq_0003_p1ball_2160: // SaffronCity_CopycatsHouse_2F -> map 405
+    play_se SEQ_SE_DP_SELECT
+    lockall
+    goto_if_no_item_space ITEM_NUGGET, 1, _p1BallFull
+    hide_person VAR_SPECIAL_LAST_TALKED
+    setflag 1193
+    giveitem_no_check ITEM_NUGGET, 1
+    closemsg
+    releaseall
+    end
+
+scr_seq_0003_p1ball_2161: // SeafoamIslands_B3F -> map 454
+    play_se SEQ_SE_DP_SELECT
+    lockall
+    goto_if_no_item_space ITEM_NUGGET, 1, _p1BallFull
+    hide_person VAR_SPECIAL_LAST_TALKED
+    setflag 1194
+    giveitem_no_check ITEM_NUGGET, 1
+    closemsg
+    releaseall
+    end
+
+scr_seq_0003_p1ball_2162: // SeafoamIslands_B4F -> map 456
+    play_se SEQ_SE_DP_SELECT
+    lockall
+    goto_if_no_item_space ITEM_WATER_STONE, 1, _p1BallFull
+    hide_person VAR_SPECIAL_LAST_TALKED
+    setflag 1195
+    giveitem_no_check ITEM_WATER_STONE, 1
+    closemsg
+    releaseall
+    end
+
+scr_seq_0003_p1ball_2163: // SilphCo_10F -> map 189
+    play_se SEQ_SE_DP_SELECT
+    lockall
+    goto_if_no_item_space ITEM_HP_UP, 1, _p1BallFull
+    hide_person VAR_SPECIAL_LAST_TALKED
+    setflag 1198
+    giveitem_no_check ITEM_HP_UP, 1
+    closemsg
+    releaseall
+    end
+
+scr_seq_0003_p1ball_2164: // SilphCo_11F -> map 189
+    play_se SEQ_SE_DP_SELECT
+    lockall
+    goto_if_no_item_space ITEM_REVIVE, 1, _p1BallFull
+    hide_person VAR_SPECIAL_LAST_TALKED
+    setflag 1200
+    giveitem_no_check ITEM_REVIVE, 1
+    closemsg
+    releaseall
+    end
+
+scr_seq_0003_p1ball_2165: // SilphCo_5F -> map 189
+    play_se SEQ_SE_DP_SELECT
+    lockall
+    goto_if_no_item_space ITEM_ELIXIR, 1, _p1BallFull
+    hide_person VAR_SPECIAL_LAST_TALKED
+    setflag 1201
+    giveitem_no_check ITEM_ELIXIR, 1
+    closemsg
+    releaseall
+    end
+
+scr_seq_0003_p1ball_2166: // SilphCo_5F -> map 189
+    play_se SEQ_SE_DP_SELECT
+    lockall
+    goto_if_no_item_space ITEM_PP_UP, 1, _p1BallFull
+    hide_person VAR_SPECIAL_LAST_TALKED
+    setflag 1202
+    giveitem_no_check ITEM_PP_UP, 1
+    closemsg
+    releaseall
+    end
+
+scr_seq_0003_p1ball_2167: // SilphCo_9F -> map 189
+    play_se SEQ_SE_DP_SELECT
+    lockall
+    goto_if_no_item_space ITEM_MAX_POTION, 1, _p1BallFull
+    hide_person VAR_SPECIAL_LAST_TALKED
+    setflag 1203
+    giveitem_no_check ITEM_MAX_POTION, 1
+    closemsg
+    releaseall
+    end
+
+scr_seq_0003_p1ball_2168: // SilphCo_9F -> map 189
+    play_se SEQ_SE_DP_SELECT
+    lockall
+    goto_if_no_item_space ITEM_CALCIUM, 1, _p1BallFull
+    hide_person VAR_SPECIAL_LAST_TALKED
+    setflag 1204
+    giveitem_no_check ITEM_CALCIUM, 1
+    closemsg
+    releaseall
+    end
+
+scr_seq_0003_p1ball_2169: // SilphCo_2F -> map 186
+    play_se SEQ_SE_DP_SELECT
+    lockall
+    goto_if_no_item_space ITEM_ULTRA_BALL, 1, _p1BallFull
+    hide_person VAR_SPECIAL_LAST_TALKED
+    setflag 1205
+    giveitem_no_check ITEM_ULTRA_BALL, 1
+    closemsg
+    releaseall
+    end
+
+scr_seq_0003_p1ball_2170: // SilphCo_6F -> map 186
+    play_se SEQ_SE_DP_SELECT
+    lockall
+    goto_if_no_item_space ITEM_CARBOS, 1, _p1BallFull
+    hide_person VAR_SPECIAL_LAST_TALKED
+    setflag 1208
+    giveitem_no_check ITEM_CARBOS, 1
+    closemsg
+    releaseall
+    end
+
+scr_seq_0003_p1ball_2171: // SilphCo_3F -> map 187
+    play_se SEQ_SE_DP_SELECT
+    lockall
+    goto_if_no_item_space ITEM_PROTEIN, 1, _p1BallFull
+    hide_person VAR_SPECIAL_LAST_TALKED
+    setflag 1209
+    giveitem_no_check ITEM_PROTEIN, 1
+    closemsg
+    releaseall
+    end
+
+scr_seq_0003_p1ball_2172: // SilphCo_7F -> map 187
+    play_se SEQ_SE_DP_SELECT
+    lockall
+    goto_if_no_item_space ITEM_ZINC, 1, _p1BallFull
+    hide_person VAR_SPECIAL_LAST_TALKED
+    setflag 1210
+    giveitem_no_check ITEM_ZINC, 1
+    closemsg
+    releaseall
+    end
+
+scr_seq_0003_p1ball_2173: // SilphCo_4F -> map 188
+    play_se SEQ_SE_DP_SELECT
+    lockall
+    goto_if_no_item_space ITEM_IRON, 1, _p1BallFull
+    hide_person VAR_SPECIAL_LAST_TALKED
+    setflag 1211
+    giveitem_no_check ITEM_IRON, 1
+    closemsg
+    releaseall
+    end
+
+scr_seq_0003_p1ball_2174: // SilphCo_8F -> map 188
+    play_se SEQ_SE_DP_SELECT
+    lockall
+    goto_if_no_item_space ITEM_NUGGET, 1, _p1BallFull
+    hide_person VAR_SPECIAL_LAST_TALKED
+    setflag 1212
+    giveitem_no_check ITEM_NUGGET, 1
+    closemsg
+    releaseall
+    end
+
+scr_seq_0003_p1ball_2175: // ThreeIsland_BerryForest -> map 117
+    play_se SEQ_SE_DP_SELECT
+    lockall
+    goto_if_no_item_space ITEM_RAZZ_BERRY, 1, _p1BallFull
+    hide_person VAR_SPECIAL_LAST_TALKED
+    setflag 1213
+    giveitem_no_check ITEM_RAZZ_BERRY, 1
+    closemsg
+    releaseall
+    end
+
+scr_seq_0003_p1ball_2176: // ThreeIsland_BerryForest -> map 117
+    play_se SEQ_SE_DP_SELECT
+    lockall
+    goto_if_no_item_space ITEM_BLUK_BERRY, 1, _p1BallFull
+    hide_person VAR_SPECIAL_LAST_TALKED
+    setflag 1214
+    giveitem_no_check ITEM_BLUK_BERRY, 1
+    closemsg
+    releaseall
+    end
+
+scr_seq_0003_p1ball_2177: // ThreeIsland_BerryForest -> map 117
+    play_se SEQ_SE_DP_SELECT
+    lockall
+    goto_if_no_item_space ITEM_NANAB_BERRY, 1, _p1BallFull
+    hide_person VAR_SPECIAL_LAST_TALKED
+    setflag 1215
+    giveitem_no_check ITEM_NANAB_BERRY, 1
+    closemsg
+    releaseall
+    end
+
+scr_seq_0003_p1ball_2178: // ThreeIsland_BerryForest -> map 117
+    play_se SEQ_SE_DP_SELECT
+    lockall
+    goto_if_no_item_space ITEM_WEPEAR_BERRY, 1, _p1BallFull
+    hide_person VAR_SPECIAL_LAST_TALKED
+    setflag 1216
+    giveitem_no_check ITEM_WEPEAR_BERRY, 1
+    closemsg
+    releaseall
+    end
+
+scr_seq_0003_p1ball_2179: // ThreeIsland_BerryForest -> map 117
+    play_se SEQ_SE_DP_SELECT
+    lockall
+    goto_if_no_item_space ITEM_ORAN_BERRY, 1, _p1BallFull
+    hide_person VAR_SPECIAL_LAST_TALKED
+    setflag 1217
+    giveitem_no_check ITEM_ORAN_BERRY, 1
+    closemsg
+    releaseall
+    end
+
+scr_seq_0003_p1ball_2180: // ThreeIsland_BerryForest -> map 117
+    play_se SEQ_SE_DP_SELECT
+    lockall
+    goto_if_no_item_space ITEM_CHERI_BERRY, 1, _p1BallFull
+    hide_person VAR_SPECIAL_LAST_TALKED
+    setflag 1218
+    giveitem_no_check ITEM_CHERI_BERRY, 1
+    closemsg
+    releaseall
+    end
+
+scr_seq_0003_p1ball_2181: // ThreeIsland_BerryForest -> map 117
+    play_se SEQ_SE_DP_SELECT
+    lockall
+    goto_if_no_item_space ITEM_CHESTO_BERRY, 1, _p1BallFull
+    hide_person VAR_SPECIAL_LAST_TALKED
+    setflag 1219
+    giveitem_no_check ITEM_CHESTO_BERRY, 1
+    closemsg
+    releaseall
+    end
+
+scr_seq_0003_p1ball_2182: // ThreeIsland_BerryForest -> map 117
+    play_se SEQ_SE_DP_SELECT
+    lockall
+    goto_if_no_item_space ITEM_PECHA_BERRY, 1, _p1BallFull
+    hide_person VAR_SPECIAL_LAST_TALKED
+    setflag 1220
+    giveitem_no_check ITEM_PECHA_BERRY, 1
+    closemsg
+    releaseall
+    end
+
+scr_seq_0003_p1ball_2183: // ThreeIsland_BerryForest -> map 117
+    play_se SEQ_SE_DP_SELECT
+    lockall
+    goto_if_no_item_space ITEM_RAWST_BERRY, 1, _p1BallFull
+    hide_person VAR_SPECIAL_LAST_TALKED
+    setflag 1221
+    giveitem_no_check ITEM_RAWST_BERRY, 1
+    closemsg
+    releaseall
+    end
+
+scr_seq_0003_p1ball_2184: // ThreeIsland_BerryForest -> map 117
+    play_se SEQ_SE_DP_SELECT
+    lockall
+    goto_if_no_item_space ITEM_ASPEAR_BERRY, 1, _p1BallFull
+    hide_person VAR_SPECIAL_LAST_TALKED
+    setflag 1231
+    giveitem_no_check ITEM_ASPEAR_BERRY, 1
+    closemsg
+    releaseall
+    end
+
+scr_seq_0003_p1ball_2185: // ThreeIsland_BerryForest -> map 117
+    play_se SEQ_SE_DP_SELECT
+    lockall
+    goto_if_no_item_space ITEM_PERSIM_BERRY, 1, _p1BallFull
+    hide_person VAR_SPECIAL_LAST_TALKED
+    setflag 1239
+    giveitem_no_check ITEM_PERSIM_BERRY, 1
+    closemsg
+    releaseall
+    end
+
+scr_seq_0003_p1ball_2186: // ThreeIsland_BerryForest -> map 117
+    play_se SEQ_SE_DP_SELECT
+    lockall
+    goto_if_no_item_space ITEM_PINAP_BERRY, 1, _p1BallFull
+    hide_person VAR_SPECIAL_LAST_TALKED
+    setflag 1242
+    giveitem_no_check ITEM_PINAP_BERRY, 1
+    closemsg
+    releaseall
+    end
+
+scr_seq_0003_p1ball_2187: // ThreeIsland_BerryForest -> map 117
+    play_se SEQ_SE_DP_SELECT
+    lockall
+    goto_if_no_item_space ITEM_LUM_BERRY, 1, _p1BallFull
+    hide_person VAR_SPECIAL_LAST_TALKED
+    setflag 1243
+    giveitem_no_check ITEM_LUM_BERRY, 1
+    closemsg
+    releaseall
+    end
+
+scr_seq_0003_p1ball_2188: // UndergroundPath_EastWestTunnel -> map 532
+    play_se SEQ_SE_DP_SELECT
+    lockall
+    goto_if_no_item_space ITEM_POTION, 1, _p1BallFull
+    hide_person VAR_SPECIAL_LAST_TALKED
+    setflag 1244
+    giveitem_no_check ITEM_POTION, 1
+    closemsg
+    releaseall
+    end
+
+scr_seq_0003_p1ball_2189: // UndergroundPath_EastWestTunnel -> map 532
+    play_se SEQ_SE_DP_SELECT
+    lockall
+    goto_if_no_item_space ITEM_PARALYZE_HEAL, 1, _p1BallFull
+    hide_person VAR_SPECIAL_LAST_TALKED
+    setflag 1245
+    giveitem_no_check ITEM_PARALYZE_HEAL, 1
+    closemsg
+    releaseall
+    end
+
+scr_seq_0003_p1ball_2190: // UndergroundPath_EastWestTunnel -> map 532
+    play_se SEQ_SE_DP_SELECT
+    lockall
+    goto_if_no_item_space ITEM_AWAKENING, 1, _p1BallFull
+    hide_person VAR_SPECIAL_LAST_TALKED
+    setflag 1246
+    giveitem_no_check ITEM_AWAKENING, 1
+    closemsg
+    releaseall
+    end
+
+scr_seq_0003_p1ball_2191: // UndergroundPath_EastWestTunnel -> map 532
+    play_se SEQ_SE_DP_SELECT
+    lockall
+    goto_if_no_item_space ITEM_BURN_HEAL, 1, _p1BallFull
+    hide_person VAR_SPECIAL_LAST_TALKED
+    setflag 1266
+    giveitem_no_check ITEM_BURN_HEAL, 1
+    closemsg
+    releaseall
+    end
+
+scr_seq_0003_p1ball_2192: // UndergroundPath_EastWestTunnel -> map 532
+    play_se SEQ_SE_DP_SELECT
+    lockall
+    goto_if_no_item_space ITEM_ICE_HEAL, 1, _p1BallFull
+    hide_person VAR_SPECIAL_LAST_TALKED
+    setflag 1273
+    giveitem_no_check ITEM_ICE_HEAL, 1
+    closemsg
+    releaseall
+    end
+
+scr_seq_0003_p1ball_2193: // UndergroundPath_EastWestTunnel -> map 532
+    play_se SEQ_SE_DP_SELECT
+    lockall
+    goto_if_no_item_space ITEM_ETHER, 1, _p1BallFull
+    hide_person VAR_SPECIAL_LAST_TALKED
+    setflag 1274
+    giveitem_no_check ITEM_ETHER, 1
+    closemsg
+    releaseall
+    end
+
+scr_seq_0003_p1ball_2194: // UndergroundPath_EastWestTunnel -> map 532
+    play_se SEQ_SE_DP_SELECT
+    lockall
+    goto_if_no_item_space ITEM_ANTIDOTE, 1, _p1BallFull
+    hide_person VAR_SPECIAL_LAST_TALKED
+    setflag 1275
+    giveitem_no_check ITEM_ANTIDOTE, 1
+    closemsg
+    releaseall
+    end
+
+scr_seq_0003_p1ball_2195: // UndergroundPath_NorthSouthTunnel -> map 532
+    play_se SEQ_SE_DP_SELECT
+    lockall
+    goto_if_no_item_space ITEM_POTION, 1, _p1BallFull
+    hide_person VAR_SPECIAL_LAST_TALKED
+    setflag 1276
+    giveitem_no_check ITEM_POTION, 1
+    closemsg
+    releaseall
+    end
+
+scr_seq_0003_p1ball_2196: // UndergroundPath_NorthSouthTunnel -> map 532
+    play_se SEQ_SE_DP_SELECT
+    lockall
+    goto_if_no_item_space ITEM_ANTIDOTE, 1, _p1BallFull
+    hide_person VAR_SPECIAL_LAST_TALKED
+    setflag 1277
+    giveitem_no_check ITEM_ANTIDOTE, 1
+    closemsg
+    releaseall
+    end
+
+scr_seq_0003_p1ball_2197: // UndergroundPath_NorthSouthTunnel -> map 532
+    play_se SEQ_SE_DP_SELECT
+    lockall
+    goto_if_no_item_space ITEM_BURN_HEAL, 1, _p1BallFull
+    hide_person VAR_SPECIAL_LAST_TALKED
+    setflag 1278
+    giveitem_no_check ITEM_BURN_HEAL, 1
+    closemsg
+    releaseall
+    end
+
+scr_seq_0003_p1ball_2198: // UndergroundPath_NorthSouthTunnel -> map 532
+    play_se SEQ_SE_DP_SELECT
+    lockall
+    goto_if_no_item_space ITEM_AWAKENING, 1, _p1BallFull
+    hide_person VAR_SPECIAL_LAST_TALKED
+    setflag 1279
+    giveitem_no_check ITEM_AWAKENING, 1
+    closemsg
+    releaseall
+    end
+
+scr_seq_0003_p1ball_2199: // UndergroundPath_NorthSouthTunnel -> map 532
+    play_se SEQ_SE_DP_SELECT
+    lockall
+    goto_if_no_item_space ITEM_ICE_HEAL, 1, _p1BallFull
+    hide_person VAR_SPECIAL_LAST_TALKED
+    setflag 1280
+    giveitem_no_check ITEM_ICE_HEAL, 1
+    closemsg
+    releaseall
+    end
+
+scr_seq_0003_p1ball_2200: // UndergroundPath_NorthSouthTunnel -> map 532
+    play_se SEQ_SE_DP_SELECT
+    lockall
+    goto_if_no_item_space ITEM_PARALYZE_HEAL, 1, _p1BallFull
+    hide_person VAR_SPECIAL_LAST_TALKED
+    setflag 1284
+    giveitem_no_check ITEM_PARALYZE_HEAL, 1
+    closemsg
+    releaseall
+    end
+
+scr_seq_0003_p1ball_2201: // UndergroundPath_NorthSouthTunnel -> map 532
+    play_se SEQ_SE_DP_SELECT
+    lockall
+    goto_if_no_item_space ITEM_ETHER, 1, _p1BallFull
+    hide_person VAR_SPECIAL_LAST_TALKED
+    setflag 1285
+    giveitem_no_check ITEM_ETHER, 1
+    closemsg
+    releaseall
+    end
+
+scr_seq_0003_p1ball_2202: // VermilionCity -> map 54
+    play_se SEQ_SE_DP_SELECT
+    lockall
+    goto_if_no_item_space ITEM_MAX_ETHER, 1, _p1BallFull
+    hide_person VAR_SPECIAL_LAST_TALKED
+    setflag 1286
+    giveitem_no_check ITEM_MAX_ETHER, 1
+    closemsg
+    releaseall
+    end
+
+scr_seq_0003_p1ball_2203: // ViridianCity_Gym -> map 496
+    play_se SEQ_SE_DP_SELECT
+    lockall
+    goto_if_no_item_space ITEM_MACHO_BRACE, 1, _p1BallFull
+    hide_person VAR_SPECIAL_LAST_TALKED
+    setflag 1288
+    giveitem_no_check ITEM_MACHO_BRACE, 1
+    closemsg
+    releaseall
+    end
+
+scr_seq_0003_p1ball_2204: // ViridianForest -> map 147
+    play_se SEQ_SE_DP_SELECT
+    lockall
+    goto_if_no_item_space ITEM_POTION, 1, _p1BallFull
+    hide_person VAR_SPECIAL_LAST_TALKED
+    setflag 1289
+    giveitem_no_check ITEM_POTION, 1
+    closemsg
+    releaseall
+    end
+
+scr_seq_0003_p1ball_2205: // ViridianForest -> map 147
+    play_se SEQ_SE_DP_SELECT
+    lockall
+    goto_if_no_item_space ITEM_ANTIDOTE, 1, _p1BallFull
+    hide_person VAR_SPECIAL_LAST_TALKED
+    setflag 1290
+    giveitem_no_check ITEM_ANTIDOTE, 1
+    closemsg
+    releaseall
+    end
+
+_p1BallFull:
+    callstd std_bag_is_full
+    closemsg
+    releaseall
+    end
