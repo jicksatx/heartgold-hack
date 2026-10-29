@@ -74,6 +74,16 @@ Name: **Glorious Gold**. Title-screen logo redrawn (rawdata/title_logo = demo/ti
      - Known: FireRed's hidden items are item balls (HeartGold's own Kanto hidden items remain too).
    - Save layout unchanged (old saves still load as plain HeartGold). Main code space freed by deriving the wild pool's BSTs (sWildPoolFormBST) instead of a full table.
 
+## Possible future fixes (not bugs; kept for later)
+- 29 unimplemented moves (blocked from being learned, Metronome/Copycat can't call them): Wonder Room, Magic Room, Telekinesis, Ally Switch, Sky Drop, Reflect Type, Water/Fire/Grass Pledge, Rototiller, Flower Shield, Magnetic Flux, Gear Up, Aromatic Mist, Topsy-Turvy, Electrify, Fairy Lock, Speed Swap, Purify, Instruct, Beak Blast, Shell Trap, No Retreat, Teatime, Octolock, Court Change, Corrosive Gas, Revival Blessing, Dragon Cheer. Possible: each needs new battle-engine code (room/field effects, ally targeting, pledge combos); hg-engine upstream may add some.
+- 4 unimplemented abilities: Opportunist, Ball Fetch, Symbiosis, Embody Aspect. Possible: new ability hooks (stat-copy on foe boosts, ball retrieval after a failed catch, item passing in doubles, Ogerpon mask boost).
+- Part 1 player art: Oak's intro pictures, the Trainer Card and the Hall of Fame pose still show Ethan. Possible: recolor Ethan as Red (like the battle back sprite), port FireRed's Red art, or reuse HeartGold's Red battle picture; needs a Part 1-only graphics switch in the intro, Trainer Card and Hall of Fame code.
+- Borrowed maps (see the list under step 14): real FireRed layouts need 3D map editing (Sevii Islands, Cinnabar buildings, Mansion, Mt. Moon B1F/B2F, Rocket Hideout, Pokemon Tower, Silph Co., S.S. Anne, Underground Paths, Safari Zone, Victory Road, Route 23, Elite Four rooms).
+- Sevii met locations only cover wild catches; the place-name archive (279.txt) lines 235-242 could also be used by gifts/eggs if any are added there.
+- Safari Zone hidden items sit in the Safari entrance; Mt. Moon's, Route 23's, Silph Co. 6F-11F's and the second Underground Path's share stand-in floors.
+- HeartGold-only areas still reachable in Part 1 (harmless): Mt. Moon Square, Seafoam Islands B3F, the Viridian-Route 1 gatehouse.
+- Release builds: comment out CHAPTER_DEBUG_SKIP in include/config.h (Mom's test-build skip to the Hall of Fame).
+
 ## Building in the cloud workspace (workarounds)
 - Only GitHub is reachable: ARM toolchain from xpack GitHub release (arm-none-eabi-gcc 14.2.1),
   ndspy copied from its GitHub source into `.venv`, and build with `make ROM_TOOL=tools/ndstool`
