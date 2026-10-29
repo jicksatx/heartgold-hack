@@ -60,6 +60,9 @@ _part1Mom:
 _nuzlockeDeclined:
 	npc_msg 7
 _part1MomTalk:
+	// FireRed: once Red has battled Blue in the lab, Mom heals the team
+	compare VAR_P1_STORY, 4
+	goto_if_ge _part1MomHeal
 	npc_msg 3
 #ifdef CHAPTER_DEBUG_SKIP
 	wait_button
@@ -91,6 +94,22 @@ _debugSkipPart1:
 	releaseall
 	end
 #endif
+
+_part1MomHeal:
+	npc_msg 9
+	closemsg
+	fade_screen 6, 1, 0, 0
+	wait_fade
+	heal_party
+	play_fanfare SEQ_ME_ASA
+	wait_fanfare
+	fade_screen 6, 1, 1, 0
+	wait_fade
+	npc_msg 10
+	wait_button
+	closemsg
+	releaseall
+	end
 
 scr_seq_T01R0101_001:
 	play_se SEQ_SE_DP_SELECT

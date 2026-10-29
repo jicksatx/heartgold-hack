@@ -186,7 +186,6 @@ static const struct Part1Map sPart1Maps[] = {
     { 466, 645, 1059, 589, 921 }, // Route 10 Pokemon Center (Oak's Aide: Everstone)
     { 511, 646, 1059, 589, 921 }, // Route 3 Pokemon Center (the Magikarp salesman)
     // FireRed's people in the Kanto interiors that kept HeartGold's (Build 31, scratch build32_interiors.py)
-    { 503, 647, 1060, 970, 922 }, // PalletTown_PlayersHouse_1F (HeartGold map 503)
     { 501, 648, 1060, 589, 922 }, // ViridianCity_PokemonCenter_1F (HeartGold map 501)
     { 497, 649, 1060, 970, 922 }, // ViridianCity_House (HeartGold map 497)
     { 498, 650, 1060, 970, 922 }, // ViridianCity_School (HeartGold map 498)

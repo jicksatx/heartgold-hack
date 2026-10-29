@@ -7,3 +7,5 @@ Would you like to take on the\nNuzlocke Challenge? {YESNO 0}
 Then the Nuzlocke Challenge is on!\nBe careful out there, dear.\r
 All right! Just have fun out there!\r
 (Test build) Skip to the end of\nPart 1?\rYou’ll get a test team and go\nstraight to the Hall of Fame. {YESNO 0}
+Mom: {STRVAR_1 3, 0, 0}!\nYou should take a quick rest.\r
+Mom: Oh, good! You and your\nPokémon are looking great.\fTake care now!
