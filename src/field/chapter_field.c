@@ -270,33 +270,6 @@ u16 LONG_CALL Chapter_MapHeader_GetEventsBank(u32 mapId)
 }
 
 #define FontID_String_GetWidth ((u32 (*)(u32, void *, u32))(0x02002F30 | 1))
-#define MapHeader_GetMapSec    ((u32 (*)(u32))(0x0203B36C | 1))
-
-// Sevii Islands place names, appended to the place-name archive (data/text/279.txt lines 235+)
-enum {
-    PLACE_ONE_ISLAND = 235,
-    PLACE_KINDLE_ROAD,
-    PLACE_MT_EMBER,
-    PLACE_TWO_ISLAND,
-    PLACE_CAPE_BRINK,
-    PLACE_THREE_ISLAND,
-    PLACE_BOND_BRIDGE,
-    PLACE_BERRY_FOREST,
-};
-
-static const u16 sSeviiPlaceNames[][2] = {
-    { 75, PLACE_ONE_ISLAND },    // Cianwood City
-    { 279, PLACE_KINDLE_ROAD },  // Cliff Edge Gate
-    { 151, PLACE_KINDLE_ROAD },  // Route 47
-    { 122, PLACE_MT_EMBER },     // Mt. Silver 1F
-    { 463, PLACE_MT_EMBER },     // Mt. Silver 2F
-    { 465, PLACE_MT_EMBER },     // Mt. Silver summit
-    { 67, PLACE_TWO_ISLAND },    // Cherrygrove City
-    { 34, PLACE_CAPE_BRINK },    // Route 30
-    { 74, PLACE_THREE_ISLAND },  // Azalea Town
-    { 37, PLACE_BOND_BRIDGE },   // Route 33
-    { 117, PLACE_BERRY_FOREST }, // Ilex Forest
-};
 
 /**
  *  @brief replaces MsgData_ReadMsgIntoStringAndGetWidth (0x02068F84), which reads a place name from the place-name
@@ -305,17 +278,7 @@ static const u16 sSeviiPlaceNames[][2] = {
  */
 u32 LONG_CALL Chapter_ReadPlaceNameAndGetWidth(void *msgData, u32 mapsec, void *dest)
 {
-    if (Chapter_Get() == CHAPTER_RED && gFieldSysPtr != NULL && gFieldSysPtr->location != NULL) {
-        u32 mapId = gFieldSysPtr->location->mapId;
-        for (u32 i = 0; i < NELEMS(sSeviiPlaceNames); i++) {
-            if (sSeviiPlaceNames[i][0] == mapId) {
-                if (mapsec == MapHeader_GetMapSec(mapId)) {
-                    mapsec = sSeviiPlaceNames[i][1];
-                }
-                break;
-            }
-        }
-    }
+    mapsec = Chapter_SeviiMapSec(mapsec);
     ReadMsgDataIntoString(msgData, mapsec, dest);
     return FontID_String_GetWidth(0, dest, 0);
 }

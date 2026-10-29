@@ -9,6 +9,7 @@
 #include "constants/moves.h"
 #include "constants/species.h"
 #include "constants/system_control.h"
+#include "chapter.h"
 
 #include "battle.h"
 #include "item.h"
@@ -189,6 +190,12 @@ struct BattleStruct *ServerInit(struct BattleSystem *bw)
     }
 
 #endif // RESTORE_ITEMS_AT_BATTLE_END
+
+#ifdef CHAPTER_SYSTEM
+    // hack: on Part 1's Sevii stand-ins the battle's map section (met location, Nuzlocke area) is the Sevii place
+    // (src/field/chapter_field.c)
+    bw->location = Chapter_SeviiMapSec(bw->location);
+#endif // CHAPTER_SYSTEM
 
 #ifdef NUZLOCKE_MODE
     Nuzlocke_BattleStart(bw);

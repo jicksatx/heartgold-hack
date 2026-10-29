@@ -61,6 +61,85 @@ void randomize(int arr[], int n)
 
 extern u32 gLastPokemonLevelForMoneyCalc;
 
+#ifdef CHAPTER_SYSTEM
+#define TRAINER_RED_MT_SILVER 260
+
+/**
+ *  @brief hack: in Part 2, Red on Mt. Silver battles with the team that entered Part 1's Hall of Fame (kept in the PC
+ *         Boxes' padding, src/chapter.c).  levels are raised so his strongest Pokemon is level 88 (Red's level cap),
+ *         keeping the gaps between them.  species, form, nature/personality, IVs, moves, item, ball, ability bits,
+ *         shininess and nickname are kept.
+ *  @return TRUE if Red's party was built from Part 1's team
+ */
+static BOOL MakeRedPartyFromPart1(struct BATTLE_PARAM *bp, int num, int heapID)
+{
+    struct ChapterTeam team;
+    int i, j, count = 0, maxLevel = 0;
+
+    if (Chapter_Get() != CHAPTER_GOLD || bp->trainer_id[num] != TRAINER_RED_MT_SILVER || !Chapter_ReadRedTeam(&team)) {
+        return FALSE;
+    }
+    for (i = 0; i < CHAPTER_TEAM_SIZE; i++) {
+        if (team.mons[i].species != SPECIES_NONE && team.mons[i].species <= 1075) {
+            count++;
+            if (team.mons[i].level > maxLevel) {
+                maxLevel = team.mons[i].level;
+            }
+        }
+    }
+    if (count == 0) {
+        return FALSE;
+    }
+    int boost = maxLevel < 88 ? 88 - maxLevel : 0;
+
+    for (i = 0; i < CHAPTER_TEAM_SIZE; i++) {
+        struct ChapterTeamMon *src = &team.mons[i];
+        if (src->species == SPECIES_NONE || src->species > 1075) {
+            continue;
+        }
+        int level = src->level + boost;
+        if (level > 100) {
+            level = 100;
+        }
+        u32 pid = src->personality;
+        u32 shinyValue = ((pid >> 16) ^ (pid & 0xFFFF));
+        // OT id whose shiny value against the personality is 0 (shiny) or 0x8000 (never shiny)
+        u32 otid = (src->flags & 1) ? (shinyValue << 16) : ((shinyValue ^ 0x8000) << 16);
+        struct PartyPokemon *mon = AllocMonZeroed(heapID);
+        PokeParaSet(mon, src->species, level, 0, 1, pid, 1, otid);
+        u8 form = src->form;
+        SetMonData(mon, MON_DATA_FORM, &form);
+        for (j = 0; j < 6; j++) {
+            u32 iv = (src->ivs >> (j * 5)) & 31;
+            SetMonData(mon, MON_DATA_HP_IV + j, &iv);
+        }
+        u16 r114 = src->reserved114;
+        u8 r113 = src->reserved113;
+        SetMonData(mon, MON_DATA_RESERVED_114, &r114);
+        SetMonData(mon, MON_DATA_RESERVED_113, &r113);
+        ResetPartyPokemonAbility(mon);
+        for (j = 0; j < 4; j++) {
+            SetPartyPokemonMoveAtPos(mon, src->moves[j], j);
+        }
+        u16 item = src->item;
+        SetMonData(mon, MON_DATA_HELD_ITEM, &item);
+        u8 ball = src->ball ? src->ball : ITEM_POKE_BALL;
+        SetMonData(mon, MON_DATA_POKEBALL, &ball);
+        if (src->nickname[0] != 0 && src->nickname[0] != 0xFFFF) {
+            u32 one = 1;
+            SetMonData(mon, MON_DATA_HAS_NICKNAME, &one);
+            SetMonData(mon, MON_DATA_NICKNAME, src->nickname);
+        }
+        ChangeToBattleForm(mon);
+        RecalcPartyPokemonStats(mon);
+        gLastPokemonLevelForMoneyCalc = level;
+        PokeParty_Add(bp->poke_party[num], mon);
+        sys_FreeMemoryEz(mon);
+    }
+    return TRUE;
+}
+#endif // CHAPTER_SYSTEM
+
 /**
  *  @brief create the trainer Party from the trainer data file and trainer party file
  *
@@ -78,6 +157,13 @@ void MakeTrainerPokemonParty(struct BATTLE_PARAM *bp, int num, int heapID)
     seed_tmp = gf_get_seed();
 
     PokeParty_Init(bp->poke_party[num], 6);
+
+#ifdef CHAPTER_SYSTEM
+    if (MakeRedPartyFromPart1(bp, num, heapID)) {
+        gf_srand(seed_tmp);
+        return;
+    }
+#endif
 
     buf = (u8 *)sys_AllocMemory(heapID, sizeof(struct FULL_TRAINER_MON_DATA_STRUCTURE) * 6);
 

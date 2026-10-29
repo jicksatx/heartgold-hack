@@ -53,5 +53,6 @@ u32 LONG_CALL Chapter_Get(void);
 void LONG_CALL Chapter_Location_SetToPlayerRoom(Location *dest);
 void LONG_CALL Chapter_Location_SetToOutsidePlayerHome(Location *dest);
 BOOL LONG_CALL Chapter_ReadRedTeam(struct ChapterTeam *team);
+u32 LONG_CALL Chapter_SeviiMapSec(u32 mapsec);
 
 #endif // CHAPTER_H
