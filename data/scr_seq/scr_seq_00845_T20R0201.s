@@ -18,6 +18,7 @@
 #include "constants/item.h"
 #include "constants/moves.h"
 #include "constants/species.h"
+#include "config.h"
 
 .include "data/scr_seq/include/event_T20R0201.inc"
 
@@ -139,6 +140,29 @@ scr_seq_T20R0201_006:
 	end
 
 scr_seq_T20R0201_001:
+#ifdef CHAPTER_DEBUG_SKIP
+	// hack, test builds only: once Ethan/Lyra has a Pokemon, Mom offers Red's Mt. Silver battle (trainer 260, built
+	// from Part 1's Hall of Fame team by src/field/enemy_party.c) so it can be tested without playing Part 2
+	goto_if_unset FLAG_GOT_STARTER, _noRedTest
+	play_se SEQ_SE_DP_SELECT
+	lockall
+	faceplayer
+	npc_msg 43
+	touchscreen_menu_hide
+	getmenuchoice VAR_SPECIAL_RESULT
+	touchscreen_menu_show
+	closemsg
+	compare VAR_SPECIAL_RESULT, 0
+	goto_if_ne _redTestDeclined
+	trainer_battle TRAINER_PKMN_TRAINER_RED_RED, 0, 1, 0
+	heal_party
+	releaseall
+	end
+
+_redTestDeclined:
+	releaseall
+_noRedTest:
+#endif
 	goto_if_set FLAG_GAME_CLEAR, _015C
 	compare VAR_SCENE_ELMS_LAB, 4
 	goto_if_ge _0205

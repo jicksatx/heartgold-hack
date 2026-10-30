@@ -41,3 +41,4 @@ Oh, and before you go...\rSome Trainers like to take on a\nspecial challenge cal
 Would you like to take on the\nNuzlocke Challenge? {YESNO 0}
 Then the Nuzlocke Challenge is on!\nBe careful out there, dear.\r
 All right! Just have fun out there!\r
+(Test build) Battle Red with your\nPart 1 Hall of Fame team now?\rIt’s a battle you’re allowed to lose. {YESNO 0}
