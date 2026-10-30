@@ -270,6 +270,16 @@ u16 LONG_CALL Chapter_MapHeader_GetEventsBank(u32 mapId)
     return Part1Map_GetBank(mapId, PART1_EVENTS, 16);
 }
 
+/**
+ *  the main-code stubs (Chapter_MapHdr* in asm/general_hooks.s) jump through this table after making sure this overlay
+ *  (131, the field extension) is loaded: the map header banks are read when a game starts or continues, before the
+ *  field overlay - and with it this one - is loaded.  section .init puts it first in the overlay, at 0x023C8000.
+ */
+__attribute__((section(".init"), used)) const void *const gChapterFieldEntries[4] = {
+    Chapter_MapHeader_GetMsgBank, Chapter_MapHeader_GetScriptsBank, Chapter_MapHeader_GetScriptHeaderBank,
+    Chapter_MapHeader_GetEventsBank,
+};
+
 #define FontID_String_GetWidth ((u32 (*)(u32, void *, u32))(0x02002F30 | 1))
 
 /**

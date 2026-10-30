@@ -73,12 +73,14 @@ scr_seq_P1_P01R0103_003:
 	compare VAR_P1_SEVII, 4
 	goto_if_lt _sailVermNoPass
 	npc_msg 5
+	touchscreen_menu_hide
 	menu_init 1, 1, 0, 1, VAR_SPECIAL_RESULT
 	menu_item_add 8, 255, 0
 	menu_item_add 9, 255, 1
 	menu_item_add 10, 255, 2
 	menu_item_add 12, 255, 9
 	menu_exec
+	touchscreen_menu_show
 	compare VAR_SPECIAL_RESULT, 0
 	goto_if_eq _sailVermone
 	compare VAR_SPECIAL_RESULT, 1

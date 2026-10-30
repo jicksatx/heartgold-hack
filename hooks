@@ -683,11 +683,12 @@ arm9 Chapter_GetPlayerSprite 0205C898
 arm9 Chapter_TrainerClassToBackpic 0207280C
 0053 Chapter_OakSpeechGenderHook 021E7818 1
 #endif
-# hack: Part 1 maps get their own events/scripts/text (src/field/chapter_field.c)
-arm9 Chapter_MapHeader_GetMsgBank 0203B2C0 1
-arm9 Chapter_MapHeader_GetScriptsBank 0203B2D4 1
-arm9 Chapter_MapHeader_GetScriptHeaderBank 0203B2E8 1
-arm9 Chapter_MapHeader_GetEventsBank 0203B358 1
+# hack: Part 1 maps get their own events/scripts/text (src/field/chapter_field.c, through main-code stubs in
+# asm/general_hooks.s that load the field extension overlay first)
+arm9 Chapter_MapHdrMsg 0203B2C0 1
+arm9 Chapter_MapHdrScripts 0203B2D4 1
+arm9 Chapter_MapHdrScriptHeader 0203B2E8 1
+arm9 Chapter_MapHdrEvents 0203B358 1
 arm9 Chapter_ReadPlaceNameAndGetWidth 02068F84 3
 # hack: Ethan's art recolored as Red in Part 1 (Trainer Card, Oak's intro, Hall of Fame; src/chapter_gfx.c).  'bl' = one BL
 # instruction at the end of GfGfxLoader_LoadFromNarc (the function itself is left as it is)

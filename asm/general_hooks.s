@@ -160,3 +160,32 @@ ldr r2, [sp]
 bl Chapter_RedCapPalette
 mov r0, r4
 pop {r3-r7, pc}
+
+// hack: Part 1's map header bank hooks (src/field/chapter_field.c) live in the field extension overlay, which isn't
+// loaded yet when a game starts or continues.  these load it first, then jump to gChapterFieldEntries[k] (at the
+// overlay's start) with the caller's r0 and lr.
+.global Chapter_MapHdrMsg
+Chapter_MapHdrMsg:
+mov r1, #0
+b Chapter_MapHdrCommon
+.global Chapter_MapHdrScripts
+Chapter_MapHdrScripts:
+mov r1, #4
+b Chapter_MapHdrCommon
+.global Chapter_MapHdrScriptHeader
+Chapter_MapHdrScriptHeader:
+mov r1, #8
+b Chapter_MapHdrCommon
+.global Chapter_MapHdrEvents
+Chapter_MapHdrEvents:
+mov r1, #12
+Chapter_MapHdrCommon:
+push {r0, r1, r2, lr}
+bl Chapter_LoadFieldExt
+pop {r0, r1, r2, r3}
+mov lr, r3
+ldr r2, =0x023C8000
+ldr r2, [r2, r1]
+bx r2
+
+.pool

@@ -1,6 +1,8 @@
 #include "../include/config.h"
 #include "../include/types.h"
 #include "../include/chapter.h"
+#include "../include/overlay.h"
+#include "../include/constants/file.h"
 
 /*
  *  hack: Part 1's player is Red, but the Trainer Card, Professor Oak's intro pictures and the Hall of Fame pose only
@@ -22,7 +24,7 @@
 
 // each entry: narc, first member, last member, color index, Ethan's yellow, Red's red (5-bit RGB).  a color is
 // changed only while it still holds Ethan's yellow.
-static const u16 sCapColors[][6] = {
+static const struct { u8 narc, first, last, index; u16 yellow, red; } sCapColors[] = {
     { NARC_TRAINER_CARD, 0, 24, 81, RGB(31, 27, 11), RGB(31, 14, 12) }, // card palettes keep Ethan's colors at 80-95
     { NARC_TRAINER_CARD, 0, 24, 82, RGB(27, 23, 7), RGB(29, 9, 7) },
     { NARC_TRAINER_CARD, 0, 24, 83, RGB(20, 14, 4), RGB(21, 5, 5) },
@@ -40,11 +42,22 @@ void LONG_CALL Chapter_RedCapPalette(u8 *data, u32 narcId, s32 member)
     }
     u16 *colors = (u16 *)(data + NCLR_COLORS_OFFSET);
     for (u32 i = 0; i < NELEMS(sCapColors); i++) {
-        const u16 *e = sCapColors[i];
-        if (narcId == e[0] && member >= e[1] && member <= e[2] && *(u32 *)data == 0x4E434C52 // 'RLCN': a palette
-            && colors[e[3]] == e[4] && Chapter_Get() == CHAPTER_RED) {
-            colors[e[3]] = e[5];
+        if (narcId == sCapColors[i].narc && member >= sCapColors[i].first && member <= sCapColors[i].last
+            && *(u32 *)data == 0x4E434C52 // 'RLCN': a palette
+            && colors[sCapColors[i].index] == sCapColors[i].yellow && Chapter_Get() == CHAPTER_RED) {
+            colors[sCapColors[i].index] = sCapColors[i].red;
         }
+    }
+}
+
+/**
+ *  @brief loads the field extension overlay (131, src/field) if it isn't loaded yet: Part 1's map header hooks live
+ *         there, and the game reads map headers before it loads the field overlay (new game, Continue).
+ */
+void LONG_CALL Chapter_LoadFieldExt(void)
+{
+    if (!IsOverlayLoaded(OVERLAY_FIELD_EXTENSION)) {
+        HandleLoadOverlay(OVERLAY_FIELD_EXTENSION, 2);
     }
 }
 

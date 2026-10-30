@@ -129,12 +129,14 @@ scr_seq_P1_SEVII_003:
 	compare VAR_P1_SEVII, 4
 	goto_if_lt _sailOneNoPass
 	npc_msg 0
+	touchscreen_menu_hide
 	menu_init 1, 1, 0, 1, VAR_SPECIAL_RESULT
 	menu_item_add 4, 255, 0
 	menu_item_add 5, 255, 1
 	menu_item_add 6, 255, 2
 	menu_item_add 7, 255, 9
 	menu_exec
+	touchscreen_menu_show
 	compare VAR_SPECIAL_RESULT, 0
 	goto_if_eq _sailOnetwo
 	compare VAR_SPECIAL_RESULT, 1
@@ -481,12 +483,14 @@ scr_seq_P1_SEVII_032:
 	compare VAR_P1_SEVII, 4
 	goto_if_lt _sailTwoNoPass
 	npc_msg 0
+	touchscreen_menu_hide
 	menu_init 1, 1, 0, 1, VAR_SPECIAL_RESULT
 	menu_item_add 3, 255, 0
 	menu_item_add 5, 255, 1
 	menu_item_add 6, 255, 2
 	menu_item_add 7, 255, 9
 	menu_exec
+	touchscreen_menu_show
 	compare VAR_SPECIAL_RESULT, 0
 	goto_if_eq _sailTwoone
 	compare VAR_SPECIAL_RESULT, 1
@@ -673,12 +677,14 @@ scr_seq_P1_SEVII_047:
 	compare VAR_P1_SEVII, 4
 	goto_if_lt _sailThreeNoPass
 	npc_msg 0
+	touchscreen_menu_hide
 	menu_init 1, 1, 0, 1, VAR_SPECIAL_RESULT
 	menu_item_add 3, 255, 0
 	menu_item_add 4, 255, 1
 	menu_item_add 6, 255, 2
 	menu_item_add 7, 255, 9
 	menu_exec
+	touchscreen_menu_show
 	compare VAR_SPECIAL_RESULT, 0
 	goto_if_eq _sailThreeone
 	compare VAR_SPECIAL_RESULT, 1

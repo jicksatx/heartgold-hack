@@ -39,6 +39,7 @@ scr_seq_P1_REDS_ROOM_002:
 	lockall
 	buffer_players_name 0
 	npc_msg 1
+	touchscreen_menu_hide
 _pcMenu:
 	npc_msg 2
 	menu_init 1, 1, 0, 1, VAR_SPECIAL_RESULT
@@ -70,6 +71,7 @@ _pcCandy:
 _pcFull:
 	callstd std_bag_is_full
 _pcOff:
+	touchscreen_menu_show
 	closemsg
 	releaseall
 	end
