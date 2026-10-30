@@ -63,6 +63,7 @@ scr_seq_P1_D35R0102_002:
 	lockall
 	faceplayer
 	goto_if_set FLAG_P1_GOT_LIFT_KEY, _gruntAfter
+	openmsg // trainer_message needs the window open (HeartGold's trainer scripts do the same)
 	trainer_message TRAINER_P1_TEAM_ROCKET_GRUNT_16, 0
 	closemsg
 	trainer_battle TRAINER_P1_TEAM_ROCKET_GRUNT_16, 0, 0, 0
@@ -77,6 +78,7 @@ scr_seq_P1_D35R0102_002:
 	end
 
 _gruntAfter:
+	openmsg
 	trainer_message TRAINER_P1_TEAM_ROCKET_GRUNT_16, 2
 	wait_button
 	closemsg

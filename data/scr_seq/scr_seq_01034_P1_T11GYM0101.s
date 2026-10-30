@@ -30,6 +30,7 @@ scr_seq_P1_T11GYM0101_001:
 	check_badge BADGE_MARSH, VAR_SPECIAL_RESULT
 	compare VAR_SPECIAL_RESULT, 1
 	goto_if_eq _sabrinaAfter
+	openmsg // trainer_message needs the window open (HeartGold's trainer scripts do the same)
 	trainer_message TRAINER_P1_LEADER_SABRINA, 0
 	closemsg
 	trainer_battle TRAINER_P1_LEADER_SABRINA, 0, 0, 0
@@ -59,6 +60,7 @@ _giveTM:
 
 _sabrinaAfter:
 	goto_if_unset FLAG_P1_GOT_TM04, _giveTM
+	openmsg
 	trainer_message TRAINER_P1_LEADER_SABRINA, 2
 	goto _talkDone
 

@@ -47,6 +47,7 @@ scr_seq_P1_T09GYM_001:
 	check_badge BADGE_VOLCANO, VAR_SPECIAL_RESULT
 	compare VAR_SPECIAL_RESULT, 1
 	goto_if_eq _blaineAfter
+	openmsg // trainer_message needs the window open (HeartGold's trainer scripts do the same)
 	trainer_message TRAINER_P1_LEADER_BLAINE, 0
 	closemsg
 	trainer_battle TRAINER_P1_LEADER_BLAINE, 0, 0, 0
@@ -76,6 +77,7 @@ _giveTM:
 
 _blaineAfter:
 	goto_if_unset FLAG_P1_GOT_TM38, _giveTM
+	openmsg
 	trainer_message TRAINER_P1_LEADER_BLAINE, 2
 	goto _talkDone
 
@@ -134,6 +136,7 @@ _wrong1:
 	closemsg
 	checktrainerflag TRAINER_P1_BURGLAR_QUINN
 	goto_if_eq _quizBeaten1
+	openmsg
 	trainer_message TRAINER_P1_BURGLAR_QUINN, 0
 	closemsg
 	trainer_battle TRAINER_P1_BURGLAR_QUINN, 0, 0, 0
@@ -174,6 +177,7 @@ _wrong2:
 	closemsg
 	checktrainerflag TRAINER_P1_SUPER_NERD_AVERY
 	goto_if_eq _quizBeaten2
+	openmsg
 	trainer_message TRAINER_P1_SUPER_NERD_AVERY, 0
 	closemsg
 	trainer_battle TRAINER_P1_SUPER_NERD_AVERY, 0, 0, 0
@@ -214,6 +218,7 @@ _wrong3:
 	closemsg
 	checktrainerflag TRAINER_P1_BURGLAR_RAMON
 	goto_if_eq _quizBeaten3
+	openmsg
 	trainer_message TRAINER_P1_BURGLAR_RAMON, 0
 	closemsg
 	trainer_battle TRAINER_P1_BURGLAR_RAMON, 0, 0, 0
@@ -254,6 +259,7 @@ _wrong4:
 	closemsg
 	checktrainerflag TRAINER_P1_SUPER_NERD_DEREK
 	goto_if_eq _quizBeaten4
+	openmsg
 	trainer_message TRAINER_P1_SUPER_NERD_DEREK, 0
 	closemsg
 	trainer_battle TRAINER_P1_SUPER_NERD_DEREK, 0, 0, 0
@@ -294,6 +300,7 @@ _wrong5:
 	closemsg
 	checktrainerflag TRAINER_P1_BURGLAR_DUSTY
 	goto_if_eq _quizBeaten5
+	openmsg
 	trainer_message TRAINER_P1_BURGLAR_DUSTY, 0
 	closemsg
 	trainer_battle TRAINER_P1_BURGLAR_DUSTY, 0, 0, 0
@@ -334,6 +341,7 @@ _wrong6:
 	closemsg
 	checktrainerflag TRAINER_P1_SUPER_NERD_ZAC
 	goto_if_eq _quizBeaten6
+	openmsg
 	trainer_message TRAINER_P1_SUPER_NERD_ZAC, 0
 	closemsg
 	trainer_battle TRAINER_P1_SUPER_NERD_ZAC, 0, 0, 0
@@ -355,6 +363,7 @@ scr_seq_P1_T09GYM_009:
 	goto_if_set FLAG_P1_GYM_ASIDE_1, _after1
 	checktrainerflag TRAINER_P1_BURGLAR_QUINN
 	goto_if_eq _stepAside1
+	openmsg
 	trainer_message TRAINER_P1_BURGLAR_QUINN, 0
 	closemsg
 	trainer_battle TRAINER_P1_BURGLAR_QUINN, 0, 0, 0
@@ -363,6 +372,7 @@ scr_seq_P1_T09GYM_009:
 	goto_if_eq _lost
 	settrainerflag TRAINER_P1_BURGLAR_QUINN
 _stepAside1:
+	openmsg
 	trainer_message TRAINER_P1_BURGLAR_QUINN, 2
 	closemsg
 	apply_movement 2, _aside1
@@ -372,6 +382,7 @@ _stepAside1:
 	end
 
 _after1:
+	openmsg
 	trainer_message TRAINER_P1_BURGLAR_QUINN, 2
 	goto _talkDone
 
@@ -382,6 +393,7 @@ scr_seq_P1_T09GYM_010:
 	goto_if_set FLAG_P1_GYM_ASIDE_2, _after2
 	checktrainerflag TRAINER_P1_SUPER_NERD_AVERY
 	goto_if_eq _stepAside2
+	openmsg
 	trainer_message TRAINER_P1_SUPER_NERD_AVERY, 0
 	closemsg
 	trainer_battle TRAINER_P1_SUPER_NERD_AVERY, 0, 0, 0
@@ -390,6 +402,7 @@ scr_seq_P1_T09GYM_010:
 	goto_if_eq _lost
 	settrainerflag TRAINER_P1_SUPER_NERD_AVERY
 _stepAside2:
+	openmsg
 	trainer_message TRAINER_P1_SUPER_NERD_AVERY, 2
 	closemsg
 	get_player_facing VAR_SPECIAL_RESULT
@@ -406,6 +419,7 @@ _asideWait2:
 	end
 
 _after2:
+	openmsg
 	trainer_message TRAINER_P1_SUPER_NERD_AVERY, 2
 	goto _talkDone
 
@@ -416,6 +430,7 @@ scr_seq_P1_T09GYM_011:
 	goto_if_set FLAG_P1_GYM_ASIDE_3, _after3
 	checktrainerflag TRAINER_P1_BURGLAR_RAMON
 	goto_if_eq _stepAside3
+	openmsg
 	trainer_message TRAINER_P1_BURGLAR_RAMON, 0
 	closemsg
 	trainer_battle TRAINER_P1_BURGLAR_RAMON, 0, 0, 0
@@ -424,6 +439,7 @@ scr_seq_P1_T09GYM_011:
 	goto_if_eq _lost
 	settrainerflag TRAINER_P1_BURGLAR_RAMON
 _stepAside3:
+	openmsg
 	trainer_message TRAINER_P1_BURGLAR_RAMON, 2
 	closemsg
 	apply_movement 4, _aside3
@@ -433,6 +449,7 @@ _stepAside3:
 	end
 
 _after3:
+	openmsg
 	trainer_message TRAINER_P1_BURGLAR_RAMON, 2
 	goto _talkDone
 
@@ -443,6 +460,7 @@ scr_seq_P1_T09GYM_012:
 	goto_if_set FLAG_P1_GYM_ASIDE_4, _after4
 	checktrainerflag TRAINER_P1_SUPER_NERD_DEREK
 	goto_if_eq _stepAside4
+	openmsg
 	trainer_message TRAINER_P1_SUPER_NERD_DEREK, 0
 	closemsg
 	trainer_battle TRAINER_P1_SUPER_NERD_DEREK, 0, 0, 0
@@ -451,6 +469,7 @@ scr_seq_P1_T09GYM_012:
 	goto_if_eq _lost
 	settrainerflag TRAINER_P1_SUPER_NERD_DEREK
 _stepAside4:
+	openmsg
 	trainer_message TRAINER_P1_SUPER_NERD_DEREK, 2
 	closemsg
 	apply_movement 5, _aside4
@@ -460,6 +479,7 @@ _stepAside4:
 	end
 
 _after4:
+	openmsg
 	trainer_message TRAINER_P1_SUPER_NERD_DEREK, 2
 	goto _talkDone
 
@@ -470,6 +490,7 @@ scr_seq_P1_T09GYM_013:
 	goto_if_set FLAG_P1_GYM_ASIDE_5, _after5
 	checktrainerflag TRAINER_P1_BURGLAR_DUSTY
 	goto_if_eq _stepAside5
+	openmsg
 	trainer_message TRAINER_P1_BURGLAR_DUSTY, 0
 	closemsg
 	trainer_battle TRAINER_P1_BURGLAR_DUSTY, 0, 0, 0
@@ -478,6 +499,7 @@ scr_seq_P1_T09GYM_013:
 	goto_if_eq _lost
 	settrainerflag TRAINER_P1_BURGLAR_DUSTY
 _stepAside5:
+	openmsg
 	trainer_message TRAINER_P1_BURGLAR_DUSTY, 2
 	closemsg
 	get_player_facing VAR_SPECIAL_RESULT
@@ -494,6 +516,7 @@ _asideWait5:
 	end
 
 _after5:
+	openmsg
 	trainer_message TRAINER_P1_BURGLAR_DUSTY, 2
 	goto _talkDone
 
@@ -504,6 +527,7 @@ scr_seq_P1_T09GYM_014:
 	goto_if_set FLAG_P1_GYM_ASIDE_6, _after6
 	checktrainerflag TRAINER_P1_SUPER_NERD_ZAC
 	goto_if_eq _stepAside6
+	openmsg
 	trainer_message TRAINER_P1_SUPER_NERD_ZAC, 0
 	closemsg
 	trainer_battle TRAINER_P1_SUPER_NERD_ZAC, 0, 0, 0
@@ -512,6 +536,7 @@ scr_seq_P1_T09GYM_014:
 	goto_if_eq _lost
 	settrainerflag TRAINER_P1_SUPER_NERD_ZAC
 _stepAside6:
+	openmsg
 	trainer_message TRAINER_P1_SUPER_NERD_ZAC, 2
 	closemsg
 	get_player_facing VAR_SPECIAL_RESULT
@@ -528,6 +553,7 @@ _asideWait6:
 	end
 
 _after6:
+	openmsg
 	trainer_message TRAINER_P1_SUPER_NERD_ZAC, 2
 	goto _talkDone
 

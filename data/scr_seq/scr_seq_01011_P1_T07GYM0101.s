@@ -29,6 +29,7 @@ scr_seq_P1_T07GYM0101_001:
 	check_badge BADGE_RAINBOW, VAR_SPECIAL_RESULT
 	compare VAR_SPECIAL_RESULT, 1
 	goto_if_eq _erikaAfter
+	openmsg // trainer_message needs the window open (HeartGold's trainer scripts do the same)
 	trainer_message TRAINER_P1_LEADER_ERIKA, 0
 	closemsg
 	trainer_battle TRAINER_P1_LEADER_ERIKA, 0, 0, 0
@@ -58,6 +59,7 @@ _giveTM:
 
 _erikaAfter:
 	goto_if_unset FLAG_P1_GOT_TM19, _giveTM
+	openmsg
 	trainer_message TRAINER_P1_LEADER_ERIKA, 2
 	goto _talkDone
 

@@ -30,6 +30,7 @@ scr_seq_P1_T04GYM0101_001:
 	check_badge BADGE_CASCADE, VAR_SPECIAL_RESULT
 	compare VAR_SPECIAL_RESULT, 1
 	goto_if_eq _mistyAfter
+	openmsg // trainer_message needs the window open (HeartGold's trainer scripts do the same)
 	trainer_message TRAINER_P1_LEADER_MISTY, 0
 	closemsg
 	trainer_battle TRAINER_P1_LEADER_MISTY, 0, 0, 0
@@ -57,6 +58,7 @@ _giveTM:
 
 _mistyAfter:
 	goto_if_unset FLAG_P1_GOT_TM03, _giveTM
+	openmsg
 	trainer_message TRAINER_P1_LEADER_MISTY, 2
 	wait_button
 	closemsg

@@ -32,6 +32,7 @@ scr_seq_P1_T02GYM_001:
 	check_badge BADGE_EARTH, VAR_SPECIAL_RESULT
 	compare VAR_SPECIAL_RESULT, 1
 	goto_if_eq _giovanniAfter
+	openmsg // trainer_message needs the window open (HeartGold's trainer scripts do the same)
 	trainer_message TRAINER_P1_LEADER_GIOVANNI, 0
 	closemsg
 	trainer_battle TRAINER_P1_LEADER_GIOVANNI, 0, 0, 0
@@ -64,6 +65,7 @@ _giveTM:
 
 _giovanniAfter:
 	goto_if_unset FLAG_P1_GOT_TM26, _giveTM
+	openmsg
 	trainer_message TRAINER_P1_LEADER_GIOVANNI, 2
 	goto _talkDone
 

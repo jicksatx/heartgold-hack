@@ -9,7 +9,7 @@ from the map's scripts.inc + text.inc, and writes:
   - data/Trainers.c sTrainerTextOrder: the ids, between the PART1 GENERATED markers
   - asm/include/trainers.inc: TRAINER_P1_<name> constants, between the PART1 GENERATED markers
 
-scripts use a trainer object with script 3000 + id (the common trainer script), or trainer_battle for gym leaders.
+scripts use a trainer object with script 3000 + id - 1 (the common trainer script; trainer ids start at 1, double-battle partners 5000 + id - 1), or trainer_battle for gym leaders.
 
 usage: python3 scripts/hack/gen_part1_trainers.py [path to pokefirered checkout]
 """

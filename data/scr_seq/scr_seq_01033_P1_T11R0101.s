@@ -35,6 +35,7 @@ scr_seq_P1_T11R0101_001:
 	faceplayer
 	checktrainerflag TRAINER_P1_BLACK_BELT_KOICHI
 	goto_if 1, _masterBeaten
+	openmsg // trainer_message needs the window open (HeartGold's trainer scripts do the same)
 	trainer_message TRAINER_P1_BLACK_BELT_KOICHI, 0
 	closemsg
 	trainer_battle TRAINER_P1_BLACK_BELT_KOICHI, 0, 0, 0
