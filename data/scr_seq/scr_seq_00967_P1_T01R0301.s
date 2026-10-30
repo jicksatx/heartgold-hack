@@ -159,6 +159,7 @@ _deliverParcel:
 	npc_msg 24
 	give_pokedex
 	setflag FLAG_GOT_POKEDEX
+	setflag FLAG_UNK_09A // FLAG_WATCHED_CATCHING_TUTORIAL (pokeheartgold): HeartGold's marts sell Poke Balls only with this flag (Lyra's tutorial); FireRed's do once Oak hands them out
 	nat_dex_flag_action 1, VAR_SPECIAL_RESULT
 	buffer_players_name 0
 	npc_msg 25
