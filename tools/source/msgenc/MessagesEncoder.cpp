@@ -19,10 +19,14 @@ void MessagesEncoder::ReadMessagesFromText(string& fname) {
             break;
         pos = text.find_first_of("\r\n");
         vec_decoded.push_back(text.substr(0, pos));
-        pos = text.find_last_of("\r\n", pos + 1, 2);
         if (pos == string::npos)
             break;
-        pos++;
+        // hack: one line ending is "\r\n" or a lone "\n"/"\r".  the old find_last_of skipped "\n\n" as one break, so
+        // with LF line endings every empty message was dropped and the rest of the bank shifted up.
+        if (text[pos] == '\r' && pos + 1 < text.size() && text[pos + 1] == '\n')
+            pos += 2;
+        else
+            pos += 1;
     } while (pos != string::npos);
     header.count = vec_decoded.size();
     debug_printf("%d lines\n", header.count);

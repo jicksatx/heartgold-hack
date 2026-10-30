@@ -86,6 +86,7 @@ scr_seq_P1_T01_007:
 	npc_msg 7
 	closemsg
 	setvar VAR_P1_STORY, 1
+	callstd 2071 // end Oak's theme (fade out, back to the map music) so it doesn't carry into the lab over its music
 	fade_screen 6, 1, 0, 0
 	wait_fade
 	hide_person 2

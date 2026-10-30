@@ -74,6 +74,7 @@ scr_seq_P1_T01R0301_004:
 	play_fanfare SEQ_ME_POKEGET
 	wait_fanfare
 	closemsg
+	setflag FLAG_GOT_STARTER // the start menu shows POKEMON only with this flag (HeartGold sets it in Elm's lab)
 	setvar VAR_P1_STORY, 3
 	// Blue takes the starter that is strong against Red's (FireRed).  the starter screen gives the party one;
 	// get_starter_choice reports its type as 152 grass / 155 fire / 158 water (src/field/chapter_field.c)

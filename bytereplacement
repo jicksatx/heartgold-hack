@@ -410,9 +410,9 @@ arm9 0204B94C FC
 0012 02246560 FC
 
 #ifdef EXPAND_MUSIC_TABLES
-# MainMusicComboTable combo range
-arm9 080517AA 2D
-arm9 080517D4 2D
+# MainMusicComboTable combo range (hack: 4 Part 1 combos added, src/music_tables.c)
+arm9 080517AA 32
+arm9 080517D4 32
 
 # TrainerClassToMusicCombo table range
 arm9 08051886 20

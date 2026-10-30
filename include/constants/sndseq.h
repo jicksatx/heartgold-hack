@@ -1422,6 +1422,12 @@ enum {
     ANIM_MUSIC_COMBO_JOHTO_WILD_THEME,
     ANIM_MUSIC_COMBO_KIMONO_GIRL,
     ANIM_MUSIC_COMBO_RED,
+    // hack: Part 1's FireRed trainers who borrow a HeartGold class (src/chapter.c): the plain trainer intro instead of
+    // that class's portrait banner (Silver's, Will's, Lance's, Blaine's), with the right music
+    ANIM_MUSIC_COMBO_P1_RIVAL,
+    ANIM_MUSIC_COMBO_P1_ELITE_FOUR,
+    ANIM_MUSIC_COMBO_P1_CHAMPION,
+    ANIM_MUSIC_COMBO_P1_GIOVANNI,
 };
 
 #endif // POKEHEARTGOLD_CONSTANTS_SNDSEQ_H

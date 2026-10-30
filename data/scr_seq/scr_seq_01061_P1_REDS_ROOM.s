@@ -22,6 +22,7 @@
 
 scrdef scr_seq_P1_REDS_ROOM_001 // the NES
 scrdef scr_seq_P1_REDS_ROOM_002 // Red's PC
+scrdef scr_seq_P1_REDS_ROOM_003 // on transition: unlock the start menu (header scr_seq_01062)
 scrdef_end
 
 scr_seq_P1_REDS_ROOM_001:
@@ -74,4 +75,13 @@ _pcOff:
 	touchscreen_menu_show
 	closemsg
 	releaseall
+	end
+
+// HeartGold unlocks the start menu's BAG, TRAINER CARD, SAVE and OPTIONS buttons in Johto's opening (src/start_menu.c
+// CheckGotMenuIconI: FLAG_GOT_BAG + 0-3).  Red has them all from the start, like FireRed.
+scr_seq_P1_REDS_ROOM_003:
+	setflag FLAG_GOT_BAG
+	setflag FLAG_GOT_TRAINER_CARD
+	setflag FLAG_GOT_SAVE_BUTTON
+	setflag FLAG_GOT_OPTIONS_BUTTON
 	end

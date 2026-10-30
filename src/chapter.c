@@ -337,20 +337,21 @@ extern u8 TrainerClassToMusicCombo[32][2];
 
 /**
  *  @brief replaces the trainer class -> battle music combo lookup (0x02051868).  in Part 1 Blue is Red's rival, so he
- *         gets Silver's rival battle intro and music; in Part 2 he keeps the Kanto Gym Leader theme.
+ *         gets the rival battle music (with the plain trainer intro: the rival combo's banner is Silver's); in Part 2 he
+ *         keeps the Kanto Gym Leader theme.  Part 1's own classes get the plain intro with their music too.
  */
 u32 LONG_CALL Chapter_TrainerClassToMusicCombo(u32 trainerClass)
 {
     if (trainerClass == TRAINERCLASS_LEADER_BLUE && Chapter_Get() == CHAPTER_RED) {
-        return ANIM_MUSIC_COMBO_RIVAL;
+        return ANIM_MUSIC_COMBO_P1_RIVAL;
     }
     if (trainerClass == TRAINERCLASS_ELITE_FOUR_LORELEI || trainerClass == TRAINERCLASS_ELITE_FOUR_AGATHA
         || trainerClass == TRAINERCLASS_P1_ELITE_FOUR_LANCE) {
-        trainerClass = TRAINERCLASS_ELITE_FOUR_WILL;
+        return ANIM_MUSIC_COMBO_P1_ELITE_FOUR;
     } else if (trainerClass == TRAINERCLASS_P1_CHAMPION_BLUE) {
-        trainerClass = TRAINERCLASS_CHAMPION;
+        return ANIM_MUSIC_COMBO_P1_CHAMPION;
     } else if (trainerClass == TRAINERCLASS_P1_LEADER_GIOVANNI) {
-        trainerClass = TRAINERCLASS_LEADER_BLAINE; // Kanto Gym Leader music
+        return ANIM_MUSIC_COMBO_P1_GIOVANNI;
     }
     for (u32 i = 0; i < NELEMS(TrainerClassToMusicCombo); i++) {
         u16 entry = TrainerClassToMusicCombo[i][0] | (TrainerClassToMusicCombo[i][1] << 8);
