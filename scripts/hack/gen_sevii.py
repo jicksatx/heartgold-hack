@@ -957,11 +957,11 @@ def main():
     header("data/scr_seq/scr_seq_01056_P1_T09_hdr.s",
            f"Cinnabar Island (Part 1) map script header: on transition -> script {c0 + 2} (Bill's flags), frame table "
            f"VAR_P1_SEVII == 1 -> script {c0} (Bill invites Red to One Island); data/scr_seq/scr_seq_01038_P1_T09.s",
-           [(2, c0 + 2)], [("0x4176", 1, c0)])
+           [(2, c0 + 2)], [("0x4141", 1, c0)])
     header("data/scr_seq/scr_seq_01057_P1_1IPC_hdr.s",
            f"One Island Pokemon Center (Part 1) map script header: on transition -> script {SC['1pc_transition']}, "
            f"frame table VAR_P1_SEVII == 3 -> {SC['1pc_meet']}, == 5 -> {SC['1pc_return']} (data/scr_seq/scr_seq_01055_P1_SEVII.s)",
-           [(2, SC["1pc_transition"])], [("0x4176", 3, SC["1pc_meet"]), ("0x4176", 5, SC["1pc_return"])])
+           [(2, SC["1pc_transition"])], [("0x4141", 3, SC["1pc_meet"]), ("0x4141", 5, SC["1pc_return"])])
     header("data/scr_seq/scr_seq_01058_P1_2IGC_hdr.s",
            f"Joyful Game Corner (Part 1) map script header: on transition -> script {SC['gc_transition']} "
            "(data/scr_seq/scr_seq_01055_P1_SEVII.s)", [(2, SC["gc_transition"])])

@@ -4,6 +4,7 @@
 
 #include "chapter.h"
 #include "randomizer.h"
+#include "constants/species.h"
 #include "script.h"
 
 /*
@@ -324,7 +325,7 @@ BOOL LONG_CALL Chapter_CanGenerateWalkingEncounters(u8 tile)
  *  @param ctx script context
  *  @return FALSE
  */
-#define VAR_P1_PRIZE 0x4171
+#define VAR_P1_PRIZE 0x4163
 
 extern const u16 *const sPrizeTiers[5];
 extern const u16 sPrizeTierCounts[5];
@@ -338,8 +339,10 @@ BOOL LONG_CALL Chapter_ScrCmd_GetStarterChoice(SCRIPTCONTEXT *ctx)
     // prize Pokemon instead: a single-stage Pokemon from the slot's base stat band (src/field/prize_pool.c), fixed per save
     if (ret == GetVarPointer(ctx->fsys, VAR_P1_PRIZE)) {
         u32 slot = *ret;
+        static const u16 sFireRedPrizes[5] = { SPECIES_ABRA, SPECIES_CLEFAIRY, SPECIES_DRATINI, SPECIES_SCYTHER, SPECIES_PORYGON };
         if (slot < 5) {
-            *ret = sPrizeTiers[slot][Randomizer_Hash(Randomizer_GetSeed(), 0x50 + slot) % sPrizeTierCounts[slot]];
+            *ret = Randomizer_IsOff() ? sFireRedPrizes[slot]
+                                      : sPrizeTiers[slot][Randomizer_Hash(Randomizer_GetSeed(), 0x50 + slot) % sPrizeTierCounts[slot]];
         }
         return FALSE;
     }

@@ -393,18 +393,22 @@
 // 1 while walking the Underground Path tunnel as the Route 7-8 one (its stairs lead to the Route 7/8 gates)
 .equ VAR_P1_UGPATH, 0x416F
 // Rocket Hideout elevator: the floor it is on, 0 B4F, 1 B2F
-.equ VAR_P1_LIFT, 0x4170
+.equ VAR_P1_LIFT, 0x4162
 // Game Corner prize Pokemon lookup: set to the slot (0-4), then "get_starter_choice VAR_P1_PRIZE" (src/field/chapter_field.c)
-.equ VAR_P1_PRIZE, 0x4171
+.equ VAR_P1_PRIZE, 0x4163
 // Saffron: 1 the gate guards got the Tea (the Saffron gates are open)
-.equ VAR_P1_SAFFRON, 0x4172
+.equ VAR_P1_SAFFRON, 0x413C
 // Silph Co.: 1 beat Blue, 2 beat Giovanni (Team Rocket leaves Saffron)
-.equ VAR_P1_SILPH, 0x4173
-.equ VAR_P1_POWER_PLANT, 0x4174
-.equ VAR_P1_VIRIDIAN_GYM, 0x4175
+.equ VAR_P1_SILPH, 0x413D
+.equ VAR_P1_POWER_PLANT, 0x413E
+.equ VAR_P1_VIRIDIAN_GYM, 0x413F
 // Sevii Islands: 1 Bill waits outside Cinnabar Gym, 2 Bill waits in Cinnabar's Pokemon Center, 3 sailing to One
 // Island, 4 got the Meteorite and Tri-Pass, 5 Moon Stone from the Game Corner owner, 6 back in Kanto (scr_seq_01055)
-.equ VAR_P1_SEVII, 0x4176
+.equ VAR_P1_SEVII, 0x4141
+// hack: vars must stay below 0x4170
+// (NUM_VARS): higher ids run into the flags array (0x4170-0x4173 landed on the map-temp flags, cleared on every
+// map change).  Builds 23-38 had the seven vars above at 0x4170-0x4176; they moved to vars vanilla HeartGold never uses.
+.equ VAR_RANDOMIZER_SEED_HI, 0x4165 // 0xFFFF = the player said no to Mom's randomizer question (include/randomizer.h)
 .equ VAR_UNK_4167, 0x4167
 .equ VAR_UNK_4168, 0x4168
 .equ VAR_UNK_4169, 0x4169

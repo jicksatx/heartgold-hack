@@ -37,7 +37,7 @@ BOOL LONG_CALL Randomizer_ScrCmd_LoadNPCTrade(SCRIPTCONTEXT *ctx)
     HandleLoadOverlay(NPC_TRADE_OVERLAY, 2);
     *work = NPCTradeApp_Init(HEAP_ID_FIELD2, tradeNo);
 
-    if (tradeNo != NPC_TRADE_KENYA && tradeNo < NELEMS(sTradeAskBank)) {
+    if (tradeNo != NPC_TRADE_KENYA && tradeNo < NELEMS(sTradeAskBank) && !Randomizer_IsOff()) {
         s32 *trade = *(s32 **)(*work); // NPCTrade: give_species at 0, ask_species at 0x4C
         trade[0] = Randomizer_RemapWildSpecies(trade[0], 0x300 + tradeNo);
         if (sTradeAskBank[tradeNo][0] != 0xFFFF) {

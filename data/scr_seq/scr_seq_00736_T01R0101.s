@@ -55,10 +55,25 @@ _part1Mom:
 	goto_if_ne _nuzlockeDeclined
 	setflag FLAG_NUZLOCKE_ENABLED
 	npc_msg 6
-	goto _part1MomTalk
+	goto _part1MomRandomizer
 
 _nuzlockeDeclined:
 	npc_msg 7
+_part1MomRandomizer:
+	// randomizer: "no" sets the seed's high half to 0xFFFF, which a generated seed never has (include/randomizer.h)
+	npc_msg 11
+	npc_msg 12
+	touchscreen_menu_hide
+	getmenuchoice VAR_SPECIAL_RESULT
+	touchscreen_menu_show
+	compare VAR_SPECIAL_RESULT, 0
+	goto_if_ne _randomizerDeclined
+	npc_msg 13
+	goto _part1MomTalk
+
+_randomizerDeclined:
+	setvar 0x4165, 0xFFFF
+	npc_msg 14
 _part1MomTalk:
 	// FireRed: once Red has battled Blue in the lab, Mom heals the team
 	compare VAR_P1_STORY, 4

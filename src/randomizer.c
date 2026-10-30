@@ -31,6 +31,7 @@ u32 LONG_CALL Randomizer_GetSeed(void)
         struct RTCTime time;
         GF_RTC_CopyTime(&time);
         seed = ((u32)gf_rand() << 16) ^ gf_rand() ^ (time.second * 2654435761u) ^ (time.minute << 8);
+        seed &= ~0x10000; // the high half is never 0xFFFF: that means "randomizer off" (Randomizer_IsOff)
         if (seed == 0) {
             seed = 0x1D872B41;
         }
@@ -116,9 +117,17 @@ static const u16 sStarterLines[3][STARTER_LINES_PER_TYPE][3] = {
 /**
  *  @brief which line (0-8) the seed picked for the given starter type
  */
+BOOL LONG_CALL Randomizer_IsOff(void)
+{
+    return GetScriptVar(RANDOMIZER_SEED_VAR_HI) == 0xFFFF;
+}
+
 static u32 Randomizer_GetStarterLine(u32 type)
 {
 #ifdef RANDOMIZE_STARTERS
+    if (Randomizer_IsOff()) {
+        return Randomizer_IsPart1() ? KANTO_LINE_INDEX : JOHTO_LINE_INDEX;
+    }
     return Randomizer_Hash(Randomizer_GetSeed(), 0x57A27E00 + type + (Randomizer_IsPart1() ? 0x10 : 0)) % STARTER_LINES_PER_TYPE;
 #else
     return Randomizer_IsPart1() ? KANTO_LINE_INDEX : JOHTO_LINE_INDEX;
@@ -266,20 +275,14 @@ static void RemapSlots(EncounterDataSlot *slots, u32 n, u32 area)
 
 void LONG_CALL Randomizer_RandomizeEncounterTable(EncounterData *enc, u32 area)
 {
-    RemapList(enc->landSlots.speciesMorning, NUM_ENCOUNTERS_LAND, area);
-    RemapList(enc->landSlots.speciesDay, NUM_ENCOUNTERS_LAND, area);
-    RemapList(enc->landSlots.speciesNight, NUM_ENCOUNTERS_LAND, area);
-    RemapList(enc->hoennSoundSpecies, NUM_ENCOUNTERS_SOUNDS, area);
-    RemapList(enc->sinnohSoundSpecies, NUM_ENCOUNTERS_SOUNDS, area);
-    RemapSlots(enc->surfSlots, NUM_ENCOUNTERS_SURF, area);
-    RemapSlots(enc->rockSmashSlots, NUM_ENCOUNTERS_ROCKSMASH, area);
-    RemapSlots(enc->oldRodSlots, NUM_ENCOUNTERS_FISH, area);
-    RemapSlots(enc->goodRodSlots, NUM_ENCOUNTERS_FISH, area);
-    RemapSlots(enc->superRodSlots, NUM_ENCOUNTERS_FISH, area);
-    enc->landSwarm = Randomizer_RemapWildSpecies(enc->landSwarm, area);
-    enc->surfSwarm = Randomizer_RemapWildSpecies(enc->surfSwarm, area);
-    enc->nightFish = Randomizer_RemapWildSpecies(enc->nightFish, area);
-    enc->fishSwarm = Randomizer_RemapWildSpecies(enc->fishSwarm, area);
+    if (Randomizer_IsOff()) {
+        return;
+    }
+    // the struct keeps these together: morning/day/night grass + the Hoenn/Sinnoh radio sounds (40 species in a row),
+    // surf/rock smash/old/good/super rod (22 slots in a row), then the four swarm species
+    RemapList(enc->landSlots.speciesMorning, NUM_ENCOUNTERS_LAND * 3 + NUM_ENCOUNTERS_SOUNDS * 2, area);
+    RemapSlots(enc->surfSlots, NUM_ENCOUNTERS_SURF + NUM_ENCOUNTERS_ROCKSMASH + NUM_ENCOUNTERS_FISH * 3, area);
+    RemapList(&enc->landSwarm, 4, area);
 }
 
 /**

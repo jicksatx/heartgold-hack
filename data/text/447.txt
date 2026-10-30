@@ -9,3 +9,7 @@ All right! Just have fun out there!\r
 (Test build) Skip to the end of\nPart 1?\rYou’ll get a test team and go\nstraight to the Hall of Fame. {YESNO 0}
 Mom: {STRVAR_1 3, 0, 0}!\nYou should take a quick rest.\r
 Mom: Oh, good! You and your\nPokémon are looking great.\fTake care now!
+One more thing, dear.\rSome Trainers like their journey\nfull of surprises.\fThe Pokémon you meet, your first\npartner, even trades... all mixed up!
+Would you like your adventure to be\nrandomized? {YESNO 0}
+Then expect the unexpected out\nthere, dear!\r
+All right! Everything will be just\nlike the old stories.\r

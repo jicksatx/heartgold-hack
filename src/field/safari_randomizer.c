@@ -52,6 +52,9 @@ extern const u16 sRegionalPoolCount;
  */
 static u16 Safari_Remap(u16 species, u32 areaNo)
 {
+    if (Randomizer_IsOff()) {
+        return species; // no randomizer: HeartGold's own Safari Pokemon
+    }
     species &= 0x7FF;
     if (species == SPECIES_NONE || species > 1075 || sBaseStatTotals[species] == 0) {
         return species;

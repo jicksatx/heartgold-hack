@@ -8,7 +8,7 @@
 	.hword 15, 0
 	.byte 0 // end of entries
 _frameTable:
-	.hword 0x4176, 3, 13
-	.hword 0x4176, 5, 14
+	.hword 0x4141, 3, 13
+	.hword 0x4141, 5, 14
 	.hword 0
 	.balign 4, 0
