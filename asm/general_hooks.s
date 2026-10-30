@@ -149,3 +149,14 @@ ldr r1, =0x021E7CF8 | 1
 bx r1
 
 .pool
+
+// hack: the end of GfGfxLoader_LoadFromNarc (0x02007ABE, reached as a BL): r4 = the loaded data, r7 = narc,
+// [sp] = member.  Part 1 recolors Ethan's cap (src/chapter_gfx.c), then this does the original's return.
+.global Chapter_LoadFromNarcTail
+Chapter_LoadFromNarcTail:
+mov r0, r4
+mov r1, r7
+ldr r2, [sp]
+bl Chapter_RedCapPalette
+mov r0, r4
+pop {r3-r7, pc}

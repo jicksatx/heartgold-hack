@@ -689,8 +689,9 @@ arm9 Chapter_MapHeader_GetScriptsBank 0203B2D4 1
 arm9 Chapter_MapHeader_GetScriptHeaderBank 0203B2E8 1
 arm9 Chapter_MapHeader_GetEventsBank 0203B358 1
 arm9 Chapter_ReadPlaceNameAndGetWidth 02068F84 3
-# hack: Ethan's art recolored as Red in Part 1 (Trainer Card, Oak's intro, Hall of Fame; src/field/chapter_gfx.c)
-arm9 Chapter_GfGfxLoader_LoadFromNarc 02007A44
+# hack: Ethan's art recolored as Red in Part 1 (Trainer Card, Oak's intro, Hall of Fame; src/chapter_gfx.c).  'bl' = one BL
+# instruction at the end of GfGfxLoader_LoadFromNarc (the function itself is left as it is)
+arm9 Chapter_LoadFromNarcTail 02007ABE bl
 arm9 Chapter_CanGenerateWalkingEncounters 0205B994 1
 arm9 Chapter_BufferBattleTrainerClass 0200C344 3
 arm9 Chapter_TrainerClassToMusicCombo 02051868 1

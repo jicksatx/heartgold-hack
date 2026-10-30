@@ -365,7 +365,12 @@ def hook():
                     with open("base/overarm9.bin", 'rb+') as y9Table:
                         y9Table.seek((int(files)*0x20)+0x4) # read the overlay memory address for offset calculation
                         offset = int(address, 16) - struct.unpack_from("<I", y9Table.read(4))[0] if int(address, 16) & 0x02000000 else int(address, 16) - 0x08000000
-                Hook(rom2, code, offset, int(register), int(address, 16))
+                if register == "bl":  # hack: a single thumb BL at the address (4 bytes) instead of a trampoline
+                    rom2.seek(offset)
+                    rel = ((code & ~1) - (int(address, 16) + 4)) >> 1
+                    rom2.write((0xF000 | ((rel >> 11) & 0x7FF)).to_bytes(2, 'little') + (0xF800 | (rel & 0x7FF)).to_bytes(2, 'little'))
+                else:
+                    Hook(rom2, code, offset, int(register), int(address, 16))
                 rom2.close()
 
 
