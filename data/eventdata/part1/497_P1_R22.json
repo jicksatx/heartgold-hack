@@ -63,20 +63,20 @@
   "coord_events": [
     {
       "script": 1,
-      "x": 990,
-      "z": 266,
+      "x": 948,
+      "z": 265,
       "width": 1,
-      "length": 3,
+      "length": 4,
       "y": 0,
       "value": 1,
       "var": 16744
     },
     {
       "script": 5,
-      "x": 990,
-      "z": 266,
+      "x": 948,
+      "z": 265,
       "width": 1,
-      "length": 3,
+      "length": 4,
       "y": 0,
       "value": 3,
       "var": 16744

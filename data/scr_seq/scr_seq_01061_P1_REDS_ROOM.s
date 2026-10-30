@@ -13,7 +13,8 @@
 #include "config.h"
 
 // hack: Red's bedroom in Part 1 (FireRed): the NES, and Red's PC with the Potion in its item storage.  test builds
-// (CHAPTER_DEBUG_SKIP, include/config.h) also keep unlimited Rare Candies there.
+// (CHAPTER_DEBUG_SKIP, include/config.h) also keep unlimited Rare Candies there, plus test tools (give item, give Pokemon
+// on the PC, a warp on the NES) driven by vars 0x4111/0x4112/0x4109.
 // events: data/eventdata/part1/680_P1_T01R0102.json, text: data/text/923.txt
 
 .equ FLAG_P1_GOT_PC_POTION, 2094
@@ -32,6 +33,18 @@ scr_seq_P1_REDS_ROOM_001:
 	npc_msg 0
 	wait_button
 	closemsg
+#ifdef CHAPTER_DEBUG_SKIP
+	// test tool: with var 0x4109 set (an emulator's memory editor), the NES warps to map 0x4111 at x 0x4112, z 0x4109.
+	// (a warp straight out of the PC's touchscreen menu leaves the field blank, so it lives here)
+	compare 0x4109, 0
+	goto_if_eq _nesEnd
+	fade_screen 6, 1, 0, 0
+	wait_fade
+	warp 0x4111, 0, 0x4112, 0x4109, DIR_SOUTH
+	fade_screen 6, 1, 1, 0
+	wait_fade
+_nesEnd:
+#endif
 	releaseall
 	end
 
@@ -49,6 +62,8 @@ _pcMenu:
 _pcNoPotion:
 #ifdef CHAPTER_DEBUG_SKIP
 	menu_item_add 4, 255, 1
+	menu_item_add 8, 255, 4
+	menu_item_add 9, 255, 5
 #endif
 	menu_item_add 5, 255, 2
 	menu_exec
@@ -56,6 +71,12 @@ _pcNoPotion:
 	goto_if_eq _pcPotion
 	compare VAR_SPECIAL_RESULT, 1
 	goto_if_eq _pcCandy
+#ifdef CHAPTER_DEBUG_SKIP
+	compare VAR_SPECIAL_RESULT, 4
+	goto_if_eq _pcTestItem
+	compare VAR_SPECIAL_RESULT, 5
+	goto_if_eq _pcTestMon
+#endif
 	goto _pcOff
 
 _pcPotion:
@@ -68,6 +89,22 @@ _pcCandy:
 	goto_if_no_item_space ITEM_RARE_CANDY, 50, _pcFull
 	giveitem_no_check ITEM_RARE_CANDY, 50
 	goto _pcMenu
+
+#ifdef CHAPTER_DEBUG_SKIP
+// test tools: the values come from vars no script uses (vanilla HeartGold never references them), set from
+// outside (an emulator's memory editor) (the warp tool is on the NES, above): give item 0x4111 x 0x4112;
+// give Pokemon 0x4111 at level 0x4112
+_pcTestItem:
+	giveitem 0x4111, 0x4112, VAR_SPECIAL_RESULT
+	goto _pcMenu
+
+_pcTestMon:
+	give_mon 0x4111, 0x4112, 0, 0, 0, VAR_SPECIAL_RESULT
+	play_se SEQ_SE_DP_SELECT
+	npc_msg 10
+	wait_button
+	goto _pcMenu
+#endif
 
 _pcFull:
 	callstd std_bag_is_full

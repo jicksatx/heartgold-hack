@@ -13,7 +13,8 @@
 #include "config.h"
 
 // hack: Route 22 in Part 1 (FireRed).  events: data/eventdata/part1/497_P1_R22.json, text: data/text/860.txt,
-// header scr_seq_00976_P1_R22_hdr.s.  Blue's first Route 22 battle (after the Pokedex, a battle Red may lose).
+// header scr_seq_00976_P1_R22_hdr.s.  Blue's first Route 22 battle (after the Pokedex, a battle Red may lose): the trigger column is x 948, just
+// east of the League gate, past the route's grass, and Blue walks in from the gate side, as in FireRed.
 // Blue's second battle once Red has the Earth Badge (VAR_P1_ROUTE22 3 -> 4).
 
 .equ OBJ_BLUE, 0
@@ -30,7 +31,7 @@ scrdef_end
 scr_seq_P1_R22_001:
 	lockall
 	get_player_coords VAR_SPECIAL_x8004, VAR_SPECIAL_x8005
-	move_person OBJ_BLUE, 987, VAR_SPECIAL_x8005
+	move_person OBJ_BLUE, 939, VAR_SPECIAL_x8005
 	clearflag FLAG_P1_HIDE_ROUTE22_BLUE
 	callstd 2031 // rival intro music
 	show_person OBJ_BLUE
@@ -71,7 +72,7 @@ _afterBattle:
 scr_seq_P1_R22_005:
 	lockall
 	get_player_coords VAR_SPECIAL_x8004, VAR_SPECIAL_x8005
-	move_person OBJ_BLUE, 987, VAR_SPECIAL_x8005
+	move_person OBJ_BLUE, 939, VAR_SPECIAL_x8005
 	clearflag FLAG_P1_HIDE_ROUTE22_BLUE
 	callstd 2031 // rival intro music
 	show_person OBJ_BLUE
@@ -139,7 +140,7 @@ scr_seq_P1_R22_004:
 
 	.balign 4
 _blueApproach:
-	step 15, 2  // walk east
+	step 15, 8  // walk east from the League gate side (FireRed: Blue comes from Route 23's direction)
 	step_end
 
 	.balign 4
@@ -149,5 +150,5 @@ _faceWest:
 
 	.balign 4
 _blueLeave:
-	step 14, 2  // walk west
+	step 14, 8  // walk west, back toward the League gate
 	step_end

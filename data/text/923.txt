@@ -2,6 +2,10 @@
 {STRVAR_1 3, 0, 0} booted up the PC.\r
 Accessed {STRVAR_1 3, 0, 0}’s PC.\nItem Storage System opened.
 Potion
-Rare Candy (test build)
+Rare Candy
 Log off
 There are no items stored.
+(unused)
+Give item
+Give Pokémon
+Done!
