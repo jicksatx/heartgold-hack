@@ -280,7 +280,7 @@ _champAfter:
 	play_se SEQ_SE_DP_KI_GASYAN
 	hide_person OBJ_CHAMP_EXIT
 	stop_bgm 0
-	play_bgm SEQ_GS_OHKIDO
+	temp_bgm SEQ_GS_OHKIDO
 	buffer_players_name 0
 	npc_msg 10
 	closemsg

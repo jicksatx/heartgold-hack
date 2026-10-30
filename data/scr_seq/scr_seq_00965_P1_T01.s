@@ -70,7 +70,8 @@ scr_seq_P1_T01_006:
 // FireRed: heading into Route 1's tall grass without a Pokemon, Oak calls out and takes Red to his lab
 scr_seq_P1_T01_007:
 	lockall
-	play_bgm SEQ_GS_OHKIDO
+	stop_bgm 0
+	temp_bgm SEQ_GS_OHKIDO
 	npc_msg 6
 	closemsg
 	apply_movement obj_player, _playerNotice
