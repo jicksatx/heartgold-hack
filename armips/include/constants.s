@@ -283,6 +283,7 @@
 .equ TRAINERCLASS_P1_CHAMPION_BLUE,            140
 .equ TRAINERCLASS_P1_ELITE_FOUR_LANCE,         141
 .equ TRAINERCLASS_P1_LEADER_GIOVANNI,          142
+.equ TRAINERCLASS_P1_LEADER_KOGA,              143
 // pokedex data constants
 .equ DEX_END_AREA_DATA, 0x0
 

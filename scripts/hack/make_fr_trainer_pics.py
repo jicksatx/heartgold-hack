@@ -74,6 +74,10 @@ def main():
     for ext in (".png", "_enc.png", "_cell.json", "_anim.json", "_enc.png.key"):
         shutil.copy(f"{OUT}/124{ext}", f"{OUT}/142{ext}")
     print(f"{OUT}/142: Giovanni's pic")
+    # 143: Part 1's Leader Koga (class "Leader" with Elite Four Koga's pic)
+    for ext in (".png", "_enc.png", "_cell.json", "_anim.json", "_enc.png.key"):
+        shutil.copy(f"{OUT}/089{ext}", f"{OUT}/143{ext}")
+    print(f"{OUT}/143: Koga's pic")
 
 
 if __name__ == "__main__":

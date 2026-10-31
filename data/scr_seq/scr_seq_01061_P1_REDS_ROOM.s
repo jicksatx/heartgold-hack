@@ -40,7 +40,7 @@ scr_seq_P1_REDS_ROOM_001:
 	goto_if_eq _nesEnd
 	fade_screen 6, 1, 0, 0
 	wait_fade
-	warp 0x4111, 0, 0x4112, 0x4109, DIR_SOUTH
+	warp 0x4111, 0, 0x4112, 0x4109, DIR_NORTH // facing north: the walking Pokemon lands behind, not in the way
 	fade_screen 6, 1, 1, 0
 	wait_fade
 _nesEnd:

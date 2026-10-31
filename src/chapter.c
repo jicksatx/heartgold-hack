@@ -350,8 +350,8 @@ u32 LONG_CALL Chapter_TrainerClassToMusicCombo(u32 trainerClass)
         return ANIM_MUSIC_COMBO_P1_ELITE_FOUR;
     } else if (trainerClass == TRAINERCLASS_P1_CHAMPION_BLUE) {
         return ANIM_MUSIC_COMBO_P1_CHAMPION;
-    } else if (trainerClass == TRAINERCLASS_P1_LEADER_GIOVANNI) {
-        return ANIM_MUSIC_COMBO_P1_GIOVANNI;
+    } else if (trainerClass == TRAINERCLASS_P1_LEADER_GIOVANNI || trainerClass == TRAINERCLASS_P1_LEADER_KOGA) {
+        return ANIM_MUSIC_COMBO_P1_GIOVANNI; // plain intro + Kanto gym leader music (HeartGold has no VS portrait for them)
     }
     for (u32 i = 0; i < NELEMS(TrainerClassToMusicCombo); i++) {
         u16 entry = TrainerClassToMusicCombo[i][0] | (TrainerClassToMusicCombo[i][1] << 8);
