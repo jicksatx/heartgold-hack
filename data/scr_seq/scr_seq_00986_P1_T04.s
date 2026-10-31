@@ -170,6 +170,7 @@ scr_seq_P1_T04_011:
 	check_battle_won VAR_SPECIAL_RESULT
 	compare VAR_SPECIAL_RESULT, 0
 	goto_if_eq _lost
+	settrainerflag TRAINER_P1_TEAM_ROCKET_GRUNT_5 // a scripted trainer_battle doesn't mark the trainer beaten
 _gruntGiveTM:
 	npc_msg 13
 	goto_if_no_item_space ITEM_TM028, 1, _gruntBagFull

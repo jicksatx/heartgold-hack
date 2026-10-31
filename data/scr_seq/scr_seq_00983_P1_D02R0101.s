@@ -42,6 +42,7 @@ scr_seq_P1_D02R0101_001:
 	check_battle_won VAR_SPECIAL_RESULT
 	compare VAR_SPECIAL_RESULT, 0
 	goto_if_eq _lost
+	settrainerflag TRAINER_P1_SUPER_NERD_MIGUEL // a scripted trainer_battle doesn't mark the trainer beaten
 _miguelPick:
 	npc_msg 1
 	goto _talkDone

@@ -42,6 +42,7 @@ scr_seq_P1_T11R0101_001:
 	check_battle_won VAR_SPECIAL_RESULT
 	compare VAR_SPECIAL_RESULT, 0
 	goto_if_eq _lost
+	settrainerflag TRAINER_P1_BLACK_BELT_KOICHI // a scripted trainer_battle doesn't mark the trainer beaten
 _masterBeaten:
 	goto_if_set FLAG_P1_GOT_DOJO_MON, _stay
 	npc_msg 0
