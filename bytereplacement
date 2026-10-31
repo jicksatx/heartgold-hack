@@ -591,3 +591,9 @@ arm9 020F9654 01
 # FireRed's Power Plant table from member 143 + 11 (data/EncountersPart1.inc); the plant's floor only counts as an
 # encounter tile in Part 1 (Chapter_CanGenerateWalkingEncounters, src/field/chapter_field.c), so Part 2 stays empty.
 arm9 020F97A8 0B
+
+# hack: Pallet Town's white-out point (spawn 13, heal-location table at 0x020F9F58: flags, death map, x | z << 8, then
+# two fly locations).  HeartGold never whites out to Pallet and points it at map 49 tile (8, 13), off the map; Part 1
+# sets spawn 13 on a new game (Red's bedroom, scr_seq_01061) so a loss before any Pokemon Center sends Red home to
+# Mom: map 503 (Red's house 1F), in front of her at (6, 7).
+arm9 020F9F5A F7 01 06 07

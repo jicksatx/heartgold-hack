@@ -117,6 +117,11 @@ _pcOff:
 // HeartGold unlocks the start menu's BAG, TRAINER CARD, SAVE and OPTIONS buttons in Johto's opening (src/start_menu.c
 // CheckGotMenuIconI: FLAG_GOT_BAG + 0-3).  Red has them all from the start, like FireRed.
 scr_seq_P1_REDS_ROOM_003:
+	// first load of a new game: white out to Pallet (HeartGold's default is Mom's house in New Bark) until Red
+	// reaches a Pokemon Center, which sets its own spawn as usual
+	goto_if_set FLAG_GOT_BAG, _menuFlags
+	set_spawn 13 // SPAWN_PALLET
+_menuFlags:
 	setflag FLAG_GOT_BAG
 	setflag FLAG_GOT_TRAINER_CARD
 	setflag FLAG_GOT_SAVE_BUTTON

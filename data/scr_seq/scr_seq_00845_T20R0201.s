@@ -187,6 +187,7 @@ _0179:
 	buffer_players_name 0
 	npc_msg 8
 	setflag FLAG_GOT_POKEGEAR
+	set_spawn 1 // hack: SPAWN_NEW_BARK (Mom).  Part 2 starts with Part 1's last Pokemon Center as the white-out point
 	play_fanfare SEQ_ME_ITEM
 	wait_fanfare
 	npc_msg 9
