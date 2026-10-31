@@ -17,7 +17,7 @@
 // over, as in FireRed.  The guard at the Elite Four door steps aside when you talk to him.
 // events: 599 (Indigo Plateau), 600 (lobby), header scr_seq_01045 (lobby), text: data/text/917.txt
 
-.equ OBJ_GUARD, 8
+.equ OBJ_GUARD, 6
 
 .data
 
