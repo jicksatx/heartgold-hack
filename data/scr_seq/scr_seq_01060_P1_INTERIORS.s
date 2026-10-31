@@ -107,6 +107,9 @@ scrdef scr_seq_P1_INTERIORS_086 // Route2_ViridianForest_NorthEntrance: OldMan
 scrdef scr_seq_P1_INTERIORS_087 // Route2_ViridianForest_NorthEntrance: CooltrainerF
 scrdef scr_seq_P1_INTERIORS_088 // Route16_NorthEntrance_1F: Guard
 scrdef scr_seq_P1_INTERIORS_089 // Route16_NorthEntrance_1F: OldMan
+scrdef scr_seq_P1_INTERIORS_090 // Route 16 gate: Cycling Road bike check (HeartGold's; vars 0x4129/0x412A, flag 0x149)
+scrdef scr_seq_P1_INTERIORS_091 // Route 16 gate: leaving Cycling Road
+scrdef scr_seq_P1_INTERIORS_092 // Route 16 gate: on resume (header scr_seq_01063)
 scrdef_end
 
 scr_seq_P1_INTERIORS_001:
@@ -585,3 +588,48 @@ scr_seq_P1_INTERIORS_088:
 scr_seq_P1_INTERIORS_089:
 	simple_npc_msg 76
 	end
+
+scr_seq_P1_INTERIORS_090:
+	lockall
+	player_on_bike_check VAR_SPECIAL_RESULT
+	compare VAR_SPECIAL_RESULT, 1
+	goto_if_eq _r16OnBike
+	apply_movement obj_player, _r16FaceNorth
+	wait_movement
+	npc_msg 77
+	closemsg
+	apply_movement obj_player, _r16StepEast
+	wait_movement
+	releaseall
+	end
+
+_r16OnBike:
+	scrcmd_186 1
+	setvar 0x4129, 1
+	setvar 0x412A, 1
+	setflag 0x149
+	releaseall
+	end
+
+scr_seq_P1_INTERIORS_091:
+	scrcmd_186 0
+	setvar 0x4129, 0
+	setvar 0x412A, 0
+	clearflag 0x149
+	end
+
+scr_seq_P1_INTERIORS_092:
+	goto_if_unset 0x149, _r16ResumeDone
+	scrcmd_186 1
+_r16ResumeDone:
+	end
+
+	.balign 4
+_r16FaceNorth:
+	step 0, 1
+	step_end
+
+	.balign 4
+_r16StepEast:
+	step 15, 1
+	step_end

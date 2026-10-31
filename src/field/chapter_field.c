@@ -219,7 +219,7 @@ static const struct Part1Map sPart1Maps[] = {
     { 405, 676, 1060, 970, 922 }, // SaffronCity_CopycatsHouse_2F (HeartGold map 405)
     { 419, 677, 1060, 970, 922 }, // Route2_ViridianForest_SouthEntrance (HeartGold map 419)
     { 420, 678, 1060, 970, 922 }, // Route2_ViridianForest_NorthEntrance (HeartGold map 420)
-    { 421, 679, 1060, 970, 922 }, // Route16_NorthEntrance_1F (HeartGold map 421)
+    { 421, 679, 1060, 1063, 922 }, // Route16_NorthEntrance_1F (HeartGold map 421; HeartGold's Cycling Road bike check)
 };
 
 #define MAP_HEADERS        ((const u8 *)0x020F6BE0) // sMapHeaders

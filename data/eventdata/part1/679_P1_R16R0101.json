@@ -52,5 +52,26 @@
       "y": 0
     }
   ],
-  "coord_events": []
+  "coord_events": [
+    {
+      "script": 90,
+      "x": 5,
+      "z": 6,
+      "width": 1,
+      "length": 3,
+      "y": 0,
+      "value": 0,
+      "var": 16681
+    },
+    {
+      "script": 91,
+      "x": 6,
+      "z": 6,
+      "width": 1,
+      "length": 3,
+      "y": 0,
+      "value": 1,
+      "var": 16682
+    }
+  ]
 }

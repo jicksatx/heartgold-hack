@@ -75,3 +75,4 @@ Have you noticed the skinny trees\non the roadside?\rThey can be cut down by a s
 Do you know the evolution-cancel\ntechnique?\rWhen a Pokémon is evolving, you\ncan stop the process.\rIt’s a technique for raising\nPokémon the way they are.
 Cycling Road is a downhill course\nby the sea. It’s a great ride.
 How’d you get in?\nGood effort!
+You need a Bicycle to go out on\nCycling Road!
