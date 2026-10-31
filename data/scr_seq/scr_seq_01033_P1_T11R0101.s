@@ -10,6 +10,7 @@
 .include "asm/include/trainers.inc"
 
 #include "constants/item.h"
+#include "constants/species.h"
 #include "config.h"
 .include "asm/include/game_stats.inc"
 
@@ -62,12 +63,12 @@ _lost:
 	end
 
 scr_seq_P1_T11R0101_002:
-	setvar VAR_SPECIAL_x8006, 106
+	setvar VAR_P1_PRIZE, 5 // Hitmonlee, or its randomizer replacement (src/field/chapter_field.c)
 	setvar VAR_SPECIAL_x8007, 2
 	goto _ball
 
 scr_seq_P1_T11R0101_003:
-	setvar VAR_SPECIAL_x8006, 107
+	setvar VAR_P1_PRIZE, 6 // Hitmonchan, or its randomizer replacement
 	setvar VAR_SPECIAL_x8007, 3
 _ball:
 	play_se SEQ_SE_DP_SELECT
@@ -77,8 +78,18 @@ _ball:
 	get_party_count VAR_SPECIAL_x8005
 	compare VAR_SPECIAL_x8005, 6
 	goto_if_eq _partyFull
-	compare VAR_SPECIAL_x8007, 2
-	goto_if_ne _askChan
+	get_starter_choice VAR_P1_PRIZE
+	copyvar VAR_SPECIAL_x8006, VAR_P1_PRIZE
+	buffer_species_name 1, VAR_SPECIAL_x8006, 0, 0
+	// FireRed's lines for the real pair; a randomized Pokemon gets a plain question
+	compare VAR_SPECIAL_x8006, SPECIES_HITMONLEE
+	goto_if_eq _askLee
+	compare VAR_SPECIAL_x8006, SPECIES_HITMONCHAN
+	goto_if_eq _askChan
+	npc_msg 10
+	goto _ask
+
+_askLee:
 	npc_msg 2
 	goto _ask
 
@@ -94,8 +105,12 @@ _ask:
 	hide_person OBJ_HITMONLEE_BALL
 	hide_person OBJ_HITMONCHAN_BALL
 	setflag FLAG_P1_GOT_DOJO_MON
+	buffer_players_name 0
+	buffer_species_name 1, VAR_SPECIAL_x8006, 0, 0
 	play_fanfare SEQ_ME_POKEGET
+	npc_msg 11
 	wait_fanfare
+	wait_button
 _no:
 	closemsg
 	releaseall

@@ -8,3 +8,5 @@ Fighting Dojo
 You already know, don’t you?\nTM29 is Psychic.\rIt’s an attack that may also lower\nthe target’s special stats.
 Your party is full!\nMake some room first.
 Hiyah! Defeat our Karate Master\nto earn a prize!
+You want {STRVAR_1 1, 1, 0}? {YESNO 0}
+{STRVAR_1 3, 0, 0} received {STRVAR_1 1, 1, 0}!

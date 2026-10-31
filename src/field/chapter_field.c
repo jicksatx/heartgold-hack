@@ -343,6 +343,11 @@ BOOL LONG_CALL Chapter_ScrCmd_GetStarterChoice(SCRIPTCONTEXT *ctx)
         if (slot < 5) {
             *ret = Randomizer_IsOff() ? sFireRedPrizes[slot]
                                       : sPrizeTiers[slot][Randomizer_Hash(Randomizer_GetSeed(), 0x50 + slot) % sPrizeTierCounts[slot]];
+        } else if (slot == 5 || slot == 6) {
+            // slots 5/6: the Fighting Dojo's prize Pokemon (Hitmonlee/Hitmonchan; with the randomizer on, a Pokemon of
+            // similar base stat total, fixed per save, picked like a wild replacement in a bank no map uses)
+            u16 species = slot == 5 ? SPECIES_HITMONLEE : SPECIES_HITMONCHAN;
+            *ret = Randomizer_IsOff() ? species : (Randomizer_RemapWildSpecies(species, 0x200) & 0x7FF);
         }
         return FALSE;
     }
