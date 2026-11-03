@@ -76,3 +76,5 @@ Do you know the evolution-cancel\ntechnique?\rWhen a Pokémon is evolving, you\n
 Cycling Road is a downhill course\nby the sea. It’s a great ride.
 How’d you get in?\nGood effort!
 You need a Bicycle to go out on\nCycling Road!
+Welcome aboard the S.S. Anne!\nThe gangway is right there.
+The S.S. Anne has already set sail.\nShe’ll be back next year.

@@ -110,6 +110,8 @@ scrdef scr_seq_P1_INTERIORS_089 // Route16_NorthEntrance_1F: OldMan
 scrdef scr_seq_P1_INTERIORS_090 // Route 16 gate: Cycling Road bike check (HeartGold's; vars 0x4129/0x412A, flag 0x149)
 scrdef scr_seq_P1_INTERIORS_091 // Route 16 gate: leaving Cycling Road
 scrdef scr_seq_P1_INTERIORS_092 // Route 16 gate: on resume (header scr_seq_01063)
+scrdef scr_seq_P1_INTERIORS_093 // Vermilion dock: sailor (Part 1 uses its own dock events: HeartGold's sailor boards the S.S. Aqua)
+scrdef scr_seq_P1_INTERIORS_094 // Vermilion dock: the gangway after the S.S. Anne has sailed (coord, VAR_P1_SSANNE 2)
 scrdef_end
 
 scr_seq_P1_INTERIORS_001:
@@ -632,4 +634,35 @@ _r16FaceNorth:
 	.balign 4
 _r16StepEast:
 	step 15, 1
+	step_end
+
+scr_seq_P1_INTERIORS_093:
+	compare VAR_P1_SSANNE, 2
+	goto_if_eq _dockSailed
+	simple_npc_msg 78
+	end
+
+_dockSailed:
+	simple_npc_msg 79
+	end
+
+scr_seq_P1_INTERIORS_094:
+	lockall
+	get_player_facing VAR_SPECIAL_RESULT
+	compare VAR_SPECIAL_RESULT, 0 // only stop Red going up the gangway, not coming down it
+	goto_if_ne _dockLetPass
+	npc_msg 79
+	closemsg
+	apply_movement obj_player, _dockStepBack
+	wait_movement
+	releaseall
+	end
+
+_dockLetPass:
+	releaseall
+	end
+
+	.balign 4
+_dockStepBack:
+	step 13, 1
 	step_end
