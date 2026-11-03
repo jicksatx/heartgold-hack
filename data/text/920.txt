@@ -115,3 +115,10 @@ Ohh! That was so scary!\nThank you!\rLostelle came to pick some\nBerries.\rYou c
 Your Berry Pouch is full.\nI guess you don’t want this.\r
 What’s your name?\rLostelle’s scared, so can I go\nwith you to my daddy’s house?\rOkay!\nLet’s go home!
 The Berry Forest lies just past\nthis gate.\rWild Pokémon love the Berries\nthere, so take care!
+If your Pokémon wants to remember\na move it learned growing up,\rbring me two Tiny Mushrooms or\none Big Mushroom.\rI’ll make it remember a move\nin exchange.
+Oh! You’ve brought mushrooms!\rI’ll make one of your Pokémon\nremember a move it learned\ngrowing up.\rWhich Pokémon should I tutor?
+Sorry...\nIt looks like that Pokémon has no\rmoves to remember.
+Hm? That’s an Egg!\nThere’s nothing I can teach an Egg.
+Which move should it remember?
+Come back any time you have\nmushrooms to share!
+{STRVAR_1 3, 0, 0} handed over\nthe mushrooms.\rMushrooms are so very fine...\nThank you!

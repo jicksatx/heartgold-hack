@@ -658,8 +658,78 @@ _lostelleHome:
 	clearflag FLAG_P1_HIDE_HOME_LOSTELLE
 	end
 
+// FireRed's Move Maniac: two Tiny Mushrooms or one Big Mushroom make a Pokemon remember a move (HeartGold's
+// move relearner screen, as Blackthorn's Move Reminder uses it)
 scr_seq_P1_SEVII_044:
-	simple_npc_msg 76
+	play_se SEQ_SE_DP_SELECT
+	lockall
+	faceplayer
+	npc_msg 76
+	hasitem ITEM_BIG_MUSHROOM, 1, VAR_SPECIAL_x8006
+	compare VAR_SPECIAL_x8006, 1
+	goto_if_eq _maniacPay
+	hasitem ITEM_TINY_MUSHROOM, 2, VAR_SPECIAL_x8006
+	compare VAR_SPECIAL_x8006, 1
+	goto_if_eq _maniacPay
+	npc_msg 117
+	goto _maniacDone
+
+_maniacPay:
+	npc_msg 118
+	closemsg
+	fade_screen 6, 1, 0, 0
+	wait_fade
+	party_select_ui
+	get_party_selection VAR_SPECIAL_x8005
+	restore_overworld
+	fade_screen 6, 1, 1, 0
+	wait_fade
+	compare VAR_SPECIAL_x8005, 255
+	goto_if_eq _maniacCancel
+	get_partymon_species VAR_SPECIAL_x8005, VAR_SPECIAL_RESULT
+	compare VAR_SPECIAL_RESULT, 0
+	goto_if_eq _maniacEgg
+	scrcmd_466 VAR_SPECIAL_RESULT, VAR_SPECIAL_x8005
+	compare VAR_SPECIAL_RESULT, 0
+	goto_if_eq _maniacNothing
+	npc_msg 121
+	closemsg
+	fade_screen 6, 1, 0, 0
+	wait_fade
+	move_relearner_init VAR_SPECIAL_x8005
+	move_relearner_get_result VAR_SPECIAL_RESULT
+	restore_overworld
+	fade_screen 6, 1, 1, 0
+	wait_fade
+	compare VAR_SPECIAL_RESULT, 255
+	goto_if_eq _maniacCancel
+	hasitem ITEM_BIG_MUSHROOM, 1, VAR_SPECIAL_x8006
+	compare VAR_SPECIAL_x8006, 1
+	goto_if_eq _maniacTakeBig
+	takeitem ITEM_TINY_MUSHROOM, 2, VAR_SPECIAL_RESULT
+	goto _maniacThanks
+
+_maniacTakeBig:
+	takeitem ITEM_BIG_MUSHROOM, 1, VAR_SPECIAL_RESULT
+_maniacThanks:
+	buffer_players_name 0
+	npc_msg 123
+	goto _maniacDone
+
+_maniacEgg:
+	npc_msg 120
+	goto _maniacDone
+
+_maniacNothing:
+	npc_msg 119
+	goto _maniacDone
+
+_maniacCancel:
+	npc_msg 122
+_maniacDone:
+	wait_button
+	closemsg
+	releaseall
 	end
 
 scr_seq_P1_SEVII_045:
