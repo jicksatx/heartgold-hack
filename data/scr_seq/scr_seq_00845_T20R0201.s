@@ -141,6 +141,40 @@ scr_seq_T20R0201_006:
 
 scr_seq_T20R0201_001:
 #ifdef CHAPTER_DEBUG_SKIP
+	// hack, test builds only: Part 2 test tools, driven by vars no script uses (set from an emulator's memory editor),
+	// like Red's room's: 0x4109 set -> warp to map 0x4111 at x 0x4112, z 0x4109; else 0x4111 set -> give Pokemon
+	// 0x4111 at level 0x4112, or with 0x4112 = 0 give item 0x4111 x 1
+	compare 0x4109, 0
+	goto_if_eq _noTestWarp
+	play_se SEQ_SE_DP_SELECT
+	lockall
+	fade_screen 6, 1, 0, 0
+	wait_fade
+	warp 0x4111, 0, 0x4112, 0x4109, DIR_NORTH
+	fade_screen 6, 1, 1, 0
+	wait_fade
+	releaseall
+	end
+
+_noTestWarp:
+	compare 0x4111, 0
+	goto_if_eq _noTestGive
+	play_se SEQ_SE_DP_SELECT
+	lockall
+	compare 0x4112, 0
+	goto_if_eq _testItem
+	give_mon 0x4111, 0x4112, 0, 0, 0, VAR_SPECIAL_RESULT
+	goto _testGiven
+
+_testItem:
+	giveitem 0x4111, 1, VAR_SPECIAL_RESULT
+_testGiven:
+	setvar 0x4111, 0
+	play_se SEQ_SE_DP_SELECT
+	releaseall
+	end
+
+_noTestGive:
 	// hack, test builds only: once Ethan/Lyra has a Pokemon, Mom offers Red's Mt. Silver battle (trainer 260, built
 	// from Part 1's Hall of Fame team by src/field/enemy_party.c) so it can be tested without playing Part 2
 	goto_if_unset FLAG_GOT_STARTER, _noRedTest

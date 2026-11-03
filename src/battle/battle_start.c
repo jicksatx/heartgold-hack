@@ -41,7 +41,10 @@ _Static_assert(offsetof(struct BattleSystem, battleSpecial) == 0x240C, "BattleSy
 #define SAVE_PCSTORAGE 41
 
 extern const u16 sNuzlockeFamilyRoot[1076];
-void *SaveArray_Get(SaveData *saveData, int id);
+// the save-array lookup is reached through its vanilla entry point (0x020272C8, hooked to src/save.c's version): this
+// file is linked into the battle overlay, where a direct call to the main-code symbol (an absolute address) was
+// emitted as an ARM-mode BLX into Thumb code and froze the game at the start of every wild battle with a Poke Ball
+#define Battle_SaveArray_Get ((void *(*)(SaveData *saveData, int id))(0x020272C8 | 1))
 
 static u16 Nuzlocke_GetFamilyRoot(u16 species)
 {
@@ -73,7 +76,7 @@ static BOOL Nuzlocke_PlayerOwnsFamily(u16 species)
 {
     SaveData *saveData = SaveBlock2_get();
     struct Party *party = SaveData_GetPlayerPartyPtr(saveData);
-    PCStorage *storage = SaveArray_Get(saveData, SAVE_PCSTORAGE);
+    PCStorage *storage = Battle_SaveArray_Get(saveData, SAVE_PCSTORAGE);
     u16 root = Nuzlocke_GetFamilyRoot(species);
     int i, j;
 
