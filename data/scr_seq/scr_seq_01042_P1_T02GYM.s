@@ -61,7 +61,16 @@ _giveTM:
 	setflag FLAG_P1_GOT_TM26
 	setflag FLAG_P1_HIDE_VIRIDIAN_GIOVANNI
 	npc_msg 2
-	goto _talkDone
+	wait_button
+	closemsg
+	// like FireRed: Giovanni leaves the Gym once he's said his piece
+	fade_screen 6, 1, 0, 0
+	wait_fade
+	hide_person 0
+	fade_screen 6, 1, 1, 0
+	wait_fade
+	releaseall
+	end
 
 _giovanniAfter:
 	goto_if_unset FLAG_P1_GOT_TM26, _giveTM
