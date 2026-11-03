@@ -201,7 +201,7 @@ scr_seq_P1_T07R0401_010:
 	hasitem ITEM_COIN_CASE, 1, VAR_SPECIAL_RESULT
 	compare VAR_SPECIAL_RESULT, 0
 	goto_if_eq _flipNoCase
-	npc_msg 20
+	npc_msg 21
 	touchscreen_menu_hide
 	getmenuchoice VAR_SPECIAL_RESULT
 	touchscreen_menu_show
@@ -223,7 +223,7 @@ _flipNo:
 	end
 
 _flipNoCase:
-	npc_msg 19
+	npc_msg 20
 	wait_button
 	closemsg
 	releaseall

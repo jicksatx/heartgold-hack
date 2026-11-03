@@ -27,6 +27,8 @@ scrdef scr_seq_P1_D35R0102_002 // Grunt with the Lift Key
 scrdef scr_seq_P1_D35R0102_003 // elevator panel
 scrdef scr_seq_P1_D35R0102_004 // elevator: on transition
 scrdef scr_seq_P1_D35R0102_005 // ice room boulders (fixed: they're part of the puzzle)
+scrdef scr_seq_P1_D35R0102_006 // B2F corridor: on transition (the elevator is on B2F)
+scrdef scr_seq_P1_D35R0102_007 // B4F: on transition (the elevator is on B4F)
 scrdef_end
 
 scr_seq_P1_D35R0102_001:
@@ -136,20 +138,26 @@ _needKey:
 	releaseall
 	end
 
-// the elevator's door is a dynamic warp: point it at the floor the player came from (the B2F corridor's stairs arrive
-// one tile to the right of the door)
+// the elevator's door is a dynamic warp: point it at the floor the player came from.  VAR_P1_LIFT is set by the B2F and
+// B4F map headers on transition (scripts 6/7), so it always names the floor the player entered the elevator from; both
+// floors arrive on the elevator's mat (3,6), its only exit tile (HeartGold's own elevator has the one warp)
 scr_seq_P1_D35R0102_004:
-	get_player_coords VAR_SPECIAL_x8004, VAR_SPECIAL_x8005
-	compare VAR_SPECIAL_x8004, 4
+	compare VAR_P1_LIFT, 1
 	goto_if_eq _fromB2F
-	setvar VAR_P1_LIFT, 0
 	set_dynamic_warp MAP_D35R0104, 3, 51, 4, DIR_SOUTH
 	end
 
 _fromB2F:
-	setvar VAR_P1_LIFT, 1
 	set_dynamic_warp MAP_D35R0103, 4, 51, 4, DIR_SOUTH
 	end
 
 scr_seq_P1_D35R0102_005:
+	end
+
+scr_seq_P1_D35R0102_006:
+	setvar VAR_P1_LIFT, 1
+	end
+
+scr_seq_P1_D35R0102_007:
+	setvar VAR_P1_LIFT, 0
 	end

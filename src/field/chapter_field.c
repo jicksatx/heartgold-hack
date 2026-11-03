@@ -79,8 +79,8 @@ static const struct Part1Map sPart1Maps[] = {
     { 376, 539, 1012, 970, 890 }, // Celadon Condominiums 1F
     { 381, 540, 1013, 970, 891 }, // Rocket Game Corner (the Japanese release's Game Corner map)
     { 247, 541, 1014, 970, 892 }, // Rocket Hideout B1F (Team Rocket HQ)
-    { 248, 542, 1014, 970, 892 }, // Rocket Hideout B2F
-    { 249, 543, 1014, 970, 892 }, // Rocket Hideout B3F
+    { 248, 542, 1014, 1064, 892 }, // Rocket Hideout B2F
+    { 249, 543, 1014, 1065, 892 }, // Rocket Hideout B3F
     { 110, 544, 1015, 1016, 893 }, // Pokemon Tower 1F (Sprout Tower)
     { 155, 545, 1015, 1016, 893 }, // Pokemon Tower 2F
     { 156, 546, 1015, 1016, 893 }, // Pokemon Tower 3F
