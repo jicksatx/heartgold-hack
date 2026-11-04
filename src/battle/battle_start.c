@@ -223,6 +223,12 @@ struct BattleStruct *ServerInit(struct BattleSystem *bw)
     bw->location = Chapter_SeviiMapSec(bw->location);
 #endif // CHAPTER_SYSTEM
 
+    // hack: every battle uses the Set style (no "switch Pokemon?" prompt when the opponent sends out the next one),
+    // whatever the options say.  the battle has its own copy of the options, so the player's setting is left alone
+    if (bw->options != NULL) {
+        bw->options->battleStyle = 1;
+    }
+
 #ifdef NUZLOCKE_MODE
     Nuzlocke_BattleStart(bw);
 #endif // NUZLOCKE_MODE
