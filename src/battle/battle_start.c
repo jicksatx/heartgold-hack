@@ -42,8 +42,8 @@ _Static_assert(offsetof(struct BattleSystem, battleSpecial) == 0x240C, "BattleSy
 
 extern const u16 sNuzlockeFamilyRoot[1076];
 // the save-array lookup is reached through its vanilla entry point (0x020272C8, hooked to src/save.c's version): this
-// file is linked into the battle overlay, where a direct call to the main-code symbol (an absolute address) was
-// emitted as an ARM-mode BLX into Thumb code and froze the game at the start of every wild battle with a Poke Ball
+// file is linked into the battle overlay, where a direct call to the main-code symbol froze the game at the start of
+// every wild battle with a Poke Ball
 #define Battle_SaveArray_Get ((void *(*)(SaveData *saveData, int id))(0x020272C8 | 1))
 
 static u16 Nuzlocke_GetFamilyRoot(u16 species)
@@ -81,7 +81,9 @@ static BOOL Nuzlocke_PlayerOwnsFamily(u16 species)
     int i, j;
 
     for (i = 0; i < party->count; i++) {
-        if (BoxMonIsInFamily(&party->members[i].box, root)) {
+        struct PartyPokemon *mon = Party_GetMonByIndex(party, i);
+        u16 partySpecies = GetMonData(mon, MON_DATA_SPECIES, NULL);
+        if (partySpecies != 0 && !GetMonData(mon, MON_DATA_IS_EGG, NULL) && Nuzlocke_GetFamilyRoot(partySpecies) == root) {
             return TRUE;
         }
     }
@@ -109,9 +111,6 @@ static BOOL Nuzlocke_PlayerOwnsFamily(u16 species)
 static void Nuzlocke_BattleStart(struct BattleSystem *bw)
 {
     u32 battleType = BattleTypeGet(bw);
-    struct PartyPokemon *wildMon;
-    u16 species, root;
-    int i;
 
     newBS.nuzlockeCatchBlocked = NUZLOCKE_CATCH_OK;
     newBS.nuzlockeFaintMask = 0;
@@ -132,17 +131,41 @@ static void Nuzlocke_BattleStart(struct BattleSystem *bw)
     if (bw->battleSpecial & BATTLE_SPECIAL_LEGENDARY) { // scripted/static encounter: a free extra
         return;
     }
+    if (!(battleType & BATTLE_TYPE_SAFARI) && !Bag_PocketNotEmpty(bw->bag, POCKET_BALLS)) {
+        return; // encounters only count once the player can actually catch something
+    }
+
+    // the wild Pokemon isn't in the battle's party yet when the server starts (its data reads as an Egg), so the
+    // species rules wait until it is: Nuzlocke_ResolveEncounter, at the first ball thrown or at the battle's end
+    newBS.nuzlockeCatchBlocked = NUZLOCKE_CATCH_PENDING;
+}
+
+/**
+ *  @brief hack: the species-dependent Nuzlocke rules for a wild encounter that counts (decided once, the first time a
+ *         ball is thrown or when the battle ends): shiny clause, first encounter per map section, dupes clause (a
+ *         Pokemon from a family the player already has can't be caught and leaves the area open).
+ *
+ *  @param bw battle work structure
+ */
+void Nuzlocke_ResolveEncounter(void *bsys)
+{
+    struct BattleSystem *bw = bsys;
+    struct PartyPokemon *wildMon;
+    u16 species, root;
+    int i;
+
+    if (newBS.nuzlockeCatchBlocked != NUZLOCKE_CATCH_PENDING) {
+        return;
+    }
+    newBS.nuzlockeCatchBlocked = NUZLOCKE_CATCH_OK;
 
     wildMon = BattleWorkPokemonParamGet(bw, 1, 0);
     species = GetMonData(wildMon, MON_DATA_SPECIES, NULL);
-    if (species == 0) {
+    if (species == 0 || species == SPECIES_EGG) {
         return;
     }
     if (MonIsShiny(wildMon)) { // shiny clause
         return;
-    }
-    if (!(battleType & BATTLE_TYPE_SAFARI) && !Bag_PocketNotEmpty(bw->bag, POCKET_BALLS)) {
-        return; // encounters only count once the player can actually catch something
     }
     if (Nuzlocke_IsAreaUsed(bw->location)) {
         newBS.nuzlockeCatchBlocked = NUZLOCKE_CATCH_AREA_USED;

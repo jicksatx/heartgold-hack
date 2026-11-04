@@ -1033,6 +1033,8 @@ static void Nuzlocke_BattleEnd(struct BattleSystem *bw)
     int i, count, alive = 0;
     u8 dead = 0;
 
+    Nuzlocke_ResolveEncounter(bw); // a counting encounter the player never threw a ball at still uses the area up
+
     if (!Nuzlocke_IsActive() || (battleType & (BATTLE_TYPE_LINK | BATTLE_TYPE_FRONTIER | BATTLE_TYPE_TUTORIAL))) {
         return;
     }

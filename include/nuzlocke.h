@@ -35,8 +35,10 @@
 #define NUZLOCKE_CATCH_OK          0
 #define NUZLOCKE_CATCH_AREA_USED   1
 #define NUZLOCKE_CATCH_DUPE        2
+#define NUZLOCKE_CATCH_PENDING     3 // the species rules haven't run yet (Nuzlocke_ResolveEncounter)
 
 BOOL LONG_CALL Nuzlocke_IsActive(void);
+void Nuzlocke_ResolveEncounter(void *bsys); // battle overlay (src/battle/battle_start.c)
 BOOL LONG_CALL Nuzlocke_IsAreaUsed(u32 mapsec);
 void LONG_CALL Nuzlocke_SetAreaUsed(u32 mapsec);
 BOOL LONG_CALL Nuzlocke_IsMonDead(struct PartyPokemon *mon);

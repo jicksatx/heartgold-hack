@@ -6094,17 +6094,20 @@ BOOL btl_scr_cmd_12D_NuzlockeRecordFaint(void *bsys, struct BattleStruct *ctx)
  *  @brief hack: NuzlockeGoToIfCatchBlocked areaUsedLabel, dupeLabel.  jumps when the Nuzlocke rules don't allow
  *         catching this wild Pokemon (decided when the battle started).
  */
-BOOL btl_scr_cmd_12E_NuzlockeGoToIfCatchBlocked(void *bsys UNUSED, struct BattleStruct *ctx)
+BOOL btl_scr_cmd_12E_NuzlockeGoToIfCatchBlocked(void *bsys, struct BattleStruct *ctx)
 {
     IncrementBattleScriptPtr(ctx, 1);
     int areaUsedAdrs = read_battle_script_param(ctx);
     int dupeAdrs = read_battle_script_param(ctx);
 
 #ifdef NUZLOCKE_MODE
-    if (newBS.nuzlockeCatchBlocked == NUZLOCKE_CATCH_AREA_USED) {
-        IncrementBattleScriptPtr(ctx, areaUsedAdrs);
-    } else if (newBS.nuzlockeCatchBlocked == NUZLOCKE_CATCH_DUPE) {
-        IncrementBattleScriptPtr(ctx, dupeAdrs);
+    Nuzlocke_ResolveEncounter(bsys);
+    if (newBS.nuzlockeCatchBlocked == NUZLOCKE_CATCH_AREA_USED || newBS.nuzlockeCatchBlocked == NUZLOCKE_CATCH_DUPE) {
+        // the ball never left the player's hand: give it back (the bag took it when it was picked)
+        if (ctx->item_work != ITEM_SAFARI_BALL) {
+            Bag_AddItem(((struct BattleSystem *)bsys)->bag, ctx->item_work, 1, 5);
+        }
+        IncrementBattleScriptPtr(ctx, newBS.nuzlockeCatchBlocked == NUZLOCKE_CATCH_AREA_USED ? areaUsedAdrs : dupeAdrs);
     }
 #else
     (void)areaUsedAdrs;
