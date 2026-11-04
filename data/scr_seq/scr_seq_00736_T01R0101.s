@@ -100,6 +100,8 @@ _debugSkipPart1:
 	give_mon SPECIES_CHARIZARD, 60, 0, 0, 0, VAR_SPECIAL_RESULT
 	give_mon SPECIES_LAPRAS, 60, 0, 0, 0, VAR_SPECIAL_RESULT
 	give_mon SPECIES_SNORLAX, 60, 0, 0, 0, VAR_SPECIAL_RESULT
+	setvar VAR_P1_PRIZE, 7 // the test team is the team "entering the Elite Four" (Red's Mt. Silver team)
+	get_starter_choice VAR_P1_PRIZE
 	fade_screen 6, 1, 0, RGB_BLACK
 	wait_fade
 	hof_credits 0

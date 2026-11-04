@@ -3,6 +3,7 @@
 
 #include "types.h"
 #include "pokemon.h"
+#include "pokemon_storage_system.h"
 
 /*
  *  hack: two-part game.  Part 1 is FireRed's Kanto played as Red; after Part 1's Hall of Fame the next Continue
@@ -27,6 +28,7 @@
 // Red's team is kept in the unused padding at the end of each PC Box (16 bytes x 30 boxes)
 #define CHAPTER_TEAM_MAGIC 0x31444552 // "RED1"
 #define CHAPTER_TEAM_SIZE  6
+#define CHAPTER_LEAGUE_TEAM_MAGIC 0x4C454452 // "REDL": the team that entered the Elite Four, not yet Red's
 
 struct PACKED ChapterTeamMon {
     u16 species;
@@ -53,6 +55,8 @@ u32 LONG_CALL Chapter_Get(void);
 void LONG_CALL Chapter_Location_SetToPlayerRoom(Location *dest);
 void LONG_CALL Chapter_Location_SetToOutsidePlayerHome(Location *dest);
 BOOL LONG_CALL Chapter_ReadRedTeam(struct ChapterTeam *team);
+void LONG_CALL Chapter_TeamCopy(PCStorage *storage, struct ChapterTeam *team, BOOL write);
+void LONG_CALL Chapter_PackParty(struct Party *party, struct ChapterTeam *team);
 u32 LONG_CALL Chapter_SeviiMapSec(u32 mapsec);
 
 #endif // CHAPTER_H

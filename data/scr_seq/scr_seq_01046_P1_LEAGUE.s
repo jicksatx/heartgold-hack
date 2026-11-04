@@ -181,6 +181,9 @@ scr_seq_P1_LEAGUE_005:
 	clearflag 523 // the door behind you shuts
 	show_person 1
 	setvar VAR_TEMP_x4001, 1
+	// hack: the team walking into the Elite Four becomes Red's Mt. Silver team (src/field/chapter_field.c, slot 7)
+	setvar VAR_P1_PRIZE, 7
+	get_starter_choice VAR_P1_PRIZE
 	releaseall
 	end
 

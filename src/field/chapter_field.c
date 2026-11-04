@@ -6,6 +6,13 @@
 #include "randomizer.h"
 #include "constants/species.h"
 #include "script.h"
+#include "save.h"
+#include "pokemon_storage_system.h"
+
+// main-code functions are reached through register calls: a direct BL from this overlay to an absolute symbol gets
+// an ARM-mode veneer, which runs the Thumb code as ARM
+#define Field_SaveArray_Get ((void *(*)(SaveData *saveData, int id))(0x020272C8 | 1))       // hooked to src/save.c
+#define Field_PCStorage_SetBoxModified ((void (*)(PCStorage *storage, u8 boxno))(0x020740D8 | 1)) // hooked too
 
 /*
  *  hack: two-part game, field side (include/chapter.h).
@@ -313,9 +320,46 @@ BOOL LONG_CALL Chapter_CanGenerateWalkingEncounters(u8 tile)
         && (u32)gFieldSysPtr->location->mapId == MAP_POWER_PLANT;
 }
 
+
 #endif // CHAPTER_SYSTEM
 
 #define VAR_PLAYER_STARTER 0x4030
+
+// Red's team (include/chapter.h): packing a party Pokemon
+static void PackMon(struct PartyPokemon *mon, struct ChapterTeamMon *out)
+{
+    memset(out, 0, sizeof(*out));
+    if (GetMonData(mon, MON_DATA_SPECIES, NULL) == 0 || GetMonData(mon, MON_DATA_IS_EGG, NULL)) {
+        return;
+    }
+    out->species = GetMonData(mon, MON_DATA_SPECIES, NULL);
+    out->form = GetMonData(mon, MON_DATA_FORM, NULL);
+    out->level = GetMonData(mon, MON_DATA_LEVEL, NULL);
+    out->personality = GetMonData(mon, MON_DATA_PERSONALITY, NULL);
+    for (int i = 0; i < 6; i++) {
+        out->ivs |= (GetMonData(mon, MON_DATA_HP_IV + i, NULL) & 31) << (i * 5);
+    }
+    out->item = GetMonData(mon, MON_DATA_HELD_ITEM, NULL);
+    for (int i = 0; i < 4; i++) {
+        out->moves[i] = GetMonData(mon, MON_DATA_MOVE1 + i, NULL);
+    }
+    out->reserved114 = GetMonData(mon, MON_DATA_RESERVED_114, NULL) & 0x0FFF; // drop the Nuzlocke dead bit
+    out->reserved113 = GetMonData(mon, MON_DATA_RESERVED_113, NULL);
+    out->ball = GetMonData(mon, MON_DATA_POKEBALL, NULL);
+    out->flags = MonIsShiny(mon) ? 1 : 0;
+    GetMonData(mon, MON_DATA_NICKNAME, out->nickname);
+}
+
+void LONG_CALL Chapter_PackParty(struct Party *party, struct ChapterTeam *team)
+{
+    for (int i = 0; i < CHAPTER_TEAM_SIZE; i++) {
+        if (i < party->count) {
+            PackMon(Party_GetMonByIndex(party, i), &team->mons[i]);
+        } else {
+            memset(&team->mons[i], 0, sizeof(team->mons[i]));
+        }
+    }
+}
 
 /**
  *  @brief replaces ScrCmd_GetStarterChoice (206, 0x02043938) (and doubles as the prize Pokemon lookup, see below).  the rival scripts pick the rival's team by comparing
@@ -344,6 +388,18 @@ BOOL LONG_CALL Chapter_ScrCmd_GetStarterChoice(SCRIPTCONTEXT *ctx)
         if (slot < 5) {
             *ret = Randomizer_IsOff() ? sFireRedPrizes[slot]
                                       : sPrizeTiers[slot][Randomizer_Hash(Randomizer_GetSeed(), 0x50 + slot) % sPrizeTierCounts[slot]];
+        } else if (slot == 7) {
+            // slot 7: Lorelei's room walk-in (Part 1): remember the party that entered the Elite Four as Red's
+            // Mt. Silver team, Pokemon that die there in a Nuzlocke included (src/chapter.c BeginPart2)
+            struct ChapterTeam team;
+            SaveData *saveData = SaveBlock2_get();
+            PCStorage *storage = Field_SaveArray_Get(saveData, 41); // SAVE_PCSTORAGE
+            Chapter_PackParty(SaveData_GetPlayerPartyPtr(saveData), &team);
+            team.magic = CHAPTER_LEAGUE_TEAM_MAGIC;
+            Chapter_TeamCopy(storage, &team, TRUE);
+            for (int i = 0; i <= (int)(sizeof(struct ChapterTeam) / 16); i++) {
+                Field_PCStorage_SetBoxModified(storage, i);
+            }
         } else if (slot == 5 || slot == 6) {
             // slots 5/6: the Fighting Dojo's prize Pokemon (Hitmonlee/Hitmonchan; with the randomizer on, a Pokemon of
             // similar base stat total, fixed per save, picked like a wild replacement in a bank no map uses)

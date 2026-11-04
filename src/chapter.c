@@ -78,7 +78,7 @@ void LONG_CALL Chapter_Location_SetToOutsidePlayerHome(Location *dest)
 }
 
 // Red's team lives in the 16 unused bytes at the end of every PC Box
-static void TeamCopy(PCStorage *storage, struct ChapterTeam *team, BOOL write)
+void LONG_CALL Chapter_TeamCopy(PCStorage *storage, struct ChapterTeam *team, BOOL write)
 {
     u8 *bytes = (u8 *)team;
     for (u32 i = 0; i < sizeof(struct ChapterTeam); i++) {
@@ -93,32 +93,8 @@ static void TeamCopy(PCStorage *storage, struct ChapterTeam *team, BOOL write)
 
 BOOL LONG_CALL Chapter_ReadRedTeam(struct ChapterTeam *team)
 {
-    TeamCopy(SaveArray_Get(SaveBlock2_get(), SAVE_PCSTORAGE), team, FALSE);
+    Chapter_TeamCopy(SaveArray_Get(SaveBlock2_get(), SAVE_PCSTORAGE), team, FALSE);
     return team->magic == CHAPTER_TEAM_MAGIC;
-}
-
-static void PackMon(struct PartyPokemon *mon, struct ChapterTeamMon *out)
-{
-    memset(out, 0, sizeof(*out));
-    if (GetMonData(mon, MON_DATA_SPECIES, NULL) == 0 || GetMonData(mon, MON_DATA_IS_EGG, NULL)) {
-        return;
-    }
-    out->species = GetMonData(mon, MON_DATA_SPECIES, NULL);
-    out->form = GetMonData(mon, MON_DATA_FORM, NULL);
-    out->level = GetMonData(mon, MON_DATA_LEVEL, NULL);
-    out->personality = GetMonData(mon, MON_DATA_PERSONALITY, NULL);
-    for (int i = 0; i < 6; i++) {
-        out->ivs |= (GetMonData(mon, MON_DATA_HP_IV + i, NULL) & 31) << (i * 5);
-    }
-    out->item = GetMonData(mon, MON_DATA_HELD_ITEM, NULL);
-    for (int i = 0; i < 4; i++) {
-        out->moves[i] = GetMonData(mon, MON_DATA_MOVE1 + i, NULL);
-    }
-    out->reserved114 = GetMonData(mon, MON_DATA_RESERVED_114, NULL) & 0x0FFF; // drop the Nuzlocke dead bit
-    out->reserved113 = GetMonData(mon, MON_DATA_RESERVED_113, NULL);
-    out->ball = GetMonData(mon, MON_DATA_POKEBALL, NULL);
-    out->flags = MonIsShiny(mon) ? 1 : 0;
-    GetMonData(mon, MON_DATA_NICKNAME, out->nickname);
 }
 
 static BOOL IsPart1Finished(void)
@@ -133,17 +109,13 @@ static BOOL IsPart1Finished(void)
 static void BeginPart2(SaveData *saveData)
 {
     struct ChapterTeam team;
-    struct Party *party = SaveData_GetPlayerPartyPtr(saveData);
     int i;
 
-    team.magic = CHAPTER_TEAM_MAGIC;
-    for (i = 0; i < CHAPTER_TEAM_SIZE; i++) {
-        if (i < party->count) {
-            PackMon(Party_GetMonByIndex(party, i), &team.mons[i]);
-        } else {
-            memset(&team.mons[i], 0, sizeof(team.mons[i]));
-        }
-    }
+    // Red keeps the team that walked into the Elite Four (taken by Lorelei's room's walk-in script, see
+    // src/field/chapter_field.c slot 7), Pokemon that died there in a Nuzlocke included.  without it (an old save),
+    // Red has HeartGold's team.
+    Chapter_TeamCopy(SaveArray_Get(saveData, SAVE_PCSTORAGE), &team, FALSE);
+    team.magic = team.magic == CHAPTER_LEAGUE_TEAM_MAGIC ? CHAPTER_TEAM_MAGIC : 0;
     BOOL nuzlocke = CheckScriptFlag(FLAG_NUZLOCKE_ENABLED);
     u16 seedLo = GetScriptVar(VAR_SEED_LO);
     u16 seedHi = GetScriptVar(VAR_SEED_HI);
@@ -162,7 +134,7 @@ static void BeginPart2(SaveData *saveData)
     *(u16 *)Save_PlayerData_GetOptionsAddr(saveData) = options;
 
     PCStorage *storage = SaveArray_Get(saveData, SAVE_PCSTORAGE);
-    TeamCopy(storage, &team, TRUE);
+    Chapter_TeamCopy(storage, &team, TRUE);
     for (i = 0; i <= (int)(sizeof(struct ChapterTeam) / 16); i++) {
         PCStorage_SetBoxModified(storage, i);
     }
