@@ -241,7 +241,8 @@ void MakeTrainerPokemonParty(struct BATTLE_PARAM *bp, int num, int heapID)
 #ifdef RANDOMIZE_STARTERS
         // hack: the rival's starter line follows the randomized starters (src/randomizer.c).  Silver, or Blue in
         // Part 1, where he is always the rival (include/chapter.h)
-        if (bp->trainer_data[num].tr_type == TRAINERCLASS_RIVAL
+        // (his first battle, in Cherrygrove, is as the "Passerby Boy" class, before the player learns his name)
+        if (bp->trainer_data[num].tr_type == TRAINERCLASS_RIVAL || bp->trainer_data[num].tr_type == TRAINERCLASS_PASSERBY
 #ifdef CHAPTER_SYSTEM
             || ((bp->trainer_data[num].tr_type == TRAINERCLASS_LEADER_BLUE || bp->trainer_data[num].tr_type == TRAINERCLASS_P1_CHAMPION_BLUE)
                 && Chapter_Get() == CHAPTER_RED)
