@@ -124,6 +124,10 @@ static void BeginPart2(SaveData *saveData)
     sForcePart2Locations = TRUE;
     NewGame_InitSaveData(HEAPID_OV36, saveData);
     sForcePart2Locations = FALSE;
+    // NewGame_InitSaveData marks the save as a new game, and a new game with a file on the card is refused with
+    // "There is already a saved game file. It is impossible to save."  Part 2 replaces Part 1's file, so treat the
+    // card as empty: the first save then writes a whole new file (every block and PC Box), as after deleting a save
+    saveData->saveFileExists = FALSE;
 
     SetScriptVar(VAR_CHAPTER, CHAPTER_GOLD);
     SetScriptVar(VAR_SEED_LO, seedLo);
@@ -135,7 +139,7 @@ static void BeginPart2(SaveData *saveData)
 
     PCStorage *storage = SaveArray_Get(saveData, SAVE_PCSTORAGE);
     Chapter_TeamCopy(storage, &team, TRUE);
-    for (i = 0; i <= (int)(sizeof(struct ChapterTeam) / 16); i++) {
+    for (i = 0; i < NUM_PC_BOXES; i++) {
         PCStorage_SetBoxModified(storage, i);
     }
 }
