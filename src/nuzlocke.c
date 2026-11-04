@@ -50,6 +50,20 @@ BOOL LONG_CALL Nuzlocke_IsMonDead(struct PartyPokemon *mon)
     return (GetMonData(mon, MON_DATA_RESERVED_114, NULL) & NUZLOCKE_DEAD_BIT) != 0;
 }
 
+/**
+ *  @brief the stat recalculation at the end of CopyBoxPokemonToPokemon (one BL at 0x02071800).  a box Pokemon has no
+ *         HP, so the copy into the party gives it full HP; a dead Nuzlocke Pokemon (withdrawn from the graveyard)
+ *         comes out fainted instead.
+ */
+void LONG_CALL Nuzlocke_RecalcAfterBoxCopy(struct PartyPokemon *mon)
+{
+    RecalcPartyPokemonStats(mon);
+    if (Nuzlocke_IsActive() && Nuzlocke_IsMonDead(mon)) {
+        u32 hp = 0;
+        SetMonData(mon, MON_DATA_HP, &hp);
+    }
+}
+
 void LONG_CALL Nuzlocke_MarkMonDead(struct PartyPokemon *mon)
 {
     u32 bits = GetMonData(mon, MON_DATA_RESERVED_114, NULL) | NUZLOCKE_DEAD_BIT;

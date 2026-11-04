@@ -672,6 +672,8 @@ arm9 Randomizer_SafariLoadAreaEncounters 020974C4
 #ifdef NUZLOCKE_MODE
 # hack: map scene-script lookup replaced so a finished Nuzlocke run always shows the game-over script (src/nuzlocke.c)
 arm9 Nuzlocke_GetMapSceneScriptId 0204080C
+# hack: a dead Nuzlocke Pokemon withdrawn from the PC stays fainted (src/nuzlocke.c; one BL at the end of CopyBoxPokemonToPokemon)
+arm9 Nuzlocke_RecalcAfterBoxCopy 02071800 bl
 #endif
 
 #ifdef CHAPTER_SYSTEM

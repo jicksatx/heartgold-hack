@@ -647,6 +647,13 @@ void LONG_CALL ArceusBoxPokemonFormeChange(struct BoxPokemon *bp)
  */
 BOOL LONG_CALL HandleBoxPokemonFormeChanges(struct BoxPokemon *bp)
 {
+    // hack: the PC app (overlay 14) calls this with NULL for an empty cursor slot when Box operations end.  reading
+    // address 0 decrypts ITCM bytes; when they happen to read as Arceus/Genesect/Giratina, the form change writes
+    // into ITCM over the IRQ handler and the game freezes on a black screen (seen leaving the Withdraw screen)
+    if (bp == NULL) {
+        return FALSE;
+    }
+
     u32 species = GetBoxMonData(bp, MON_DATA_SPECIES, NULL);
 
     if (species == SPECIES_ARCEUS || species == SPECIES_GENESECT) {
