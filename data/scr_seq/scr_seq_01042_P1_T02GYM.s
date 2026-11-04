@@ -23,6 +23,7 @@
 scrdef scr_seq_P1_T02GYM_001 // Giovanni
 scrdef scr_seq_P1_T02GYM_002 // gym guide
 scrdef scr_seq_P1_T02GYM_003 // statues
+scrdef scr_seq_P1_T02GYM_004 // on transition: the sliding floor (HeartGold's gymmick; without it the slide never starts)
 scrdef_end
 
 scr_seq_P1_T02GYM_001:
@@ -119,4 +120,8 @@ _talkDone:
 	wait_button
 	closemsg
 	releaseall
+	end
+
+scr_seq_P1_T02GYM_004:
+	viridian_gym_init
 	end

@@ -26,6 +26,10 @@ scrdef scr_seq_P1_R16_002 // Snorlax (and its blocker tiles)
 scrdef scr_seq_P1_R16_003 // girl (HM02 Fly)
 scrdef scr_seq_P1_R16_004 // Route 18 sign
 scrdef scr_seq_P1_R16_005 // Professor Oak's Aide (Amulet Coin, 40 species), outside the Route 16 gate
+scrdef scr_seq_P1_R16_006 // Route 16 (west) on resume: Cycling Road mode, as HeartGold's
+scrdef scr_seq_P1_R16_007 // Route 17 on transition/resume: Cycling Road mode (the slope rolls the bike downhill)
+scrdef scr_seq_P1_R16_008 // Route 18 on resume: Cycling Road mode while flag 0x149 is set
+scrdef scr_seq_P1_R16_009 // Route 16 east of the gate on transition: off the Cycling Road
 scrdef_end
 
 scr_seq_P1_R16_001:
@@ -129,4 +133,23 @@ _aideDone:
 	wait_button
 	closemsg
 	releaseall
+	end
+
+scr_seq_P1_R16_006:
+	scrcmd_186 1
+	setflag 0x149
+	end
+
+scr_seq_P1_R16_007:
+	scrcmd_186 1
+	end
+
+scr_seq_P1_R16_008:
+	goto_if_unset 0x149, _r18NotCycling
+	scrcmd_186 1
+_r18NotCycling:
+	end
+
+scr_seq_P1_R16_009:
+	clearflag 0x149
 	end

@@ -189,3 +189,32 @@ ldr r2, [r2, r1]
 bx r2
 
 .pool
+
+// hack: the Options menu's BATTLE STYLE row is gone (every battle is Set, src/battle/battle_start.c; its text is blank
+// in data/text/045.txt).  the cursor's up/down moves (overlay 54, 0x021E66F0 / 0x021E6726) call the modulo helper for
+// the next row; these wrappers step over row 2 (battle style) the same way.
+.align 2
+.thumb
+.global OptionsApp_CursorUp
+OptionsApp_CursorUp:
+push {r4, lr}
+ldr r4, =0x020F2BA4 // __aeabi_idivmod (ARM): r1 = r0 % r1
+blx r4
+cmp r1, #2
+bne 1f
+mov r1, #1
+1:
+pop {r4, pc}
+
+.global OptionsApp_CursorDown
+OptionsApp_CursorDown:
+push {r4, lr}
+ldr r4, =0x020F2BA4
+blx r4
+cmp r1, #2
+bne 1f
+mov r1, #3
+1:
+pop {r4, pc}
+
+.pool

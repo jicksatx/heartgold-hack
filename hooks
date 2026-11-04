@@ -705,3 +705,7 @@ arm9 Chapter_ScrCmd_GetStarterChoice 02043938 2
 arm9 Randomizer_ScrCmd_LoadNPCTrade 0204527C 2
 # hack: in Part 1 the field moves' Johto badge checks are answered with FireRed's Kanto badges (src/chapter.c)
 arm9 Chapter_TestBadgeFlag 02028F98 2
+
+# hack: Options menu: the cursor skips the (blank) BATTLE STYLE row (asm/general_hooks.s)
+0054 OptionsApp_CursorUp 021E66F0 bl
+0054 OptionsApp_CursorDown 021E6726 bl

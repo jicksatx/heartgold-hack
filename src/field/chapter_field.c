@@ -118,10 +118,10 @@ static const struct Part1Map sPart1Maps[] = {
     { 398, 571, 1033, 970, 907 }, // Fighting Dojo
     { 399, 572, 1033, 970, 907 }, // Mr. Psychic's house
     { 410, 573, 1034, 970, 908 }, // Saffron Gym
-    { 24,  574, 1035, 970, 909 }, // Route 16 (Cycling Road's north end)
-    { 422, 575, 1035, 970, 909 }, // Route 16 east of the gate (Snorlax)
-    { 25,  576, 1035, 970, 909 }, // Route 17 (Cycling Road)
-    { 26,  577, 1035, 970, 909 }, // Route 18
+    { 24,  574, 1035, 1067, 909 }, // Route 16 (Cycling Road's north end)
+    { 422, 575, 1035, 1070, 909 }, // Route 16 east of the gate (Snorlax)
+    { 25,  576, 1035, 1068, 909 }, // Route 17 (Cycling Road)
+    { 26,  577, 1035, 1069, 909 }, // Route 18
     { 415, 578, 1035, 970, 909 }, // Route 16 house (HM02 Fly)
     { 362, 579, 1036, 970, 910 }, // Vermilion Pokemon Fan Club (Bike Voucher)
     { 432, 580, 1036, 970, 910 }, // Cerulean bike shop (HeartGold's Bike Maniac's house)
@@ -141,7 +141,7 @@ static const struct Part1Map sPart1Maps[] = {
     { 457, 594, 1040, 1041, 914 }, // Cinnabar Gym (HeartGold's Seafoam Islands Gym)
     { 7,   595, 1039, 970, 913 }, // Pokemon Mansion 1F/2F (Burned Tower 1F)
     { 217, 596, 1039, 970, 913 }, // Pokemon Mansion 3F/B1F (Burned Tower B1F)
-    { 496, 597, 1042, 970, 915 }, // Viridian Gym (Giovanni)
+    { 496, 597, 1042, 1066, 915 }, // Viridian Gym (Giovanni)
     { 299, 598, 1043, 970, 916 }, // Pokemon League reception gate (Route 23's badge checks)
     { 58,  599, 1044, 970, 917 }, // Indigo Plateau
     { 300, 600, 1044, 1045, 917 }, // Pokemon League lobby (resets the Elite Four)
