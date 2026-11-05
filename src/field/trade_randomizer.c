@@ -12,7 +12,8 @@
  *  with a pseudo-area per trade), and the Pokemon asked for becomes exactly what the area randomizer turned it (or its
  *  pre-evolution) into in a wild area where it lives, so it can always be caught in that save.  done once, when the
  *  script loads the trade (load_npc_trade), so the dialogue, the species check and the traded Pokemon all agree.
- *  Kenya (HeartGold's loan Spearow) is left alone.
+ *  Kenya (HeartGold's loan Spearow) and Lt. Surge's Pikachu trade are left alone.  HeartGold's own trade scripts
+ *  buffer the species for their text (scripts/hack/fix_p2_trades.py).
  */
 
 #ifdef RANDOMIZE_WILD_ENCOUNTERS
@@ -21,6 +22,7 @@
 
 #define NPC_TRADE_OVERLAY       23
 #define NPC_TRADE_KENYA         7
+#define NPC_TRADE_SURGE         10 // Lt. Surge's PIKACHU for your PIKACHU: his text names it, so it stays
 #define SCRIPTENV_MISC_DATA_PTR 21
 #define HEAP_ID_FIELD2          11
 
@@ -37,7 +39,7 @@ BOOL LONG_CALL Randomizer_ScrCmd_LoadNPCTrade(SCRIPTCONTEXT *ctx)
     HandleLoadOverlay(NPC_TRADE_OVERLAY, 2);
     *work = NPCTradeApp_Init(HEAP_ID_FIELD2, tradeNo);
 
-    if (tradeNo != NPC_TRADE_KENYA && tradeNo < NELEMS(sTradeAskBank) && !Randomizer_IsOff()) {
+    if (tradeNo != NPC_TRADE_KENYA && tradeNo != NPC_TRADE_SURGE && tradeNo < NELEMS(sTradeAskBank) && !Randomizer_IsOff()) {
         s32 *trade = *(s32 **)(*work); // NPCTrade: give_species at 0, ask_species at 0x4C
         trade[0] = Randomizer_RemapWildSpecies(trade[0], 0x300 + tradeNo);
         if (sTradeAskBank[tradeNo][0] != 0xFFFF) {
