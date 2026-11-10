@@ -192,11 +192,13 @@ int LONG_CALL Chapter_TrainerClassToBackpic(int trainerClass, BOOL isLink)
     switch (trainerClass) {
     case 0: // Ethan
     case 1: // Lyra
-        if (isLink) {
-            return trainerClass + 15;
-        }
+        // Part 1: Red's back sprite.  the battle asks with isLink set even for ordinary battles, which used to pick
+        // Ethan's link sprite (15) and showed his yellow cap
         if (Chapter_Get() == CHAPTER_RED) {
             return 17;
+        }
+        if (isLink) {
+            return trainerClass + 15;
         }
         return trainerClass;
     case 23: // rival
