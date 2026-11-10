@@ -539,6 +539,9 @@ endif
 	@echo "trainer gfx:"
 	cp $(TRAINER_GFX_NARC) $(TRAINER_GFX_TARGET)
 
+	@echo "trainer card:"
+	cp $(TRAINER_CARD_NARC) $(TRAINER_CARD_TARGET)
+
 	@echo "trainer back gfx:"
 	cp $(TRAINER_GFX_BACK_NARC) $(TRAINER_GFX_BACK_TARGET)
 

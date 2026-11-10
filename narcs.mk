@@ -938,3 +938,13 @@ $(MSGDATA_NARC): $(MSGDATA_DEPENDENCIES) $(MSGDATA_COMPILETIME_DEPENDENCIES) $(w
 # rebuild every build so edits other tools make to base/root are not overwritten by a stale copy
 .PHONY: $(BATTLEHUD_NARC) $(MOVEPARTICLES_NARC) $(OPENDEMO_NARC) $(BAGGFX_NARC) $(DEXGFX_NARC) $(BATTLEGFX_NARC)
 .PHONY: $(OTHERPOKE_NARC) $(FONT_NARC) $(TEXTBOX_NARC) $(BALL_SPA_NARC) $(MSGDATA_NARC)
+
+
+# hack: Part 1's Kanto badge case for the Trainer Card (scripts/hack/make_kanto_trainer_card.py, src/chapter_gfx.c)
+TRAINER_CARD_NARC := $(BUILD_NARC)/trainer_card.narc
+TRAINER_CARD_TARGET := $(FILESYS)/a/0/4/9
+
+$(TRAINER_CARD_NARC): scripts/hack/make_kanto_trainer_card.py
+	$(PYTHON) scripts/hack/make_kanto_trainer_card.py $(TRAINER_CARD_TARGET) $@
+
+NARC_FILES += $(TRAINER_CARD_NARC)

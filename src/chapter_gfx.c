@@ -35,10 +35,28 @@ static const struct { u8 narc, first, last, index; u16 yellow, red; } sCapColors
     { NARC_INTRO, 16, 16, 8, RGB(31, 27, 11), RGB(29, 9, 7) },
 };
 
+#define TRAINER_CARD_16_LAYOUT      52  // the 16-leader badge case (Johto band above, Kanto band below)
+#define TRAINER_CARD_KANTO_LAYOUT   78  // the same with the Johto band left empty (scripts/hack/make_kanto_trainer_card.py)
+
+/**
+ *  @brief Part 1's Trainer Card shows only Kanto's Gym Leaders: the card uses HeartGold's 16-leader badge case
+ *         (Chapter_TrainerCardBadges, src/chapter.c), read here from member 78, whose Johto band is empty.  the 8-leader
+ *         case can't be reused: its badge sprites only have the Johto badges' graphics in VRAM.
+ */
+static void Chapter_KantoTrainerCard(u8 *data, s32 member)
+{
+    if (member == TRAINER_CARD_16_LAYOUT) {
+        ReadWholeNarcMemberByIdPair(data, NARC_TRAINER_CARD, TRAINER_CARD_KANTO_LAYOUT); // same size as member 52
+    }
+}
+
 void LONG_CALL Chapter_RedCapPalette(u8 *data, u32 narcId, s32 member)
 {
     if (data == NULL) {
         return;
+    }
+    if (narcId == NARC_TRAINER_CARD && Chapter_Get() == CHAPTER_RED) {
+        Chapter_KantoTrainerCard(data, member);
     }
     u16 *colors = (u16 *)(data + NCLR_COLORS_OFFSET);
     for (u32 i = 0; i < NELEMS(sCapColors); i++) {

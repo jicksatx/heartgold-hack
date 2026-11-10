@@ -269,6 +269,36 @@ BOOL LONG_CALL Chapter_TestBadgeFlag(struct PlayerProfile *profile, s32 badge)
     return (raw[0x1F] >> (badge - 8)) & 1; // kantoBadges
 }
 
+/**
+ *  @brief replaces sub_0206940C, the Trainer Card's badge setup (always-loaded code, called once while the card's data
+ *         is built): clears the 8 badge shine words at +0x48 and sets bit N of the u16 at +6 for each badge held.
+ *         in Part 1 the card shows the 16-leader badge case (HeartGold's after-the-credits layout) with only the Kanto
+ *         band drawn (src/chapter_gfx.c), and bits 8-15 are Red's Kanto badges; Part 2 keeps HeartGold's 16 bits.
+ */
+void LONG_CALL Chapter_TrainerCardBadges(struct PlayerProfile *profile, void *fieldSystem UNUSED, u8 *card)
+{
+    const u8 *raw = (const u8 *)profile;
+    u32 *shine = (u32 *)(card + 0x48);
+    u16 bits = 0;
+
+    for (u32 i = 0; i < 8; i++) {
+        shine[i] = 0;
+    }
+    if (Chapter_Get() == CHAPTER_RED) {
+        bits = raw[0x1F] << 8; // kantoBadges; Red has no Johto badges
+        if (card[0x33] == 0) {
+            card[0x33] = 1; // the card picks the 16-leader badge case when this (the Hall of Fame month) is set
+        }
+    } else {
+        for (s32 i = 0; i < 16; i++) {
+            if (Chapter_TestBadgeFlag(profile, i)) {
+                bits |= 1 << i;
+            }
+        }
+    }
+    *(u16 *)(card + 6) |= bits;
+}
+
 #endif // CHAPTER_SYSTEM
 
 #include "message.h"
