@@ -13,3 +13,4 @@ One more thing, dear.\rSome Trainers like their journey\nfull of surprises.\fThe
 Would you like your adventure to be\nrandomized? {YESNO 0}
 Then expect the unexpected out\nthere, dear!\r
 All right! Everything will be just\nlike the old stories.\r
+There’s a movie on TV.\nFour boys are walking on railroad\ftracks.\r...I better go, too.

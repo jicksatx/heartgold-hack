@@ -113,6 +113,7 @@ _debugSkipPart1:
 #endif
 
 _part1MomHeal:
+	buffer_players_name 0
 	npc_msg 9
 	closemsg
 	fade_screen 6, 1, 0, 0
@@ -131,6 +132,16 @@ _part1MomHeal:
 scr_seq_T01R0101_001:
 	play_se SEQ_SE_DP_SELECT
 	lockall
+	// Part 1: FireRed's TV line (HeartGold's mentions Johto)
+	compare VAR_CHAPTER, 1
+	goto_if_ne _tvJohto
+	npc_msg 15
+	wait_button
+	closemsg
+	releaseall
+	end
+
+_tvJohto:
 	npc_msg 2
 	wait_button
 	closemsg
