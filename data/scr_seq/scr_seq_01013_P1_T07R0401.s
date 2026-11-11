@@ -38,6 +38,9 @@ scrdef scr_seq_P1_T07R0401_014
 scrdef scr_seq_P1_T07R0401_015
 scrdef scr_seq_P1_T07R0401_016
 scrdef scr_seq_P1_T07R0401_017
+scrdef scr_seq_P1_T07R0401_018 // sign: VOLTORB Flip (left bank)
+scrdef scr_seq_P1_T07R0401_019 // sign: slot machines (right bank)
+scrdef scr_seq_P1_T07R0401_020 // guide by the entrance
 scrdef_end
 
 scr_seq_P1_T07R0401_001:
@@ -323,4 +326,26 @@ _slotNoCase:
 	releaseall
 	end
 
+// hack: signs on the counter screens by the entrance and a guide explaining the two banks
+scr_seq_P1_T07R0401_018:
+	play_se SEQ_SE_DP_SELECT
+	lockall
+	npc_msg 23
+	wait_button
+	closemsg
+	releaseall
+	end
+
+scr_seq_P1_T07R0401_019:
+	play_se SEQ_SE_DP_SELECT
+	lockall
+	npc_msg 24
+	wait_button
+	closemsg
+	releaseall
+	end
+
+scr_seq_P1_T07R0401_020:
+	simple_npc_msg 25
+	end
 	.balign 4

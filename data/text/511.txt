@@ -16,3 +16,6 @@ Yo, legend in the making!\nDo you play this Coin game, too?\rI’ve been trying 
 A Coin Case is required...
 It’s a VOLTORB Flip machine!\rWant to play? {YESNO 0}
 It’s a slot machine!\rWant to play? {YESNO 0}
+← VOLTORB Flip machines\nFlip cards and multiply your Coins!
+Slot machines →\nLine up three to win Coins!
+Welcome to the Game Corner!\rThe machines on the left side\nplay VOLTORB Flip.\rThe machines on the right side\nare slot machines.\rYou need a Coin Case to play.\nMr. Game by the counter has one\fif you need it!

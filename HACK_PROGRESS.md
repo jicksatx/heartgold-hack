@@ -169,3 +169,6 @@ Name: **Glorious Gold**. Title-screen logo redrawn (rawdata/title_logo = demo/ti
 - src/field/slot_machine.c replaces ScrCmd_CasinoGame (hook 0001 02202430): casino_game N, 2 = slot machine N (Platinum's 12 settings shuffled by the day's seed, sub_0202C7DC); city 0/1 = Voltorb Flip as before.
 - Part 1 (scr_seq_01013, events 540): the 7 right-bank machines are scripts 11-17 (casino_game 0-6, 2), text 891 line 22.  Part 2: chapter_field.c sPart2Maps: Celadon City (55) uses events 682 (vanilla + Game Corner door -> map 381), map 381 uses events 683 / scripts 01071 / header 970 / text 511 (vanilla + lines 15-17): Mr. Game (Coin Case) at the counter, HeartGold's gambler, left bank Voltorb Flip, right bank slots.  Goldenrod unchanged.
 - Emulator: Part 1 and Part 2 slots play and exit with coins saved, 0-coin message, Voltorb Flip in Goldenrod and both Celadon rooms, Mr. Game, Part 2 door in/out.
+
+### Build 70 (Nov 11): Game Corner signs and guide
+- Map 381, both parts: bg events on the counter fronts by the entrance (5,14) / (15,14) (the counters cover rows 12-14; read from row 15): "<- VOLTORB Flip machines" / "Slot machines ->"; a guide at (12,15) explains the banks.  Part 1: scripts 18-20, text 891 lines 23-25, guide SPRITE_GSWOMAN2.  Part 2: scripts 11-13, text 511 lines 18-20, guide SPRITE_GSWOMAN1.

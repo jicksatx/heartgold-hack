@@ -30,6 +30,9 @@ scrdef scr_seq_P2_T07R0401_007
 scrdef scr_seq_P2_T07R0401_008
 scrdef scr_seq_P2_T07R0401_009
 scrdef scr_seq_P2_T07R0401_010
+scrdef scr_seq_P2_T07R0401_011 // sign: VOLTORB Flip (left bank)
+scrdef scr_seq_P2_T07R0401_012 // sign: slot machines (right bank)
+scrdef scr_seq_P2_T07R0401_013 // guide by the entrance
 scrdef_end
 
 // HeartGold's Mr. Game (scr_seq_0806 script 003): gives the Coin Case, then cheers you on
@@ -191,5 +194,28 @@ _noCase:
 	wait_button
 	closemsg
 	releaseall
+	end
+
+// hack: signs on the counter screens by the entrance and a guide explaining the two banks
+scr_seq_P2_T07R0401_011:
+	play_se SEQ_SE_DP_SELECT
+	lockall
+	npc_msg 18
+	wait_button
+	closemsg
+	releaseall
+	end
+
+scr_seq_P2_T07R0401_012:
+	play_se SEQ_SE_DP_SELECT
+	lockall
+	npc_msg 19
+	wait_button
+	closemsg
+	releaseall
+	end
+
+scr_seq_P2_T07R0401_013:
+	simple_npc_msg 20
 	end
 	.balign 4
