@@ -400,6 +400,16 @@ BOOL LONG_CALL Chapter_ScrCmd_GetStarterChoice(SCRIPTCONTEXT *ctx)
             for (int i = 0; i <= (int)(sizeof(struct ChapterTeam) / 16); i++) {
                 Field_PCStorage_SetBoxModified(storage, i);
             }
+        } else if (slot >= 8 && slot <= 13) {
+            // slots 8-13: Part 2's prize Pokemon (Build 68): Goldenrod's Abra / Ekans / Dratini (200 / 700 / 2,100 Coins)
+            // draw from the three cheapest bands, Celadon's Mr. Mime / Eevee / Porygon (3,333 / 6,666 / 9,999 Coins)
+            // from the middle band and the two most expensive (the ones with the mythicals); fixed per save
+            static const u16 sHeartGoldPrizes[6] = { SPECIES_ABRA, SPECIES_EKANS, SPECIES_DRATINI,
+                                                     SPECIES_MR_MIME, SPECIES_EEVEE, SPECIES_PORYGON };
+            static const u8 sPart2Tier[6] = { 0, 1, 2, 2, 3, 4 };
+            u32 tier = sPart2Tier[slot - 8];
+            *ret = Randomizer_IsOff() ? sHeartGoldPrizes[slot - 8]
+                                      : sPrizeTiers[tier][Randomizer_Hash(Randomizer_GetSeed(), 0x60 + slot) % sPrizeTierCounts[tier]];
         } else if (slot == 5 || slot == 6) {
             // slots 5/6: the Fighting Dojo's prize Pokemon (Hitmonlee/Hitmonchan; with the randomizer on, a Pokemon of
             // similar base stat total, fixed per save, picked like a wild replacement in a bank no map uses)

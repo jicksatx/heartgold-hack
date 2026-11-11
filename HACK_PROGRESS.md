@@ -155,3 +155,9 @@ Name: **Glorious Gold**. Title-screen logo redrawn (rawdata/title_logo = demo/ti
 - Part 2 prizes: Goldenrod (536) Abra 200 / Ekans 700 / Dratini 2100 Lv15 + TMs + held items; Celadon prize room (382, windows at (3,2)/(6,2)) Mr. Mime 3333 / Eevee 6666 / Porygon 9999 + TMs. Not randomized.
 - Part 1: Voltorb Flip + coin clerk (50/1000, 500/10000) in 381; prize room 382: FireRed prices/levels, species randomized per save (prize_pool.c).
 - Test notes: ck/gen2.sh loads a map as Part 2 (sets 0x4166=2 during the warp fade); for maps with a Part 1 version, walk out and back in after setting 0x4166 to get Part 2 events. Ethan's sprite id is 0 (PGFX=0).
+
+### Build 68 (Nov 11): Game Corner prize pool
+- scripts/hack/gen_prize_pool.py: Paradox Pokemon removed; every mythical except Arceus and Melmetal (Meltan stays) added to tiers 3-4, Volcanion to tier 4 only. src/field/prize_pool.c regenerated.
+- Part 2 prizes randomized: get_starter_choice slots 8-10 (Goldenrod, tiers 0/1/2) and 11-13 (Celadon, tiers 2/3/4) in src/field/chapter_field.c; randomizer off gives the vanilla species.
+- data/scr_seq/scr_seq_00910_T25SP0101.s and scr_seq_00804_T07R0501.s: dumped vanilla banks (bytes unchanged) whose scrdef 4 points to a new _randPrizeMon script; menu lines appended to data/text/603.txt and 509.txt.
+- Nuzlocke: give_mon gifts don't touch the area/dupe rules, so every prize can be bought, repeatedly.
