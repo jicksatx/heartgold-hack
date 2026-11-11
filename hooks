@@ -667,6 +667,10 @@ arm9 FieldSystem_RestoreMapObjectsFromSave 0203B9F4 1
 # hack: full replacement so encounter tables are randomized as they load (src/randomizer.c)
 arm9 WildEncounters_ReadFromNarc 0203B88C
 arm9 Randomizer_SafariLoadAreaEncounters 020974C4
+# hack: headbutt trees and the Bug-Catching Contest (src/field/headbutt_contest_randomizer.c): the call in
+# Task_TryHeadbuttEncounter to FieldSystem_PerformHeadbuttEncounterCheck, and BugContest_New's BugContest_InitEncounters
+0001 Randomizer_HeadbuttEncounterCheck 02204FA4 bl
+0024 Randomizer_BugContestInitEncounters 02259918 bl
 #endif
 
 #ifdef NUZLOCKE_MODE
