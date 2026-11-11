@@ -149,3 +149,9 @@ Name: **Glorious Gold**. Title-screen logo redrawn (rawdata/title_logo = demo/ti
 - learnsets.json: own-type attack moved to Lv 6 for the 15 starters that had it at Lv 1-5 (Bulbasaur, Treecko, Chespin, Rowlet, Sprigatito, Charmander, Torchic, Fennekin, Litten, Fuecoco, Squirtle, Mudkip, Froakie, Popplio, Quaxly); Chespin gains Tackle at Lv 5 (user's request). Rival first battles (Trainers.c 740-742, Silver 1) use default moves, so they follow.
 - mart.c: sCeladonDepartment4FPart1 = mail + Goldenrod 3F's evolution items, special mart index 31; Part 1 Celadon 4F clerk (scr_seq_01060 script 061) uses it. Mints were already in Part 1 (Celadon 5F right clerk, index 23).
 - New BugTest VARFIX: 0227D1B8.
+
+### Game Corner check (Build 67, no code change)
+- US HeartGold's Game Corners are maps 536 (Goldenrod, T25SP0101) and 537 (Celadon, T07SP0101): Mr. Game's Voltorb Flip table, no coin seller. Maps 183/381 are the Japanese-release Game Corners (bank 599 is blank in the US ROM); Part 1 reuses 381 with its own scripts/text.
+- Part 2 prizes: Goldenrod (536) Abra 200 / Ekans 700 / Dratini 2100 Lv15 + TMs + held items; Celadon prize room (382, windows at (3,2)/(6,2)) Mr. Mime 3333 / Eevee 6666 / Porygon 9999 + TMs. Not randomized.
+- Part 1: Voltorb Flip + coin clerk (50/1000, 500/10000) in 381; prize room 382: FireRed prices/levels, species randomized per save (prize_pool.c).
+- Test notes: ck/gen2.sh loads a map as Part 2 (sets 0x4166=2 during the warp fade); for maps with a Part 1 version, walk out and back in after setting 0x4166 to get Part 2 events. Ethan's sprite id is 0 (PGFX=0).
