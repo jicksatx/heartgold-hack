@@ -925,3 +925,22 @@ Save_MapObjects_Get = 0x0203B9D0 | 1;
 Heap_Destroy = 0x0201A9C4 | 1;
 RegisterMainOverlay = 0x02000EF4 | 1;
 TrainerClass_GetGenderOrTrainerCount = 0x020735F8 | 1;
+
+/* hack: slot machines (src/field/slot_machine.c); addresses from a pret/pokeheartgold build's main.nef */
+Heap_AllocAtEnd = 0x0201AACD;
+MI_CpuFill8 = 0x020D4994;
+FieldSystem_LaunchApplication = 0x0203DFB5;
+Save_PlayerData_GetCoinsAddr = 0x02028EB5;
+Options_GetFrame = 0x0202ADCD;
+VoltorbFlip_LaunchApp = 0x0203FA39;
+SlotLuckiness = 0x02202379;
+SetupNativeScript = 0x0203FD59;
+ScrNative_WaitApplication_DestroyTaskData = 0x02042975;
+Save_FriendGroup_Get = 0x0202C855;
+sub_0202C7DC = 0x0202C7DD;
+GetLCRNGSeed = 0x0201FD2D;
+SetLCRNGSeed = 0x0201FD39;
+LCRandom = 0x0201FD45;
+SlotMachine_Exit = 0x021E6A65; /* overlay 152, slots/slots.sym */
+SlotMachine_Init = 0x021E6901; /* overlay 152, slots/slots.sym */
+SlotMachine_Main = 0x021E69C1; /* overlay 152, slots/slots.sym */

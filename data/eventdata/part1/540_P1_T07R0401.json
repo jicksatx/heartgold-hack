@@ -9,7 +9,7 @@
       "player_facing_dir": 4
     },
     {
-      "script": 8,
+      "script": 11,
       "type": 0,
       "x": 17,
       "z": 8,
@@ -49,7 +49,7 @@
       "player_facing_dir": 4
     },
     {
-      "script": 8,
+      "script": 12,
       "type": 0,
       "x": 16,
       "z": 10,
@@ -57,7 +57,7 @@
       "player_facing_dir": 4
     },
     {
-      "script": 8,
+      "script": 13,
       "type": 0,
       "x": 16,
       "z": 8,
@@ -65,7 +65,7 @@
       "player_facing_dir": 4
     },
     {
-      "script": 8,
+      "script": 14,
       "type": 0,
       "x": 16,
       "z": 7,
@@ -97,7 +97,7 @@
       "player_facing_dir": 4
     },
     {
-      "script": 8,
+      "script": 15,
       "type": 0,
       "x": 17,
       "z": 10,
@@ -105,7 +105,7 @@
       "player_facing_dir": 4
     },
     {
-      "script": 8,
+      "script": 16,
       "type": 0,
       "x": 17,
       "z": 7,
@@ -113,7 +113,7 @@
       "player_facing_dir": 4
     },
     {
-      "script": 8,
+      "script": 17,
       "type": 0,
       "x": 17,
       "z": 6,

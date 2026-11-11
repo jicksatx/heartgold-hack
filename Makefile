@@ -359,6 +359,8 @@ all: $(OUTPUT) $(OVERLAY_OUTPUTS) $(TOOLS) $(BASE)/arm9.bin
 	$(MAKE) move_narc
 	$(ARMIPS) armips/global.s $(ARMIPS_FLAGS)
 	$(NARCHIVE) create $(FILESYS)/a/0/2/8 $(BUILD)/a028/ -nf
+	@# hack: the slot machine's graphics: Platinum's English /data/slot.narc over HeartGold's leftover Japanese one
+	cp slots/slot.narc $(FILESYS)/data/slot.narc
 	@echo "Making ROM..."
 ifeq ($(ROM_TOOL),$(DSROM))
 	$(DSROM_BRIDGE) pack --rom $(BUILDROM)

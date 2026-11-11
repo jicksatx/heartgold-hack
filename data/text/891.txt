@@ -20,3 +20,4 @@ No?\nPlease come play sometime!
 No thanks
 A Coin Case is required...
 This slot machine has been\nconverted to Voltorb Flip!\rWant to play? {YESNO 0}
+It’s a slot machine!\rWant to play? {YESNO 0}

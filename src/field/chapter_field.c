@@ -242,12 +242,25 @@ enum {
     PART1_MSG,
 };
 
+// Part 2 maps that differ from HeartGold (0 = HeartGold's bank): Celadon's Game Corner is the Japanese release's full
+// room (map 381, as in Part 1) with Voltorb Flip and working slot machines instead of the small US room (537)
+static const struct Part1Map sPart2Maps[] = {
+    { 55,  682, 0,    0,   0   }, // Celadon City: the Game Corner door (warp 3) leads to map 381
+    { 381, 683, 1071, 970, 511 }, // Celadon Game Corner (data/scr_seq/scr_seq_01071_P2_T07R0401.s)
+};
+
 static u16 Part1Map_GetBank(u32 mapId, u32 field, u32 headerOffset)
 {
     if (Chapter_Get() == CHAPTER_RED) {
         for (u32 i = 0; i < NELEMS(sPart1Maps); i++) {
             if (sPart1Maps[i].mapId == mapId) {
                 return (&sPart1Maps[i].mapId)[field];
+            }
+        }
+    } else {
+        for (u32 i = 0; i < NELEMS(sPart2Maps); i++) {
+            if (sPart2Maps[i].mapId == mapId && (&sPart2Maps[i].mapId)[field] != 0) {
+                return (&sPart2Maps[i].mapId)[field];
             }
         }
     }

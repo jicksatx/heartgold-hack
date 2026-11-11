@@ -31,6 +31,13 @@ scrdef scr_seq_P1_T07R0401_007
 scrdef scr_seq_P1_T07R0401_008 // slot machines
 scrdef scr_seq_P1_T07R0401_009 // poster
 scrdef scr_seq_P1_T07R0401_010 // Voltorb Flip machines
+scrdef scr_seq_P1_T07R0401_011 // slot machines (one script per machine: its id picks its setting)
+scrdef scr_seq_P1_T07R0401_012
+scrdef scr_seq_P1_T07R0401_013
+scrdef scr_seq_P1_T07R0401_014
+scrdef scr_seq_P1_T07R0401_015
+scrdef scr_seq_P1_T07R0401_016
+scrdef scr_seq_P1_T07R0401_017
 scrdef_end
 
 scr_seq_P1_T07R0401_001:
@@ -228,3 +235,92 @@ _flipNoCase:
 	closemsg
 	releaseall
 	end
+
+// hack: working slot machines (Platinum's slot game, slots/ -> overlay 152; casino_game N, 2 in src/field/slot_machine.c)
+scr_seq_P1_T07R0401_011:
+	call _slotAsk
+	compare VAR_SPECIAL_RESULT, 0
+	goto_if_ne _slotNo
+	casino_game 0, 2
+	goto _slotDone
+
+scr_seq_P1_T07R0401_012:
+	call _slotAsk
+	compare VAR_SPECIAL_RESULT, 0
+	goto_if_ne _slotNo
+	casino_game 1, 2
+	goto _slotDone
+
+scr_seq_P1_T07R0401_013:
+	call _slotAsk
+	compare VAR_SPECIAL_RESULT, 0
+	goto_if_ne _slotNo
+	casino_game 2, 2
+	goto _slotDone
+
+scr_seq_P1_T07R0401_014:
+	call _slotAsk
+	compare VAR_SPECIAL_RESULT, 0
+	goto_if_ne _slotNo
+	casino_game 3, 2
+	goto _slotDone
+
+scr_seq_P1_T07R0401_015:
+	call _slotAsk
+	compare VAR_SPECIAL_RESULT, 0
+	goto_if_ne _slotNo
+	casino_game 4, 2
+	goto _slotDone
+
+scr_seq_P1_T07R0401_016:
+	call _slotAsk
+	compare VAR_SPECIAL_RESULT, 0
+	goto_if_ne _slotNo
+	casino_game 5, 2
+	goto _slotDone
+
+scr_seq_P1_T07R0401_017:
+	call _slotAsk
+	compare VAR_SPECIAL_RESULT, 0
+	goto_if_ne _slotNo
+	casino_game 6, 2
+	goto _slotDone
+
+_slotAsk:
+	play_se SEQ_SE_DP_SELECT
+	lockall
+	hasitem ITEM_COIN_CASE, 1, VAR_SPECIAL_RESULT
+	compare VAR_SPECIAL_RESULT, 0
+	goto_if_eq _slotNoCase
+	npc_msg 22
+	touchscreen_menu_hide
+	getmenuchoice VAR_SPECIAL_RESULT
+	touchscreen_menu_show
+	compare VAR_SPECIAL_RESULT, 0
+	goto_if_ne _slotAskEnd
+	closemsg
+	fade_screen 6, 1, 0, 0
+	wait_fade
+_slotAskEnd:
+	return
+
+_slotDone:
+	restore_overworld
+	fade_screen 6, 1, 1, 0
+	wait_fade
+	releaseall
+	end
+
+_slotNo:
+	closemsg
+	releaseall
+	end
+
+_slotNoCase:
+	npc_msg 20
+	wait_button
+	closemsg
+	releaseall
+	end
+
+	.balign 4

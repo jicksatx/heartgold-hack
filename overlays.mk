@@ -64,3 +64,6 @@ endef
 ifneq (1,$(NOSCAN))
 $(foreach overlay, $(INDIVIDUAL_OVERLAYS), $(eval $(call INDIVIDUAL_OVERLAY_DEFINE,$(overlay))))
 endif
+
+# hack: overlay 152 (asm/slotmachine/slots.s) .incbins the prebuilt slot machine (slots/build.sh)
+$(BUILD)/slotmachine/slots.o: slots/slots.bin

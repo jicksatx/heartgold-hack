@@ -64,3 +64,5 @@ WesleyFG and [The Sounds Resource](https://www.sounds-resource.com/3ds/pokemonsu
 XLuma - helping get this buildable initially
 
 Game Freak - amazing Pokémon games from way back when
+
+- Celadon slot machines: Platinum's slot machine code and graphics from the pret/pokeplatinum decompilation (https://github.com/pret/pokeplatinum); HeartGold addresses from pret/pokeheartgold.

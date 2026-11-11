@@ -703,6 +703,8 @@ arm9 Chapter_TrainerFlagSet 0204052C 2
 arm9 Chapter_TrainerFlagClear 02040544 2
 # hack: rival scripts see randomized/FireRed starters as the Johto starter of the same type
 arm9 Chapter_ScrCmd_GetStarterChoice 02043938 2
+# hack: casino_game N, 2 starts Platinum's slot machine (src/field/slot_machine.c, overlay 152); city 0/1 stays Voltorb Flip
+0001 SlotMachine_ScrCmd_CasinoGame 02202430 1
 # hack: in-game trades follow the area randomizer (src/field/trade_randomizer.c)
 arm9 Randomizer_ScrCmd_LoadNPCTrade 0204527C 2
 # hack: in Part 1 the field moves' Johto badge checks are answered with FireRed's Kanto badges (src/chapter.c)
