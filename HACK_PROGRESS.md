@@ -134,3 +134,5 @@ Name: **Glorious Gold**. Title-screen logo redrawn (rawdata/title_logo = demo/ti
 - Kindle Road's two items at (127,383)/(123,384) are on the bridge (height 13): reach them from the bridge, not the river.
 - Signs read: Route 13 (route sign, 2x Trainer Tips), Route 15, Route 20's two Seafoam Islands signs.
 - Still open: Rock Tunnel, a real Surf trip Fuchsia->Cinnabar, One/Two Island NPC/sign sweeps, hidden items, regional forms, E4/Champion intros, Nuzlocke, Sevii wild tables.
+- Two Island: 5 NPCs, 3 signs, item; Cape Brink house old woman (move tutor) talks. One Island: sailor, islanders, signs, beachcomber, Amara, 8 items (east-edge turn-back needs Surf: data only).
+- Sevii wild: Kindle Road grass Lv30, Mt. Ember 1F Lv36, Bond Bridge Lv34, Berry Forest Lv35 = FireRed ranges (randomizer on in the test save). Note: walk grids reach into neighbouring Johto routes (e.g. Kindle x=85 is Route 48, Lv20), so pick grass inside the area's object bounds ($S/grass.py).
