@@ -128,3 +128,9 @@ Name: **Glorious Gold**. Title-screen logo redrawn (rawdata/title_logo = demo/ti
   ndspy copied from its GitHub source into `.venv`, and build with `make ROM_TOOL=tools/ndstool`
   (ds-rom needs crates.io, which is blocked).
 - On your own machine (WSL) the normal README steps work.
+
+### Checks on Build 65 (cont.)
+- One-trainer-at-a-time emulator sweeps: Routes 9, 10, 12, 13, 15, 17, 18, 19, 20, 21; Victory Road 1F-3F; One/Two/Three Island, Kindle Road, Mt. Ember 1F/2F, Bond Bridge, Berry Forest. Every trainer battled and every item ball picked up.
+- Kindle Road's two items at (127,383)/(123,384) are on the bridge (height 13): reach them from the bridge, not the river.
+- Signs read: Route 13 (route sign, 2x Trainer Tips), Route 15, Route 20's two Seafoam Islands signs.
+- Still open: Rock Tunnel, a real Surf trip Fuchsia->Cinnabar, One/Two Island NPC/sign sweeps, hidden items, regional forms, E4/Champion intros, Nuzlocke, Sevii wild tables.
