@@ -144,3 +144,8 @@ Name: **Glorious Gold**. Title-screen logo redrawn (rawdata/title_logo = demo/ti
 - Item sweep (ck/is.sh over $S/items.txt): all 246 Part 1 item balls covered; misses are scripted (Oak's starters, Mt. Moon fossils, Dojo gifts, Gold Teeth).
 - Surf: lr.py ALTGFX=7002 (surfing sprite) + ifrun (fights off wild battles); ck/mksurf.sh teaches HM03 to a Lapras from the bag. Pallet -> Route 21 -> Cinnabar surfed. Route 20's east half (Fuchsia side) only meets the west half through Seafoam 1F/B1F (Strength boulders), as in FireRed.
 - One Island east edge turn-back played. Rock Tunnel 15 trainers + 6 items. Nuzlocke area rule played (Kindle Road used -> "Your encounter here is used up!", Mt. Ember still catchable).
+
+### Build 67
+- learnsets.json: own-type attack moved to Lv 6 for the 15 starters that had it at Lv 1-5 (Bulbasaur, Treecko, Chespin, Rowlet, Sprigatito, Charmander, Torchic, Fennekin, Litten, Fuecoco, Squirtle, Mudkip, Froakie, Popplio, Quaxly); Chespin gains Tackle at Lv 5 (user's request). Rival first battles (Trainers.c 740-742, Silver 1) use default moves, so they follow.
+- mart.c: sCeladonDepartment4FPart1 = mail + Goldenrod 3F's evolution items, special mart index 31; Part 1 Celadon 4F clerk (scr_seq_01060 script 061) uses it. Mints were already in Part 1 (Celadon 5F right clerk, index 23).
+- New BugTest VARFIX: 0227D1B8.

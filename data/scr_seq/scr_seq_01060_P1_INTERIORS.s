@@ -78,7 +78,7 @@ scrdef scr_seq_P1_INTERIORS_057 // CeladonCity_DepartmentStore_3F: GBAKid1
 scrdef scr_seq_P1_INTERIORS_058 // CeladonCity_DepartmentStore_3F: GBAKid3
 scrdef scr_seq_P1_INTERIORS_059 // CeladonCity_DepartmentStore_3F: GBAKid2
 scrdef scr_seq_P1_INTERIORS_060 // CeladonCity_DepartmentStore_3F: LittleGirl
-scrdef scr_seq_P1_INTERIORS_061 // clerk (std_special_mart 21)
+scrdef scr_seq_P1_INTERIORS_061 // clerk (std_special_mart 31: Part 1 Celadon 4F, mail + evolution items)
 scrdef scr_seq_P1_INTERIORS_062 // CeladonCity_DepartmentStore_4F: Man
 scrdef scr_seq_P1_INTERIORS_063 // CeladonCity_DepartmentStore_4F: Youngster
 scrdef scr_seq_P1_INTERIORS_064 // clerk (std_special_mart 23)
@@ -446,7 +446,7 @@ scr_seq_P1_INTERIORS_061:
 	faceplayer
 	callstd std_mart_intro
 	holdmsg
-	setvar VAR_SPECIAL_x8004, 21
+	setvar VAR_SPECIAL_x8004, 31
 	callstd std_special_mart
 	releaseall
 	end

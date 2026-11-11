@@ -10,7 +10,7 @@
         "Move": "MOVE_GROWL"
       },
       {
-        "Level": 3,
+        "Level": 6,
         "Move": "MOVE_VINE_WHIP"
       },
       {
@@ -528,7 +528,7 @@
         "Move": "MOVE_GROWL"
       },
       {
-        "Level": 4,
+        "Level": 6,
         "Move": "MOVE_EMBER"
       },
       {
@@ -1121,7 +1121,7 @@
         "Move": "MOVE_TAIL_WHIP"
       },
       {
-        "Level": 3,
+        "Level": 6,
         "Move": "MOVE_WATER_GUN"
       },
       {
@@ -44829,7 +44829,7 @@
         "Move": "MOVE_LEER"
       },
       {
-        "Level": 3,
+        "Level": 6,
         "Move": "MOVE_LEAFAGE"
       },
       {
@@ -45407,7 +45407,7 @@
         "Move": "MOVE_GROWL"
       },
       {
-        "Level": 3,
+        "Level": 6,
         "Move": "MOVE_EMBER"
       },
       {
@@ -45977,7 +45977,7 @@
         "Move": "MOVE_GROWL"
       },
       {
-        "Level": 3,
+        "Level": 6,
         "Move": "MOVE_WATER_GUN"
       },
       {
@@ -109710,11 +109710,15 @@
     "LevelMoves": [
       {
         "Level": 1,
-        "Move": "MOVE_VINE_WHIP"
+        "Move": "MOVE_GROWL"
       },
       {
-        "Level": 1,
-        "Move": "MOVE_GROWL"
+        "Level": 5,
+        "Move": "MOVE_TACKLE"
+      },
+      {
+        "Level": 6,
+        "Move": "MOVE_VINE_WHIP"
       },
       {
         "Level": 8,
@@ -110256,7 +110260,7 @@
         "Move": "MOVE_TAIL_WHIP"
       },
       {
-        "Level": 5,
+        "Level": 6,
         "Move": "MOVE_EMBER"
       },
       {
@@ -110758,7 +110762,7 @@
         "Move": "MOVE_GROWL"
       },
       {
-        "Level": 5,
+        "Level": 6,
         "Move": "MOVE_WATER_GUN"
       },
       {
@@ -120509,7 +120513,7 @@
         "Move": "MOVE_GROWL"
       },
       {
-        "Level": 3,
+        "Level": 6,
         "Move": "MOVE_LEAFAGE"
       },
       {
@@ -120985,7 +120989,7 @@
         "Move": "MOVE_GROWL"
       },
       {
-        "Level": 3,
+        "Level": 6,
         "Move": "MOVE_EMBER"
       },
       {
@@ -121426,7 +121430,7 @@
         "Move": "MOVE_GROWL"
       },
       {
-        "Level": 3,
+        "Level": 6,
         "Move": "MOVE_WATER_GUN"
       },
       {
@@ -150288,7 +150292,7 @@
         "Move": "MOVE_TAIL_WHIP"
       },
       {
-        "Level": 1,
+        "Level": 6,
         "Move": "MOVE_LEAFAGE"
       },
       {
@@ -150646,7 +150650,7 @@
         "Move": "MOVE_LEER"
       },
       {
-        "Level": 1,
+        "Level": 6,
         "Move": "MOVE_EMBER"
       },
       {
@@ -150985,7 +150989,7 @@
         "Move": "MOVE_GROWL"
       },
       {
-        "Level": 1,
+        "Level": 6,
         "Move": "MOVE_WATER_GUN"
       },
       {
