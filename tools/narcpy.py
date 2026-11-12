@@ -28,9 +28,15 @@ elif args[0] == 'create':
 
     idx = 0
     # members are named <narc>_<index>; sort by the index as a number so 2_1000 comes after 2_999
+    # a member can carry a suffix after its index (4_212.NCLR, 8_346-00.NCGR): it sorts by the index, then the suffix,
+    # which is the plain name order the tool used before the number sort.  (Build 73: suffixed members used to go to
+    # the end, shifting every later member of otherpoke a/1/1/4 by two on each build.)
     def member_key(entry):
-        index = entry.rsplit('_', 1)[-1]
-        return (0, int(index), entry) if index.isdigit() else (1, 0, entry)
+        tail = entry.rsplit('_', 1)[-1]
+        digits = len(tail) - len(tail.lstrip('0123456789'))
+        if digits == 0:
+            return (1, 0, '', entry)
+        return (0, int(tail[:digits]), tail[digits:], entry)
 
     # the same member can be there twice under different zero padding (2_965 from the build, 2_0965 extracted once
     # the narc passed 1000 members): keep the newest file for each index
@@ -38,7 +44,7 @@ elif args[0] == 'create':
     for entry in os.listdir(args[2]):
         key = member_key(entry)
         path = os.path.join(args[2], entry)
-        ident = key[1] if key[0] == 0 else entry
+        ident = (key[1], key[2]) if key[0] == 0 else entry
         if ident not in newest or os.path.getmtime(path) >= os.path.getmtime(newest[ident][1]):
             newest[ident] = (key, path)
     files = []
