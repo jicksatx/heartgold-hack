@@ -719,3 +719,6 @@ arm9 Chapter_TrainerCardBadges 0206940C 3
 # hack: Options menu: the cursor skips the (blank) BATTLE STYLE row (asm/general_hooks.s)
 0054 OptionsApp_CursorUp 021E66F0 bl
 0054 OptionsApp_CursorDown 021E6726 bl
+# hack: instant text (src/instant_text.c)
+arm9 InstantText_GetTextFrameDelay 0202AD3C 1
+arm9 InstantText_RunTextPrinter 020202EC 2
