@@ -166,6 +166,10 @@ static const OAMSpriteTemplate WeatherIconObjParam = {
  *
  *  @param bip battle input param
  */
+// hack (Build 75): the weather icon's cell, anim and palette are loaded.  in .data like newBS, so the battle overlay
+// starts every battle with it clear
+static BOOL __attribute__((section(".data"))) sWeatherResLoaded = FALSE;
+
 void Sub_PokeIconResourceLoad(struct BI_PARAM *bip)
 {
     u32 nclr;
@@ -199,7 +203,7 @@ void Sub_PokeIconResourceLoad(struct BI_PARAM *bip)
     OAM_LoadResourceCellAnmArc(csp, crp, ARC_ITEM_GFX_DATA, 0, 0, MEGA_ICON_CELL_ANIM_TAG);
 
     // weather
-    if (bip->bw->sp->field_condition & WEATHER_ANY_ICONS) {
+    if (!sWeatherResLoaded && (bip->bw->sp->field_condition & WEATHER_ANY_ICONS)) {
         if (bip->bw->sp->field_condition & FIELD_CONDITION_SUN_ALL) {
             nclr = BATTLE_GFX_SUN_NCLR;
         } else if (bip->bw->sp->field_condition & FIELD_CONDITION_RAIN_ALL) {
@@ -217,6 +221,7 @@ void Sub_PokeIconResourceLoad(struct BI_PARAM *bip)
         OAM_LoadResourceCellArc(csp, crp, ARC_BATTLE_GFX, BATTLE_GFX_NCER, 0, WEATHER_ICON_CELL_TAG); // NCER
 
         OAM_LoadResourceCellAnmArc(csp, crp, ARC_POKEICON, 3, 0, WEATHER_ICON_CELL_ANIM_TAG); // NANR
+        sWeatherResLoaded = TRUE;
     }
 }
 
@@ -262,18 +267,20 @@ void Sub_PokeIconResourceFree(struct BI_PARAM *bip)
         newBS.MegaIconLight = 0;
     }
 
-    if (bip->bw->sp->field_condition & WEATHER_ANY_ICONS) {
-        if (newBS.WeatherOAM) {
-            OAM_FreeResourceChar(crp, WEATHER_ICON_SPRITE_TAG);
-            OAM_FreeResourceCell(crp, WEATHER_ICON_CELL_TAG);
-            OAM_FreeResourceCellAnm(crp, WEATHER_ICON_CELL_ANIM_TAG);
-            OAM_FreeResourcePltt(crp, WEATHER_ICON_PAL_TAG);
-
-            CATS_ActorPointerDelete_S(newBS.WeatherOAM);
-            newBS.WeatherOAM = NULL;
-            DestroySysTask(newBS.weatherUpdateTask);
-            newBS.weatherUpdateTask = NULL;
-        }
+    // hack (Build 75): free by what was actually loaded, not by the weather now; weather that starts or ends between
+    // the load and the free used to leak the resources or the icon sprite
+    if (newBS.WeatherOAM) {
+        OAM_FreeResourceChar(crp, WEATHER_ICON_SPRITE_TAG);
+        CATS_ActorPointerDelete_S(newBS.WeatherOAM);
+        newBS.WeatherOAM = NULL;
+        DestroySysTask(newBS.weatherUpdateTask);
+        newBS.weatherUpdateTask = NULL;
+    }
+    if (sWeatherResLoaded) {
+        OAM_FreeResourceCell(crp, WEATHER_ICON_CELL_TAG);
+        OAM_FreeResourceCellAnm(crp, WEATHER_ICON_CELL_ANIM_TAG);
+        OAM_FreeResourcePltt(crp, WEATHER_ICON_PAL_TAG);
+        sWeatherResLoaded = FALSE;
     }
 }
 
@@ -322,7 +329,7 @@ void LoadMegaIcon(struct BI_PARAM *bip)
         OAM_ObjectUpdate(newBS.MegaOAM->act);
     }
 
-    if (bip->bw->sp->field_condition & WEATHER_ANY_ICONS) {
+    if (sWeatherResLoaded && !newBS.WeatherOAM && (bip->bw->sp->field_condition & WEATHER_ANY_ICONS)) {
         u32 ncgr;
         csp = BattleWorkCATS_SYS_PTRGet(bip->bw);
         crp = BattleWorkCATS_RES_PTRGet(bip->bw);

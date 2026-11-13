@@ -164,7 +164,10 @@ BOOL LONG_CALL Chapter_ContinueAppExit(void *man UNUSED, int *state UNUSED)
 static const u16 sPlayerSprites[3][15] = {
     { 0, 21, 178, 258, 176, 180, 407, 188, 196, 198, 200, 248, 260, 423, 297 },
     { 97, 98, 179, 259, 177, 181, 408, 189, 197, 199, 201, 249, 261, 424, 298 },
-    { 7000, 7001, 7002, 0, 7003, 7004, 0, 7005, 7006, 7007, 7008, 7009, 0, 0, 0 }, // src/field/overworld_table.c
+    // walk, bike, surf, (rocket), field move, watering, (pokeathlon), fishing, pokegear, save, heal, ladder
+    // (Build 75: pokegear/save/heal/ladder were one sheet off - saving showed Red's Pokegear pose, the ladder his heal
+    // pose; matched to Ethan's row by callback params in overworld_table.c)
+    { 7000, 7001, 7002, 0, 7003, 7004, 0, 7005, 7007, 7008, 7009, 7006, 0, 0, 0 }, // src/field/overworld_table.c
 };
 
 /**

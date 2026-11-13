@@ -27,26 +27,27 @@ elif args[0] == 'create':
         files.append(None)
 
     idx = 0
-    # members are named <narc>_<index>; sort by the index as a number so 2_1000 comes after 2_999
-    # a member can carry a suffix after its index (4_212.NCLR, 8_346-00.NCGR): it sorts by the index, then the suffix,
-    # which is the plain name order the tool used before the number sort.  (Build 73: suffixed members used to go to
-    # the end, shifting every later member of otherpoke a/1/1/4 by two on each build.)
+    # members are named <narc>_<index><rest> (2_0965, 4_212.NCLR, 8_346_sun-00.NCGR, 1_0000.btx0 / 2_0000.btx0 / 3_0000.btx0).
+    # sort by the text before the first '_', then the index as a number (so 2_1000 comes after 2_999 and 2_965 meets
+    # 2_0965), then the rest of the name: the same order as a plain name sort whenever the padding is consistent.
+    # (Build 75: the Build 73 key read the index after the LAST '_', which put 8_348.NCER before the 8_346_sun pair in
+    # the battle graphics narc, so the weather icon's cell bank was a palette and melonDS aborted in any weather battle.)
+    import re
+    member_re = re.compile(r'^([^_]*)_(\d+)(.*)$')
     def member_key(entry):
-        tail = entry.rsplit('_', 1)[-1]
-        digits = len(tail) - len(tail.lstrip('0123456789'))
-        if digits == 0:
-            return (1, 0, '', entry)
-        return (0, int(tail[:digits]), tail[digits:], entry)
+        m = member_re.match(entry)
+        if not m:
+            return (entry, -1, '')
+        return (m.group(1) + '_', int(m.group(2)), m.group(3))
 
     # the same member can be there twice under different zero padding (2_965 from the build, 2_0965 extracted once
-    # the narc passed 1000 members): keep the newest file for each index
+    # the narc passed 1000 members): keep the newest file for each key
     newest = {}
     for entry in os.listdir(args[2]):
         key = member_key(entry)
         path = os.path.join(args[2], entry)
-        ident = (key[1], key[2]) if key[0] == 0 else entry
-        if ident not in newest or os.path.getmtime(path) >= os.path.getmtime(newest[ident][1]):
-            newest[ident] = (key, path)
+        if key not in newest or os.path.getmtime(path) >= os.path.getmtime(newest[key][1]):
+            newest[key] = (key, path)
     files = []
     for key, path in sorted(newest.values()):
         with open(path, 'rb') as f:

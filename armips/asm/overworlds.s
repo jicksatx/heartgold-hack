@@ -8,8 +8,16 @@
 //.halfword NUM_OF_MON_OVERWORLDS + 0x1E4 // update the limiter
 //// 0x1E4 is the start of the follower mon tags
 
+// ov01_021F72DC (a map object's render data): sprites 0x1AC..limit keep it in the follower layout (unk108[0]).
+// hg-engine nopped the upper bound so every new tag counted as a follower; the hack's own sheets (the Red player sprites,
+// 7000+ = NEW_NPC_TAG_START) are billboards like the vanilla player, so the bound is back and stops below them.
+// (Build 75: with the nop, saving / Pokegear / heal / bike as Red read the billboard data as a follower model and
+// melonDS aborted at 0x02023F9C.)  followers are MON_OVERWORLD_TAG_START (2500) + species.
 .org 0x021F7394
-nop
+bgt 0x021F73A0
+
+.org 0x021F73C4
+.word 6999 // NEW_NPC_TAG_START - 1
 
 .close
 
