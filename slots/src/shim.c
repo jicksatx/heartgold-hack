@@ -167,7 +167,9 @@ struct NARC *SlotPort_OpenSlotNarc(int heapID) {
 
 // only used by sprite-resource paths the slot machine never takes
 void *LoadMemberFromNARC(int narcID, u32 member, BOOL compressed, int heapID, BOOL atEnd) { return NULL; }
-void *ReadFileToHeap(int heapID, const char *path) { return NULL; }
+// SpriteList_New reads data/clact_default.NANR with this (Build 74: was a NULL stub; melonDS aborted on it)
+extern void *Sys_AllocAndReadFile(int heapID, const char *path);
+void *ReadFileToHeap(int heapID, const char *path) { return Sys_AllocAndReadFile(heapID, path); }
 
 // Platinum's GF_ASSERT keeps its expression (some calls live inside one, e.g. NNS_G2dGetNewOamManagerInstance);
 // a failed assert is ignored, as in a retail HeartGold build

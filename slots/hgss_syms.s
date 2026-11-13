@@ -381,6 +381,8 @@
 .thumb_set SysTask_CreateOnVWaitQueue, 0x0200E374
 .global SysTask_Destroy
 .thumb_set SysTask_Destroy, 0x0200E390
+.global Sys_AllocAndReadFile
+.thumb_set Sys_AllocAndReadFile, 0x0201A3A4
 .global _ll_mul
 .type _ll_mul, %function
 .set _ll_mul, 0x020F2948
