@@ -101,7 +101,7 @@
 
 // UPDATE_OVERWORLD_POISON will remove overworld poison if enabled
 // comment the line out below to retain overworld poison
-#define UPDATE_OVERWORLD_POISON
+// #define UPDATE_OVERWORLD_POISON // Glorious Gold: keep the Gen 4 overworld poison (1 HP every 4 steps, cured at 1 HP)
 
 // DISABLE_END_OF_TURN_WEATHER_MESSAGE removes the weather messages at the end of the turn.  instead the bottom screen icon can be used
 // uncomment the line out to get this functionality
