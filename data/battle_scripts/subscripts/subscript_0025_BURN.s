@@ -66,6 +66,7 @@ _111:
     CompareVarToValue OPCODE_NEQ, BSCRIPT_VAR_SIDE_EFFECT_TYPE, SIDE_EFFECT_TYPE_DIRECT, _118
     PrintAttackMessage
     Wait
+    WaitButtonABTime 20
 
 _118:
     CompareVarToValue OPCODE_EQU, BSCRIPT_VAR_SIDE_EFFECT_TYPE, SIDE_EFFECT_TYPE_HELD_ITEM, _CheckForItemAnimation

@@ -6,6 +6,7 @@
 _000:
     PrintAttackMessage 
     Wait 
+    WaitButtonABTime 20
     CompareMonDataToValue OPCODE_FLAG_SET, BATTLER_CATEGORY_ATTACKER, BMON_DATA_STATUS2, STATUS2_SUBSTITUTE, _043
     TrySubstitute _036
     PlayBattleAnimation BATTLER_CATEGORY_ATTACKER, BATTLE_ANIMATION_SUBSTITUTE_IN

@@ -6,6 +6,7 @@
 _000:
     PrintAttackMessage 
     Wait 
+    WaitButtonABTime 20
     CompareMonDataToValue OPCODE_EQU, BATTLER_CATEGORY_ATTACKER, BMON_DATA_STOCKPILE_COUNT, 3, _077
     PlayMoveAnimation BATTLER_CATEGORY_ATTACKER
     Wait 

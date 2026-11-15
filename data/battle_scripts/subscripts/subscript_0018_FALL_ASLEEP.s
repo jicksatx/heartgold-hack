@@ -64,6 +64,7 @@ _122:
     CompareVarToValue OPCODE_NEQ, BSCRIPT_VAR_SIDE_EFFECT_TYPE, SIDE_EFFECT_TYPE_DIRECT, _129
     PrintAttackMessage
     Wait
+    WaitButtonABTime 20 // hack: a beat after "<mon> used <move>!" now that text is instant
 
 _129:
     CompareVarToValue OPCODE_EQU, BSCRIPT_VAR_SIDE_EFFECT_TYPE, SIDE_EFFECT_TYPE_ABILITY, _137

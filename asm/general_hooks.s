@@ -204,6 +204,10 @@ cmp r1, #2
 bne 1f
 mov r1, #1
 1:
+cmp r1, #0 // Build 77: the TEXT SPEED row (0) is blank too; up from row 1 goes to CONFIRM/QUIT (6)
+bne 2f
+mov r1, #6
+2:
 pop {r4, pc}
 
 .global OptionsApp_CursorDown
@@ -215,6 +219,11 @@ cmp r1, #2
 bne 1f
 mov r1, #3
 1:
+cmp r1, #0 // Build 77: down from CONFIRM/QUIT wraps past the blank TEXT SPEED row
+bne 2f
+mov r1, #1
+2:
 pop {r4, pc}
+
 
 .pool

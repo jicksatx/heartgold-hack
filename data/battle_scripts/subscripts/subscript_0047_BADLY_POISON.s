@@ -130,6 +130,7 @@ _CheckIfSkipAttackMessage:
     CompareVarToValue OPCODE_NEQ, BSCRIPT_VAR_SIDE_EFFECT_TYPE, SIDE_EFFECT_TYPE_DIRECT, _CheckPoisonImmunities
     PrintAttackMessage
     Wait
+    WaitButtonABTime 20
 
 _CheckPoisonImmunities:
     CheckSubstitute BATTLER_CATEGORY_SIDE_EFFECT_MON, _MoveFailed
@@ -202,6 +203,7 @@ _AbilityBlock:
     CompareVarToValue OPCODE_EQU, BSCRIPT_VAR_SIDE_EFFECT_TYPE, SIDE_EFFECT_TYPE_TOXIC_SPIKES, _ImmuneDueToAbility
     PrintAttackMessage
     Wait
+    WaitButtonABTime 20
 
 _ImmuneDueToAbility:
     WaitButtonABTime 30
@@ -266,6 +268,7 @@ _DoubleFlowerVeilHandle:
     CompareVarToValue OPCODE_EQU, BSCRIPT_VAR_SIDE_EFFECT_TYPE, SIDE_EFFECT_TYPE_TOXIC_SPIKES, _FlowerVeilAllyFail
     PrintAttackMessage
     Wait
+    WaitButtonABTime 20
 
 _FlowerVeilAllyFail:
     WaitButtonABTime 30

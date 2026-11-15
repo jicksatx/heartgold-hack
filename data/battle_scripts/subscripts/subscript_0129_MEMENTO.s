@@ -6,6 +6,7 @@
 _000:
     PrintAttackMessage 
     Wait 
+    WaitButtonABTime 20
     CompareMonDataToValue OPCODE_NEQ, BATTLER_CATEGORY_DEFENDER, BMON_DATA_STAT_CHANGE_ATK, 0, _013
     CompareMonDataToValue OPCODE_EQU, BATTLER_CATEGORY_DEFENDER, BMON_DATA_STAT_CHANGE_SPATK, 0, _077
 

@@ -8,6 +8,7 @@ _000:
     CompareVarToValue OPCODE_NEQ, BSCRIPT_VAR_SIDE_EFFECT_TYPE, SIDE_EFFECT_TYPE_DIRECT, _010
     PrintAttackMessage
     Wait
+    WaitButtonABTime 20
 
 _010:
     CompareVarToValue OPCODE_NEQ, BSCRIPT_VAR_SIDE_EFFECT_TYPE, SIDE_EFFECT_TYPE_DIRECT, _023
@@ -39,6 +40,7 @@ _051:
     CompareVarToValue OPCODE_NEQ, BSCRIPT_VAR_SIDE_EFFECT_TYPE, SIDE_EFFECT_TYPE_DIRECT, _058
     PrintAttackMessage
     Wait
+    WaitButtonABTime 20
 
 _058:
     CompareVarToValue OPCODE_FLAG_SET, BSCRIPT_VAR_BATTLE_STATUS, BATTLE_STATUS_MESSAGES_OFF, _069
@@ -61,6 +63,7 @@ _AbilityBlock:
     CompareVarToValue OPCODE_NEQ, BSCRIPT_VAR_SIDE_EFFECT_TYPE, SIDE_EFFECT_TYPE_DIRECT, _End
     PrintAttackMessage
     Wait
+    WaitButtonABTime 20
     PlayMoveAnimation BATTLER_CATEGORY_ATTACKER
     Wait
     AbilityPopup BATTLER_CATEGORY_SIDE_EFFECT_MON

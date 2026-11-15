@@ -205,3 +205,9 @@ Name: **Glorious Gold**. Title-screen logo redrawn (rawdata/title_logo = demo/ti
 ### Build 76 (Nov 14): Gen 4 overworld poison
 - include/config.h: UPDATE_OVERWORLD_POISON commented out, so bytereplacement writes 0x88 back at arm9 0x02054474: poisoned Pokemon lose 1 HP every 4 steps with the screen flash, and at 1 HP "survived the poisoning / the poison faded away" (vanilla HGSS).  Checked on tv25 (Venusaur PSN 5 HP -> 1 HP, cured, 0 MPU faults).
 - emu tooling: lr.py `sethp SLOT HP [STATUS]` - the write had been commented out by an edit, fixed.
+
+### Build 77 (Nov 14): attack-message pause, Options without TEXT SPEED
+- Battle scripts: "WaitButtonABTime 20" after every "PrintAttackMessage / Wait" that had no wait (30 places: subscript_0076 ATTACK_MESSAGE_AND_ANIMATION and the status/heal/effect scripts) - with instant text the animation used to start the frame the message appeared.
+- Options: TEXT SPEED row removed like BATTLE STYLE: data/text/045.txt lines 2 and 10-12 blank; asm/general_hooks.s OptionsApp_CursorUp/Down also skip row 0 (up from row 1 -> CONFIRM/QUIT, down from there -> row 1); armips/asm/options.s patches overlay 54: menu opens on row 1 (SetupGraphicsData sets currentMenuEntryId 1 + highlight -32), the value-marker sprites of rows 0/2 start off screen (templates y 220); scripts/hack/options_bg.py paints the choice boxes of rows 0/2 over with the row fill in a/0/7/2 member 17.
+- Lesson: base overlays are patched in place, so a hook removed from `hooks` leaves its bl behind - options.s re-writes the two original calls a first try had hooked.  Main code region is full (39 bytes over with two more asm hooks); overlay-local patches go in armips.
+- Checked on tv26: Options opens on BATTLE SCENE, cursor cycles rows 1,3,4,5,QUIT; "Bulbasaur used Tackle!" holds before the animation; Final 77 opening to the bedroom; 0 MPU faults.

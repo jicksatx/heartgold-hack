@@ -8,6 +8,7 @@
 _000:
     PrintAttackMessage 
     Wait 
+    WaitButtonABTime 20
     PlayMoveAnimation BATTLER_CATEGORY_ATTACKER
     Wait
     SetMoveConditionFlag MOVE_LASER_FOCUS, BATTLER_CATEGORY_ATTACKER

@@ -17,6 +17,7 @@ _050:
 _069:
     PrintAttackMessage 
     Wait 
+    WaitButtonABTime 20 // hack: a beat after "<mon> used <move>!" now that text is instant
     CompareMonDataToValue OPCODE_NEQ, BATTLER_CATEGORY_ATTACKER, BMON_DATA_STAT_CHANGE_SPATK, 12, _moveCanBeUsed
     CompareMonDataToValue OPCODE_NEQ, BATTLER_CATEGORY_ATTACKER, BMON_DATA_STAT_CHANGE_SPDEF, 12, _moveCanBeUsed
     CompareMonDataToValue OPCODE_NEQ, BATTLER_CATEGORY_ATTACKER, BMON_DATA_STAT_CHANGE_SPEED, 12, _moveCanBeUsed

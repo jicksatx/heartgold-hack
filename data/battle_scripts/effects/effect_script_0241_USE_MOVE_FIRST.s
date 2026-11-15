@@ -8,6 +8,7 @@ _000:
     TryMeFirst _011
     PrintAttackMessage 
     Wait 
+    WaitButtonABTime 20 // hack: a beat after "<mon> used <move>!" now that text is instant
     PlayMoveAnimation BATTLER_CATEGORY_ATTACKER
     Wait 
     GotoIfCurrentMoveIsValidForParentalBond _016

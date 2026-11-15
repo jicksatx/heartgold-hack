@@ -8,6 +8,7 @@
 _000:
     PrintAttackMessage 
     Wait 
+    WaitButtonABTime 20
     PlayMoveAnimation BATTLER_CATEGORY_ATTACKER
     Wait
     UpdateVarFromVar OPCODE_SET, BSCRIPT_VAR_MSG_BATTLER_TEMP, BSCRIPT_VAR_BATTLER_ATTACKER

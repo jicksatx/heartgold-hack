@@ -6,6 +6,7 @@
 _000:
     PrintAttackMessage 
     Wait 
+    WaitButtonABTime 20
     Call BATTLE_SUBSCRIPT_RECOVER_HP
     // {0}’s stockpiled effect wore off!
     PrintMessage 994, TAG_NICKNAME, BATTLER_CATEGORY_ATTACKER

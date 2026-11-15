@@ -21,6 +21,7 @@ _042:
     CompareVarToValue OPCODE_NEQ, BSCRIPT_VAR_SIDE_EFFECT_TYPE, SIDE_EFFECT_TYPE_DIRECT, _049
     PrintAttackMessage
     Wait
+    WaitButtonABTime 20
 
 _049:
     CheckSubstitute BATTLER_CATEGORY_SIDE_EFFECT_MON, _101

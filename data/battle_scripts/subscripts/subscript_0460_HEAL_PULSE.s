@@ -6,6 +6,7 @@
 _000:
     PrintAttackMessage 
     Wait 
+    WaitButtonABTime 20
     UpdateMonDataFromVar OPCODE_GET, BATTLER_CATEGORY_DEFENDER, BMON_DATA_MAXHP, BSCRIPT_VAR_HP_CALC
     CheckAbility CHECK_OPCODE_HAVE, BATTLER_CATEGORY_ATTACKER, ABILITY_MEGA_LAUNCHER, _Heal75Percent
     DivideVarByValueRoundUp BSCRIPT_VAR_HP_CALC, 2

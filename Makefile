@@ -361,6 +361,8 @@ all: $(OUTPUT) $(OVERLAY_OUTPUTS) $(TOOLS) $(BASE)/arm9.bin
 	$(NARCHIVE) create $(FILESYS)/a/0/2/8 $(BUILD)/a028/ -nf
 	@# hack: the slot machine's graphics: Platinum's English /data/slot.narc over HeartGold's leftover Japanese one
 	cp slots/slot.narc $(FILESYS)/data/slot.narc
+	@# hack: the Options menu's unused TEXT SPEED / BATTLE STYLE rows lose their choice boxes
+	$(PYTHON) scripts/hack/options_bg.py $(FILESYS)/a/0/7/2
 	@echo "Making ROM..."
 ifeq ($(ROM_TOOL),$(DSROM))
 	$(DSROM_BRIDGE) pack --rom $(BUILDROM)

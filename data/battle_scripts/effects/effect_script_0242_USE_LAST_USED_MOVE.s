@@ -7,6 +7,7 @@ _000:
     SetPsychicTerrainMoveUsedFlag 
     PrintAttackMessage 
     Wait 
+    WaitButtonABTime 20 // hack: a beat after "<mon> used <move>!" now that text is instant
     TryCopycat _011
     PlayMoveAnimation BATTLER_CATEGORY_ATTACKER
     Wait 

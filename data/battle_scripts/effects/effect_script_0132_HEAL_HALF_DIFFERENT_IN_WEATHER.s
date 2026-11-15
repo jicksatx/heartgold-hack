@@ -7,6 +7,7 @@ _000:
     CompareMonDataToValue OPCODE_NEQ, BATTLER_CATEGORY_ATTACKER, BMON_DATA_ABILITY, ABILITY_MEGA_SOL, _Continue
     PrintAttackMessage
     Wait
+    WaitButtonABTime 20 // hack: a beat after "<mon> used <move>!" now that text is instant
     AbilityPopup BATTLER_CATEGORY_ATTACKER
 _Continue:
     WeatherHPRecovery

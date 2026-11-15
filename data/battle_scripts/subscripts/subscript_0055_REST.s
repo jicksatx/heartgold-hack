@@ -6,6 +6,7 @@
 _000:
     PrintAttackMessage 
     Wait 
+    WaitButtonABTime 20
     GotoIfTerrainOverlayIsType ELECTRIC_TERRAIN, _152
     GotoIfTerrainOverlayIsType MISTY_TERRAIN, _152
     CheckAbility CHECK_OPCODE_HAVE, BATTLER_CATEGORY_ATTACKER, ABILITY_INSOMNIA, _099

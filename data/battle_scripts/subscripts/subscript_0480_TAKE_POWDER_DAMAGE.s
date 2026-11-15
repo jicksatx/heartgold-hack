@@ -6,6 +6,7 @@
 _000:
     PrintAttackMessage
     Wait
+    WaitButtonABTime 20
     //TODO: different animation
     PlayBattleAnimation BATTLER_CATEGORY_ATTACKER, BATTLE_ANIMATION_BURNED
     Wait 
