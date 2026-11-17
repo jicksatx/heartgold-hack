@@ -319,12 +319,16 @@ BOOL ScrCmd_DaycareSanitizeMon(SCRIPTCONTEXT *ctx)
     return FALSE;
 }
 
+u16 LONG_CALL Static_RandomizeSpecies(u16 species, u32 key);
+
 BOOL ScrCmd_WildBattle(SCRIPTCONTEXT *ctx)
 {
     u32 *winFlag = FieldSysGetAttrAddr(ctx->fsys, 24); // SCRIPTENV_BATTLE_WIN_FLAG = 24
     u16 species = ScriptGetVar(ctx);
     u16 level = ScriptGetVar(ctx);
     u8 shiny = ScriptReadByte(ctx);
+    // hack (Build 78): Snorlax and the legendaries become the static randomizer's pick for this map
+    species = Static_RandomizeSpecies(species, ctx->fsys->location != NULL ? (u32)ctx->fsys->location->mapId : 0);
     // Set this var to 1 in DSPRE just prior to starting a forced wild battle to turn it into a Totem battle.
     if (GetScriptVar(0x800B)) {
         SetupAndStartTotemBattle(ctx->taskman, species, level, winFlag, shiny);

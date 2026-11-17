@@ -388,6 +388,8 @@ void LONG_CALL Chapter_PackParty(struct Party *party, struct ChapterTeam *team)
 extern const u16 *const sPrizeTiers[5];
 extern const u16 sPrizeTierCounts[5];
 
+u16 LONG_CALL Static_RandomizeSpecies(u16 species, u32 key);
+
 BOOL LONG_CALL Chapter_ScrCmd_GetStarterChoice(SCRIPTCONTEXT *ctx)
 {
     static const u16 sJohtoStarters[3] = { 152, 155, 158 };
@@ -426,8 +428,17 @@ BOOL LONG_CALL Chapter_ScrCmd_GetStarterChoice(SCRIPTCONTEXT *ctx)
         } else if (slot == 5 || slot == 6) {
             // slots 5/6: the Fighting Dojo's prize Pokemon (Hitmonlee/Hitmonchan; with the randomizer on, a Pokemon of
             // similar base stat total, fixed per save, picked like a wild replacement in a bank no map uses)
-            u16 species = slot == 5 ? SPECIES_HITMONLEE : SPECIES_HITMONCHAN;
-            *ret = Randomizer_IsOff() ? species : (Randomizer_RemapWildSpecies(species, 0x200) & 0x7FF);
+            // (Build 78: from the static randomizer's no-evolution pool; the two balls never hold the same Pokemon)
+            u16 lee = Static_RandomizeSpecies(SPECIES_HITMONLEE, 0x1005), chan = Static_RandomizeSpecies(SPECIES_HITMONCHAN, 0x1006);
+            for (u32 k = 1; chan == lee && k < 8; k++) {
+                chan = Static_RandomizeSpecies(SPECIES_HITMONCHAN, 0x1006 + 0x100 * k);
+            }
+            *ret = slot == 5 ? lee : chan;
+        } else if (slot >= 14 && slot <= 16) {
+            // hack (Build 78) slots 14-16: the gift Pokemon of the static randomizer: Part 1's Celadon Eevee (14) and
+            // Magikarp salesman (15), Bill's Eevee in Part 2 (16)
+            static const u16 sGifts[3] = { SPECIES_EEVEE, SPECIES_MAGIKARP, SPECIES_EEVEE };
+            *ret = Static_RandomizeSpecies(sGifts[slot - 14], 0x1000 + slot);
         }
         return FALSE;
     }

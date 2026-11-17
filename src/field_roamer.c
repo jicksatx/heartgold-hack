@@ -132,18 +132,14 @@ void LONG_CALL Save_CreateRoamerByID(SaveData *saveData, u8 idx)
 
 u8 LONG_CALL SpeciesToRoamerIdx(u16 species)
 {
-    switch (species) {
-    case SPECIES_RAIKOU:
-        return ROAMER_RAIKOU;
-    case SPECIES_ENTEI:
-        return ROAMER_ENTEI;
-    case SPECIES_LATIOS:
-        return ROAMER_LATIOS;
-    case SPECIES_LATIAS:
-        return ROAMER_LATIAS;
-    default:
-        GF_ASSERT(FALSE);
-        return ROAMER_MAX;
+    // hack (Build 78): roamers can be randomized (src/field/static_randomizer.c), so look the species up in the save
+    void *roamerSave = EncDataSave_GetSaveDataPtr(SaveBlock2_get());
+    for (u8 i = 0; i < ROAMER_MAX; i++) {
+        if (Roamers_GetRoamMonStats(roamerSave, i)->species == species) {
+            return i;
+        }
     }
+    GF_ASSERT(FALSE);
+    return ROAMER_MAX;
 }
 #endif

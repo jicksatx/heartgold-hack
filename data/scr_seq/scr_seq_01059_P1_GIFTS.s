@@ -193,7 +193,12 @@ scr_seq_P1_GIFTS_017:
 	npc_msg 23
 	hide_person VAR_SPECIAL_LAST_TALKED
 	setflag FLAG_P1_GOT_EEVEE
-	give_mon 133, 25, 0, 0, 0, VAR_SPECIAL_RESULT
+	// hack (Build 78): Eevee, or the static randomizer's pick (src/field/chapter_field.c slot 14)
+	setvar VAR_P1_PRIZE, 14
+	get_starter_choice VAR_P1_PRIZE
+	copyvar VAR_SPECIAL_x8006, VAR_P1_PRIZE
+	give_mon VAR_SPECIAL_x8006, 25, 0, 0, 0, VAR_SPECIAL_RESULT
+	buffer_species_name 1, VAR_SPECIAL_x8006, 0, 0
 	buffer_players_name 0
 	npc_msg 21
 	play_fanfare SEQ_ME_POKEGET
@@ -446,6 +451,11 @@ scr_seq_P1_GIFTS_028:
 	faceplayer
 	buffer_players_name 0
 	goto_if_set FLAG_P1_BOUGHT_MAGIKARP, _karpRefund
+	// hack (Build 78): Magikarp, or the static randomizer's pick (src/field/chapter_field.c slot 15)
+	setvar VAR_P1_PRIZE, 15
+	get_starter_choice VAR_P1_PRIZE
+	copyvar VAR_SPECIAL_x8006, VAR_P1_PRIZE
+	buffer_species_name 1, VAR_SPECIAL_x8006, 0, 0
 	touchscreen_menu_hide
 	show_money_box 20, 2
 	npc_msg 52
@@ -460,7 +470,7 @@ scr_seq_P1_GIFTS_028:
 	goto_if_eq _karpFull
 	submoneyimmediate 500
 	update_money_box
-	give_mon 129, 5, 0, 0, 0, VAR_SPECIAL_RESULT
+	give_mon VAR_SPECIAL_x8006, 5, 0, 0, 0, VAR_SPECIAL_RESULT
 	setflag FLAG_P1_BOUGHT_MAGIKARP
 	npc_msg 53
 	play_fanfare SEQ_ME_POKEGET
